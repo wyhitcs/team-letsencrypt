@@ -16,3 +16,13 @@ We are students from  <img src="http://www.ce.ewi.tudelft.nl/fileadmin/ce/images
 - [Xilin Li](https://github.com/lixilin2301), Student ID: 4500563
 - [Wang Jing](https://github.com/Clover-WangJ), Student ID: 4517938
 - [Changliang Luo](https://github.com/YourDaddyIsHere), Student ID: 4501357
+
+#Journal
+The [journal](https://github.com/delftswa2016/team-letsencrypt/blob/master/journal.md) contains main activities of team letsencrypt.
+#Hour Sheet
+Our hour sheet is available on [Google Docs](https://docs.google.com/spreadsheets/d/1WNZ6_zGQyT9PT4Q8Ou8pqhx76jxQEzxe0XPCoo_UU1Y/edit#gid=0).
+
+#Links
+- [Private team repository](https://github.com/delftswa2016/team-letsencrypt)
+- [Public fork](https://github.com/delftswa2016/letsencrypt)
+- [Slack channel](https://delftswa.slack.com/archives/team-letsencrypt)
