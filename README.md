@@ -23,6 +23,7 @@ The [journal](https://github.com/delftswa2016/team-letsencrypt/blob/master/journ
 Our hour sheet is available on [Google Docs](https://docs.google.com/spreadsheets/d/1WNZ6_zGQyT9PT4Q8Ou8pqhx76jxQEzxe0XPCoo_UU1Y/edit#gid=0).
 
 #Links
+- [Let’s Encrypt](https://letsencrypt.org/)
 - [Private team repository](https://github.com/delftswa2016/team-letsencrypt)
 - [Public fork](https://github.com/delftswa2016/letsencrypt)
 - [Slack channel](https://delftswa.slack.com/archives/team-letsencrypt)
