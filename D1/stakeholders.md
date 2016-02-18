@@ -1,8 +1,10 @@
-Stakeholders
-------------
+#Stakeholders
+
 ##Acquirers
-##Assessors
-##Communicators
+- [Electonic Frontier Foundation](https://www.eff.org/)
+- [Mozilla Foundation](https://www.mozilla.org/en-US/)
+- [University of Michigan](https://en.wikipedia.org/wiki/University_of_Michigan)
+
 ##Developers
 - [Liam Marshall](https://github.com/ArchimedesPi)
 - [bmw](https://github.com/bmw)
@@ -17,9 +19,15 @@ Stakeholders
 - [Roland Bracewell Shoemaker](https://github.com/rolandshoemaker)
 - [Sagi Kedmi](https://github.com/sagi)
 
-##Maintainers
 ##Suppliers
-##Support staff
-##System administrators
-##Testers
+- [Internet Security Research Group (ISRG)](https://letsencrypt.org/isrg/)
+
 ##Users
+Users who want to set up HTTPS encryption for web server
+##Sponsors
+- [Mozilla](https://www.mozilla.org/)
+- [Akamai](http://www.akamai.com/)
+- [Cisco](http://www.cisco.com/)
+- [Electronic Frontier Foundation](https://www.eff.org/)
+- [OVH](https://www.ovh.com/)
+- [Chrome](https://www.google.com/chrome/)
