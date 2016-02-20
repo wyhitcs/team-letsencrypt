@@ -11,3 +11,9 @@ Issue Analysis
 **Description:** The letsencrypt-auto symlink was turned at the root of the project into a copy of the letsencrypt-auto of the latest release. A line to the release script was added to copy the latest build to the root. Our instructions used to tell people to *git pull* and then run *le-auto* from the root. This will keep them from running a bleeding-edge master version and allow us to tiptoe less around changes to *le-auto* (double reviews, etc.).
 
 **Stakeholder:** Users
+
+###3. Title: Letsencrypt-auto fails with SSL error to pypi.python.org [(\#2499)](https://github.com/letsencrypt/letsencrypt/issues/2499)
+**Description:**
+This issue reports a bug of *letsencrypt* that the letsencrypt throws an error while running for SSL process.The issue hasn’t been settled, but the comments proposed that it may be because of some function circumvent hash checking. The relevant functions may be *cryptography()*, *cffi()*, *set_requires()*.
+
+**Stakeholder:**Users
