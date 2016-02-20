@@ -1,7 +1,10 @@
 Context View
 ===========================
-###System scope
-The system scope of let’s encrypt is: generating Digital Certificate for server/clients who are using TLS protocol. i.e. The computers using TLS protocols need Digital Certificate from a CA to identify themselves. And let’s encryption serves as a CA.
+###System scope and Responsibilities
+The system scope of let’s encrypt is:
+helping ACME clients (web servers which need certificates) and ACME servers(i.e. certificate authorities (CAs)) to deal with request/response of digital certificates. i.e. The computers using TLS protocols need Digital Certificate from a CA to identify themselves.
+And let’s encryption serves as a communicator between web servers and CAs.
+
 ###Environment
 All computers communicating with TLS protocols constitute the environment of let’s encrypt.
 Interaction between system and environment can be depicted as following scenarios:
