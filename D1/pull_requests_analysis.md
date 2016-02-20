@@ -29,6 +29,6 @@ The issue #2410 is to solve the fact that view_config_changes() only displays pe
 
 **Commented on by:** [pde](https://github.com/pde)
 
-**Description:** 1) Prevented the script from exiting if it needs to install OS packages. 2) Removed quotes around $SUDO from the arch_common.sh and the other bootstrap scripts.
+**Description:** 1) Prevented the script from exiting if it needs to install OS packages. 2) Removed quotes around $SUDO from the *arch_common.sh* and the other bootstrap scripts.
 
 **Stakeholder:** Developers
