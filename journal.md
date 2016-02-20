@@ -6,7 +6,9 @@ The task for the first week is planned as follow:
 - Getting to know the project in more depth: browsing the readme file, documentation and website to get familiar with the project.
 - Learning GitHub: Since not all team members are familiar with the GitHub, we will follow the tutorial online and master it as soon as possible.
 - Learning encryption technique: Our project is about encryption. Getting the main idea about it and learning its common structure will benifit.
+
 #Week 2-D1
+
 ###Group Meeting 16-02-2016(1.5h)
 - Disscuss the content of Assignment 1
 - Divided the tasks
