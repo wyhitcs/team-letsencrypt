@@ -1,6 +1,7 @@
 #Integrators:
 - [pde](https://github.com/letsencrypt/letsencrypt/issues/created_by/pde)
 - [bmw](https://github.com/letsencrypt/letsencrypt/pulls/bmw)
+- They two are responsible to merge pull requests and response to contributors whatever the pull requests are accepted or denied.
 
 
 ##Challenge of Integrators
