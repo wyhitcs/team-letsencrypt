@@ -57,7 +57,7 @@ The issue #2410 is to solve the fact that *view_config_changes()* only displays 
 
 ###8. Title: Support system-default Apache on OS X. Tested on Yosemite (10.10).[(\#2449)](https://github.com/letsencrypt/letsencrypt/pull/2449)
 
-**Creaded by:**[nneonneo](https://github.com/nneonneo)
+**Created by:**[nneonneo](https://github.com/nneonneo)
 
 **Description:** Added a configuration for the Apache plugin in order to support OSX’s built-in Apache web server. However, it still needs users to enable SSL (including httpd-ssl.conf) and generate a snakeoil CA cert to support the DVSNI check. In addition, the user has to add a vhost configuration to */etc/apache2/other*.
 
