@@ -17,14 +17,14 @@ Issue Analysis
 This issue reports a bug of *letsencrypt* that the letsencrypt throws an error while running for SSL process.The issue hasn’t been settled, but the comments proposed that it may be because of some function circumvent hash checking. The relevant functions may be *cryptography()*, *cffi()*, *set_requires()*.
 
 **Stakeholder:**Users
-###4. Title: Apache installer has trouble with missing vhost on renewal [\#2491](https://github.com/letsencrypt/letsencrypt/issues/2491)
+###4. Title: Apache installer has trouble with missing vhost on renewal [(\#2491)](https://github.com/letsencrypt/letsencrypt/issues/2491)
 
 **Description:**
 This is a bug may be related to vhost of letsencrypty. The comments says after fixing issue [(\#1991)](https://github.com/letsencrypt/letsencrypt/issues/1991), the problem is somehow reduced, but it still occassionaly happen when users install *letsencrypt* in their first time.
 
 **Stakeholder:** Users
 
-###5. Title: Apache plugin error: 'Error parsing variable' when envvars are used [\#2481](https://github.com/letsencrypt/letsencrypt/issues/2481)
+###5. Title: Apache plugin error: 'Error parsing variable' when envvars are used [(\#2481)](https://github.com/letsencrypt/letsencrypt/issues/2481)
 
 **Description:**
 This issue reports a bug that when users use the command ./letsencrypt-auto --apache, they receive the following message:
