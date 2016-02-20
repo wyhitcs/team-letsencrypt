@@ -27,15 +27,12 @@ The issue #2410 is to solve the fact that *view_config_changes()* only displays 
 
 **Created by:** [bmw](https://github.com/bmw)
 
-**Commented on by:** [pde](https://github.com/pde)
-
 **Description:** 1) Prevented the script from exiting if it needs to install OS packages. 2) Removed quotes around $SUDO from the *arch_common.sh* and the other bootstrap scripts.
 
 **Stakeholder:** Developers
 
 ### 5.Title: Remove acme-challenge after cleaning up all challenges[(\#2480)](https://github.com/letsencrypt/letsencrypt/pull/2480)
-**Created by:** filipochnik (https://github.com/filipochnik)
-Commented on by: [pde](https://github.com/pde)
+**Created by:** [filipochnik](https://github.com/filipochnik)
 
 **Description:** 1) Added tests for cleaning up acme-challenge and refactor path logic in webroot plugin. After cleaning up all the challenges, the acme-challenge will be removed. 2) The response given by the developer gave another error about the travis failure. One more checking for the error code was added to solve the problem.
 
@@ -45,8 +42,6 @@ Commented on by: [pde](https://github.com/pde)
 
 **Created by:**  [TheBoegl](https://github.com/TheBoegl)
 
-**Commented on by:** None
-
 **Description:** 1) Correctly split IPv6 addresses into the host and the port parts. This will work for the normal IPv4 and IPv6 addresses appended by a port number as well as for the IPv6 addresses without a port, which should be the normal IPv6 usage. 2) Added test for virtual host configuration file, which works correctly whether it is a reversed order or an IPv6 address without a given port.
 
 **Labels:** Apache
@@ -54,8 +49,6 @@ Commented on by: [pde](https://github.com/pde)
 ###7.Title: No conflicting declarations [(\#2262)](https://github.com/letsencrypt/letsencrypt/pull/2262)
 
 **Created by:** [olabini](https://github.com/olabini)
-
-**Commented on by:** [pde](https://github.com/pde)
 
 **Description:** 1) Stopped using the options-ssl-nginx.conf but instead read it and added the declarations directly. The reason for doing this is to stop the potential conflicting declarations and make it easier to deal with the other requirements, such as providing the possibility of upgrading cipher suites. It also changes the name of the session cache used, which means that even if an *ssl_session_cache* is defined at the http{ } level, this cache will not conflict with it.
 
@@ -66,8 +59,6 @@ Commented on by: [pde](https://github.com/pde)
 
 **Creaded by:**[nneonneo](https://github.com/nneonneo)
 
-**Commented on by:** [pde](https://github.com/pde)
-
 **Description:** Added a configuration for the Apache plugin in order to support OSX’s built-in Apache web server. However, it still needs users to enable SSL (including httpd-ssl.conf) and generate a snakeoil CA cert to support the DVSNI check. In addition, the user has to add a vhost configuration to */etc/apache2/other*.
 
 **StakeHolder:** Developers, users
@@ -76,7 +67,6 @@ Commented on by: [pde](https://github.com/pde)
 
 **Created by:** [erikrose](https://github.com/erikrose)
 
-**Commented on by:** [pde](https://github.com/pde),[kuba](https://github.com/kuba),[bmw](https://github.com/bmw)
 
 **Description:** Made argparse dependency unconditional which can avoid a branch, giving the bugs one fewer place to hide and can fix the bug of argparse.This is about the Arch linux packaging and only people manually installing the Python packages with pip will use these dependency declarations.
 
