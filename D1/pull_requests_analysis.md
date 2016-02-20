@@ -22,3 +22,13 @@ The issue #2410 is to solve the fact that view_config_changes() only displays pe
 **Description:** Solved a bug that would cause the letsencrypt-apache to fail. The problem was posted in the issue #2308. According to the issue #2308, letsencrypt_apache uses some of the test libraries from the letsencrypt. However, they strip the tests and the test data from the python-letsencrypt library during its build step to save space in the package and to prevent the distribution of the unneeded files. This is a downstream bug.
 
 **Stakeholder:** Developers, Users
+
+### 4. Title: Fix minor bootstrap problems[(\#2485)](https://github.com/letsencrypt/letsencrypt/pull/2485)
+
+**Created by:** [bmw](https://github.com/bmw)
+
+**Commented on by:** [pde](https://github.com/pde)
+
+**Description:** 1) Prevented the script from exiting if it needs to install OS packages. 2) Removed quotes around $SUDO from the arch_common.sh and the other bootstrap scripts.
+
+**Stakeholder:** Developers
