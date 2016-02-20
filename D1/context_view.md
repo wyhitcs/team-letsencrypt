@@ -30,3 +30,6 @@ Then CA returns the certificate to letsencrypty and letsencrypt deliver it to we
 2. B receive the certificate of A (the certificate is issued by let’s encrypt).
 If B trust let’s encrypt or the root CA of let’s encrypt(that means that B has a public key of CA), B can decrypt the certificate and find that: first, A is really A.
 And then, B can take out the public key of A inside the certificate and use it to decrypt message from A and encrypt message to A.
+
+![context view](https://github.com/delftswa2016/team-letsencrypt/blob/master/D1/context.view.png)
+
