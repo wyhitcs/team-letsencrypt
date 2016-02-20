@@ -72,3 +72,12 @@ Commented on by: [pde](https://github.com/pde)
 
 **StakeHolder:** Developers, users
 
+###9.Title: Make argparse dependency unconditional. [(\#2249)](https://github.com/letsencrypt/letsencrypt/pull/2249)
+
+**Created by:** [erikrose](https://github.com/erikrose)
+
+**Commented on by:** [pde](https://github.com/pde),[kuba](https://github.com/kuba),[bmw](https://github.com/bmw)
+
+**Description:** Made argparse dependency unconditional which can avoid a branch, giving the bugs one fewer place to hide and can fix the bug of argparse.This is about the Arch linux packaging and only people manually installing the Python packages with pip will use these dependency declarations.
+
+**StakeHolder:** Developers, users
