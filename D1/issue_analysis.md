@@ -52,3 +52,14 @@ A reply to the issue mentions that he has addressed this problem in issue #2488 
 
 **Stakeholder:** Users
 
+###8. Title: webroot only verifies through port 80 [(\#2440)](https://github.com/letsencrypt/letsencrypt/issues/2440)
+**Description:**
+This issue is about the webroot option. A user wanted to use port other than port 80 to be the webroot option of verification, since his port 80 is firewalled. It turns out that the Letsencrypt has already provided two other validation methods --- the SNI challenge (which can completely use a TLS listener on port 443) and the DNS challenge (which just requires being able to add records to your DNS zone).
+
+**Stakeholder:** Users, developers
+
+###9. Title: Letsencrypt certificate expiration notice [(\#2483)](https://github.com/letsencrypt/letsencrypt/issues/2483)
+**Description:**
+This issue is about user experience. A user of *Letsencrypt* got an email notifying that the certificate will expire in a few days. However, the problem is that this is about a certificate he regularly replaces by auto-renewing it. It is not solved since there exists situations where a reminder is still worthwhile, even though a replacement certificate has been issued. One obvious heuristic suggested by the developers is to check each of the names on the old certificate. If any publicly-accessible web sites are still using the old certificate, a reminder is definitely in order, whether or not a replacement cert has been issued. This doesn't solve the whole problem, but can be used in conjunction with other heuristics to reduce the number of false negatives without increasing the number of false positives.
+
+**Stakeholder:** Developers, users
