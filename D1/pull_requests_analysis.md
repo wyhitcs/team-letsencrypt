@@ -14,3 +14,11 @@ Pull Request Analysis
 The issue #2410 is to solve the fact that view_config_changes() only displays permanent changes which are saved to a specific file but doesn’t display the temporary changes which will not be saved.
 
 **Stakeholder:** Developers
+
+### 3.Title: Fix apache2.2 redirect problems [(\#2489)](https://github.com/letsencrypt/letsencrypt/pull/2489)
+
+**Created by:** [SwartzCr](https://github.com/letsencrypt/letsencrypt/pulls/SwartzCr)
+
+**Description:** Solved a bug that would cause the letsencrypt-apache to fail. The problem was posted in the issue #2308. According to the issue #2308, letsencrypt_apache uses some of the test libraries from the letsencrypt. However, they strip the tests and the test data from the python-letsencrypt library during its build step to save space in the package and to prevent the distribution of the unneeded files. This is a downstream bug.
+
+**Stakeholder:** Developers, Users
