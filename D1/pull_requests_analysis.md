@@ -50,3 +50,25 @@ Commented on by: [pde](https://github.com/pde)
 **Description:** 1) Correctly split IPv6 addresses into the host and the port parts. This will work for the normal IPv4 and IPv6 addresses appended by a port number as well as for the IPv6 addresses without a port, which should be the normal IPv6 usage. 2) Added test for virtual host configuration file, which works correctly whether it is a reversed order or an IPv6 address without a given port.
 
 **Labels:** Apache
+
+###7.Title: No conflicting declarations [(\#2262)](https://github.com/letsencrypt/letsencrypt/pull/2262)
+
+**Created by:** [olabini](https://github.com/olabini)
+
+**Commented on by:** [pde](https://github.com/pde)
+
+**Description:** 1) Stopped using the options-ssl-nginx.conf but instead read it and added the declarations directly. The reason for doing this is to stop the potential conflicting declarations and make it easier to deal with the other requirements, such as providing the possibility of upgrading cipher suites. It also changes the name of the session cache used, which means that even if an *ssl_session_cache* is defined at the http{ } level, this cache will not conflict with it.
+
+**StakeHolder:** Developers
+
+
+###8. Title: Support system-default Apache on OS X. Tested on Yosemite (10.10).[(\#2449)](https://github.com/letsencrypt/letsencrypt/pull/2449)
+
+**Creaded by:**[nneonneo](https://github.com/nneonneo)
+
+**Commented on by:** [pde](https://github.com/pde)
+
+**Description:** Added a configuration for the Apache plugin in order to support OSX’s built-in Apache web server. However, it still needs users to enable SSL (including httpd-ssl.conf) and generate a snakeoil CA cert to support the DVSNI check. In addition, the user has to add a vhost configuration to */etc/apache2/other*.
+
+**StakeHolder:** Developers, users
+
