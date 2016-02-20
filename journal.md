@@ -19,8 +19,9 @@ The task for the first week is planned as follow:
 - Figure out specific role of stakeholders in the project
 - Analyze the 10 rencent pull request
 
-###Group Meeting 20-02-2016(3.5h)
+###Group Meeting 20-02-2016(7.5h)
 - Analyze the 10 rencent issues
+- identify the integrators
 - Find out people to contact
 - Disscuss the Context view
 - Finish the draft of D1
