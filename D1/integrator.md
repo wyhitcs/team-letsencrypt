@@ -1,6 +1,7 @@
 ##Integrators:
 - [pde](https://github.com/letsencrypt/letsencrypt/issues/created_by/pde)
 - [bmw](https://github.com/letsencrypt/letsencrypt/pulls/bmw)
+
 According to the definition posted by by Georgios Gousios, the integrator must act to assure the quality of project by communicating modification requirements to the original contributors. Two developers listed below are responsible to merge pull requests and respond to contributors, no matter the pull requests are accepted or denied.
 
 
