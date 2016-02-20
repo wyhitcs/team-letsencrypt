@@ -47,3 +47,5 @@ Sponsors here means the financial support of the project. Because of the great u
 - [IdenTrust](https://www.identrust.com/) (Root certificate provider)
 
 Let's Encrypt is a project about TLS encryption and CA certification. An organization is not able to provide CA service unless it is authorized by another qualified certificate authority.  IdenTrust is such a certificate authority and secure applications provider which issued Let's Encrypt root certificate.
+
+![stakeholder](https://github.com/delftswa2016/team-letsencrypt/blob/master/D1/stakeholder.png)
