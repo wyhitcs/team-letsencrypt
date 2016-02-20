@@ -31,7 +31,7 @@ Let's Encrypt is a service provided by ISRG, a public benefit organization which
 
 ##Users
 
-The client is offered to the users who want to set up Transport Layer Security (TLS) encryption for their web server. 
+The client is offered to the users who want to set up Transport Layer Security (TLS) encryption for their web server. Now a large number of websites tend to use the service offered by Let's Encrypt, such as Blueboard.cz, Checkdomain and Deep.ch.
 
 ##Sponsors
 - [Mozilla](https://www.mozilla.org/)
