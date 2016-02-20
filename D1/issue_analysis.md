@@ -34,3 +34,21 @@ The error was PluginError (u'Error Parsing variable: ${INSTANCE\_ADDRESS}'). It 
 This issue is still open and there is not a solution yet.
 
 **Stakeholder:** Users
+
+###6. Title: Automatic upgrading in letsencrypt-auto downgrades to incompatible version [(\#2490)](https://github.com/letsencrypt/letsencrypt/issues/2490)
+
+**Description:**
+This issue reports that the auto script *letsencrypt-auto-source/letsencrypt-auto* self-upgrades the current version to a downgrade incompatible version. This is because that  the auto script which simply checks if the versions are different. The problem is fixed in #2492 and this issue is closed.
+
+**Stakeholder:** Developers, users
+
+###7. Title: Fatal certlint error in recently signed certificate [(\#2463)](https://github.com/letsencrypt/letsencrypt/issues/2463)
+**Description:**
+This issue is about a bug for the signed certificate. The log is
+>FATAL: ASN.1 Error in X520CommonName and for more details, see:
+https://crt.sh/?id=12791738&opt=cablint.
+
+A reply to the issue mentions that he has addressed this problem in issue #2488 and it is not a client bug at all. For issue #2488, see https://github.com/letsencrypt/boulder/issues/1488.
+
+**Stakeholder:** Users
+
