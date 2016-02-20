@@ -81,3 +81,12 @@ Commented on by: [pde](https://github.com/pde)
 **Description:** Made argparse dependency unconditional which can avoid a branch, giving the bugs one fewer place to hide and can fix the bug of argparse.This is about the Arch linux packaging and only people manually installing the Python packages with pip will use these dependency declarations.
 
 **StakeHolder:** Developers, users
+
+###10.Title: Added some standard apache2 modules that make tests fail.[(\#2105)](https://github.com/letsencrypt/letsencrypt/pull/2105)
+
+**Created by:** [phispi](https://github.com/phispi)
+
+
+**Description:** Letsencrypt failed on server when parsing the apache2.4 config. It turned out that the files where the error happens are standard apache2 modules. This pull request added the apache2 dav and the dav_svn modules that tests the failure on the server when parsing the apache2.4 config.
+
+**StakeHolder:** Developers
