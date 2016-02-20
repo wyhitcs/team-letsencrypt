@@ -27,3 +27,4 @@ Our hour sheet is available on [Google Docs](https://docs.google.com/spreadsheet
 - [Private team repository](https://github.com/delftswa2016/team-letsencrypt)
 - [Public fork](https://github.com/delftswa2016/letsencrypt)
 - [Slack channel](https://delftswa.slack.com/archives/team-letsencrypt)
+- [Let’s Encrypt Documentation](https://letsencrypt.readthedocs.org/en/latest/intro.html)
