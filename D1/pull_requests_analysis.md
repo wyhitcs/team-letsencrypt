@@ -32,3 +32,21 @@ The issue #2410 is to solve the fact that *view_config_changes()* only displays 
 **Description:** 1) Prevented the script from exiting if it needs to install OS packages. 2) Removed quotes around $SUDO from the *arch_common.sh* and the other bootstrap scripts.
 
 **Stakeholder:** Developers
+
+### 5.Title: Remove acme-challenge after cleaning up all challenges[(\#2480)](https://github.com/letsencrypt/letsencrypt/pull/2480)
+**Created by:** filipochnik (https://github.com/filipochnik)
+Commented on by: [pde](https://github.com/pde)
+
+**Description:** 1) Added tests for cleaning up acme-challenge and refactor path logic in webroot plugin. After cleaning up all the challenges, the acme-challenge will be removed. 2) The response given by the developer gave another error about the travis failure. One more checking for the error code was added to solve the problem.
+
+**Labels:** webroot
+
+### 6.Title: Parse IPv6 and IPv4 virtual host entries correctly [(\#2478)](https://github.com/letsencrypt/letsencrypt/pull/2478)
+
+**Created by:**  [TheBoegl](https://github.com/TheBoegl)
+
+**Commented on by:** None
+
+**Description:** 1) Correctly split IPv6 addresses into the host and the port parts. This will work for the normal IPv4 and IPv6 addresses appended by a port number as well as for the IPv6 addresses without a port, which should be the normal IPv6 usage. 2) Added test for virtual host configuration file, which works correctly whether it is a reversed order or an IPv6 address without a given port.
+
+**Labels:** Apache
