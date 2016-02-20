@@ -5,7 +5,7 @@ Pull Request Analysis
 
 **Description:** Added a new parameter in *client.view_config_changes()* function so that the users could limit the number of lines shown in the command line. i.e. changing  from *client.view_config_changes(config)* to  *client.view_config_changes(config, num=config.num)*, with the parameter *config.num* used to specify the number of lines.
 
-**Stakeholder:** Developers, Users
+**Stakeholder:** Developers, users
 
 ### 2.Title: Print only challenge changes to configs [(\#2496)](https://github.com/letsencrypt/letsencrypt/pull/2262)
 **Created by:** [SwartzCr](https://github.com/letsencrypt/letsencrypt/pulls/SwartzCr)
@@ -36,7 +36,7 @@ The issue #2410 is to solve the fact that *view_config_changes()* only displays 
 
 **Description:** 1) Added tests for cleaning up acme-challenge and refactor path logic in webroot plugin. After cleaning up all the challenges, the acme-challenge will be removed. 2) The response given by the developer gave another error about the travis failure. One more checking for the error code was added to solve the problem.
 
-**Labels:** webroot
+**StakeHolder:** Developers
 
 ### 6.Title: Parse IPv6 and IPv4 virtual host entries correctly [(\#2478)](https://github.com/letsencrypt/letsencrypt/pull/2478)
 
@@ -44,7 +44,7 @@ The issue #2410 is to solve the fact that *view_config_changes()* only displays 
 
 **Description:** 1) Correctly split IPv6 addresses into the host and the port parts. This will work for the normal IPv4 and IPv6 addresses appended by a port number as well as for the IPv6 addresses without a port, which should be the normal IPv6 usage. 2) Added test for virtual host configuration file, which works correctly whether it is a reversed order or an IPv6 address without a given port.
 
-**Labels:** Apache
+**StakeHolder:** Developers
 
 ###7.Title: No conflicting declarations [(\#2262)](https://github.com/letsencrypt/letsencrypt/pull/2262)
 
@@ -57,7 +57,7 @@ The issue #2410 is to solve the fact that *view_config_changes()* only displays 
 
 ###8. Title: Support system-default Apache on OS X. Tested on Yosemite (10.10).[(\#2449)](https://github.com/letsencrypt/letsencrypt/pull/2449)
 
-**Creaded by:**[nneonneo](https://github.com/nneonneo)
+**Created by:** [nneonneo](https://github.com/nneonneo)
 
 **Description:** Added a configuration for the Apache plugin in order to support OSX’s built-in Apache web server. However, it still needs users to enable SSL (including httpd-ssl.conf) and generate a snakeoil CA cert to support the DVSNI check. In addition, the user has to add a vhost configuration to */etc/apache2/other*.
 
