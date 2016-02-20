@@ -7,17 +7,17 @@ The task for the first week is planned as follow:
 - Learning GitHub: Since not all team members are familiar with the GitHub, we will follow the tutorial online and master it as soon as possible.
 - Learning encryption technique: Our project is about encryption. Getting the main idea about it and learning its common structure will benifit.
 #Week 2-D1
-#Group Meeting 16-02-2016(1.5h)
+###Group Meeting 16-02-2016(1.5h)
 - Disscuss the content of Assignment 1
 - Divided the tasks
 - Discuss the book Chapter 9, 10, 16
 
-#Group Meeting 18-02-2016(3h)
+###Group Meeting 18-02-2016(3h)
 - Discuss the Stakeholders
 - Figure out specific role of stakeholders in the project
 - Analyze the 10 rencent pull request
 
-#Group Meeting 20-02-2016(3.5h)
+###Group Meeting 20-02-2016(3.5h)
 - Analyze the 10 rencent issues
 - Find out people to contact
 - Disscuss the Context view
