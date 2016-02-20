@@ -7,7 +7,7 @@ According to the definition posted by by Georgios Gousios, the integrator must a
 
 ##Challenge of Integrators
 1. Time, this project is very active, about every 3 hours they will receive a new pull requests, they have to test it and check the source codes. Besides integrating the project, they also have other works to do, so, time is a prior challenge.
-2. Maintaining quality is also a major issue. Letsencrypt is designed to be part of certificate infrastructure, it require very high quality codes, and this project has over 150 contributors, some of them are not so experienced programmer and everyone has their own coding styles, so maintain quality (make sure letsencrypt can work efficiently and the codes of letsencrypt is easy to read) is big challenge
+2. Maintaining quality is also a major issue. Letsencrypt is designed to be part of certificate infrastructure, it requires very high quality codes, and this project has over 150 contributors, some of them are not so experienced programmer and everyone has their own coding styles, so maintain quality (make sure letsencrypt can work efficiently and the codes of letsencrypt is easy to read) is big challenge
 
 ##Merge Strategies
 1. All the pull requests have to pass the Travis test before merging into the master. Travis CI provides continuous integration service to build and test software projects hosted at Github. In this way, integrators can transit a great amount of his/her own work to the quality evaluation tools like Travis.
