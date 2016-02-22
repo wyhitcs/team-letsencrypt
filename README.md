@@ -20,7 +20,7 @@ We are students from  <img src="http://www.ce.ewi.tudelft.nl/fileadmin/ce/images
 #Journal
 The [journal](https://github.com/delftswa2016/team-letsencrypt/blob/master/journal.md) contains main activities of team letsencrypt.
 #Hour Sheet
-Our hour sheet is available on [Google Docs](https://docs.google.com/spreadsheets/d/1WNZ6_zGQyT9PT4Q8Ou8pqhx76jxQEzxe0XPCoo_UU1Y/edit#gid=0).
+Our hour sheet is available on [Google Docs](https://docs.google.com/spreadsheets/d/1WNZ6_zGQyT9PT4Q8Ou8pqhx76jxQEzxe0XPCoo_UU1Y/edit?usp=sharing).
 
 #Links
 - [Let’s Encrypt](https://letsencrypt.org/)
