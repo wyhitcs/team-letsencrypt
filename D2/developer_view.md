@@ -75,10 +75,10 @@ All flags used by the client can be configured, including RSA key size, registed
 
 #Technical Debt
 -issue # 2155
-Now, the renewal contain paths relative to config_dir, it is useful to contains such path, but for convenience they ignore it, this may save some time at the first place, but now they have to pay the time back.
+Now, the renewal contain paths relative to config_dir, it is useful to contains such path, but for convenience they ignore it, this may save some time at the first place, but now they have to pay the time back. They decide to do some change and add the path to config_dir now.
 
 -issue #2498 
-The client will display all the changes to users. Users can't specify how many lines to show on their screen. The developer choose to ignore this unresonalable fact to save some time, but now they have to pay their time back.
+The client will display all the changes to users. Users can't specify how many lines to show on their screen. The developer choose to ignore this unresonalable fact to save some time, but now they have to pay their time back. The issue has been closed and they add a parameter to the function to enable specifying how many lines to show
 
 -issue #2114
 Now, when the letsencrypt-auto fails, the client won't show what exactly fails to the client. Most programs have trace back features while letsecnrypt doesn't. I believe it is the developers who choose to ignore such needs of the client, just for convenience, they choose to do it quick and dirty. It is also a technical debt which they have to pay back.
