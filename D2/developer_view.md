@@ -22,6 +22,7 @@ The design of Let’s encrypt is based on plugin architecture, the interfaces av
 Current client is still in a developer-preview stage, the API may undergo a few changes. Community is still develop it and welcome other developer to contribute.
 
 ##Common Software
+Travis CI provides continuous integration service to build and test software projects hosted at Github. In this way, integrators can transit a great amount of his/her own work to the quality evaluation tools like Travis.
 #Module Structure Model
 #Codeline Model
 In this section code structure of letsencrypt will be explored. Build, Integration, Test and Release Approach also matters a lot in understanding the project organization. In addition, Technical Debt is also analyzed.
