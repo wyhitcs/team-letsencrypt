@@ -7,6 +7,17 @@ The developer view describes the architecture that supports the software develop
 In this section code structure of letsencrypt will be explored. Build, Integration, Test and Release Approach also matters a lot in understanding the project organization. In addition, Technical Debt is also analyzed.
 
 ##Source Code Structure
+- acme
+- docs
+- examples
+- letsencrypt-apache
+- letsencrypt-auto-source
+- letsencrypt-compatibility-test
+- letsencrypt-nginx
+- letsencrypt
+- letshelp-letsencrypt
+- tests
+- tools
 ##Build, Integration and Test Approach
 Let's Encrypt has an offical workfolw for build, integrate and test for developers.
 
