@@ -79,7 +79,18 @@ For open source projects, the contribution of open source communities behind the
 - No architecture and module information, which makes understanding of how the project works and how the module connect with each other difficult to understand.
 - Only few files have comments, which may leads confusion for certain code.
 
-The above aspects make it difficult for developers to contribute to the project
+The above aspects make it difficult for developers not in their team to contribute to the project.
+
+##File Organization
+A well-structured file organization could help project develop, Let's encrypt is a pretty new project and still have some trouble in this aspect.
+- issue [#2155](https://github.com/letsencrypt/letsencrypt/issues/2155):Now, the renewal contain paths relative to config\_dir, it is useful to contains such path, but for convenience they ignore it, this may save some time at the first place, but now they have to pay the time back. They decide to do some change and add the path to config_dir now.
+
+##User Friendly
+A good user experience is important for the software, and a crucial first step in achieving this is deploying a user-friendly interface. For Let's Encrypt, user mostly interact with the software when deploy `letsencrypt` for their own website, this progress in done mainly in terminal. This process is not user friendly enough.
+- issue [#2498](https://github.com/letsencrypt/letsencrypt/issues/2498): The client will display all the changes to users. Users can't specify how many lines to show on their screen. The developer choose to ignore this unresonalable fact to save some time, but now they have to pay their time back. The issue has been closed and they add a parameter to the function to enable specifying how many lines to show
+- issue [#2114](https://github.com/letsencrypt/letsencrypt/issues/2114): Now, when the letsencrypt-auto fails, the client won't show what exactly fails to the client. Most programs have trace back features while letsecnrypt doesn't. I believe it is the developers who choose to ignore such needs of the client, just for convenience, they choose to do it quick and dirty. It is also a technical debt which they have to pay back.
+
+
 ##How developers deal with technical debt
 #Conclusions
 #References
