@@ -74,6 +74,29 @@ By default, the following locations are searched:
 All flags used by the client can be configured, including RSA key size, registed e-mail address, specified domains which generate certificates for, text interface or ncurses, standalone authenticator, webroot authenticator.
 
 #Technical Debt
+The concept of technical debt refers to the accumulated consequences of the quick but dirty design into an evolving software program (Fowler, 2014). In other words, the danger occurs when people rush software by simply adding features into the program but never reflect their understanding of those features. As the “debt” accumulates, the complexity of maintaining the programs to reduce its deterioration to the whole software increases (Cunningham, 2011).
+
+##Documentation
+For open source projects, the contribution of open source communities behind the huge development of the project is very evident. So it is very important that a transparent documentation system is followed in such community projects. Without proper documentation it is very difficult for other developers to understand the code developed by any user and to reuse the code or make it more efficient.Unfortunately, for Let's Encrypt, they do not provide a well-structured documentation for developers. 
+- No architecture and module information, which makes understanding of how the project works and how the module connect with each other difficult to understand.
+- Only few files have comments, which may leads confusion for certain code.
+
+The above aspects make it difficult for developers not in their team to contribute to the project.
+
+##File Organization
+A well-structured file organization could help project develop, Let's encrypt is a pretty new project and still have some trouble in this aspect.
+- issue [#2155](https://github.com/letsencrypt/letsencrypt/issues/2155):Now, the renewal contain paths relative to config\_dir, it is useful to contains such path, but for convenience they ignore it, this may save some time at the first place, but now they have to pay the time back. They decide to do some change and add the path to config_dir now.
+
+##User Friendly
+A good user experience is important for the software, and a crucial first step in achieving this is deploying a user-friendly interface. For Let's Encrypt, user mostly interact with the software when deploy `letsencrypt` for their own website, this progress in done mainly in terminal. This process is not user friendly enough.
+- issue [#2498](https://github.com/letsencrypt/letsencrypt/issues/2498): The client will display all the changes to users. Users can't specify how many lines to show on their screen. The developer choose to ignore this unresonalable fact to save some time, but now they have to pay their time back. The issue has been closed and they add a parameter to the function to enable specifying how many lines to show
+- issue [#2114](https://github.com/letsencrypt/letsencrypt/issues/2114): Now, when the letsencrypt-auto fails, the client won't show what exactly fails to the client. Most programs have trace back features while letsecnrypt doesn't. I believe it is the developers who choose to ignore such needs of the client, just for convenience, they choose to do it quick and dirty. It is also a technical debt which they have to pay back.
+
+
+##How developers deal with technical debt
+For technical debt, developers always find it via Issues, discuss it and try to find a better solution to fix it. For the technical debt and related issues we mentioned above [#2155](https://github.com/letsencrypt/letsencrypt/issues/2155), [#2498](https://github.com/letsencrypt/letsencrypt/issues/2498) and [#2114](https://github.com/letsencrypt/letsencrypt/issues/2114) they use this kind of method to manage their technical debt. 
 #Conclusions
 #References
-- Cairns, C., Allen, S. (2015), [Managing technical debt](https://18f.gsa.gov/2015/10/05/managing-technical-debt/), United States Government, 
+- Cairns, C., Allen, S. (2015), [Managing technical debt](https://18f.gsa.gov/2015/10/05/managing-technical-debt/).
+- Fowler, M. (2014), [TechnicalDebtQuadrant](http://martinfowler.com/bliki/TechnicalDebt.html).
+- Cunningham, W. (2011), [Ward Explains Debt Metaphor](http://c2.com/cgi/wiki?WardExplainsDebtMetaphor).
