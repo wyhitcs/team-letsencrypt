@@ -2,6 +2,18 @@
 #Introduction
 The developer view describes the architecture that supports the software development process. For Let's Encrypt, the developer view communicate the aspects of the architecture of interest to stakeholders from the building, testing, maintaining and enhancing the project.
 #Common Design Model
+##Common Processing
+- **Instruction parser**: 
+The parser analyzes the received instructions with the same preset procedure: it uses a sequence of "if" to figure out what kind of instruction it is and then put the parameters into an argument list. Therefore, the parser is an independ module.
+- **ACME Objects**: 
+ACME components contain all protocal specific code. Whenever a module calls ACME Objects, the procedure is always the same and therefore, it is feasible to put ACME Objects in an isolated module.
+- **Plugin**: 
+More than three plugins are used to facilitate support for different webservers (i.e. apache, nginx). There are also IDisplay plugins, which implement bindings to alternative UI libraries.
+- **Configuration**:
+Configuration file can be specified with *letsencrypt-auto --config cli.ini* to change options such as the user's email address.
+
+##Standard Design Approaches
+##Common Software
 
 #Module Structure Model
 ![ModuleStructure](https://github.com/delftswa2016/team-letsencrypt/blob/master/D2/module.structure.png)
@@ -116,6 +128,7 @@ A good user experience is important for the software, and a crucial first step i
 ##How developers deal with technical debt
 For technical debt, developers always find it via Issues, discuss it and try to find a better solution to fix it. For the technical debt and related issues we mentioned above [#2155](https://github.com/letsencrypt/letsencrypt/issues/2155), [#2498](https://github.com/letsencrypt/letsencrypt/issues/2498) and [#2114](https://github.com/letsencrypt/letsencrypt/issues/2114) they use this kind of method to manage their technical debt. 
 #Conclusions
+There are many common process which are often used in the project, the developer wrapper them into different modules. That lead to the current appearance of the let's encrypt. The project are divided into 4 layers,i.e. user layers, parser layers, functional layer and platform layer. The structure of the project is well designed but there are still something are done "quick and dirty". The developers complete some codes in an inappropriate place for saving some time. But at least they have to spend some time fix them. That is the so called technical debt. That includes: inappropriate UI configuration, terrible exception trace back.
 #References
 - Nick, R., Eoin, W. (2012), Software Systems Architecture
 - Cairns, C., Allen, S. (2015), [Managing technical debt](https://18f.gsa.gov/2015/10/05/managing-technical-debt/).
