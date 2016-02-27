@@ -75,6 +75,11 @@ All flags used by the client can be configured, including RSA key size, registed
 
 #Technical Debt
 ##Documentation
+For open source projects, the contribution of open source communities behind the huge development of the project is very evident. So it is very important that a transparent documentation system is followed in such community projects. Without proper documentation it is very difficult for other developers to understand the code developed by any user and to reuse the code or make it more efficient.Unfortunately, for Let's Encrypt, they do not provide a well-structured documentation for developers. 
+- No architecture and module information, which makes understanding of how the project works and how the module connect with each other difficult to understand.
+- Only few files have comments, which may leads confusion for certain code.
+
+The above aspects make it difficult for developers to contribute to the project
 ##How developers deal with technical debt
 #Conclusions
 #References
