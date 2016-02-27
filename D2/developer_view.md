@@ -3,13 +3,15 @@
 The developer view describes the architecture that supports the software development process. For Let's Encrypt, the developer view communicate the aspects of the architecture of interest to stakeholders from the building, testing, maintaining and enhancing the project.
 #Common Design Model
 ##Common Processing
-- Parser instruction: 
-Whenever, receive instruction from users the parser analyze it with same preset procedure: let's encrypt use a sequence of "if" to figure out what kind of instruction it is and find out the parameters passing by the instruction and form them into argument list...So all content about parser are put into a single module.
-- ACME Objects: 
-ACME components are represented as ACME Objects in let's encrypt. Whatever modules call ACME Object, the procedure are same, so it is feasible to put ACME Object in an isolated module (and the developers do so)
-- Plugin: 
-different kind of plugin has their own common process so they are put into different package in Plugin in Module (i.e. apache, nginx)
-
+- **Instruction parser**: 
+The parser analyzes the received instructions with the same preset procedure: it uses a sequence of "if" to figure out what kind of instruction it is and then put the parameters into an argument list. Therefore, the parser is an independ module.
+- **ACME Objects**: 
+ACME components contain all protocal specific code. Whenever a module calls ACME Objects, the procedure is always the same and therefore, it is feasible to put ACME Objects in an isolated module.
+- **Plugin**: 
+More than three plugins are used to facilitate support for different webservers (i.e. apache, nginx). There are also IDisplay plugins, which implement bindings to alternative UI libraries.
+- **Configuration**:
+Configuration file can be specified with *letsencrypt-auto --config cli.ini* to change options such as the user's email address.
+ 
 #Module Structure Model
 #Codeline Model
 In this section code structure of letsencrypt will be explored. Build, Integration, Test and Release Approach also matters a lot in understanding the project organization. In addition, Technical Debt is also analyzed.
