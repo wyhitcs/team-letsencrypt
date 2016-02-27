@@ -5,6 +5,7 @@ The developer view describes the architecture that supports the software develop
 
 #Module Structure Model
 ![ModuleStructure](https://github.com/delftswa2016/team-letsencrypt/blob/master/D2/module.structure.png)
+
 The UML component diagram below gives an overview of module structure. Each package means a code module and arrow shows intermodule dependencies[1].
 The first layer which is also the closest layer to users offers friendly UI for common clients to set up their own certificates. And the command way is also possible for developers to contribute to the project. 
 Receiving commands from upper layer, the coordinator module tries to check the compatibility to ensure the job can be done in certain environment. After that, the commands are parsed by parser and functions offered in next layer are recalled.
