@@ -7,6 +7,7 @@ The developer view describes the architecture that supports the software develop
 In this section code structure of letsencrypt will be explored. Build, Integration, Test and Release Approach also matters a lot in understanding the project organization. In addition, Technical Debt is also analyzed.
 
 ##Source Code Structure
+![SourceCodeStructure](https://github.com/delftswa2016/team-letsencrypt/blob/master/D2/code.structure.png)
 - **acme** - ACME protocol implementation in Python.
   - **jose** - Implementation of the standards developed by “JavaScript Object Signing and Encyption”.
   - **\*.py** - Implementation of the ACME protocal objects.
