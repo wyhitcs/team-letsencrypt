@@ -16,6 +16,26 @@ Generally it is sufficient to open a pull request and let Github and Travis run 
 Test the changes, all changes in pull request must have thorough unit test coverage, pass Let's Encrypt's integration tests, and be compliant with the coding style. Let's Encrypt recommend `tox` and `ipdb` for testing and debugging.
 
 ##Release Process
+Let's Encrypt release packages and upload them to PyPI (wheels and source tarballs).
+
+- https://pypi.python.org/pypi/acme
+- https://pypi.python.org/pypi/letsencrypt
+- https://pypi.python.org/pypi/letsencrypt-apache
+- https://pypi.python.org/pypi/letsencrypt-nginx
+- https://pypi.python.org/pypi/letshelp-letsencrypt
+
+The following scripts are used in the process:
+
+- https://github.com/letsencrypt/letsencrypt/blob/master/tools/dev-release.sh
+- https://gist.github.com/kuba/b9a3a2ca3bd35b8368ef
+Let's Encrypt currently version as 0.0.0.devYYYYMMDD, and will change at GA time to the following scheme:
+
+- 0.1.0
+- 0.2.0dev for developement in master
+- 0.2.0 (only temporarily in master)
+- ...
+
+Tracking issue for non-dev release scripts: https://github.com/letsencrypt/letsencrypt/issues/1185
 ##Configuration Management
 #Technical Debt
 #Conclusions
