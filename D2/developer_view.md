@@ -74,6 +74,8 @@ By default, the following locations are searched:
 All flags used by the client can be configured, including RSA key size, registed e-mail address, specified domains which generate certificates for, text interface or ncurses, standalone authenticator, webroot authenticator.
 
 #Technical Debt
+##Documentation
+##How developers deal with technical debt
 #Conclusions
 #References
 - Cairns, C., Allen, S. (2015), [Managing technical debt](https://18f.gsa.gov/2015/10/05/managing-technical-debt/), United States Government, 
