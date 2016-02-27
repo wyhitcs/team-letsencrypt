@@ -19,7 +19,7 @@ Configuration file can be specified with *letsencrypt-auto --config cli.ini* to 
  - **Authenticators**: Prove client deserves a certificate for some domain name by solving challenges received from the ACME server.
  - **Installer**: Setup the certificate in a server, possibly tweak the security configuration to make it more correct and secure. 
  
- -Current client is still in a developer-preview stage, the API may undergo a few changes. Community is still develop it and welcome other developer to contribute.
+-Current client is still in a developer-preview stage, the API may undergo a few changes. Community is still develop it and welcome other developer to contribute.
  
 ##Common Software
 Travis CI provides continuous integration service to build and test software projects hosted at Github. In this way, integrators can transit a great amount of his/her own work to the quality evaluation tools like Travis.
