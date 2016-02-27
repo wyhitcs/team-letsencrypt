@@ -28,8 +28,8 @@ The following scripts are used in the process:
 
 - https://github.com/letsencrypt/letsencrypt/blob/master/tools/dev-release.sh
 - https://gist.github.com/kuba/b9a3a2ca3bd35b8368ef
-Let's Encrypt currently version as 0.0.0.devYYYYMMDD, and will change at GA time to the following scheme:
 
+Let's Encrypt currently version as 0.0.0.devYYYYMMDD, and will change at GA time to the following scheme:
 - 0.1.0
 - 0.2.0dev for developement in master
 - 0.2.0 (only temporarily in master)
