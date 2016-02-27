@@ -2,6 +2,13 @@
 #Introduction
 The developer view describes the architecture that supports the software development process. For Let's Encrypt, the developer view communicate the aspects of the architecture of interest to stakeholders from the building, testing, maintaining and enhancing the project.
 #Common Design Model
+##Common Processing
+-parser instruction
+Whenever, receive instruction from users the parser analyze it with same preset procedure: let's encrypt use a sequence of "if" to figure out what kind of instruction it is and find out the parameters passing by the instruction and form them into argument list...So all content about parser are put into a single module.
+-ACME Objects
+ACME components are represented as ACME Objects in let's encrypt. Whatever modules call ACME Object, the procedure are same, so it is feasible to put ACME Object in an isolated module (and the developers do so)
+-Plugin
+different kind of plugin has their own common process so they are put into different package in Plugin in Module (i.e. apache, nginx)
 
 #Module Structure Model
 #Codeline Model
