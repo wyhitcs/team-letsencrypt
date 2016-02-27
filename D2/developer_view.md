@@ -4,6 +4,8 @@ The developer view describes the architecture that supports the software develop
 
 #Module Structure Model
 #Codeline Model
+In this section code structure of letsencrypt will be explored. Build, Integration, Test and Release Approach also matters a lot in understanding the project organization. In addition, Technical Debt is also analyzed.
+
 ##Source Code Structure
 ##Build, Integration and Test Approach
 Let's Encrypt has an offical workfolw for build, integrate and test for developers.
