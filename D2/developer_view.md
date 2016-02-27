@@ -67,4 +67,4 @@ All flags used by the client can be configured, including RSA key size, registed
 #Technical Debt
 #Conclusions
 #References
-- Cairns, C., Allen, S. (2015), Managing technical debt, United States Government, https://18f.gsa.gov/2015/10/05/managing-technical-debt/
+- Cairns, C., Allen, S. (2015), [Managing technical debt](https://18f.gsa.gov/2015/10/05/managing-technical-debt/), United States Government, 
