@@ -13,16 +13,8 @@ More than three plugins are used to facilitate support for different webservers 
 Configuration file can be specified with *letsencrypt-auto --config cli.ini* to change options such as the user's email address.
 
 ##Standard Design Approaches
-The design of Let’s encrypt is based on plugin architecture, the interfaces available for plugins to implement are defined in [interfaces.py](https://github.com/letsencrypt/letsencrypt/blob/master/letsencrypt/interfaces.py) and [plugins/common.py](https://github.com/letsencrypt/letsencrypt/blob/master/letsencrypt/plugins/common.py#L34). The “plugin” in `letsencrypt` is as follows:
-- **Configurator**:  Implement the`IAuthenticator` and `IInstaller` interfaces.
-- **IDisplay**:  Implement bindings to alternative UI libraries.
-- **Authenticators**: Prove client deserves a certificate for some domain name by solving challenges received from the ACME server.
-- **Installer**: Setup the certificate in a server, possibly tweak the security configuration to make it more correct and secure. 
-
-Current client is still in a developer-preview stage, the API may undergo a few changes. Community is still develop it and welcome other developer to contribute.
-
 ##Common Software
-Travis CI provides continuous integration service to build and test software projects hosted at Github. In this way, integrators can transit a great amount of his/her own work to the quality evaluation tools like Travis.
+
 #Module Structure Model
 #Codeline Model
 In this section code structure of letsencrypt will be explored. Build, Integration, Test and Release Approach also matters a lot in understanding the project organization. In addition, Technical Debt is also analyzed.
@@ -117,6 +109,7 @@ A good user experience is important for the software, and a crucial first step i
 ##How developers deal with technical debt
 For technical debt, developers always find it via Issues, discuss it and try to find a better solution to fix it. For the technical debt and related issues we mentioned above [#2155](https://github.com/letsencrypt/letsencrypt/issues/2155), [#2498](https://github.com/letsencrypt/letsencrypt/issues/2498) and [#2114](https://github.com/letsencrypt/letsencrypt/issues/2114) they use this kind of method to manage their technical debt. 
 #Conclusions
+There are many common process which are often used in the project, the developer wrapper them into different modules. That lead to the current appearance of the let's encrypt. The project are divided into 4 layers,i.e. user layers, parser layers, functional layer and platform layer. The structure of the project is well designed but there are still something are done "quick and dirty". The developers complete some codes in an inappropriate place for saving some time. But at least they have to spend some time fix them. That is the so called technical debt. That includes: inappropriate UI configuration, terrible exception trace back.
 #References
 - Cairns, C., Allen, S. (2015), [Managing technical debt](https://18f.gsa.gov/2015/10/05/managing-technical-debt/).
 - Fowler, M. (2014), [TechnicalDebtQuadrant](http://martinfowler.com/bliki/TechnicalDebt.html).
