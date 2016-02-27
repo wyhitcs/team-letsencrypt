@@ -11,7 +11,9 @@ ACME components contain all protocal specific code. Whenever a module calls ACME
 More than three plugins are used to facilitate support for different webservers (i.e. apache, nginx). There are also IDisplay plugins, which implement bindings to alternative UI libraries.
 - **Configuration**:
 Configuration file can be specified with *letsencrypt-auto --config cli.ini* to change options such as the user's email address.
- 
+
+##Standard Design Approaches
+##Common Software
 #Module Structure Model
 #Codeline Model
 In this section code structure of letsencrypt will be explored. Build, Integration, Test and Release Approach also matters a lot in understanding the project organization. In addition, Technical Debt is also analyzed.
