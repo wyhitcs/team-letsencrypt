@@ -39,11 +39,18 @@ In this section code structure of letsencrypt will be explored. Build, Integrati
 Let's Encrypt has an offical workfolw for build, integrate and test for developers.
 
 ###Build
-Firstly, run the client in developer mode from local tree. Secondly, find the open issues in the github issue tracker, and start work on something, post a comment to let others know and seek feedback on the plan where appropriate. Once the developer got a working branch, he/she can open a pull request. 
+Let's Encrypt supports multiple operating systems. Users can install client according to their requirements. However, developers should have their own local copies based on their platform and run the client in developer mode from local tree for technical test.  
+
 ###Integration
-Generally it is sufficient to open a pull request and let Github and Travis run integration tests for you. However, if developer prefer to run tests, they can use `Vagrant`, using the Vagrantfile in Let’s Encrypt’s repository.  
+To contribute to Let's Encrypt project, developers have to follow the strict integration process made by project team.
+- Developers can firstly find open issues in the github issue tracker or post new issues for their own idea.
+- Then developers start to work on the problem, post a comment to let others know and seek feedback on the plan where appropriate.
+- Once the developer gets a working branch, he/she can open a pull request. All changes in pull request must pass complete test. Generally it is sufficient to open a pull request and let Github and Travis run integration tests for you. However, if developers prefer to run tests, they can use Vagrant, using the Vagrantfile in Let’s Encrypt’s repository. 
+- Let's Encrypt integrator will review the pull request and make a decision to merge or not.
+
 ###Test
-Test the changes, all changes in pull request must have thorough unit test coverage, pass Let's Encrypt's integration tests, and be compliant with the coding style. Let's Encrypt recommend `tox` and `ipdb` for testing and debugging.
+Before merging the changes in pull requests, all of them must have thorough unit test coverage, pass Let's Encrypt's integration tests, and be compliant with the coding style. This is done by popular online testing platform Travis CI. 
+And developers can also do their own test before posting a request. Tox is recommended as official tools for running a full set of test like config file parsing test. For debugging, ipdb is introduced to execlude a series of faults.
 
 ##Release Process
 Let's Encrypt release packages and upload them to PyPI (wheels and source tarballs).
