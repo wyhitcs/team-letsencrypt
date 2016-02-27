@@ -13,7 +13,16 @@ More than three plugins are used to facilitate support for different webservers 
 Configuration file can be specified with *letsencrypt-auto --config cli.ini* to change options such as the user's email address.
 
 ##Standard Design Approaches
+-The design of Let’s encrypt is based on plugin architecture, the interfaces available for plugins to implement are defined in [interfaces.py](https://github.com/letsencrypt/letsencrypt/blob/master/letsencrypt/interfaces.py) and [plugins/common.py](https://github.com/letsencrypt/letsencrypt/blob/master/letsencrypt/plugins/common.py#L34). The “plugin” in `letsencrypt` is as follows:
+ -- **Configurator**:  Implement the`IAuthenticator` and `IInstaller` interfaces.
+ -- **IDisplay**:  Implement bindings to alternative UI libraries.
+ -- **Authenticators**: Prove client deserves a certificate for some domain name by solving challenges received from the ACME server.
+ -- **Installer**: Setup the certificate in a server, possibly tweak the security configuration to make it more correct and secure. 
+ 
+ -Current client is still in a developer-preview stage, the API may undergo a few changes. Community is still develop it and welcome other developer to contribute.
+ 
 ##Common Software
+Travis CI provides continuous integration service to build and test software projects hosted at Github. In this way, integrators can transit a great amount of his/her own work to the quality evaluation tools like Travis.
 
 #Module Structure Model
 #Codeline Model
