@@ -4,6 +4,8 @@ The developer view describes the architecture that supports the software develop
 #Common Design Model
 
 #Module Structure Model
+![ModuleStructure](https://github.com/delftswa2016/team-letsencrypt/blob/master/D2/module.structure.png)
+
 #Codeline Model
 In this section code structure of letsencrypt will be explored. Build, Integration, Test and Release Approach also matters a lot in understanding the project organization. In addition, Technical Debt is also analyzed.
 
