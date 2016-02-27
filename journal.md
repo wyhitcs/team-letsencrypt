@@ -25,3 +25,22 @@ The task for the first week is planned as follow:
 - Find out people to contact
 - Disscuss the Context view
 - Finish the draft of D1
+
+#Week 3-D2
+
+###Group Meeting 24-02-2016(2.5h)
+- Discuss the content of Assignment 2
+- Discuss the book Chapter 20
+- Read let's encrypt documentation, ACME protocal
+
+###Group Meeting 26-02-2016(2h)
+- Discuss the feedback of D1 report
+- Analyze the structure of the source code
+- Analyze the module dependency by using PyCharm
+
+###Group Meeting 27-02-2016(8.5h)
+- Analyze the module structure model
+- Draw the source code structure 
+- Analyze technical debt
+- Disscuss the Common design model
+- Finish the draft of D2
