@@ -6,7 +6,7 @@ The developer view describes the architecture that supports the software develop
 #Module Structure Model
 ![ModuleStructure](https://github.com/delftswa2016/team-letsencrypt/blob/master/D2/module.structure.png)
 
-The UML component diagram below gives an overview of module structure. Each package means a code module and arrow shows intermodule dependencies[1].
+The UML component diagram below gives an overview of module structure. Each package means a code module and arrow shows intermodule dependencies(Nick, 2012).
 
 The first layer which is also the closest layer to users offers friendly UI for common clients to set up their own certificates. And the command way is also possible for developers to contribute to the project. 
 
@@ -117,6 +117,7 @@ A good user experience is important for the software, and a crucial first step i
 For technical debt, developers always find it via Issues, discuss it and try to find a better solution to fix it. For the technical debt and related issues we mentioned above [#2155](https://github.com/letsencrypt/letsencrypt/issues/2155), [#2498](https://github.com/letsencrypt/letsencrypt/issues/2498) and [#2114](https://github.com/letsencrypt/letsencrypt/issues/2114) they use this kind of method to manage their technical debt. 
 #Conclusions
 #References
+- Nick, R., Eoin, W. (2012), Software Systems Architecture
 - Cairns, C., Allen, S. (2015), [Managing technical debt](https://18f.gsa.gov/2015/10/05/managing-technical-debt/).
 - Fowler, M. (2014), [TechnicalDebtQuadrant](http://martinfowler.com/bliki/TechnicalDebt.html).
 - Cunningham, W. (2011), [Ward Explains Debt Metaphor](http://c2.com/cgi/wiki?WardExplainsDebtMetaphor).
