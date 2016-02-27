@@ -37,6 +37,13 @@ Let's Encrypt currently version as 0.0.0.devYYYYMMDD, and will change at GA time
 
 Tracking issue for non-dev release scripts: https://github.com/letsencrypt/letsencrypt/issues/1185
 ##Configuration Management
+To ensure repeatability and technical integrity, Let's encrypt define a configuration file. It is possible to specify configuration file with `letsencrypt-auto --config cli.ini` (or shorter `-c cli.ini`).
+By default, the following locations are searched:
+- `/etc/letsencrypt/cli.ini`
+- `$XDG_CONFIG_HOME/letsencrypt/cli.ini` (or `~/.config/letsencrypt/cli.ini` if `$XDG_CONFIG_HOME` is not set).
+
+All flags used by the client can be configured, including RSA key size, registed e-mail address, specified domains which generate certificates for, text interface or ncurses, standalone authenticator, webroot authenticator.
+
 #Technical Debt
 #Conclusions
 #References
