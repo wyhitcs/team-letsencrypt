@@ -48,7 +48,7 @@ In this section code structure of letsencrypt will be explored. Build, Integrati
 
 
 ##Build, Integration and Test Approach
-Let's Encrypt has an offical workfolw for build, integrate and test for developers.
+To provide developers a convenient environment and also protect project source version, Let's Encrypt has an offical workflow for building, integrating and testing. 
 
 ###Build
 Let's Encrypt supports multiple operating systems. Users can install client according to their requirements. However, developers should have their own local copies based on their platform and run the client in developer mode from local tree for technical test.  
