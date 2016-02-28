@@ -44,3 +44,9 @@ The task for the first week is planned as follow:
 - Analyze technical debt
 - Disscuss the Common design model
 - Finish the draft of D2
+
+###Group Meeting 28-02-2016(3h)
+- Fix a number of typos and language faults
+- Discuss the potential contributions to the project and make a plan
+- Sum up the work of week 3 and write conclusion
+- Merge related branches 
