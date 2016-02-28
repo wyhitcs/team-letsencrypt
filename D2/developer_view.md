@@ -1,6 +1,6 @@
 
 #Introduction
-The developer view describes the architecture that supports the software development process. For Let's Encrypt, the developer view communicate the aspects of the architecture of interest to stakeholders from the building, testing, maintaining and enhancing the project.
+The development view describes the architecture that supports the software development process. The development view communicates the aspects of the architecture of interest to stakeholders from the building, testing, maintaining and enhancing the project(). Based on this, the following article shows the common design model, module structure model and code line model of Let's Encrypt which give a technical overview of whole project. To learn more details, each model is attached with complete descrption. In addition, technical debt of the project and coresponding solution or plan are described at the end of report.
 #Common Design Model
 ##Common Processing
 - **Instruction parser**: 
