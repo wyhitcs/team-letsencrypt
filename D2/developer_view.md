@@ -67,7 +67,20 @@ In this section, code structure of letsencrypt will be explored. Build, Integrat
 
 - **tools** - Include .sh files which are frequently used.
 
+##Coding Style
+The developers of Let's Encrypt follow the **Google Python Style Guide**, And use **Sphinx-style** for documentation. 'pylint' is used to check coding style.
+```
+def foo(arg):
+    """Short description.
 
+    :param int arg: Some number.
+
+    :returns: Argument
+    :rtype: int
+
+    """
+    return arg
+```
 ##Build, Integration and Test Approach
 To provide developers a convenient environment and also protect project source version, Let's Encrypt has an offical workflow for building, integrating and testing. 
 
