@@ -118,7 +118,7 @@ A good user experience is important for the software, and a crucial first step i
 ##How developers deal with technical debt
 For technical debt, developers always find it via Issues, discuss it and try to find a better solution to fix it. For the technical debt and related issues we mentioned above [#2155](https://github.com/letsencrypt/letsencrypt/issues/2155), [#2498](https://github.com/letsencrypt/letsencrypt/issues/2498) and [#2114](https://github.com/letsencrypt/letsencrypt/issues/2114) they use this kind of method to manage their technical debt. 
 #Conclusions
-As shown above, the let's encrypt project have good common design model, good standard design approaches. However, there are many drawbacks. First, let's encrypt has a crappy developer documents. As a new comer it is very hard to see the whole picture of the project, let alone contribute to it. Second, the client is not user friendly, and it is also hard to install (it is designed to be easy to install, but in fact it usually crash without any trace back information, that is some kinds of technical debts, the developers still have no idea to thoroughly solve it. 
+
 - Cairns, C., Allen, S. (2015), [Managing technical debt](https://18f.gsa.gov/2015/10/05/managing-technical-debt/).
 - Fowler, M. (2014), [TechnicalDebtQuadrant](http://martinfowler.com/bliki/TechnicalDebt.html).
 - Cunningham, W. (2011), [Ward Explains Debt Metaphor](http://c2.com/cgi/wiki?WardExplainsDebtMetaphor).
