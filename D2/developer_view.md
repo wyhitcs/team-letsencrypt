@@ -1,6 +1,6 @@
 
 #Introduction
-The developer view describes the architecture that supports the software development process. For Let's Encrypt, the developer view communicate the aspects of the architecture of interest to stakeholders from the building, testing, maintaining and enhancing the project.
+The development view describes the architecture that supports the software development process. The development view communicates the aspects of the architecture of interest to stakeholders from the building, testing, maintaining and enhancing the project(Nick, 2012). Based on this, the following article shows the common design model, module structure model and code line model of Let's Encrypt which give a technical overview of whole project. To learn more details, each model is attached with complete descrption. In addition, technical debt of the project and coresponding solution or plan are described at the end of report.
 #Common Design Model
 ##Common Processing
 - **Instruction parser**: 
@@ -137,11 +137,12 @@ A good user experience is important for the software, and a crucial first step i
 ##How developers deal with technical debt
 For technical debt, developers always find it via Issues, discuss it and try to find a better solution to fix it. For the technical debt and related issues we mentioned above [#2155](https://github.com/letsencrypt/letsencrypt/issues/2155), [#2498](https://github.com/letsencrypt/letsencrypt/issues/2498) and [#2114](https://github.com/letsencrypt/letsencrypt/issues/2114) they use this kind of method to manage their technical debt. 
 #Conclusions
-There are many common process which are often used in the project, the developer wrapper them into different modules. That lead to the current appearance of the let's encrypt. The project are divided into 4 layers,i.e. user layers, parser layers, functional layer and platform layer. The structure of the project is well designed but there are still something are done "quick and dirty". The developers complete some codes in an inappropriate place for saving some time. But at least they have to spend some time fix them. That is the so called technical debt. That includes: inappropriate UI configuration, terrible exception trace back.
+As shown above, the let's encrypt project have good common design model, good standard design approaches. However, there are many drawbacks. First, let's encrypt has a crappy developer documents. As a new comer it is very hard to see the whole picture of the project, let alone contribute to it. Second, the client is not user friendly, and it is also hard to install (it is designed to be easy to install, but in fact it usually crash without any trace back information, that is some kinds of technical debts, the developers still have no idea to thoroughly solve it. 
+
 #References
 - Nick, R., Eoin, W. (2012), Software Systems Architecture
 - Cairns, C., Allen, S. (2015), [Managing technical debt](https://18f.gsa.gov/2015/10/05/managing-technical-debt/).
 - Fowler, M. (2014), [TechnicalDebtQuadrant](http://martinfowler.com/bliki/TechnicalDebt.html).
 - Cunningham, W. (2011), [Ward Explains Debt Metaphor](http://c2.com/cgi/wiki?WardExplainsDebtMetaphor).
-- lfam (2016),[Packaging](https://github.com/letsencrypt/letsencrypt/wiki/Packaging)
-- Let's Encrypt Project, (2015)[Let’s Encrypt client documentation!](https://letsencrypt.readthedocs.org/en/latest/index.html)
+- lfam (2016), [Packaging](https://github.com/letsencrypt/letsencrypt/wiki/Packaging)
+- Let's Encrypt Project (2015), [Let’s Encrypt client documentation!](https://letsencrypt.readthedocs.org/en/latest/index.html)
