@@ -38,7 +38,7 @@ As the core layer of whole project, the third layer offers important functions t
 There’s no doubt that all previous code is based on python library which is included the bottom layer. In addition, OpenSSL, a software library to be used to secure communications against eavesdropping or to ascertain the identity of the party at the other end, is also the base of authentication process .
 
 #Codeline Model
-In this section code structure of letsencrypt will be explored. Build, Integration, Test and Release Approach also matters a lot in understanding the project organization. In addition, Technical Debt is also analyzed.
+In this section, code structure of letsencrypt will be explored. Build, Integration, Test and Release Approach also matters a lot in understanding the project organization. In addition, Technical Debt is also analyzed.
 
 ##Source Code Structure
 ![SourceCodeStructure](https://github.com/delftswa2016/team-letsencrypt/blob/master/D2/code.structure.png)
@@ -144,3 +144,5 @@ As shown above, the let's encrypt project have good common design model, good st
 - Cairns, C., Allen, S. (2015), [Managing technical debt](https://18f.gsa.gov/2015/10/05/managing-technical-debt/).
 - Fowler, M. (2014), [TechnicalDebtQuadrant](http://martinfowler.com/bliki/TechnicalDebt.html).
 - Cunningham, W. (2011), [Ward Explains Debt Metaphor](http://c2.com/cgi/wiki?WardExplainsDebtMetaphor).
+- lfam (2016),[Packaging](https://github.com/letsencrypt/letsencrypt/wiki/Packaging)
+- Let's Encrypt Project, (2015)[Let’s Encrypt client documentation!](https://letsencrypt.readthedocs.org/en/latest/index.html)
