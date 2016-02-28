@@ -57,7 +57,7 @@ In this section, code structure of letsencrypt will be explored. Build, Integrat
 
 
 ##Build, Integration and Test Approach
-Let's Encrypt has an offical workfolw for build, integrate and test for developers.
+Let's Encrypt has an offical workflow for build, integrate and test for developers.
 
 ###Build
 Firstly, run the client in developer mode from local tree. Secondly, find the open issues in the github issue tracker, and start work on something, post a comment to let others know and seek feedback on the plan where appropriate. Once the developer got a working branch, he/she can open a pull request. 
