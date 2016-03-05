@@ -36,19 +36,79 @@ Variability Perspective
 ===========================
 ##Introduction
 
+According to (Sven, 2013), a feature is a characteristic or end-user-visible behavior of a software system. Features are used in product-line engineering to specify and communicate commonalities and differences of the products between stakeholders, and to guide structure, reuse, and variation across all phases of the software life cycle. In this section,  a series of features for Let’s Encrypt are identified and commented. In addition, they are classified into five different parts.
+
 ##Variable Features
 
 ###Feature List
 
+####Environment
+
+The first part concerns about the environment that the software runs in. 
+
+- OS support: Let’s encrypt supports multiple Unix-ish Operating Systems including Arch, Debian, FreeBSD, etc. Based on user’s system, Let’s Encrypt will install automatically, or user can manually choose his OS.
+
+- Python-version support: The Let’s Encrypt Client presently only runs on Unix-ish OSes that include Python 2.6 or 2.7; Python 3.x support will be added after the Public Beta launch.
+
+####Client(GUI)
+
+- UI/Command switch: Let’s Encrypt supports ncurses and text (-t) UI, or can be driven entirely from the command line. Users can choose according to their requirements.
+
+- Notification of configuration change: As a user, you can switch on/off notification of change, for example, if you change the storage path of some files, there should be some notification for the change by default, but you can choose to close this function. And a result of your certificate generation will also be shown on window.
+
+- User authority: There are two levels for authority, ’user’ and ’super-user’ (developer), in ’user’ mode you are not allowed to use some instructions and some information are hidden. In ’super-user’ level, all functions are open.
+
+- Virtual Environment: To implement some functions, Let’s Encrypt allow users to use virtualenv (virtual environment package), while you can choose not to use it.
+
+- Usage (As plugin or client): With no doubt, Let’s encrypt can serve as an independent application. Additionally, it can also serve as a third party module in other applications which means that users use it as a plugin.
+
+- Input method: User can choose to input arguments for functions from keyboard or from a file.
+
+####Plugin
+
+- Web server support: Let’s Encrypt client supports a number of different “plugins” that can be used to obtain and/or install certificates. Plugins that can obtain a specified certificate are called “authenticators” and can be used with the “certonly” command. Plugins that can install a cert are called “installers”. Apache, Nginx and webroot are plugins currently supported.
+
+####Configuration
+
+- Logging-level: The application is setup using serilog for logging. There are many logger levels like debug and customer. In customer level, some detail information are hidden to prevent ’noise’, but in debug level you can see more information.
+
+- Allow specifying Encryption algorithm: ACME protocol enables multiple kinds of encryption algorithm like RSA and MD5. As an implementation of ACME, Let’s encrypt enable those algorithms as well.
+
+- Editable Certificate and key storage path: After installing, the path to store your certificate has been specified by default setting, but users are allow to edit it and assign another path.
+
+- Editable Log file storage path: After installing, the path of the log documents has been specified by default setting, but users are allow to edit it and assign it another path.
+
+- Personal profile: The most important information of your profile is your email address and users have to offer an effective profile when apply for a certificate. And also they are allow to edit it.
+
+- Multiple Challenge solution: There are many ways to solve challenges (so that you can prove you own a certain domain name):Simple HTTP/DVSNI/ private key/DNS verification. By default Let’s encrypt will choose one of them by preset algorithms but you can also specify it manually.
+
+- Optional update way (Manual or automatic): Once there is a newer version of let’s encrypt released, the Let’s Encrypt in user’s machine will update itself automatically, but you can also choose to disable automatically update and do it manually
+
+- Optional ACME compliant services: As an implementation of ACME, Let’s Encrypt supports not only Let’s Encrypt CA but also other ACME compliant services. User can set up their choice in command.
+
+- Optional redirect: Optionally install a http -> https redirect. Once user finish SSL certificate, browsers  can use https instead of http. User can  choose use only or a hybrid strategy (http and https are both valid)  by changing the configuration.
+
+####Function
+
+- Verification: Let’s Encrypt currently supports two kinds of verification, Domain-Validated (DV) and Organization-Validated (OV) Certificate. Users can choose according to their requirements.
+
+- Revocation: It is common that when user lose the ownership of the server he needs to revoke the certificate issued before. And this is possible to complete this task in Let’s Encrypt.
+
+- Adjustable key bit-length: Because users have different requirement for key bit-length, it is possible to change it in Let’s Encrypt while 2048 is default value.
+
+- Valid period: Considering about the safety of server and users who log in their web, the certificate is not permanently valid and owners must update it when expiring. In Let’s Encrypt, a certificate is valid for 90 days.
+
+- Email notification: For good user experience, Let’s Encrypt records the registration date of certificate and kindly remind user to update their certificates by email when 30 days rest for validity.
+
 ###Feature Relationships
 
-### Feature Model
+###Feature Model
 
-### Feature Binding Time
+###Feature Binding Time
 
-## Implementation Strategy
+##Implementation Strategy
 
-## Evolution History
+##Evolution History
 
 ###Variability Mechanism
 
@@ -57,7 +117,7 @@ Variability Perspective
 ##Reference
 - Slides lecture February 26th
 
-- Sven Apel, Don Batory, Christian Kästner, Gunter Saake. Feature-Oriented Software Product Lines. 
+- Sven Apel, Don Batory, Christian Kästner, Gunter Saake (2013). Feature-Oriented Software Product Lines. 
 
 - Rozanski and Woods' _Evolution Perspective_ (chapter 28, variation points, p. 556 (digital book p. 523)). 
 
