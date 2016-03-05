@@ -31,3 +31,32 @@ As for D1, and
 
 * Clear and compelling description of the importance of the variability in your project as listed above.
 * Adequate treatment of the questions asked.
+
+Variability Perspective
+===========================
+##Introduction
+
+##Variable Features
+
+###Feature List
+
+###Feature Relationships
+
+### Feature Model
+
+### Feature Binding Time
+
+## Implementation Strategy
+
+## Evolution History
+
+###Variability Mechanism
+
+###Configurable Features
+
+##Reference
+- Slides lecture February 26th
+- 
+- Sven Apel, Don Batory, Christian Kästner, Gunter Saake. Feature-Oriented Software Product Lines. 
+- 
+- Rozanski and Woods' _Evolution Perspective_ (chapter 28, variation points, p. 556 (digital book p. 523)). 
