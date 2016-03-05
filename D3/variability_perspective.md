@@ -60,3 +60,5 @@ Variability Perspective
 - Sven Apel, Don Batory, Christian Kästner, Gunter Saake. Feature-Oriented Software Product Lines. 
 
 - Rozanski and Woods' _Evolution Perspective_ (chapter 28, variation points, p. 556 (digital book p. 523)). 
+
+- Lee, J., & Hwang, S. (2014). A review on variability mechanisms for product lines. International Journal of Advanced Media and Communication, 5(2-3), 172-181.
