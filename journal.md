@@ -50,3 +50,15 @@ The task for the first week is planned as follow:
 - Discuss the potential contributions to the project and make a plan
 - Sum up the work of week 3 and write conclusion
 - Merge related branches 
+
+#Week 4-D3
+
+###Group Meeting 01-03-2016(3.0h)
+- Discuss the content of Assignment 3
+- Fix the Context View according to the feedback 
+- Prepare for the pitch
+
+###Group Meeting 05-03-2016(10h)
+- Depoly the virtual server bought from Vultr
+- Dicuss the feature variability
+- Complete feature model using featureIDE
