@@ -100,9 +100,20 @@ The first part concerns about the environment that the software runs in.
 
 - Email notification: For good user experience, Let’s Encrypt records the registration date of certificate and kindly remind user to update their certificates by email when 30 days rest for validity.
 
-###Feature Relationships
+###Stakeholders related
+There are two stakeholders affected by listed features:
 
-###Feature Model
+Users: Users are the stakeholders affected most, because each creation and change of features are done for better user experience. 
+
+Developers: Developers are also related to these features. By accept suggestions and issues posted by others (users or developers), developers try to make Let’s Encrypt more flexible and robust.
+
+###Feature Dependencies and Model
+
+Mainly all features can be classified into four categories, environment, client, plugin and configuration. Among them, there are dependencies, which means that some features depend on others. For example, users have to choose “SuperUser” authority in order to enter debug mode, choose challenge solution and manual update method. 
+
+In addition, there are several constraints between plugin and configuration features. Configuration feature relies on the specified server choice that are Nginx and Apache. Furthermore, currently users can install a “http -> https” redirect, so their site effectively runs https only, however, this relies on the plugin of Apache server.
+
+Finally, it’s convenient for users to get a kind email notification about the expiring date of certificate, which is surely related to the valid period of cert.
 
 ###Feature Binding Time
 
