@@ -103,59 +103,80 @@ The first part concerns about the environment that the software runs in.
 ###Feature Model
 
 ###Feature Binding Time
-####Environment:(Manda)
--OS support:
-run-time binding, will be determined after deployed to a machine
--Python-version support: 
-run time binding, can be determined after deployed to a machine, the let’s encrypt will automatically detect what versions of python are running in the machine
-####Client (GUI):(Manda)
--UI/Command switch: 
-Compile time binding, this feature can not be disable after deployed to a machine.
--Notification of configuration change: 
-run time binding, this can be disable/enable by user specifying
--User authority:
-compile time binding, the let’s encrypt will always have two authority level: user/super user, you can not add new level or remove one of the two level.
--Virtual Environment: 
-run time binding, can enable/disable by user specifying after deployment to a machine
--multiple Usage: As plugin or client
-compile time binding, you can not specify it after deployment to your computers
--Input method:
-run time binding, can be specified by users by instructions
-####Plugin:(Option)
--Web server support: 
-compile time binding, it will always support web servers like apache, nginx, users can not disable this feature
 
+####Environment
 
+- OS support:
+run-time binding, determined after deployed to a machine.
+- Python-version support: 
+run time binding, determined after deployed to a machine and Let’s encrypt will automatically detect what versions of python are running in the machine.
 
-####Configuration:(Manda)
--multiple Logging-level:
-run time binding, users can switch the log level using command line interface.
--Allow specifying Encryption algorithm: 
-run time binding, users can disable it after deployment
--Editable Certificate and key storage path:
-run time binding, users can change the storage path after the deployment of let’s encrypt, they can also disable this feature by allow let’s encrypt to use default configuration
--Editable Log file storage path:
-run time binding, users can change the storage path after the deployment of let’s encrypt, they can also disable this feature by allow let’s encrypt to use default configuration
--Personal profile:
-run time binding, users can edit their profile after installing let’s encrypt
--Multiple Challenge solution: 
-run time binding, users can manually select a way to solve challenge.
--Optional update way: Manual or automatic
-run time binding, can be determined by users after installing let’s encrypt
--Optional ACME compliant services:
-run time binding, users can select other CAs (not only let’s encrypt CA) to trust.
--Optional redirect: optionally install a http -> https redirect
-run time binding. Can be switched between http/https at anytime after geting SSL certificates.
--Verification method: 
-run time binding, the users can choose to do Domain verification (DV) or Organization verification (OV)
--Revocation: 
-Run time binding, users can do revocation any time they like
--Adjustable key bit-length: 
-run time binding, the length can be specified after deployment to users’ machine
--Valid period: 
+####Client (GUI)
+
+- UI/Command switch: 
+compile time binding, unable to be disabled after deployed to a machine.
+
+- Notification of configuration change: 
+run time binding, can be disabled or enabled by user.
+
+- User authority:
+compile time binding, with two authority level: user and super user.
+
+- Virtual Environment: 
+run time binding, can be enabled or disabled by user after deployed to a machine.
+
+- multiple Usage: 
+compile time binding, unable to be specified after deployed to user's computer.
+
+- Input method:
+run time binding, can be specified by users using command line.
+
+####Plugin:
+- Web server support: 
+compile time binding, always support web servers like apache, nginx.
+
+####Configuration:
+- Multiple Logging-level:
+run time binding, log level can be switched by command line.
+
+- Allow specifying Encryption algorithm: 
+run time binding, can be disabled after deployed to a machine.
+
+- Editable Certificate and key storage path:
+run time binding, storage path can be changed after deployment and this feature can even be disabled by user.
+
+- Editable Log file storage path:
+run time binding, storage path can be changed after deployment and this feature can even be disabled by user.
+
+- Personal profile:
+run time binding, users can edit their profile after installation.
+
+- Multiple Challenge solution: 
+run time binding, users can manually select a way to solve the challenge.
+
+- Optional update way: 
+run time binding, can be determined by users after installation.
+
+- Optional ACME compliant services:
+run time binding, users can select other CAs (not only Let’s encrypt CA) to trust.
+
+- Optional redirect: 
+run time binding, can be switched between http/https at anytime after getting SSL certificates.
+
+- Verification method: 
+run time binding, users can choose to do Domain verification (DV) or Organization verification (OV).
+
+- Revocation: 
+run time binding, users can do revocation at any time.
+
+- Adjustable key bit-length: 
+run time binding, the length can be specified after deployed to user's machine
+
+- Valid period: 
 compile time binding, the valid period can not be determined by users.
-Email notification: 
-compile time binding, for safety concerns, users are not allow to disable this feature.
+
+- Email notification: 
+compile time binding, users are not allow to disable this feature.
 
 
 ##Implementation Strategy
