@@ -108,6 +108,7 @@ The first part concerns about the environment that the software runs in.
 
 - OS support:
 run-time binding, determined after deployed to a machine.
+
 - Python-version support: 
 run time binding, determined after deployed to a machine and Let’s encrypt will automatically detect what versions of python are running in the machine.
 
