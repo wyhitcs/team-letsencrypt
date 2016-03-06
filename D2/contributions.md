@@ -7,7 +7,7 @@ This problem is already an issue [#2114](https://github.com/letsencrypt/letsencr
 
 #Contributions
 
-1.  Fix format problem of Documentation [#2612](https://github.com/letsencrypt/letsencrypt/pull/2612)
+1) Fix format problem of Documentation [#2612](https://github.com/letsencrypt/letsencrypt/pull/2612)
 We found a display error in Let's encrypt document at website ["Read the Docs"](http://letsencrypt.readthedocs.org/en/latest/using.html?highlight=mail#webroot). This is a command line exceeds the border of the browser window:
 
 ``letsencrypt certonly --webroot -w /var/www/example/ -d www.example.com -d example.com -w /var/www/other -d other.example.net -d another.other.example.net``
