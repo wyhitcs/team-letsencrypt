@@ -82,6 +82,8 @@ In addition, there are several constraints between plugin and configuration feat
 
 Finally, it’s convenient for users to get a kind email notification about the expiring date of certificate, which is surely related to the valid period of cert.
 
+![Feature Dependencies and Model](https://github.com/delftswa2016/team-letsencrypt/blob/master/D3/Feature.Model.png)
+
 ###Feature Binding Time
 
 Features in Let's Encrypt are with different binding times, most features at run time, others at compile time.
