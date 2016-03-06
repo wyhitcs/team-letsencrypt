@@ -62,3 +62,8 @@ The task for the first week is planned as follow:
 - Depoly the virtual server bought from Vultr
 - Dicuss the feature variability
 - Complete feature model using featureIDE
+
+###Group Meeting 06-03-2016(5h)
+- Discuss the binding time of the features
+- Identify implement strategy of variability and configurability
+- Analyze the evolution history of variability and configurability
