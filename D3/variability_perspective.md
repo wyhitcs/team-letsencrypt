@@ -149,11 +149,9 @@ By default, the following locations are searched:
 - `$XDG_CONFIG_HOME/letsencrypt/cli.ini` (or `~/.config/letsencrypt/cli.ini` if `$XDG_CONFIG_HOME is not set`).
 
 
-##Evolution History
+##Evolution History of Variability and Configurability
 
-###Variability Mechanism
 
-###Configurable Features
 
 ##Reference
 - Slides lecture February 26th
