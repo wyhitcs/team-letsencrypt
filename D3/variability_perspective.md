@@ -104,80 +104,82 @@ The first part concerns about the environment that the software runs in.
 
 ###Feature Binding Time
 
+Features in Let's Encrypt are with different binding times, most features at run time, others at compile time.
+
 ####Environment
 
 - OS support:
-run-time binding, determined after deployed to a machine.
+**run time binding**, determined after deployed to a machine.
 
 - Python-version support: 
-run time binding, determined after deployed to a machine and Let’s encrypt will automatically detect what versions of python are running in the machine.
+**run time binding**, determined after deployed to a machine and Let’s encrypt will automatically detect what versions of python are running in the machine.
 
 ####Client (GUI)
 
 - UI/Command switch: 
-compile time binding, unable to be disabled after deployed to a machine.
+**compile time binding**, unable to be disabled after deployed to a machine.
 
 - Notification of configuration change: 
-run time binding, can be disabled or enabled by user.
+**run time binding**, can be disabled or enabled by user.
 
 - User authority:
-compile time binding, with two authority level: user and super user.
+**compile time binding**, with two authority level: user and super user.
 
 - Virtual Environment: 
-run time binding, can be enabled or disabled by user after deployed to a machine.
+**run time binding**, can be enabled or disabled by user after deployed to a machine.
 
-- multiple Usage: 
-compile time binding, unable to be specified after deployed to user's computer.
+- Multiple Usage: 
+**compile time binding**, unable to be specified after deployed to user's computer.
 
 - Input method:
-run time binding, can be specified by users using command line.
+**run time binding**, can be specified by users using command line.
 
 ####Plugin:
 - Web server support: 
-compile time binding, always support web servers like apache, nginx.
+**compile time binding**, always support web servers like apache, nginx.
 
 ####Configuration:
 - Multiple Logging-level:
-run time binding, log level can be switched by command line.
+**run time binding**, log level can be switched by command line.
 
 - Allow specifying Encryption algorithm: 
-run time binding, can be disabled after deployed to a machine.
+**run time binding**, can be disabled after deployed to a machine.
 
 - Editable Certificate and key storage path:
-run time binding, storage path can be changed after deployment and this feature can even be disabled by user.
+**run time binding**, storage path can be changed after deployment and this feature can even be disabled by user.
 
 - Editable Log file storage path:
-run time binding, storage path can be changed after deployment and this feature can even be disabled by user.
+**run time binding**, storage path can be changed after deployment and this feature can even be disabled by user.
 
 - Personal profile:
-run time binding, users can edit their profile after installation.
+**run time binding**, users can edit their profile after installation.
 
 - Multiple Challenge solution: 
-run time binding, users can manually select a way to solve the challenge.
+**run time binding**, users can manually select a way to solve the challenge.
 
 - Optional update way: 
-run time binding, can be determined by users after installation.
+**run time binding**, can be determined by users after installation.
 
 - Optional ACME compliant services:
-run time binding, users can select other CAs (not only Let’s encrypt CA) to trust.
+**run time binding**, users can select other CAs (not only Let’s encrypt CA) to trust.
 
 - Optional redirect: 
-run time binding, can be switched between http/https at anytime after getting SSL certificates.
+**run time binding**, can be switched between http/https at anytime after getting SSL certificates.
 
 - Verification method: 
-run time binding, users can choose to do Domain verification (DV) or Organization verification (OV).
+**run time binding**, users can choose to do Domain verification (DV) or Organization verification (OV).
 
 - Revocation: 
-run time binding, users can do revocation at any time.
+**run time binding**, users can do revocation at any time.
 
 - Adjustable key bit-length: 
-run time binding, the length can be specified after deployed to user's machine
+**run time binding**, the length can be specified after deployed to user's machine
 
 - Valid period: 
-compile time binding, the valid period can not be determined by users.
+**compile time binding**, the valid period can not be determined by users.
 
 - Email notification: 
-compile time binding, users are not allow to disable this feature.
+**compile time binding**, users are not allow to disable this feature.
 
 
 ##Implementation Strategy
