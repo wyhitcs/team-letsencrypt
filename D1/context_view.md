@@ -1,4 +1,5 @@
 Context View
+
 Context View describes the relationships, dependencies and interactions between the system and its environment(Nick,2012). 
 ===========================
 ###System scope and Responsibilities
