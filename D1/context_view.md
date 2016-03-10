@@ -1,7 +1,7 @@
-Context View
+##Context View
 
 Context View describes the relationships, dependencies and interactions between the system and its environment(Nick,2012). 
-===========================
+
 ###System scope and Responsibilities
 
 The responsibility of Let's Encrypt includes a series functions provided by the system for users.
