@@ -27,26 +27,26 @@ We identify 5 major kinds of  and an additional kind of stakeholders for letsenc
 - **Acquirers**:
 Acquirers are the ones who launch and organize the developing of let’s encrypt.  Estimate the needs of users and set goals of developers.
 For let’s encrypt, there are 3 acquirers:
-•	Electonic Frontier Foundation
-•	Mozilla Foundation
-•	University of Michigan
+- [Electonic Frontier Foundation](https://www.eff.org/)
+- [Mozilla Foundation](https://www.mozilla.org/en-US/)
+- [University of Michigan](https://en.wikipedia.org/wiki/University_of_Michigan)
 The Electonic Frontier Foundation is the most important acquirers who provides most of labor to let’s encrypt.
 Mozilla Foundation and University Michigan also have personnel devoting into this project.
 **Developers:**
 Developers are the one who devote themselves directly to the project. In let’s encrypt, the developers are mainly programmers who do coding jobs.
 There are 165 contributors for let’s encrypt, we only list the most important contributors below, they are the major developers of let’s encrypt.
-•	Liam Marshall
-•	bmw
-•	Felix Rieseberg
-•	Francois Marier
-•	Harlan Lieberman-Berg
-•	Joona Hoikkala
-•	Jacob Hoffman-Andrews
-•	Jakub Warmuz
-•	Martin Thomson
-•	Peter Eckersley
-•	Roland Bracewell Shoemaker
-•	Sagi Kedmi
+- [Liam Marshall](https://github.com/ArchimedesPi)
+- [bmw](https://github.com/bmw)
+- [Felix Rieseberg](https://github.com/felixrieseberg)
+- [Francois Marier](https://github.com/fmarier)
+- [Harlan Lieberman-Berg](https://github.com/hlieberman)
+- [Joona Hoikkala](https://github.com/joohoi)
+- [Jacob Hoffman-Andrews](https://github.com/jsha)
+- [Jakub Warmuz](https://github.com/kuba)
+- [Martin Thomson](https://github.com/martinthomson)
+- [Peter Eckersley](https://github.com/pde)
+- [Roland Bracewell Shoemaker](https://github.com/rolandshoemaker)
+- [Sagi Kedmi](https://github.com/sagi)
 
 This developer team includes the people who technically contribute to the Let's Encrypt project. Because the project is built a short time before (Dec 3, 2015) and still in progress, developers may also do test and maintaining jobs. For example, ´bmw´ who develops the client also responds to issues or pull requests from others. Without doubt, the team is the core of whole project.
 
@@ -55,16 +55,16 @@ Users are those who use the products. For let’s encrypt, the users are all web
 
 **Sponsors:**
 Sponsors are those who provides financial support for a project. For let’s encrypt, the sponsors are those who provides financial supports for programmers. The major sponsors are listed below:
-•	Mozilla
-•	Akamai
-•	Cisco
-•	Electronic Frontier Foundation
-•	OVH
-•	Chrome
+- [Mozilla](https://www.mozilla.org/)
+- [Akamai](http://www.akamai.com/)
+- [Cisco](http://www.cisco.com/)
+- [Electronic Frontier Foundation](https://www.eff.org/)
+- [OVH](https://www.ovh.com/)
+- [Chrome](https://www.google.com/chrome/)
 Mozilla and Chrome are famous web browsers. Cisco is most important router producers, Electronic Frontier Foundation is the organization which launch let’s encrypt developing. OVH is an Internet Service Provider providing dedicated servers, shared and cloud hosting, domain registration, and VOIP telephony services. Akamai is famous Content Delivery Network providers.
 
 **Additional Stakeholder**
-•	IdenTrust (Root certificate provider)
+- [IdenTrust](https://www.identrust.com/) (Root certificate provider)
 We need to explain the concept of Root Certificate Providers. A certificate  provider is a root certificate provider if and only if: 1.it can authorize other organizations to be new certificate providers; 2. It doesn’t need any other organization to authorize it to be certificate providers, in the other words, it is born to be certificate providers.
 For example, a Certificate providers A can authorize organization B to be a new certificate provider. Later, B can authorize C to be a new certificate provider in this case, A is the so called certificate Providers.
 IdenTrust is a Root Certificate Provider who authorize let’s encrypt.
