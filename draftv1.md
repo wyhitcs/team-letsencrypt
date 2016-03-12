@@ -794,3 +794,23 @@ Let’s Encrypt uses `tox` for testing.
 When making changes, it is always best to receive bad news as early as possible. 
 Travis CI is used to do automated testing for every pull request to Let’s Encrypt project before merging. 
 They set up project in multiple Python versions(2.6,2.7,3.3,3.4,3.5) and multiple plugins. [(links to `.travis.yml` for letsencrypt)](https://github.com/letsencrypt/letsencrypt/blob/master/.travis.yml)
+
+##References
+
+- Nick, R., Eoin, W. (2012), Software Systems Architecture
+
+- Cairns, C., Allen, S. (2015), [Managing technical debt](https://18f.gsa.gov/2015/10/05/managing-technical-debt/).
+
+- Fowler, M. (2014), [TechnicalDebtQuadrant](http://martinfowler.com/bliki/TechnicalDebt.html).
+
+- Cunningham, W. (2011), [Ward Explains Debt Metaphor](http://c2.com/cgi/wiki?WardExplainsDebtMetaphor).
+
+- lfam (2016), [Packaging](https://github.com/letsencrypt/letsencrypt/wiki/Packaging)
+
+- Let's Encrypt Project (2015), [Let’s Encrypt client documentation!](https://letsencrypt.readthedocs.org/en/latest/index.html)
+
+- Slides lecture February 26th
+
+- Sven Apel, Don Batory, Christian Kästner, Gunter Saake (2013). Feature-Oriented Software Product Lines.
+
+- Lee, J., & Hwang, S. (2014). A review on variability mechanisms for product lines. International Journal of Advanced Media and Communication, 5(2-3), 172-181.
