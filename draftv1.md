@@ -377,17 +377,17 @@ For developers, they could use this kind of tools to detect duplicates and then 
 
 - Documentation: The developers are professionals who may not be aware of the not sufficient documentation, but they are willing to fix it when users make an issue on the github as what they did in issue [#2216] (https://github.com/letsencrypt/letsencrypt/issues/2216) and [#2271](https://github.com/letsencrypt/letsencrypt/issues/2271).
 
-##2.4 Variability Perspective
+##2.5 Variability Perspective
 
 In (Sven, 2013), variability describes the ability to derive different products from a common set of artifacts. It is important for a good software to equip with variability to adapt to different environments, which largely satisfies the requirements of different stakeholders. Without doubt, Let’s Encrypt is such a software in developing. In the first section of report, a list of features and dependencies are given. A related model is built upon this. Additionally, the implementation and binding time of features are presented. Finally, the strategy to realize variabilities is posted.
 
 In (Sven, 2013), evolution is defined as the process of dealing with change in the system development lifecycle. After a series changes, Let’s Encrypt is desired to be more flexible for users. In the second section, the evolution history of  Let’s Encrypt is given and related issues are analyzed.
 
-###2.4.1 Variable Features
+###2.5.1 Variable Features
 
 According to (Sven, 2013), a feature is a characteristic or end-user-visible behavior of a software system. Features are used in product-line engineering to specify and communicate commonalities and differences of the products between stakeholders, and to guide structure, reuse, and variation across all phases of the software life cycle. In this section,  a series of features for Let’s Encrypt are identified and commented. In addition, they are classified into four different parts.
 
-####2.4.1.1 Feature List
+####2.5.1.1 Feature List
 
 ##### **Environment**
 
@@ -446,14 +446,14 @@ The first part concerns about the environment that the software runs in.
 - Email notification: For good user experience, Let’s Encrypt records the registration date of certificate and kindly remind user to update their certificates by email when 30 days rest for validity.
 
 
-####2.4.1.2 Stakeholders Related
+####2.5.1.2 Stakeholders Related
 There are two stakeholders affected by listed features:
 
 Users: Users are the stakeholders affected most, because each creation and change of features are done for better user experience. 
 
 Developers: Developers are also related to these features. By accept suggestions and issues posted by others (users or developers), developers try to make Let’s Encrypt more flexible and robust.
 
-####2.4.1.3 Feature Dependencies and Model
+####2.5.1.3 Feature Dependencies and Model
 
 Mainly all features can be classified into four categories, environment, client, plugin and configuration. Among them, there are dependencies, which means that some features depend on others. For example, users have to choose “SuperUser” authority in order to enter debug mode, choose challenge solution and manual update method. 
 
@@ -465,7 +465,7 @@ Finally, it’s convenient for users to get a kind email notification about the 
 
                                            Figure 2.3. Feature Dependencies and Model
  
-####2.4.1.4 Feature Binding Time
+####2.5.1.4 Feature Binding Time
 
 Features in Let's Encrypt are with different binding times, most features at run time, others at compile time.
 
@@ -544,13 +544,13 @@ Features in Let's Encrypt are with different binding times, most features at run
 - Email notification: 
 **compile time binding**, users are not allow to disable this feature.
 
-###2.4.2 Implementation Strategy
+###2.5.2 Implementation Strategy
 
-####2.4.2.1 Interface Design
+####2.5.2.1 Interface Design
 
 The key to implement variability and configurability is using interface. All the interfaces need to be implemented are stored in the file `interface.py`. In the [developer guide](https://letsencrypt.readthedocs.org/en/latest/contributing.html) announce that what interface should be implemented by a specific kind of class. The interface.py and the developer guide together draw a outline for the let’s encrypt: what configuration can be done, what parameter can be specified, what Operation System it should support, what plugin it should support. Hence the variability and configurability has been implemented.
 
-####2.4.2.2 Configuration File
+####2.5.2.2 Configuration File
 
 It is possible to specify configuration file with letsencrypt-auto --config cli.ini (or shorter -c cli.ini). In the configuration file, users could change the length of RSA key, registered e-mail address, domains need certification, text interface or ncurses, authenticator, etc. An example configuration file is shown below:
 
@@ -588,7 +588,7 @@ By default, the following locations are searched:
 
 - `$XDG_CONFIG_HOME/letsencrypt/cli.ini` (or `~/.config/letsencrypt/cli.ini` if `$XDG_CONFIG_HOME is not set`).
 
-###2.4.3 Evolution History of Variability and Configurability
+###2.5.3 Evolution History of Variability and Configurability
 
 The Let’s Encrypt had already included many features in the first released version. More features are added in the following releases. The contributions focus mainly on the support for Operation Systems, different versions of python, improvements of configuration file and command line flags, support for new plugins, and implementations of more ACME challenge solutions. 
 
