@@ -389,7 +389,7 @@ According to (Sven, 2013), a feature is a characteristic or end-user-visible beh
 
 ####2.4.1.1 Feature List
 
-#####2.4.1.1.1 Environment
+##### **Environment**
 
 The first part concerns about the environment that the software runs in. 
 
@@ -397,7 +397,7 @@ The first part concerns about the environment that the software runs in.
 
 - Python-version support: The Let’s Encrypt Client presently only runs on Unix-ish OSes that include Python 2.6 or 2.7; Python 3.x support will be added after the Public Beta launch.
 
-#####2.4.1.1.2 Client(GUI)
+##### **Client(GUI)**
 
 - UI/Command switch: Let’s Encrypt supports ncurses and text (-t) UI, or can be driven entirely from the command line. Users can choose according to their requirements.
 
@@ -411,11 +411,11 @@ The first part concerns about the environment that the software runs in.
 
 - Input method: User can choose to input arguments for functions from keyboard or from a file.
 
-#####2.4.1.1.3 Plugin
+##### **Plugin**
 
 - Web server support: Let’s Encrypt client supports a number of different “plugins” that can be used to obtain and/or install certificates. Plugins that can obtain a specified certificate are called “authenticators” and can be used with the “certonly” command. Plugins that can install a cert are called “installers”. Apache, Nginx and webroot are plugins currently supported.
 
-#####2.4.1.1.4 Configuration
+##### **Configuration**
 
 - Logging-level: The application is setup using serilog for logging. There are many logger levels like debug and customer. In customer level, some detail information are hidden to prevent ’noise’, but in debug level you can see more information.
 
@@ -469,7 +469,7 @@ Finally, it’s convenient for users to get a kind email notification about the 
 
 Features in Let's Encrypt are with different binding times, most features at run time, others at compile time.
 
-#####2.4.1.4.1 Environment
+##### **Environment**
 
 - OS support:
 **run time binding**, determined after deployed to a machine.
@@ -477,7 +477,7 @@ Features in Let's Encrypt are with different binding times, most features at run
 - Python-version support: 
 **run time binding**, determined after deployed to a machine and Let’s encrypt will automatically detect what versions of python are running in the machine.
 
-#####2.4.1.4.2 Client (GUI)
+##### **Client (GUI)**
 
 - UI/Command switch: 
 **compile time binding**, unable to be disabled after deployed to a machine.
@@ -497,11 +497,11 @@ Features in Let's Encrypt are with different binding times, most features at run
 - Input method:
 **run time binding**, can be specified by users using command line.
 
-#####2.4.1.4.3 Plugin
+##### **Plugin**：
 - Web server support: 
 **compile time binding**, always support web servers like apache, nginx.
 
-#####2.4.1.4.4 Configuration:
+##### **Configuration**:
 - Multiple Logging-level:
 **run time binding**, log level can be switched by command line.
 
