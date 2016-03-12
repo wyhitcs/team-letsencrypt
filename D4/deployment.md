@@ -8,6 +8,28 @@ In this part, we will introduce a series of constraints about Let’s Encrypt in
 
 ##Third Party Software Requirements
 
+Identifying third party software requirements is essential for both developers and users. 
+For developers, they can clearly know what tools or libraries are available for further use. 
+Users can know what is exactly needed to apply such software on their environments. 
+
+For Let’s  Encrypt, following softwares are required to be installed on user machine:
+
+- **Python**: Python programming language;
+
+- **OpenSSL**: a software library implementing the Secure Sockets Layer (SSL) and Transport Layer Security (TLS) protocols;
+
+- **ACME**: Automatic Certificate Management Environment (ACME) protocol implementation in Python;
+
+- **ConfigArgParse**: Python command-line parsing library;
+
+- **Python Package Index (PyPI)**: a tool to help package and share Python modules;
+
+- **cryptography**: a package which provides cryptographic recipes and primitives to Python developers;
+
+- **psutil**: a cross-platform library for retrieving information on running processes and system utilization;
+
+
+
 ##Technology Compatibility
 
 1. **Python**: It is required to use Python 2.6 or 2.7, while Python 3.x support is currently not available. When installing Let’s Encrypt, it will automatically check the version of Python in user environment and install it if there is no proper library.  
