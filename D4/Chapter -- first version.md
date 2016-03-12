@@ -1,3 +1,105 @@
+Our Chapter -- First Version
+----------------------------
+
+#Background Knowledge
+
+##SSL/TLS
+Transport Layer Security Protocol (TLS) and its prodecessor -- Secure Socket Layer Protocol (SSL) are both referred to as “SSL”, these two protocols aim to provide encryption for communication between two parties, but in SSL/TLS communications, the server side need to provide a Digital Certificate (for convenience may be referred to SSL certificate in the rest of this Chapter) to verify its identity (to prove that the server really own a set of domain names like www.google.com, www.paypal.com etc).
+
+##ACME protocol
+ACME refers to Automatic Certificate Management Environment.
+The internet entities (client, servers) have needs to verify identity, but today, the verification are done by some ad-hoc mechanisms which is not suitable for further development of online verification. ACME protocol aims to address such issue. It is a protocol to standarlize and automate the procedure of verification. In other words, it is a bag of procedures by doing which a client can get a digital certificate and a Certificate Authority(CA, we discuss it later) can issue a certificate.
+
+##Certificate authority
+A Certificate Authority is an online organization which can issue a digital certificate for you.  To cooperate with let’s encrypt (we will discuss it later), a certificate should install a software called boulder.  
+
+##Let’s encrypt
+Let’s encrypt is a software implement ACME protocol. It works in this way: when you request a certificate to prove possession of a domain name, let’s encrypt wrap necessary information (your account, the domain name etc) into standard format and send them to boulder of a CA. CA will respond with a challenge, saying that “Since you say you own the domain name xxxxx.com, please add a .txt file containing the string blablabla in the folder aaa/bbb/ccc”. Let’s encrypt will automatically solve this challenge by following the requirement of CA. After solving the challenge, the CA gives you a request.
+
+#Chapter Structure
+In previous Section, we introduce some background knowledge to you and offer a brief on what is let’s encrypt. In this section, we will give you a more comprehensive insight of let’s encrypt. The issues covered in this Section includes: what organization and individuals are involve in let’s encrypt, the inner architecture of let’s encrypt, the deployment of letsencrypt, the variability of let’s encrypt. The evolution of let’s encrypt.
+We will address those issue by Context View, Development View, Deployment View, Variability Perspective, Evolution Perspective.
+
+## Stakeholders and Context View
+Before talking about Context View, we plan to talk something about stakeholder, that will help you better understand context view.
+###Stakeholders
+We identify 5 major kinds of  and an additional kind of stakeholders for letsencrypt:
+- **Acquirers**:
+Acquirers are the ones who launch and organize the developing of let’s encrypt.  Estimate the needs of users and set goals of developers.
+For let’s encrypt, there are 3 acquirers:
+•	Electonic Frontier Foundation
+•	Mozilla Foundation
+•	University of Michigan
+The Electonic Frontier Foundation is the most important acquirers who provides most of labor to let’s encrypt.
+Mozilla Foundation and University Michigan also have personnel devoting into this project.
+**Developers:**
+Developers are the one who devote themselves directly to the project. In let’s encrypt, the developers are mainly programmers who do coding jobs.
+There are 165 contributors for let’s encrypt, we only list the most important contributors below, they are the major developers of let’s encrypt.
+•	Liam Marshall
+•	bmw
+•	Felix Rieseberg
+•	Francois Marier
+•	Harlan Lieberman-Berg
+•	Joona Hoikkala
+•	Jacob Hoffman-Andrews
+•	Jakub Warmuz
+•	Martin Thomson
+•	Peter Eckersley
+•	Roland Bracewell Shoemaker
+•	Sagi Kedmi
+
+This developer team includes the people who technically contribute to the Let's Encrypt project. Because the project is built a short time before (Dec 3, 2015) and still in progress, developers may also do test and maintaining jobs. For example, ´bmw´ who develops the client also responds to issues or pull requests from others. Without doubt, the team is the core of whole project.
+
+**Users:**
+Users are those who use the products. For let’s encrypt, the users are all web servers who use let’s encrypt to request digital certificate for SSL/TLS communication. Now, the users are not too many, but since the let’s encrypt is free and reliable, the number of the users is growing very fast.
+
+**Sponsors:**
+Sponsors are those who provides financial support for a project. For let’s encrypt, the sponsors are those who provides financial supports for programmers. The major sponsors are listed below:
+•	Mozilla
+•	Akamai
+•	Cisco
+•	Electronic Frontier Foundation
+•	OVH
+•	Chrome
+Mozilla and Chrome are famous web browsers. Cisco is most important router producers, Electronic Frontier Foundation is the organization which launch let’s encrypt developing. OVH is an Internet Service Provider providing dedicated servers, shared and cloud hosting, domain registration, and VOIP telephony services. Akamai is famous Content Delivery Network providers.
+
+**Additional Stakeholder**
+•	IdenTrust (Root certificate provider)
+We need to explain the concept of Root Certificate Providers. A certificate  provider is a root certificate provider if and only if: 1.it can authorize other organizations to be new certificate providers; 2. It doesn’t need any other organization to authorize it to be certificate providers, in the other words, it is born to be certificate providers.
+For example, a Certificate providers A can authorize organization B to be a new certificate provider. Later, B can authorize C to be a new certificate provider in this case, A is the so called certificate Providers.
+IdenTrust is a Root Certificate Provider who authorize let’s encrypt.
+
+The graph for major stakeholders are below:
+
+
+
+
+##Context View
+Now we are fully prepared to discuss Context View. This section includes： System Scope;  entities and interfaces; impact to enviroment
+
+###System scope and Responsibilities:
+The responsibility of Let's Encrypt includes a series functions provided by the system for users.
+•	users can register certificate for their server
+•	users can revoke certificate
+•	users can create their own account
+•	
+•	users can modify their profile
+•	users can turn on/off the notice of expiring date of certificate
+•	users can choose which ACME solution to use
+Let's Encrypt is a software concerning network security. Its functions are surely about that. However, what is different is that, it also cares about user experience, the full automation and easy use both highlight this.
+
+
+
+
+
+###Entities, data and interfaces
+**Entities and Interfaces**
+There're ten entities for Let's Encrypt. First, the development of Let's Encrypt is based on GitHub platform. Second, Python is identified as the only language dependency. Third, the community, Freenode, is refered as the platform that developers communicate on. Fourth, as an authority, Let's Encrypt must be qualified with root certificate, which is provided by IdenTrust. Fifth, the release is based on the Python Package Index (PYPI). Sixth, Let's Encrypt extends its support of different servers by adding plugins including Apache, Nginx and Webroot. Seventh, the test part is extended by test tools, Tox and Travis CI online test system. Eighth, the operating system is another entity including a series Unix-ish Operating Systems like Arch, Debian, FreeBSD, etc. Ninth, the users are a large number of websites including blueboard.cz, checkdcmain. Finally, competitors are other softwares based on ACME.
+**Impact of the System on Environment**
+The impact of system on environment concerns about the dependencies of other system on Let's Encrypt and other systems decommissions and data migration. Let's Encrypt can be used as a plugin embedded in other certificate system, thus the performance of such system will depend on Let's Encrypt. Since Let's Encrypt is still deveoping and incomplete, there is no system decommissions because of it. However, because it is free and automatic, it does form a big threat for its competitors. Finally, Let's Encrypt is software independently developed by ISRG. Their code and data including its protocols, plugins and client are all original.
+
+
+
 #Introduction
 
 The development view describes the architecture that supports the software development process. The development view communicates the aspects of the architecture of interest to stakeholders from the building, testing, maintaining and enhancing the project(Nick, 2012). Based on this, the following article shows the common design model, module structure model and code line model of Let's Encrypt which give a technical overview of whole project. To learn more details, each model is attached with complete descrption. In addition, technical debt of the project and coresponding solution or plan are described at the end of report.
@@ -185,13 +287,7 @@ First of all, code duplication causes an increase in software size. Secondly, du
 For open source projects, the contribution of open source communities behind the huge development of the project is very evident. So it is very important that a transparent documentation system is followed in such community projects. Without proper documentation it is very difficult for other developers to understand the code developed by any user and to reuse the code or make it more efficient.Unfortunately, for Let's Encrypt, they do not provide a well-structured documentation for developers. There are 59 issuses labeled `documentation`. No architecture and module information, which makes understanding of how the project works and how the module connect with each other difficult to understand, which makes it difficult for developers not in their team to contribute to the project. In addition, insufficient documentation may also cause troubles for users.
 
 
-##User Friendly
 
-A good user experience is important for the software, and a crucial first step in achieving this is deploying a user-friendly interface. For Let's Encrypt, user mostly interact with the software when deploy `letsencrypt` for their own website, this progress in done mainly in terminal. This process is not user friendly enough.
-
-- issue [#2498](https://github.com/letsencrypt/letsencrypt/issues/2498): The client will display all the changes to users. Users can't specify how many lines to show on their screen. The developer choose to ignore this unresonalable fact to save some time, but now they have to pay their time back. The issue has been closed and they add a parameter to the function to enable specifying how many lines to show
-
-- issue [#2114](https://github.com/letsencrypt/letsencrypt/issues/2114): Now, when the letsencrypt-auto fails, the client won't show what exactly fails to the client. Most programs have trace back features while letsecnrypt doesn't. I believe it is the developers who choose to ignore such needs of the client, just for convenience, they choose to do it quick and dirty. It is also a technical debt which they have to pay back.
 
 
 ##How developers deal with technical debt
