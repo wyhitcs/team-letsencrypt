@@ -119,6 +119,7 @@ competitors are other softwares based on ACME.
 
 
 **Impact of the System on Environment**
+
 The impact of system on environment concerns about the dependencies of other system on Let's Encrypt and other systems decommissions and data migration. Let's Encrypt can be used as a plugin embedded in other certificate system, thus the performance of such system will depend on Let's Encrypt. Since Let's Encrypt is still deveoping and incomplete, there is no system decommissions because of it. However, because it is free and automatic, it does form a big threat for its competitors. Finally, Let's Encrypt is software independently developed by ISRG. Their code and data including its protocols, plugins and client are all original.
 
 ![context view](https://github.com/delftswa2016/team-letsencrypt/blob/master/D1/contextview.png)
