@@ -289,11 +289,11 @@ def foo(arg):
 
 To provide developers a convenient environment and also protect project source version, Let's Encrypt has an offical workflow for building, integrating and testing. 
 
-#####2.3.3.3.1 Build
+##### **Build**
 
 Let's Encrypt supports multiple operating systems. Users can install client according to their requirements. However, developers should have their own local copies based on their platform and run the client in developer mode from local tree for technical test. 
 
-#####2.3.3.3.2 Integration
+##### **Integration**
 
 To contribute to Let's Encrypt project, developers have to follow the strict integration process made by project team.
 
