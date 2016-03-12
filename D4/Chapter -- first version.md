@@ -30,6 +30,7 @@ For let’s encrypt, there are 3 acquirers:
 - [Electonic Frontier Foundation](https://www.eff.org/)
 - [Mozilla Foundation](https://www.mozilla.org/en-US/)
 - [University of Michigan](https://en.wikipedia.org/wiki/University_of_Michigan)
+
 The Electonic Frontier Foundation is the most important acquirers who provides most of labor to let’s encrypt.
 Mozilla Foundation and University Michigan also have personnel devoting into this project.
 **Developers:**
@@ -65,6 +66,7 @@ Mozilla and Chrome are famous web browsers. Cisco is most important router produ
 
 **Additional Stakeholder**
 - [IdenTrust](https://www.identrust.com/) (Root certificate provider)
+
 We need to explain the concept of Root Certificate Providers. A certificate  provider is a root certificate provider if and only if: 1.it can authorize other organizations to be new certificate providers; 2. It doesn’t need any other organization to authorize it to be certificate providers, in the other words, it is born to be certificate providers.
 For example, a Certificate providers A can authorize organization B to be a new certificate provider. Later, B can authorize C to be a new certificate provider in this case, A is the so called certificate Providers.
 IdenTrust is a Root Certificate Provider who authorize let’s encrypt.
