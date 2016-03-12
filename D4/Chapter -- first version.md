@@ -24,7 +24,7 @@ We will address those issue by Context View, Development View, Deployment View, 
 Before talking about Context View, we plan to talk something about stakeholder, that will help you better understand context view.
 ###Stakeholders
 We identify 5 major kinds of  and an additional kind of stakeholders for letsencrypt:
-- **Acquirers**:
+ **Acquirers**:
 Acquirers are the ones who launch and organize the developing of let’s encrypt.  Estimate the needs of users and set goals of developers.
 For let’s encrypt, there are 3 acquirers:
 - [Electonic Frontier Foundation](https://www.eff.org/)
