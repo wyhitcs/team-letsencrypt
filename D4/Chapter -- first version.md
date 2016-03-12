@@ -8,7 +8,7 @@ Transport Layer Security Protocol (TLS) and its prodecessor -- Secure Socket Lay
 
 ##ACME protocol
 ACME refers to Automatic Certificate Management Environment.
-The internet entities (client, servers) have needs to verify identity, but today, the verification are done by some ad-hoc mechanisms which is not suitable for further development of online verification. ACME protocol aims to address such issue. It is a protocol to standarlize and automate the procedure of verification. In other words, it is a bag of procedures by doing which a client can get a digital certificate and a Certificate Authority(CA, we discuss it later) can issue a certificate.
+The internet entities (client, servers) have needs to verify identity, but today, the verification is done by some ad-hoc mechanisms which is not suitable for further development of online verification. ACME protocol aims to address such issue. It is a protocol to standarlize and automate the procedure of verification. In other words, it is a bag of procedures by doing which a client can get a Digital Certificate and a Certificate Authority(CA, we discuss it later) can issue a certificate.
 
 ##Certificate authority
 A Certificate Authority is an online organization which can issue a digital certificate for you.  To cooperate with let’s encrypt (we will discuss it later), a certificate should install a software called boulder.  
