@@ -96,25 +96,25 @@ Let's encrypt provides following features for users.
 ###Entities, data and interfaces
 **Entities and Interfaces**
 There're ten entities for Let's Encrypt. 
--GitHub: 
+- GitHub: 
 the development of Let's Encrypt is based on GitHub platform. 
--Python: 
+- Python: 
 Python is identified as the only language dependency. 
--Freenode: 
+- Freenode: 
 Freenode, is refered as the platform that developers communicate on. 
--IdenTrust: 
+- IdenTrust: 
 as an authority, Let's Encrypt must be authorized by IdenTrust. 
--PYPI:
+- PYPI:
 the release is based on the Python Package Index (PYPI). 
--Plugins: 
+- Plugins: 
 Let's Encrypt extends its support of different servers by adding plugins including Apache, Nginx and Webroot. 
--Test Tools: 
+- Test Tools: 
 the test part is extended by test tools, Tox and Travis CI online test system. 
--Operating System：
+- Operating System：
 the operating system is another entity including a series Unix-ish Operating Systems like Arch, Debian, FreeBSD, etc. 
--Users:
+- Users:
 the users are a large number of websites including blueboard.cz, checkdcmain. 
--Competitors:
+- Competitors:
 competitors are other softwares based on ACME.
 **Impact of the System on Environment**
 The impact of system on environment concerns about the dependencies of other system on Let's Encrypt and other systems decommissions and data migration. Let's Encrypt can be used as a plugin embedded in other certificate system, thus the performance of such system will depend on Let's Encrypt. Since Let's Encrypt is still deveoping and incomplete, there is no system decommissions because of it. However, because it is free and automatic, it does form a big threat for its competitors. Finally, Let's Encrypt is software independently developed by ISRG. Their code and data including its protocols, plugins and client are all original.
