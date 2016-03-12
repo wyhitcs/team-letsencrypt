@@ -68,3 +68,21 @@ The task for the first week is planned as follow:
 - Discuss the binding time of the features
 - Identify implement strategy of variability and configurability
 - Analyze the evolution history of variability and configurability
+
+#Week 5-D4
+
+###Group Meeting 08-03-2016(4h)
+- Give a pitch about our project
+- Discuss other teams' presentation and give some suggestions
+- Discuss about our future work and plan
+
+###Group Meeting 10-03-2016(4h)
+- Discuss the improvement of D1 and D2
+- Fix Context View in D1  
+- Solve several problems about 'technical debt' in D2
+
+###Group Meeting 12-03-2016(9h)
+- Discuss Evolution Perspectives 
+- Discuss Deployment View
+- Integrate previous materials and write the outline
+
