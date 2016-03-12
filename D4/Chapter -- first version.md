@@ -62,6 +62,7 @@ Sponsors are those who provides financial support for a project. For let’s enc
 - [Electronic Frontier Foundation](https://www.eff.org/)
 - [OVH](https://www.ovh.com/)
 - [Chrome](https://www.google.com/chrome/)
+
 Mozilla and Chrome are famous web browsers. Cisco is most important router producers, Electronic Frontier Foundation is the organization which launch let’s encrypt developing. OVH is an Internet Service Provider providing dedicated servers, shared and cloud hosting, domain registration, and VOIP telephony services. Akamai is famous Content Delivery Network providers.
 
 **Additional Stakeholder**
