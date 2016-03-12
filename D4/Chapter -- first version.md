@@ -120,7 +120,7 @@ competitors are other softwares based on ACME.
 
 **Impact of the System on Environment**
 
-The impact of system on environment concerns about the dependencies of other system on Let's Encrypt and other systems decommissions and data migration. Let's Encrypt can be used as a plugin embedded in other certificate system, thus the performance of such system will depend on Let's Encrypt. Since Let's Encrypt is still deveoping and incomplete, there is no system decommissions because of it. However, because it is free and automatic, it does form a big threat for its competitors. Finally, Let's Encrypt is software independently developed by ISRG. Their code and data including its protocols, plugins and client are all original.
+The impact of system on environment concerns about the dependencies of other system on Let's Encrypt and other systems decommissions and data migration. Let's Encrypt can be used as a plugin embedded in other certificate system, thus the performance of such system will depend on Let's Encrypt. Since Let's Encrypt is still deveoping and incomplete, there is no system decommissions because of it. However, because it is free and automatic, it does form a big threat for its competitors. Finally, Let's Encrypt is software independently developed by ISRG (Internet Security Research Group). Their code and data including its protocols, plugins and client are all original.
 
 ![context view](https://github.com/delftswa2016/team-letsencrypt/blob/master/D1/contextview.png)
 
@@ -326,7 +326,7 @@ For developers, they could use this kind of tools to detect duplicates and then 
 
 #Conclusions
 
-As shown above, the let's encrypt project have good common design model, good standard design approaches. However, there are many drawbacks. First, let's encrypt has a crappy developer documents. As a new comer it is very hard to see the whole picture of the project, let alone contribute to it. Second, the client is not user friendly, and it is also hard to install (it is designed to be easy to install, but in fact it usually crash without any trace back information, that is some kinds of technical debts, the developers still have no idea to thoroughly solve it. 
+As shown above, the Let's Encrypt project have good common design model, good standard design approaches. However, there are many drawbacks. First, Let's Encrypt has a crappy developer documents. As a new comer it is very hard to see the whole picture of the project, let alone contribute to it. Second, the client is not user friendly, and it is also hard to install (it is designed to be easy to install, but in fact it usually crash without any trace back information, that is some kinds of technical debts, the developers still have no idea to thoroughly solve it. 
 
 #References
 
@@ -362,7 +362,7 @@ According to (Sven, 2013), a feature is a characteristic or end-user-visible beh
 
 The first part concerns about the environment that the software runs in. 
 
-- OS support: Let’s encrypt supports multiple Unix-ish Operating Systems including Arch, Debian, FreeBSD, etc. Based on user’s system, Let’s Encrypt will install automatically, or user can manually choose his OS.
+- OS support: Let’s Encrypt supports multiple Unix-ish Operating Systems including Arch, Debian, FreeBSD, etc. Based on user’s system, Let’s Encrypt will install automatically, or user can manually choose his OS.
 
 - Python-version support: The Let’s Encrypt Client presently only runs on Unix-ish OSes that include Python 2.6 or 2.7; Python 3.x support will be added after the Public Beta launch.
 
@@ -376,7 +376,7 @@ The first part concerns about the environment that the software runs in.
 
 - Virtual Environment: To implement some functions, Let’s Encrypt allow users to use virtualenv (virtual environment package), while you can choose not to use it.
 
-- Usage (As plugin or client): With no doubt, Let’s encrypt can serve as an independent application. Additionally, it can also serve as a third party module in other applications which means that users use it as a plugin.
+- Usage (As plugin or client): With no doubt, Let’s Encrypt can serve as an independent application. Additionally, it can also serve as a third party module in other applications which means that users use it as a plugin.
 
 - Input method: User can choose to input arguments for functions from keyboard or from a file.
 
@@ -388,7 +388,7 @@ The first part concerns about the environment that the software runs in.
 
 - Logging-level: The application is setup using serilog for logging. There are many logger levels like debug and customer. In customer level, some detail information are hidden to prevent ’noise’, but in debug level you can see more information.
 
-- Allow specifying Encryption algorithm: ACME protocol enables multiple kinds of encryption algorithm like RSA and MD5. As an implementation of ACME, Let’s encrypt enable those algorithms as well.
+- Allow specifying Encryption algorithm: ACME protocol enables multiple kinds of encryption algorithm like RSA and MD5. As an implementation of ACME, Let’s Encrypt enable those algorithms as well.
 
 - Editable Certificate and key storage path: After installing, the path to store your certificate has been specified by default setting, but users are allow to edit it and assign another path.
 
@@ -398,7 +398,7 @@ The first part concerns about the environment that the software runs in.
 
 - Multiple Challenge solution: There are many ways to solve challenges (so that you can prove you own a certain domain name):Simple HTTP/DVSNI/ private key/DNS verification. By default Let’s encrypt will choose one of them by preset algorithms but you can also specify it manually.
 
-- Optional update way (Manual or automatic): Once there is a newer version of let’s encrypt released, the Let’s Encrypt in user’s machine will update itself automatically, but you can also choose to disable automatically update and do it manually
+- Optional update way (Manual or automatic): Once there is a newer version of Let’s Encrypt released, the Let’s Encrypt in user’s machine will update itself automatically, but you can also choose to disable automatically update and do it manually
 
 - Optional ACME compliant services: As an implementation of ACME, Let’s Encrypt supports not only Let’s Encrypt CA but also other ACME compliant services. User can set up their choice in command.
 
@@ -490,7 +490,7 @@ Features in Let's Encrypt are with different binding times, most features at run
 **run time binding**, can be determined by users after installation.
 
 - Optional ACME compliant services:
-**run time binding**, users can select other CAs (not only Let’s encrypt CA) to trust.
+**run time binding**, users can select other CAs (not only Let’s Encrypt CA) to trust.
 
 - Optional redirect: 
 **run time binding**, can be switched between http/https at anytime after getting SSL certificates.
@@ -515,7 +515,7 @@ Features in Let's Encrypt are with different binding times, most features at run
 
 ###Interface Design
 
-The key to implement variability and configurability is using interface. All the interfaces need to be implemented are stored in the file `interface.py`. In the [developer guide](https://letsencrypt.readthedocs.org/en/latest/contributing.html) announce that what interface should be implemented by a specific kind of class. The interface.py and the developer guide together draw a outline for the let’s encrypt: what configuration can be done, what parameter can be specified, what Operation System it should support, what plugin it should support. Hence the variability and configurability has been implemented.
+The key to implement variability and configurability is using interface. All the interfaces need to be implemented are stored in the file `interface.py`. In the [developer guide](https://letsencrypt.readthedocs.org/en/latest/contributing.html) announce that what interface should be implemented by a specific kind of class. The interface.py and the developer guide together draw a outline for the Let’s Encrypt: what configuration can be done, what parameter can be specified, what Operation System it should support, what plugin it should support. Hence the variability and configurability has been implemented.
 
 ###Configuration File
 
