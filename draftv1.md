@@ -16,16 +16,16 @@ A certificate needs to install a software called boulder to enable Let’s Encry
 
 ##1.4 Let’s Encrypt
 
-Let’s encrypt is a software implementing ACME protocol.
+Let’s Encrypt is a software implementing ACME protocol.
 The workflow is summarized as follows: 
-1) when a certificate is requested, let’s encrypt wraps necessary information (the account, the domain name etc) into standard format and sends them to boulder of a CA; 
+1) when a certificate is requested, Let’s Encrypt wraps necessary information (the account, the domain name etc) into standard format and sends them to boulder of a CA; 
 2) CA responds the request with a challenge, saying that “since you claim the ownership of the domain xxxxx.com, please add a .txt file containing the string blablabla in the folder aaa/bbb/ccc”; 
-3) Let’s encrypt will automatically solve this challenge for the client; 
+3) Let’s Encrypt will automatically solve this challenge for the client; 
 4) CA grants a certificate after solving the challenge.
 
 #2. Views and Perspectives
 
-In this section, we present a comprehensive study of let’s encrypt covering the stakeholders, the architecture, the deployment of the software, the variability and the evolution of let’s encrypt.
+In this section, we present a comprehensive study of Let’s Encrypt covering the stakeholders, the architecture, the deployment of the software, the variability and the evolution of Let’s Encrypt.
 
 ##2.1 Stakeholders Analysis
 We identify 6 types of stakeholders for Let's Encrypt.
@@ -36,7 +36,7 @@ Acquirers are the people who launch and organize this project.
 Their job also includes estimating the needs of users and setting goals for developers.
 
 
-For let’s encrypt, there are 3 acquirers:
+For Let’s Encrypt, there are 3 acquirers:
 
 - [Electonic Frontier Foundation](https://www.eff.org/)
 
@@ -45,15 +45,15 @@ For let’s encrypt, there are 3 acquirers:
 - [University of Michigan](https://en.wikipedia.org/wiki/University_of_Michigan)
 
 
-The Electronic Frontier Foundation is the most important acquirers who provides most of labor to let’s encrypt.
+The Electronic Frontier Foundation is the most important acquirers who provides most of labor to Let’s Encrypt.
 Mozilla Foundation and University Michigan also have personnel devoting into this project.
 
 ###2.1.2 Developers
 
 Developers are the people who devote themselves directly to the development of the project.
-For let’s encrypt, the developers are mainly programmers.
+For Let’s Encrypt, the developers are mainly programmers.
 
-There are 165 contributors for let’s encrypt and here we only list the most important ones:
+There are 165 contributors for Let’s Encrypt and here we only list the most important ones:
 
 - @[Liam Marshall](https://github.com/ArchimedesPi)
 
@@ -115,7 +115,7 @@ A certificate provider is a root certificate provider if and only if:
 For example, a certificate providers A can authorize organization B to be a new certificate provider.
 Later, B can authorize C to be a new certificate provider.
 A in our case is the root certificate provider.
-IdenTrust is a root certificate provider who authorizes let’s encrypt.
+IdenTrust is a root certificate provider who authorizes Let’s Encrypt.
 
 The graph of stakeholders is shown below:
 
@@ -125,7 +125,7 @@ The graph of stakeholders is shown below:
                                           Figure 1.1. Stakeholders Analysis
 
 
-##2.2Context View
+##2.2 Context View
 
 This section is about Context View, which includes three subsections: system scope, entities and interfaces and impact to environment.
 
@@ -160,7 +160,7 @@ Fourth, Let's Encrypt is authorized by a root certificate provider IdenTrust.
 Fifth, the release is based on the Python Package Index (PYPI).
 Sixth, Let's Encrypt extends its support to a larger number of servers by adding plugins such as Apache, Nginx and Webroot.
 Seventh, the testing process is facilitated by test tools such as Tox and Travis CI. 
-Eighth, let’s encrypt supports a number of operating systems including Unix-ish OS (Arch, Debian, FreeBSD etc).
+Eighth, Let’s Encrypt supports a number of operating systems including Unix-ish OS (Arch, Debian, FreeBSD etc).
 Ninth, the users are a large number of web servers including [blueboard.cz](https://blueboard.cz/) and [checkdomain](https://www.checkdomain.de/ssl/zertifikat/ssl-free/).
 Finally, competitors are other softwares based on ACME.
 
