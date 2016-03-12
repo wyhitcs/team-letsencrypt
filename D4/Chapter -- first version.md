@@ -28,12 +28,10 @@ We identify 5 major kinds of  and an additional kind of stakeholders for letsenc
  **Acquirers**:
 Acquirers are the ones who launch and organize the developing of let’s encrypt.  Estimate the needs of users and set goals of developers.
 For let’s encrypt, there are 3 acquirers:
-- [Electonic Frontier Foundation](https://www.eff.org/)
-- [Mozilla Foundation](https://www.mozilla.org/en-US/)
+- [Electonic Frontier Foundation](https://www.eff.org/)(The Electonic Frontier Foundation is the most important acquirers who provides most of labor to let’s encrypt)
+- [Mozilla Foundation](https://www.mozilla.org/en-US/)(Mozilla Foundation and University Michigan also have personnel devoting into this project)
 - [University of Michigan](https://en.wikipedia.org/wiki/University_of_Michigan)
 
-The Electonic Frontier Foundation is the most important acquirers who provides most of labor to let’s encrypt.
-Mozilla Foundation and University Michigan also have personnel devoting into this project.
 **Developers:**
 Developers are the one who devote themselves directly to the project. In let’s encrypt, the developers are mainly programmers who do coding jobs.
 There are 165 contributors for let’s encrypt, we only list the most important contributors below, they are the major developers of let’s encrypt.
