@@ -2,7 +2,7 @@
 ##Abstract
 Let’s encrypt is a software which aims to help you automatically apply Digital certificates and install/renew those certificates. 
 In this chapter, we will first introduce some necessary knowledge to you e.g. what is Digital Certificate, what is ACME.
-After that, we will give you a brief instruction on view and perspectives of Let's Encrypt: the Context View, Development View, Deployment View, Variability Perspectives and Evolution Perspectives. 
+After that, we will give you a brief instruction on the views and perspectives of Let's Encrypt: the Context View, Development View, Deployment View, Variability Perspectives and Evolution Perspectives. 
 
 
 | section              | subsection           |
