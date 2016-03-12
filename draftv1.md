@@ -22,7 +22,7 @@ After that, we will give you a brief instruction on the views and perspectives o
 
 ##Plan and current status:
 1.	We have finished the first version of Context View, Development View, Deployment View, Variability Perspectives and Evolution Perspectives.
-2.	The content are still in first version, hence they need to be revised.
+2.	The contents are still in first version, hence they need to be revised.
 3.	We have made a little contribution to Let's Encrypt project and further contribution is planned and in progress.
 
 #1. Background Knowledge
