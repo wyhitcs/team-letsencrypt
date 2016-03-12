@@ -9,6 +9,8 @@ After that, we will give you a brief instruction on view and perspectives of let
 |----------------------|----------------------|
 | 1. Backgroud Knowledge  |  1.1 SSL/TLS Certificate     |
 |                         |  1.2 ACME Protocol           |
+|                         |  1.3 Certificate Authority   |
+|                         |  1.4 Let's encrypt           |
 | 2.View and Perspectives |  2.1 Context View            |
 |                         | 2.2 Development View         |
 |                         | 2.3 Deployment View          |
