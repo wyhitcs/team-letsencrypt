@@ -147,9 +147,8 @@ IdenTrust is a root certificate provider who authorizes Let’s Encrypt.
 The graph of stakeholders is shown below:
 
 
-![stakeholder](https://github.com/delftswa2016/team-letsencrypt/blob/master/D1/stakeholder.png)
+![Stakeholders Analysis](https://github.com/delftswa2016/team-letsencrypt/blob/master/D1/stakeholder.png)
 
-                                          Figure 1.1. Stakeholders Analysis
 
 
 ##2.2 Context View
@@ -255,9 +254,8 @@ There are two types of tests: Unit Test and Intergration Test.
 Integration Test is to test whether letsencrypt works well with boulder (a software runs in Certificate Authority which generate SSL/TLS). It is an online test running automatically to test a pull request. The module corresponding to Intergration Test is Travis CI.
 
 ###2.3.2 Module Structure Model
-![ModuleStructure](https://github.com/delftswa2016/team-letsencrypt/blob/master/D2/module.structure.png)
+![Module Structure Model](https://github.com/delftswa2016/team-letsencrypt/blob/master/D2/module.structure.png)
 
-                                          Figure 2.1 Module Structure Model
 
 The UML component diagram below gives an overview of module structure. Each package means a code module and arrow shows intermodule dependencies[[1](#Nick)].
 
@@ -277,9 +275,8 @@ In addition, Technical Debt is also analyzed.
 
 ####2.3.3.1 Source Code Structure
 
-![SourceCodeStructure](https://github.com/delftswa2016/team-letsencrypt/blob/master/D2/code.structure.png)
+![Source Code Structure](https://github.com/delftswa2016/team-letsencrypt/blob/master/D2/code.structure.png)
 
-                                          Figure 2.2 Source Code Structure
 
 - **acme** - ACME protocol implementation in Python.
   - **jose** - Implementation of the standards developed by “JavaScript Object Signing and Encyption”.
@@ -554,7 +551,6 @@ Finally, it’s convenient for users to get a kind email notification about the 
 
 ![Feature Dependencies and Model](https://github.com/delftswa2016/team-letsencrypt/blob/master/D3/Feature.Model.png)
 
-                                           Figure 2.3. Feature Dependencies and Model
  
 ####2.5.1.4 Feature Binding Time
 
