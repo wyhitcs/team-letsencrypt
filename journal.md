@@ -86,3 +86,7 @@ The task for the first week is planned as follow:
 - Discuss Deployment View
 - Integrate previous materials and write the outline
 
+###Group Meeting 13-03-2016(3h)
+- Fix Reference format according to new requirement
+- Pull Request to add links for ACME 
+- Update contributions
