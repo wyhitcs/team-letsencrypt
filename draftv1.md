@@ -180,17 +180,27 @@ Besides, it also improves user experience by for example, allowing users to turn
 ####2.2.2.1 Entities and Interfaces
 
 There are ten entities related to Let's Encrypt.
-First, the development of Let's Encrypt is based on GitHub platform.
-Second, Python is identified as the only language dependency.
-Third, Freenode (online community) provides a platform for the developers to communicate.
-Fourth, Let's Encrypt is authorized by a root certificate provider IdenTrust.
-Fifth, the release is based on the Python Package Index (PYPI).
-Sixth, Let's Encrypt extends its support to a larger number of servers by adding plugins such as Apache, Nginx and Webroot.
-Seventh, the testing process is facilitated by test tools such as Tox and Travis CI. 
-Eighth, Let’s Encrypt supports a number of operating systems including Unix-ish OS (Arch, Debian, FreeBSD etc).
-Ninth, the users are a large number of web servers including [blueboard.cz](https://blueboard.cz/) and [checkdomain](https://www.checkdomain.de/ssl/zertifikat/ssl-free/).
-Finally, competitors are other softwares based on ACME.
 
+- GitHub: 
+the development of Let's Encrypt is based on GitHub platform. 
+- Python: 
+Python is identified as the only language dependency. 
+- Freenode: 
+Freenode(online community) is refered as the platform that developers communicate on. 
+- IdenTrust: 
+as an authority, Let's Encrypt must be authorized by IdenTrust. 
+- PYPI:
+the release is based on the Python Package Index (PYPI). 
+- Plugins: 
+Let's Encrypt extends its support of different servers by adding plugins including Apache, Nginx and Webroot. 
+- Test Tools: 
+the test part is extended by test tools, Tox and Travis CI online test system. 
+- Operating System：
+the operating system is another entity including a series Unix-ish Operating Systems like Arch, Debian, FreeBSD, etc. 
+- Users:
+the users are a large number of websites including [blueboard.cz](https://blueboard.cz/) and [checkdomain](https://www.checkdomain.de/ssl/zertifikat/ssl-free/). 
+- Competitors:
+competitors are other softwares based on ACME.
 
 ####2.2.2.2 Impact of the System on Environment
 
