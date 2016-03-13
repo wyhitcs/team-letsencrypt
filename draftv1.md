@@ -808,11 +808,11 @@ They set up project in multiple Python versions(2.6,2.7,3.3,3.4,3.5) and multipl
 ##References
 
 1. <div id="Nick"/>Nick Rozanski and Eoin Woods. Software Systems Architecture: Working with Stakeholders using Viewpoints and Perspectives. Addison-Wesley, 2012.
-2. <div id="Cairns">Chris Cairns and Sarah Allen. [Managing technical debt](https://18f.gsa.gov/2015/10/05/managing-technical-debt/). 2015.
-3. <div id="Fowler">Fowler Martin. [TechnicalDebtQuadrant](http://martinfowler.com/bliki/TechnicalDebt.html). 2014.
-4. <div id="Cunningham">Cunningham Ward. [Ward Explains Debt Metaphor](http://c2.com/cgi/wiki?WardExplainsDebtMetaphor). 2011.
-5. <div id="lfam">lfam. [Packaging](https://github.com/letsencrypt/letsencrypt/wiki/Packaging). 2016.
-6. <div id="Let">Let's Encrypt Project. [Let’s Encrypt client documentation!](https://letsencrypt.readthedocs.org/en/latest/index.html).
+2. <div id="Cairns">Chris Cairns and Sarah Allen. Managing technical debt. https://18f.gsa.gov/2015/10/05/managing-technical-debt/. 2015.
+3. <div id="Fowler">Fowler Martin. TechnicalDebtQuadrant. http://martinfowler.com/bliki/TechnicalDebt.html. 2014.
+4. <div id="Cunningham">Cunningham Ward. Ward Explains Debt Metaphor. http://c2.com/cgi/wiki?WardExplainsDebtMetaphor. 2011.
+5. <div id="lfam">lfam. Packaging. https://github.com/letsencrypt/letsencrypt/wiki/Packaging. 2016.
+6. <div id="Let">Let's Encrypt Project. Let’s Encrypt client documentation! https://letsencrypt.readthedocs.org/en/latest/index.html.
 7. <div id="slides">Slides lecture February 26th.
 8. <div id="Sven">Sven Apel, Don Batory, Christian Kästner, Gunter Saake.Feature-Oriented Software Product Lines. 2013.
 9. <div id="Lee">Lee, Jihyun, & Hwang Sunmyung. A review on variability mechanisms for product lines. International Journal of Advanced Media and Communication, 5(2-3), 172-181. 2014
