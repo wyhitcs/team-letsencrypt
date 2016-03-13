@@ -46,7 +46,7 @@ A certificate needs to install a software called boulder to enable Let’s Encry
 Let’s Encrypt is a software implementing ACME protocol.
 The workflow is summarized as follows: 
 1) when a certificate is requested, Let’s Encrypt wraps necessary information (the account, the domain name etc) into standard format and sends them to boulder of a CA; 
-2) CA responds the request with a challenge, saying that “since you claim the ownership of the domain xxxxx.com, please add a .txt file containing the string blablabla in the folder aaa/bbb/ccc”; 
+2) CA responds the request with a challenge, saying that “since you claim the ownership of the domain xxxxx.com, please add a .txt file containing the string in the folder aaa/bbb/ccc”; 
 3) Let’s Encrypt will automatically solve this challenge for the client; 
 4) CA grants a certificate after solving the challenge.
 
@@ -180,17 +180,27 @@ Besides, it also improves user experience by for example, allowing users to turn
 ####2.2.2.1 Entities and Interfaces
 
 There are ten entities related to Let's Encrypt.
-First, the development of Let's Encrypt is based on GitHub platform.
-Second, Python is identified as the only language dependency.
-Third, Freenode (online community) provides a platform for the developers to communicate.
-Fourth, Let's Encrypt is authorized by a root certificate provider IdenTrust.
-Fifth, the release is based on the Python Package Index (PYPI).
-Sixth, Let's Encrypt extends its support to a larger number of servers by adding plugins such as Apache, Nginx and Webroot.
-Seventh, the testing process is facilitated by test tools such as Tox and Travis CI. 
-Eighth, Let’s Encrypt supports a number of operating systems including Unix-ish OS (Arch, Debian, FreeBSD etc).
-Ninth, the users are a large number of web servers including [blueboard.cz](https://blueboard.cz/) and [checkdomain](https://www.checkdomain.de/ssl/zertifikat/ssl-free/).
-Finally, competitors are other softwares based on ACME.
 
+- GitHub: 
+the development of Let's Encrypt is based on GitHub platform. 
+- Python: 
+Python is identified as the only language dependency. 
+- Freenode: 
+Freenode(online community) is refered as the platform that developers communicate on. 
+- IdenTrust: 
+as an authority, Let's Encrypt must be authorized by IdenTrust. 
+- PYPI:
+the release is based on the Python Package Index (PYPI). 
+- Plugins: 
+Let's Encrypt extends its support of different servers by adding plugins including Apache, Nginx and Webroot. 
+- Test Tools: 
+the test part is extended by test tools, Tox and Travis CI online test system. 
+- Operating System：
+the operating system is another entity including a series Unix-ish Operating Systems like Arch, Debian, FreeBSD, etc. 
+- Users:
+the users are a large number of websites including [blueboard.cz](https://blueboard.cz/) and [checkdomain](https://www.checkdomain.de/ssl/zertifikat/ssl-free/). 
+- Competitors:
+competitors are other softwares based on ACME.
 
 ####2.2.2.2 Impact of the System on Environment
 
@@ -202,7 +212,7 @@ Finally, Let's Encrypt is independently developed by ISRG.
 ##2.3 Development View
 
 The development view describes the architecture that supports the software development process.
-The development view communicates the aspects of the architecture of interest to stakeholders from the building, testing, maintaining and enhancing the project(Nick, 2012).
+The development view communicates the aspects of the architecture of interest to stakeholders from the building, testing, maintaining and enhancing the project[[1](#Nick)].
 Based on this, the following article shows the common design model, module structure model and code line model of Let's Encrypt which give a technical overview of whole project.
 To learn more details, each model is attached with complete descrption. In addition, technical debt of the project and coresponding solution or plan are described at the end of report.
 
@@ -249,7 +259,7 @@ Integration Test is to test whether letsencrypt works well with boulder (a softw
 
                                           Figure 2.1 Module Structure Model
 
-The UML component diagram below gives an overview of module structure. Each package means a code module and arrow shows intermodule dependencies(Nick, 2012).
+The UML component diagram below gives an overview of module structure. Each package means a code module and arrow shows intermodule dependencies[[1](#Nick)].
 
 The first layer which is also the closest layer to users offers friendly UI for common clients to set up their own certificates. And the command way is also possible for developers to contribute to the project. 
 
@@ -339,7 +349,7 @@ And developers can also do their own test before posting a request. Tox is recom
 
 ####2.3.3.4 Release Process
 
-Let's Encrypt release packages and upload them to PyPI (wheels and source tarballs).
+Let's Encrypt release packages and upload them to PyPI (wheels and source tarballs)[[4](#lfam)].
 
 - https://pypi.python.org/pypi/acme
 
@@ -382,7 +392,7 @@ All flags used by the client can be configured, including RSA key size, registed
 
 ###2.3.4 Technical Debt
 
-The concept of technical debt refers to the accumulated consequences of the quick but dirty design into an evolving software program (Fowler, 2014). In other words, the danger occurs when people rush software by simply adding features into the program but never reflect their understanding of those features. As the “debt” accumulates, the complexity of maintaining the programs to reduce its deterioration to the whole software increases (Cunningham, 2011).
+The concept of technical debt refers to the accumulated consequences of the quick but dirty design into an evolving software program [[2](#Fowler)]. In other words, the danger occurs when people rush software by simply adding features into the program but never reflect their understanding of those features. As the “debt” accumulates, the complexity of maintaining the programs to reduce its deterioration to the whole software increases [[3](#Cunningham)].
 
 ####2.3.4.1 Code Duplication
 
@@ -407,7 +417,7 @@ For developers, they could use this kind of tools to detect duplicates and then 
 ##2.4 Deployment View
 
 Considering the wide use of Let’s Encrypt, it is important to describe the deployment of software to guarantee the proper operating in different environments. 
-As defined(Nick, 2012), deployment describes the environment into which the system will be deployed and dependencies that the system has on elements of it. 
+As defined[[1](#Nick)], deployment describes the environment into which the system will be deployed and dependencies that the system has on elements of it. 
 In this part, we will introduce a series of constraints about Let’s Encrypt including third party software requirements, technology compatibility and network requirements.
 
 ###2.4.1 Third Party Software Requirements
@@ -493,13 +503,13 @@ If the system is successfully deployed, then all of the registration files and k
 
 ##2.5 Variability Perspective
 
-In (Sven, 2013), variability describes the ability to derive different products from a common set of artifacts. It is important for a good software to equip with variability to adapt to different environments, which largely satisfies the requirements of different stakeholders. Without doubt, Let’s Encrypt is such a software in developing. In the first section of report, a list of features and dependencies are given. A related model is built upon this. Additionally, the implementation and binding time of features are presented. Finally, the strategy to realize variabilities is posted.
+In [[6](#Sven)], variability describes the ability to derive different products from a common set of artifacts. It is important for a good software to equip with variability to adapt to different environments, which largely satisfies the requirements of different stakeholders. Without doubt, Let’s Encrypt is such a software in developing. In the first section of report, a list of features and dependencies are given. A related model is built upon this. Additionally, the implementation and binding time of features are presented. Finally, the strategy to realize variabilities is posted.
 
-In (Sven, 2013), evolution is defined as the process of dealing with change in the system development lifecycle. After a series changes, Let’s Encrypt is desired to be more flexible for users. In the second section, the evolution history of  Let’s Encrypt is given and related issues are analyzed.
+In [[6](#Sven)], evolution is defined as the process of dealing with change in the system development lifecycle. After a series changes, Let’s Encrypt is desired to be more flexible for users. In the second section, the evolution history of  Let’s Encrypt is given and related issues are analyzed.
 
 ###2.5.1 Variable Features
 
-According to (Sven, 2013), a feature is a characteristic or end-user-visible behavior of a software system. Features are used in product-line engineering to specify and communicate commonalities and differences of the products between stakeholders, and to guide structure, reuse, and variation across all phases of the software life cycle. In this section,  a series of features for Let’s Encrypt are identified and commented. In addition, they are classified into four different parts.
+According to [[6](#Sven)], a feature is a characteristic or end-user-visible behavior of a software system. Features are used in product-line engineering to specify and communicate commonalities and differences of the products between stakeholders, and to guide structure, reuse, and variation across all phases of the software life cycle. In this section,  a series of features for Let’s Encrypt are identified and commented. In addition, they are classified into four different parts.
 
 ####2.5.1.1 Feature List
 
@@ -581,7 +591,7 @@ Finally, it’s convenient for users to get a kind email notification about the 
  
 ####2.5.1.4 Feature Binding Time
 
-Features in Let's Encrypt are with different binding times, most features at run time, others at compile time.
+Features in Let's Encrypt are with different binding times, most features at run time, others at compile time[[7](#Lee)].
 
 ##### **Environment**
 
@@ -734,7 +744,7 @@ Issues and pull requests relevant to the variability and configurability can be 
 
 ##2.6 Evolution Perspective
 
-As the business maxim tells us “the only constant  is change” （Nick, 2012）, a major concern for architects is how to build a flexible system to adapt to inevitable changes. 
+As the business maxim tells us “the only constant  is change”[[1](#Nick)], a major concern for architects is how to build a flexible system to adapt to inevitable changes. 
 As a result, there is constant pressure to change the system’s behavior, which in many cases requires architectural tactics to ease such process. The term evolution is used as the process of dealing with changes encountered during the development lifecycle.
 
 ###2.6.1 Requirements Capture
@@ -776,7 +786,7 @@ Let’s Encrypt supports different servers by adding extensible plugins, which m
 
 To  make Let’s Encrypt more flexible, developers design variation points into software. 
 For example, Let’s Encrypt supports a series of configurable parameters like adjustable key bit-length and optional ACME compliant services. 
-This allow some aspects of the system’s operation to be changed over time without modifying its implementation(Nick, 2012).
+This allow some aspects of the system’s operation to be changed over time without modifying its implementation[[1](#Nick)].
 
 ####2.6.2.3 Achieve reliable change	
 
@@ -797,20 +807,18 @@ They set up project in multiple Python versions(2.6,2.7,3.3,3.4,3.5) and multipl
 
 ##References
 
-- Nick, R., Eoin, W. (2012), Software Systems Architecture
+1. <div id="Nick"/>Nick Rozanski and Eoin Woods. Software Systems Architecture: Working with Stakeholders using Viewpoints and Perspectives. Addison-Wesley, 2012.
 
-- Cairns, C., Allen, S. (2015), [Managing technical debt](https://18f.gsa.gov/2015/10/05/managing-technical-debt/).
+2. <div id="Fowler">Fowler Martin. TechnicalDebtQuadrant. http://martinfowler.com/bliki/TechnicalDebt.html. 2014.
 
-- Fowler, M. (2014), [TechnicalDebtQuadrant](http://martinfowler.com/bliki/TechnicalDebt.html).
+3. <div id="Cunningham">Cunningham Ward. Ward Explains Debt Metaphor. http://c2.com/cgi/wiki?WardExplainsDebtMetaphor. 2011.
 
-- Cunningham, W. (2011), [Ward Explains Debt Metaphor](http://c2.com/cgi/wiki?WardExplainsDebtMetaphor).
+4. <div id="lfam">lfam. Packaging. https://github.com/letsencrypt/letsencrypt/wiki/Packaging. 2016.
 
-- lfam (2016), [Packaging](https://github.com/letsencrypt/letsencrypt/wiki/Packaging)
+5. <div id="Let">Let's Encrypt Project. Let’s Encrypt client documentation! https://letsencrypt.readthedocs.org/en/latest/index.html.
 
-- Let's Encrypt Project (2015), [Let’s Encrypt client documentation!](https://letsencrypt.readthedocs.org/en/latest/index.html)
+6. <div id="Sven">Sven Apel, Don Batory, Christian Kästner, Gunter Saake.Feature-Oriented Software Product Lines. 2013.
 
-- Slides lecture February 26th
+7. <div id="Lee">Lee, Jihyun, & Hwang Sunmyung. A review on variability mechanisms for product lines. International Journal of Advanced Media and Communication, 5(2-3), 172-181. 2014
 
-- Sven Apel, Don Batory, Christian Kästner, Gunter Saake (2013). Feature-Oriented Software Product Lines.
 
-- Lee, J., & Hwang, S. (2014). A review on variability mechanisms for product lines. International Journal of Advanced Media and Communication, 5(2-3), 172-181.
