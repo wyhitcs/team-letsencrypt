@@ -6,7 +6,7 @@ Currently, when the clients encounter error, it won't show 'trace back' informat
 This problem is already an issue [#2114](https://github.com/letsencrypt/letsencrypt/issues/2114) posted in the discussion board. But nobody replies to it by now. We plan to solve this problem. The 'client' package is the potential target that we will work on. After learning its code and layout, we will try to make an improvement. We want to apply an working branches for it and then we can launch our pull request. requests. 
 
 #Contributions
-
+**March 5th**
 1) Fix format problem of Documentation [#2612](https://github.com/letsencrypt/letsencrypt/pull/2612)
 We found a display error in Let's encrypt document at website ["Read the Docs"](http://letsencrypt.readthedocs.org/en/latest/using.html?highlight=mail#webroot). This is a command line exceeds the border of the browser window:
 
