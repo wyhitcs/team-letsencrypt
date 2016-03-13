@@ -147,9 +147,8 @@ IdenTrust is a root certificate provider who authorizes Let’s Encrypt.
 The graph of stakeholders is shown below:
 
 
-![stakeholder](https://github.com/delftswa2016/team-letsencrypt/blob/master/D1/stakeholder.png)
+![Stakeholders Analysis](https://github.com/delftswa2016/team-letsencrypt/blob/master/D1/stakeholder.png)
 
-                                          Figure 1.1. Stakeholders Analysis
 
 
 ##2.2 Context View
@@ -195,7 +194,7 @@ the release is based on the Python Package Index (PYPI).
 Let's Encrypt extends its support of different servers by adding plugins including Apache, Nginx and Webroot. 
 - Test Tools: 
 the test part is extended by test tools, Tox and Travis CI online test system. 
-- Operating System：
+- Operating System:
 the operating system is another entity including a series Unix-ish Operating Systems like Arch, Debian, FreeBSD, etc. 
 - Users:
 the users are a large number of websites including [blueboard.cz](https://blueboard.cz/) and [checkdomain](https://www.checkdomain.de/ssl/zertifikat/ssl-free/). 
@@ -255,9 +254,8 @@ There are two types of tests: Unit Test and Intergration Test.
 Integration Test is to test whether letsencrypt works well with boulder (a software runs in Certificate Authority which generate SSL/TLS). It is an online test running automatically to test a pull request. The module corresponding to Intergration Test is Travis CI.
 
 ###2.3.2 Module Structure Model
-![ModuleStructure](https://github.com/delftswa2016/team-letsencrypt/blob/master/D2/module.structure.png)
+![Module Structure Model](https://github.com/delftswa2016/team-letsencrypt/blob/master/D2/module.structure.png)
 
-                                          Figure 2.1 Module Structure Model
 
 The UML component diagram below gives an overview of module structure. Each package means a code module and arrow shows intermodule dependencies[[1](#Nick)].
 
@@ -277,9 +275,8 @@ In addition, Technical Debt is also analyzed.
 
 ####2.3.3.1 Source Code Structure
 
-![SourceCodeStructure](https://github.com/delftswa2016/team-letsencrypt/blob/master/D2/code.structure.png)
+![Source Code Structure](https://github.com/delftswa2016/team-letsencrypt/blob/master/D2/code.structure.png)
 
-                                          Figure 2.2 Source Code Structure
 
 - **acme** - ACME protocol implementation in Python.
   - **jose** - Implementation of the standards developed by “JavaScript Object Signing and Encyption”.
@@ -467,39 +464,6 @@ Let’s Encrypt runs a certificate management agent on the web server. The node 
 
 There is no limit to the number of certificates that can be issued to different domains.
 
-###2.4.4 Results
-
-If the system is successfully deployed, then all of the registration files and keys could be seen using `tree /etc/letsencrypt/` Then the output should be like this:
-
-```
-/etc/letsencrypt
-├── accounts (ROOT PROTECTED)
-│   └── acme-v01.api.letsencrypt.org
-│       └── directory
-│           └── 405ef3114adb6eabf5311420fa3f162d
-│               ├── meta.json
-│               ├── private_key.json
-│               └── regr.json
-├── archive (ROOT PROTECTED)
-│   └── example.com
-│       ├── cert1.pem       (server public certificate)
-│       ├── chain1.pem      (intermediate certificate(s))
-│       ├── fullchain1.pem  (server cert followed by intermediate(s))
-│       └── privkey1.pem    (server private keypair)
-|                           (NOTE: your browser already has the root cert)
-├── csr
-│   └── 0000_csr-letsencrypt.pem
-├── keys (ROOT PROTECTED)
-│   └── 0000_key-letsencrypt.pem
-├── live (ROOT PROTECTED)
-│   └── example.com
-│       ├── cert.pem -> ../../archive/example.com/cert1.pem
-│       ├── chain.pem -> ../../archive/example.com/chain1.pem
-│       ├── fullchain.pem -> ../../archive/example.com/fullchain1.pem
-│       └── privkey.pem -> ../../archive/example.com/privkey1.pem
-└── renewal
-    └── example.com.conf
-```
 
 ##2.5 Variability Perspective
 
@@ -587,7 +551,6 @@ Finally, it’s convenient for users to get a kind email notification about the 
 
 ![Feature Dependencies and Model](https://github.com/delftswa2016/team-letsencrypt/blob/master/D3/Feature.Model.png)
 
-                                           Figure 2.3. Feature Dependencies and Model
  
 ####2.5.1.4 Feature Binding Time
 
@@ -621,7 +584,7 @@ Features in Let's Encrypt are with different binding times, most features at run
 - Input method:
 **run time binding**, can be specified by users using command line.
 
-##### **Plugin**：
+##### **Plugin**:
 - Web server support: 
 **compile time binding**, always support web servers like apache, nginx.
 
