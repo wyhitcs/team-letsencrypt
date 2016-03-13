@@ -18,3 +18,23 @@ We change the way of displaying to make it visible and test it with Chrome, Fire
     letsencrypt certonly --webroot -w /var/www/example/ -d www.example.com -d example.com -w /var/www/other -d other.example.net -d another.other.example.net
 
 It has a horizontal scroll to display a long text (both in rst and html) so that the text will not exceed the browser window.
+
+##March 12th
+[#2657](https://github.com/letsencrypt/letsencrypt/pull/2657)
+The documentation of let's encrypt is not so friendly to new comers, 
+Since let's encrypt is a implementation of ACME, I propose to add a link to ACME specification. 
+But other contributors say the ACME I link to is not up to date. So, I close this pull request and start a new
+Pull Request with correct link.
+
+
+##March 13th
+[#2658](https://github.com/letsencrypt/letsencrypt/pull/2658)
+I fix the problem in issue #2657.
+But other contributors say the document linked to is still not up to date. 
+So I close this pull request and start a new one.i
+
+##March 13th
+[#2659](https://github.com/letsencrypt/letsencrypt/pull/2659)
+This Pull Request is still pending, but I think this time the link is correct.
+That may take a few days to merge this pull request.
+
