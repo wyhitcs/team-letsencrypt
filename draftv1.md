@@ -212,7 +212,7 @@ Finally, Let's Encrypt is independently developed by ISRG.
 ##2.3 Development View
 
 The development view describes the architecture that supports the software development process.
-The development view communicates the aspects of the architecture of interest to stakeholders from the building, testing, maintaining and enhancing the project(Nick, 2012).
+The development view communicates the aspects of the architecture of interest to stakeholders from the building, testing, maintaining and enhancing the project[[1](#Nick)].
 Based on this, the following article shows the common design model, module structure model and code line model of Let's Encrypt which give a technical overview of whole project.
 To learn more details, each model is attached with complete descrption. In addition, technical debt of the project and coresponding solution or plan are described at the end of report.
 
@@ -259,7 +259,7 @@ Integration Test is to test whether letsencrypt works well with boulder (a softw
 
                                           Figure 2.1 Module Structure Model
 
-The UML component diagram below gives an overview of module structure. Each package means a code module and arrow shows intermodule dependencies(Nick, 2012).
+The UML component diagram below gives an overview of module structure. Each package means a code module and arrow shows intermodule dependencies[[1](#Nick)].
 
 The first layer which is also the closest layer to users offers friendly UI for common clients to set up their own certificates. And the command way is also possible for developers to contribute to the project. 
 
@@ -417,7 +417,7 @@ For developers, they could use this kind of tools to detect duplicates and then 
 ##2.4 Deployment View
 
 Considering the wide use of Let’s Encrypt, it is important to describe the deployment of software to guarantee the proper operating in different environments. 
-As defined(Nick, 2012), deployment describes the environment into which the system will be deployed and dependencies that the system has on elements of it. 
+As defined[[1](#Nick)], deployment describes the environment into which the system will be deployed and dependencies that the system has on elements of it. 
 In this part, we will introduce a series of constraints about Let’s Encrypt including third party software requirements, technology compatibility and network requirements.
 
 ###2.4.1 Third Party Software Requirements
@@ -744,7 +744,7 @@ Issues and pull requests relevant to the variability and configurability can be 
 
 ##2.6 Evolution Perspective
 
-As the business maxim tells us “the only constant  is change” （Nick, 2012）, a major concern for architects is how to build a flexible system to adapt to inevitable changes. 
+As the business maxim tells us “the only constant  is change”[[1](#Nick)], a major concern for architects is how to build a flexible system to adapt to inevitable changes. 
 As a result, there is constant pressure to change the system’s behavior, which in many cases requires architectural tactics to ease such process. The term evolution is used as the process of dealing with changes encountered during the development lifecycle.
 
 ###2.6.1 Requirements Capture
@@ -786,7 +786,7 @@ Let’s Encrypt supports different servers by adding extensible plugins, which m
 
 To  make Let’s Encrypt more flexible, developers design variation points into software. 
 For example, Let’s Encrypt supports a series of configurable parameters like adjustable key bit-length and optional ACME compliant services. 
-This allow some aspects of the system’s operation to be changed over time without modifying its implementation(Nick, 2012).
+This allow some aspects of the system’s operation to be changed over time without modifying its implementation[[1](#Nick)].
 
 ####2.6.2.3 Achieve reliable change	
 
