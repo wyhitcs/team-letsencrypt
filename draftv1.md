@@ -349,7 +349,7 @@ And developers can also do their own test before posting a request. Tox is recom
 
 ####2.3.3.4 Release Process
 
-Let's Encrypt release packages and upload them to PyPI (wheels and source tarballs).
+Let's Encrypt release packages and upload them to PyPI (wheels and source tarballs)[[4](#lfam)].
 
 - https://pypi.python.org/pypi/acme
 
@@ -392,7 +392,7 @@ All flags used by the client can be configured, including RSA key size, registed
 
 ###2.3.4 Technical Debt
 
-The concept of technical debt refers to the accumulated consequences of the quick but dirty design into an evolving software program (Fowler, 2014). In other words, the danger occurs when people rush software by simply adding features into the program but never reflect their understanding of those features. As the “debt” accumulates, the complexity of maintaining the programs to reduce its deterioration to the whole software increases (Cunningham, 2011).
+The concept of technical debt refers to the accumulated consequences of the quick but dirty design into an evolving software program [[2](#Fowler)]. In other words, the danger occurs when people rush software by simply adding features into the program but never reflect their understanding of those features. As the “debt” accumulates, the complexity of maintaining the programs to reduce its deterioration to the whole software increases [[3](#Cunningham)].
 
 ####2.3.4.1 Code Duplication
 
@@ -503,13 +503,13 @@ If the system is successfully deployed, then all of the registration files and k
 
 ##2.5 Variability Perspective
 
-In (Sven, 2013), variability describes the ability to derive different products from a common set of artifacts. It is important for a good software to equip with variability to adapt to different environments, which largely satisfies the requirements of different stakeholders. Without doubt, Let’s Encrypt is such a software in developing. In the first section of report, a list of features and dependencies are given. A related model is built upon this. Additionally, the implementation and binding time of features are presented. Finally, the strategy to realize variabilities is posted.
+In [[6](#Sven)], variability describes the ability to derive different products from a common set of artifacts. It is important for a good software to equip with variability to adapt to different environments, which largely satisfies the requirements of different stakeholders. Without doubt, Let’s Encrypt is such a software in developing. In the first section of report, a list of features and dependencies are given. A related model is built upon this. Additionally, the implementation and binding time of features are presented. Finally, the strategy to realize variabilities is posted.
 
-In (Sven, 2013), evolution is defined as the process of dealing with change in the system development lifecycle. After a series changes, Let’s Encrypt is desired to be more flexible for users. In the second section, the evolution history of  Let’s Encrypt is given and related issues are analyzed.
+In [[6](#Sven)], evolution is defined as the process of dealing with change in the system development lifecycle. After a series changes, Let’s Encrypt is desired to be more flexible for users. In the second section, the evolution history of  Let’s Encrypt is given and related issues are analyzed.
 
 ###2.5.1 Variable Features
 
-According to (Sven, 2013), a feature is a characteristic or end-user-visible behavior of a software system. Features are used in product-line engineering to specify and communicate commonalities and differences of the products between stakeholders, and to guide structure, reuse, and variation across all phases of the software life cycle. In this section,  a series of features for Let’s Encrypt are identified and commented. In addition, they are classified into four different parts.
+According to [[6](#Sven)], a feature is a characteristic or end-user-visible behavior of a software system. Features are used in product-line engineering to specify and communicate commonalities and differences of the products between stakeholders, and to guide structure, reuse, and variation across all phases of the software life cycle. In this section,  a series of features for Let’s Encrypt are identified and commented. In addition, they are classified into four different parts.
 
 ####2.5.1.1 Feature List
 
@@ -591,7 +591,7 @@ Finally, it’s convenient for users to get a kind email notification about the 
  
 ####2.5.1.4 Feature Binding Time
 
-Features in Let's Encrypt are with different binding times, most features at run time, others at compile time.
+Features in Let's Encrypt are with different binding times, most features at run time, others at compile time[[7](#Lee)].
 
 ##### **Environment**
 
@@ -808,13 +808,17 @@ They set up project in multiple Python versions(2.6,2.7,3.3,3.4,3.5) and multipl
 ##References
 
 1. <div id="Nick"/>Nick Rozanski and Eoin Woods. Software Systems Architecture: Working with Stakeholders using Viewpoints and Perspectives. Addison-Wesley, 2012.
-2. <div id="Cairns">Chris Cairns and Sarah Allen. Managing technical debt. https://18f.gsa.gov/2015/10/05/managing-technical-debt/. 2015.
-3. <div id="Fowler">Fowler Martin. TechnicalDebtQuadrant. http://martinfowler.com/bliki/TechnicalDebt.html. 2014.
-4. <div id="Cunningham">Cunningham Ward. Ward Explains Debt Metaphor. http://c2.com/cgi/wiki?WardExplainsDebtMetaphor. 2011.
-5. <div id="lfam">lfam. Packaging. https://github.com/letsencrypt/letsencrypt/wiki/Packaging. 2016.
-6. <div id="Let">Let's Encrypt Project. Let’s Encrypt client documentation! https://letsencrypt.readthedocs.org/en/latest/index.html.
-7. <div id="slides">Slides lecture February 26th.
-8. <div id="Sven">Sven Apel, Don Batory, Christian Kästner, Gunter Saake.Feature-Oriented Software Product Lines. 2013.
-9. <div id="Lee">Lee, Jihyun, & Hwang Sunmyung. A review on variability mechanisms for product lines. International Journal of Advanced Media and Communication, 5(2-3), 172-181. 2014
+
+2. <div id="Fowler">Fowler Martin. TechnicalDebtQuadrant. http://martinfowler.com/bliki/TechnicalDebt.html. 2014.
+
+3. <div id="Cunningham">Cunningham Ward. Ward Explains Debt Metaphor. http://c2.com/cgi/wiki?WardExplainsDebtMetaphor. 2011.
+
+4. <div id="lfam">lfam. Packaging. https://github.com/letsencrypt/letsencrypt/wiki/Packaging. 2016.
+
+5. <div id="Let">Let's Encrypt Project. Let’s Encrypt client documentation! https://letsencrypt.readthedocs.org/en/latest/index.html.
+
+6. <div id="Sven">Sven Apel, Don Batory, Christian Kästner, Gunter Saake.Feature-Oriented Software Product Lines. 2013.
+
+7. <div id="Lee">Lee, Jihyun, & Hwang Sunmyung. A review on variability mechanisms for product lines. International Journal of Advanced Media and Communication, 5(2-3), 172-181. 2014
 
 
