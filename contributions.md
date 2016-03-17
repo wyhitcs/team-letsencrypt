@@ -25,6 +25,10 @@ We fix the problem in issue #2657. But other contributors say the document linke
 [#2659](https://github.com/letsencrypt/letsencrypt/pull/2659)
 This Pull Request is still pending, but this time the link is correct. That may take a few days to merge this pull request.
 
+##March 14th
+[#2659](https://github.com/letsencrypt/letsencrypt/pull/2659)
+The pull request is merged and squashed.
+
 #Future Plan
 Thought Let's Encrypt is still developing and includes a number of bugs or errors that need a solution, it is difficult to contribute to the project currently since the it is technically complicated. However we do have a plan relating to the problem described in development view. In future weeks, we will work on this and try to make some contributions.
 ##Problem overview
