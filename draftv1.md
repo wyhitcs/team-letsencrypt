@@ -139,61 +139,31 @@ The graph of stakeholders is shown below:
 
 ##2.2 Context View
 
-This section is about Context View, which includes three subsections: system scope, entities and interfaces and impact to environment.
+This section concerns about the relationships, dependencies and interactions between Let’s Encrypt and its environment[[1](#Nick)]. It gives readers an image about the responsibilities and boundaries of  the system.
 
 ###2.2.1 System scope and Responsibilities
 
-Users can do the following things using Let's Encrypt:
+Let's Encrypt allows users to do following things:
 
-- users can register certificate for their server
-
-- users can revoke certificate
-
-- users can create their own account
-
-- users can modify their profile
-
-- users can turn on/off the notice of expiring date of certificate
-
-- users can choose which ACME solution to use
-
-Let's Encrypt allows users to obtain, renew and revoke a certificate.
-Besides, it also improves user experience by for example, allowing users to turn on/off the notice of expiring date of a certificate.
+- Create their own account
+- Modify their personal profile
+- Register certificate for their server
+- Revoke certificate
+- Turn on/off the notice of expiring date of certificate
+- Choose which ACME solution to use
 
 ###2.2.2 Entities, data and interfaces
 
-####2.2.2.1 Entities and Interfaces
+There are ten entities related to Let's Encrypt. First, as discussed before, to be an Certificate Authority, Let's Encrypt must be authorized by root certificate provider, IdenTrust. And Let's Encrypt identified Python as the only language dependency. Then its development is open-source which is based on GitHub platform. Furthermore, the release of different version will be strictly tested by tools, Tox and Travis CI online test system, and finally posted by using the Python Package Index (PYPI). To further discuss about the project, Freenode offers good platform for communications.
 
-There are ten entities related to Let's Encrypt.
+Let's Encrypt provides service to a large number of users including blueboard.cz and checkdomain. Users can operate Let's Encrypt on a series Unix-ish Operating Systems like Arch, Debian, FreeBSD, etc. In addition, Let's Encrypt extends its support of different servers by adding plugins including Apache, Nginx and Webroot. Finally, there exist other softwares based on ACME that compete with Let’s Encrypt.
 
-- GitHub: 
-the development of Let's Encrypt is based on GitHub platform. 
-- Python: 
-Python is identified as the only language dependency. 
-- Freenode: 
-Freenode(online community) is refered as the platform that developers communicate on. 
-- IdenTrust: 
-as an authority, Let's Encrypt must be authorized by IdenTrust. 
-- PYPI:
-the release is based on the Python Package Index (PYPI). 
-- Plugins: 
-Let's Encrypt extends its support of different servers by adding plugins including Apache, Nginx and Webroot. 
-- Test Tools: 
-the test part is extended by test tools, Tox and Travis CI online test system. 
-- Operating System:
-the operating system is another entity including a series Unix-ish Operating Systems like Arch, Debian, FreeBSD, etc. 
-- Users:
-the users are a large number of websites including [blueboard.cz](https://blueboard.cz/) and [checkdomain](https://www.checkdomain.de/ssl/zertifikat/ssl-free/). 
-- Competitors:
-competitors are other softwares based on ACME.
+###2.2.3 Impact of the System on Environment
 
-####2.2.2.2 Impact of the System on Environment
+The impact of system on environment concerns about the dependencies of other system on Let's Encrypt and other systems’ decommissions and data migration. Since Let's Encrypt can be used as a plugin embedded in other certificate systems, the performance of those systems depend on Let's Encrypt. As a newly developed project, there is not any system decommissions because of Let's Encrypt so far. Finally, Let's Encrypt is independently developed by ISRG.
 
-The impact of system on environment concerns about the dependencies of other system on Let's Encrypt and other systems’ decommissions and data migration.
-Since Let's Encrypt can be used as a plugin embedded in other certificate systems, the performance of those systems depend on Let's Encrypt.
-As a newly developed project, there is not any system decommissions so far.
-Finally, Let's Encrypt is independently developed by ISRG.
 ![contextview](https://github.com/delftswa2016/team-letsencrypt/blob/master/D1/contextview.png)
+
 ##2.3 Development View
 
 The development view describes the architecture that supports the software development process.
