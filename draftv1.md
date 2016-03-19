@@ -114,22 +114,8 @@ For Let’s Encrypt, the users are all web servers who use Let’s Encrypt to re
 
 ###2.1.4 Sponsors
 
-Sponsors are those who provides financial support for the project.
-For Let’s Encrypt, sponsors provide financial supports for programmers.
-
-The major sponsors are listed below:
-
-- [Mozilla](https://www.mozilla.org/)
-
-- [Akamai](http://www.akamai.com/)
-
-- [Cisco](http://www.cisco.com/)
-
-- [Electronic Frontier Foundation](https://www.eff.org/)
-
-- [OVH](https://www.ovh.com/)
-
-- [Chrome](https://www.google.com/chrome/)
+Let's Encrypt is operated by a non-profit to reduce financial, technological, and education barriers to secure communication over the Internet. Corporate Sponsorship helps lead the way to a secure future for the Web. The dramatic rise in sponsors shows the importance of the programme.
+![Sponsors Growth](https://github.com/delftswa2016/team-letsencrypt/blob/master/D1/sponsors.png)
 
 ###2.1.5 Additional Stakeholder
 
