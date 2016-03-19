@@ -177,14 +177,14 @@ To learn more details, each model is attached with complete descrption. In addit
 
 ####2.3.1.1 Common Processing
 
-- **Instruction parser**: 
-The parser analyzes the received instructions with a preset workflow. Parsing instrcutions is considered to be a common process because 1) many modules rely on the user's instructions to determine the subsequent actions. 2) the parsing functions in different modules are similar to each other. Hence, the parsers should be put into a separate module. In fact, all codes relevant to the parser functions reside in the file *letsencrypt-auto* and *cli.py*.
+- **Instruction parsing**: 
+Parsing instrcutions is considered to be a common process because 1) many modules rely on the user's instructions to determine the subsequent actions. 2) the parsing functions in different modules are similar to each other. Hence, the parsers should be put into a separate module. In fact, all codes relevant to the parser functions reside in the file *letsencrypt-auto* and *cli.py*.
 
-- **ACME Objects**: 
-To implement ACME Protocol, letsencyrpt contains ACME Objects such as ACME account and ACME Exceptions. Those Objects are used almost everywhere in letsencrypt. When the user wants to request an account, for example, an account Object is created and returned. Scuh account will later be used when a certificate needs to be requested or renewed. Therefore, all ACME Objects are wrapped into a module so that they can easily be called and maintained.
+- **ACME Objects processiong**: 
+To implement ACME Protocol, letsencyrpt contains ACME Objects such as ACME account and ACME Exceptions. Those Objects are used almost everywhere in letsencrypt. When the user wants to request an account, for example, an account Object is created and returned. Such account will later be used when a certificate needs to be requested or renewed. Many modules of let's encrypt need to process ACME object(initiate,update,trasmit,destroy),so, for convenience concern the developers of let's encrypt wrap the functions used to process ACME Objects into a module.
 
-- **Configuration**:
-Configuration Object is "a bag of variables" used by almost all the other modules. For instance, the user might want to register his/her information like "I have a domain name abc.com; my account is xxxxx; my email is xxxx@gmail.com; my private key stores in xxxxx; please give me a certificate for that domain name". By passing a configuration Object containing these attributes, it enables letsencrypt to automatically obtain, renew and revoke a certificate. To facilitate the modules to pass parameters using the configuration objects, these objects (as well as the relevant functions) are wrapped into a module.
+- **Configuration processing**:
+Configuration Object is "a bag of variables" used by almost all the other modules. For instance, the user might want to register his/her information like "I have a domain name abc.com; my account is xxxxx; my email is xxxx@gmail.com; my private key stores in xxxxx; please give me a certificate for that domain name". By passing a configuration Object containing these attributes, it enables letsencrypt to automatically obtain, renew and revoke a certificate.The need for processing a configuration Object (update/trasmit/destroy) is common in almost all modules of let's encrypt. For convenience concern, the configuration Objects (as well as the relevant functions) are wrapped into a module.
 
 ####2.3.1.2 Standard Design Approaches
 
