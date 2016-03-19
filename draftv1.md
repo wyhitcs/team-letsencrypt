@@ -187,53 +187,13 @@ The UML component diagram below gives an overview of module structure. Each pack
 
 - **Platform layer**: There’s no doubt that all previous code is based on python library which is included the bottom layer. In addition, OpenSSL, a software library to be used to secure communications against eavesdropping or to ascertain the identity of the party at the other end, is also the base of authentication process.
 
-###2.3.2 Common Design Model
-
-####2.3.2.1 Common Processing
-
-- **Instruction parsing**: 
-Parsing instrcutions is considered to be a common process because 1) many modules rely on the user's instructions to determine the subsequent actions. 2) the parsing functions in different modules are similar to each other. Hence, the parsers should be put into a separate module. In fact, all codes relevant to the parser functions reside in the file *letsencrypt-auto* and *cli.py*.
-
-- **ACME Objects processiong**: 
-To implement ACME Protocol, letsencyrpt contains ACME Objects such as ACME account and ACME Exceptions. Those Objects are used almost everywhere in letsencrypt. When the user wants to request an account, for example, an account Object is created and returned. Such account will later be used when a certificate needs to be requested or renewed. Many modules of let's encrypt need to process ACME object(initiate,update,trasmit,destroy),so, for convenience concern the developers of let's encrypt wrap the functions used to process ACME Objects into a module.
-
-- **Configuration processing**:
-Configuration Object is "a bag of variables" used by almost all the other modules. For instance, the user might want to register his/her information like "I have a domain name abc.com; my account is xxxxx; my email is xxxx@gmail.com; my private key stores in xxxxx; please give me a certificate for that domain name". By passing a configuration Object containing these attributes, it enables letsencrypt to automatically obtain, renew and revoke a certificate.The need for processing a configuration Object (update/trasmit/destroy) is common in almost all modules of let's encrypt. For convenience concern, the configuration Objects (as well as the relevant functions) are wrapped into a module.
-
-####2.3.2.2 Standard Design Approaches
-
-The most important component of letsencrypt is its plugin.
-There are 4 major types of plugins: User Interface (UI), Configurator, Authenticator and Installer.
-The project uses interfaces to standardlize the contributions from developers.
-The interfaces available for implementation of these plugins are defined in [interfaces.py](https://github.com/letsencrypt/letsencrypt/blob/master/letsencrypt/interfaces.py) and [plugins/common.py](https://github.com/letsencrypt/letsencrypt/blob/master/letsencrypt/plugins/common.py#L34). 
-
-- **Configurator**:  This component is to automatically change the configurations. For example, if the user wants to                       change the folder to store certificates, it can be achieved by changing the configuration with the help of a corresponding                              configurator.  Considering that different configurators are for different purposes, letencrypt allows                           the developers to write their own configurator, which has to implement the corresponding interface.
-
- - **IDisplay**:  This plugin implements bindings to alternative UI libraries. Letsencrypt allows contributors to write their own UI, which has to implement IDisplay.
-
- - **Authenticators**: This component is to prove that the client deserves a certificate for some domain name by solving challenges received from ACME server.                         For different types of challenges (e.g. simple HTTP challenge, DVSNI challenge), different                                   Authenticators are needed. Letsencrypt allows developers to construct new authenticator,  which has to                 implement Authenticators Interface.
-
- - **Installer**: It setups the certificate in a server and possibly tweaks the security configuration to make it reliable and secure. For different web servers in user's machine, different Installers are needed. Developers are allowed to construct their own                          Installer, which has to implement Installer Interface.
- 
-####2.3.2.3 Standardlization of Testing
- 
-There are two types of tests: Unit Test and Intergration Test.
-
- - **Unit Test**: 
- Unit Test in letsencrypt aims to check whether the code style is compatiable with the required style. There are two files related to Unit Test: *pep8* and *tox.ini*. The Test can run off-line by developers.
-
-- **Integration Test**: 
-Integration Test is to test whether letsencrypt works well with boulder (a software runs in Certificate Authority which generate SSL/TLS). It is an online test running automatically to test a pull request. The module corresponding to Intergration Test is Travis CI.
-
-
-
-###2.3.3 Codeline Model
+###2.3.2 Codeline Model
 
 In this section, code structure of letsencrypt will be explored.
 Build, Integration, Test and Release Approach also matters a lot in understanding the project organization.
 In addition, Technical Debt is also analyzed.
 
-####2.3.3.1 Source Code Structure
+####2.3.2.1 Source Code Structure
 
 ![Source Code Structure](https://github.com/delftswa2016/team-letsencrypt/blob/master/D2/code.structure.png)
 
@@ -263,7 +223,7 @@ In addition, Technical Debt is also analyzed.
 
 - **tools** - Include .sh files which are frequently used.
 
-####2.3.3.2 Coding Style
+####2.3.2.2 Coding Style
 
 The developers of Let's Encrypt follow the **Google Python Style Guide**, And use **Sphinx-style** for documentation. 'pylint' is used to check coding style.
 ```
@@ -279,7 +239,7 @@ def foo(arg):
     return arg
 ```
 
-####2.3.3.3 Build, Integration and Test Approach
+####2.3.2.3 Build, Integration and Test Approach
 
 To provide developers a convenient environment and also protect project source version, Let's Encrypt has an offical workflow for building, integrating and testing. 
 
@@ -304,7 +264,7 @@ To contribute to Let's Encrypt project, developers have to follow the strict int
 Before merging the changes in pull requests, all of them must have thorough unit test coverage, pass Let's Encrypt's integration tests, and be compliant with the coding style. This is done by popular online testing platform Travis CI. 
 And developers can also do their own test before posting a request. Tox is recommended as official tools for running a full set of test like config file parsing test. For debugging, ipdb is introduced to execlude a series of faults.
 
-####2.3.3.4 Release Process
+####2.3.2.4 Release Process
 
 Let's Encrypt release packages and upload them to PyPI (wheels and source tarballs)[[4](#lfam)].
 
@@ -336,7 +296,7 @@ Let's Encrypt currently version as 0.0.0.devYYYYMMDD, and will change at GA time
 
 Tracking issue for non-dev release scripts: https://github.com/letsencrypt/letsencrypt/issues/1185
 
-####2.3.3.5 Configuration Management
+####2.3.2.5 Configuration Management
 
 To ensure repeatability and technical integrity, Let's encrypt define a configuration file. It is possible to specify configuration file with `letsencrypt-auto --config cli.ini` (or shorter `-c cli.ini`).
 By default, the following locations are searched:
@@ -346,6 +306,48 @@ By default, the following locations are searched:
 - `$XDG_CONFIG_HOME/letsencrypt/cli.ini` (or `~/.config/letsencrypt/cli.ini` if `$XDG_CONFIG_HOME` is not set).
 
 All flags used by the client can be configured, including RSA key size, registed e-mail address, specified domains which generate certificates for, text interface or ncurses, standalone authenticator, webroot authenticator.
+
+###2.3.3 Common Design Model
+
+####2.3.3.1 Common Processing
+
+- **Instruction parsing**: 
+Parsing instrcutions is considered to be a common process because 1) many modules rely on the user's instructions to determine the subsequent actions. 2) the parsing functions in different modules are similar to each other. Hence, the parsers should be put into a separate module. In fact, all codes relevant to the parser functions reside in the file *letsencrypt-auto* and *cli.py*.
+
+- **ACME Objects processiong**: 
+To implement ACME Protocol, letsencyrpt contains ACME Objects such as ACME account and ACME Exceptions. Those Objects are used almost everywhere in letsencrypt. When the user wants to request an account, for example, an account Object is created and returned. Such account will later be used when a certificate needs to be requested or renewed. Many modules of let's encrypt need to process ACME object(initiate,update,trasmit,destroy),so, for convenience concern the developers of let's encrypt wrap the functions used to process ACME Objects into a module.
+
+- **Configuration processing**:
+Configuration Object is "a bag of variables" used by almost all the other modules. For instance, the user might want to register his/her information like "I have a domain name abc.com; my account is xxxxx; my email is xxxx@gmail.com; my private key stores in xxxxx; please give me a certificate for that domain name". By passing a configuration Object containing these attributes, it enables letsencrypt to automatically obtain, renew and revoke a certificate.The need for processing a configuration Object (update/trasmit/destroy) is common in almost all modules of let's encrypt. For convenience concern, the configuration Objects (as well as the relevant functions) are wrapped into a module.
+
+####2.3.3.2 Standard Design Approaches
+
+The most important component of letsencrypt is its plugin.
+There are 4 major types of plugins: User Interface (UI), Configurator, Authenticator and Installer.
+The project uses interfaces to standardlize the contributions from developers.
+The interfaces available for implementation of these plugins are defined in [interfaces.py](https://github.com/letsencrypt/letsencrypt/blob/master/letsencrypt/interfaces.py) and [plugins/common.py](https://github.com/letsencrypt/letsencrypt/blob/master/letsencrypt/plugins/common.py#L34). 
+
+- **Configurator**:  This component is to automatically change the configurations. For example, if the user wants to                       change the folder to store certificates, it can be achieved by changing the configuration with the help of a corresponding                              configurator.  Considering that different configurators are for different purposes, letencrypt allows                           the developers to write their own configurator, which has to implement the corresponding interface.
+
+ - **IDisplay**:  This plugin implements bindings to alternative UI libraries. Letsencrypt allows contributors to write their own UI, which has to implement IDisplay.
+
+ - **Authenticators**: This component is to prove that the client deserves a certificate for some domain name by solving challenges received from ACME server.                         For different types of challenges (e.g. simple HTTP challenge, DVSNI challenge), different                                   Authenticators are needed. Letsencrypt allows developers to construct new authenticator,  which has to                 implement Authenticators Interface.
+
+ - **Installer**: It setups the certificate in a server and possibly tweaks the security configuration to make it reliable and secure. For different web servers in user's machine, different Installers are needed. Developers are allowed to construct their own                          Installer, which has to implement Installer Interface.
+ 
+####2.3.3.3 Standardlization of Testing
+ 
+There are two types of tests: Unit Test and Intergration Test.
+
+ - **Unit Test**: 
+ Unit Test in letsencrypt aims to check whether the code style is compatiable with the required style. There are two files related to Unit Test: *pep8* and *tox.ini*. The Test can run off-line by developers.
+
+- **Integration Test**: 
+Integration Test is to test whether letsencrypt works well with boulder (a software runs in Certificate Authority which generate SSL/TLS). It is an online test running automatically to test a pull request. The module corresponding to Intergration Test is Travis CI.
+
+
+
+
 
 ###2.3.4 Technical Debt
 
