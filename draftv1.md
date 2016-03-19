@@ -129,7 +129,7 @@ IdenTrust is a root certificate provider who authorizes Let’s Encrypt.
 The graph of stakeholders is shown below:
 
 
-![Stakeholders Analysis](https://github.com/delftswa2016/team-letsencrypt/blob/master/D1/stakeholder.png)
+![Stakeholders Analysis](https://github.com/delftswa2016/team-letsencrypt/blob/master/D1/stakeholdersv2.png)
 
 
 
