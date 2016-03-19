@@ -110,7 +110,7 @@ Since the project lasts for only a short time (less than 4 months) and still in 
 
 ###2.1.3 Users
 
-Users are those who use the products. For Let’s Encrypt, the users are all web servers who use Let’s Encrypt to request Digital Certificate for SSL/TLS communication. The number of users is growing fastly since the beginning of the project.
+For Let’s Encrypt, the users are all web servers who use Let’s Encrypt to request Digital Certificate for SSL/TLS communication. The number of users is growing fastly since the beginning of the project.
 
 ###2.1.4 Sponsors
 
