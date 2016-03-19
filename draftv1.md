@@ -155,6 +155,8 @@ There are ten entities related to Let's Encrypt. First, as discussed before, to 
 
 Let's Encrypt provides service to a large number of users including blueboard.cz and checkdomain. Users can operate Let's Encrypt on a series Unix-ish Operating Systems like Arch, Debian, FreeBSD, etc. In addition, Let's Encrypt extends its support of different servers by adding plugins including Apache, Nginx and Webroot. Finally, there exist other softwares based on ACME that compete with Let’s Encrypt.
 
+An overview of the relationships between Let’s Encrypt and its entities is presented in Figure 3.
+
 ###2.2.3 Impact of the System on Environment
 
 The impact of system on environment concerns about the dependencies of other system on Let's Encrypt and other systems’ decommissions and data migration. Since Let's Encrypt can be used as a plugin embedded in other certificate systems, the performance of those systems depend on Let's Encrypt. As a newly developed project, there is not any system decommissions because of Let's Encrypt so far. Finally, Let's Encrypt is independently developed by ISRG.
