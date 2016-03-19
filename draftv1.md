@@ -59,9 +59,7 @@ We identify 6 types of stakeholders for Let's Encrypt.
 
 ###2.1.1 Acquirers
 
-Acquirers are the people who launch and organize this project.
-Their jobs also include estimating the needs of users and setting goals for developers.
-The Let’s encrypt is a implementation of ACME protocol. The only need of users is to perfectly implement ACME (that is also the goals of developers). In this case the three organizations below are acquirers:
+We identified three organizations as the acquirers of Let's encrypt:
 
 
 
@@ -72,10 +70,8 @@ The Let’s encrypt is a implementation of ACME protocol. The only need of users
 - [University of Michigan](https://en.wikipedia.org/wiki/University_of_Michigan)
 
 
-The Electronic Frontier Foundation is the most important acquirer who provides most of resources to Let’s Encrypt.
-Mozilla Foundation and University Michigan also have personnel devoting into this project.
-Those three organizations provides personnels to form the bulk of the developer team, they also set goals to developers to
-meet the needs of users (perfectly implementing ACME protocol). So, they meet the definition of Acuquirers. 
+These three foundations aim to provide a free, automated and open certificate authority to users. They establish a public benefit corporation, Internet Security Research Group (ISRG), to serve the purpose. The members in this group are the main contributors of Let’s Encrypt.
+
 
 ###2.1.2 Developers
 
