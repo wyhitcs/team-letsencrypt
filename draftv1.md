@@ -148,10 +148,10 @@ Let's Encrypt allows users to do following things:
 
 - Create their own account
 - Modify their personal profile
+- Choose which ACME solution to use
+- Turn on/off the notice of expiring date of certificate
 - Register certificate for their server
 - Revoke certificate
-- Turn on/off the notice of expiring date of certificate
-- Choose which ACME solution to use
 
 ###2.2.2 Entities, data and interfaces
 
