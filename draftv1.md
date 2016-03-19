@@ -77,7 +77,7 @@ Mozilla Foundation and University Michigan also have personnel devoting into thi
 
 ###2.1.2 Developers
 
-So far 165 contributors have made contributions to the development of let’s encrypt. The core develoment team consisting of 11 people comes from a public benefit organization [Internet Security Research Group (ISRG)](https://letsencrypt.org/isrg/). The whole project is based on the ACME protocal proposed by ISRG. Unsurprisingly, they made most of the constributions to this project. For a newly established project like let’s encrypt, these developers more or less have responsibilities for testing, maintaining and github management. Here we list the several major developers:
+So far 165 contributors have made contributions to the development of let’s encrypt. The core develoment team consisting of 11 people comes from a public benefit organization [Internet Security Research Group (ISRG)](https://letsencrypt.org/isrg/). The whole project is based on the ACME protocal proposed by ISRG. Unsurprisingly, they made most of the constributions to this project. For a newly established project like let’s encrypt, these developers more or less have responsibilities for testing, maintaining and github management. Here we list several major developers:
 
 - @[Liam Marshall](https://github.com/ArchimedesPi)
 
@@ -111,7 +111,7 @@ For Let’s Encrypt, the users are all web servers who use Let’s Encrypt to re
 
 ###2.1.4 Sponsors
 
-Let's Encrypt is operated by a non-profit to reduce financial, technological, and education barriers to secure communication over the Internet. Corporate Sponsorship helps lead the way to a secure future for the Web. The dramatic rise in sponsors shows the importance of the programme.
+Let's Encrypt is initialized by a non-profit organization (ISRG) to enbale secure communication over the Internet for the purpose of overcoming financial, technological and education barriers. Corporate Sponsorship helps speed up the process leading to a secure Web. The number of sponsers keeps incresing especially in the last four months. The dramatic rise in the nubmer of sponsors reflects the success and importance of the programme.
 ![Sponsors Growth](https://github.com/delftswa2016/team-letsencrypt/blob/master/D1/sponsors.png)
 
 ###2.1.5 Additional Stakeholder
