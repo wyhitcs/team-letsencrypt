@@ -107,7 +107,11 @@ The other contributors are either the users of let’s encrypt or github users w
 
 ###2.1.3 Users
 
-For Let’s Encrypt, the users are all web servers who use Let’s Encrypt to request Digital Certificate for SSL/TLS communication. The number of users is growing fastly since the beginning of the project.
+Since let’s encrypt is a open source free software which can be download and deployed within 5 minutes, it is very hard to say who are the users of let’s encrypt. Maybe there are new users coming out while we are writing this chapter.
+But we can talk about potential users.
+Every website whos want to request SSL/TLS certificate can a potential user. Since the certificate got from let’s encrypt and the one got by ordinary request are completely the same; and let’s encrypt is free of charge. We believe most of the potential users will be
+real users in the future.
+
 
 ###2.1.4 Sponsors
 
