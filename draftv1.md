@@ -74,6 +74,8 @@ The Let’s encrypt is a implementation of ACME protocol. The only need of users
 
 The Electronic Frontier Foundation is the most important acquirer who provides most of resources to Let’s Encrypt.
 Mozilla Foundation and University Michigan also have personnel devoting into this project.
+Those three organizations provides personnels to form the bulk of the developer team, they also set goals to developers to
+meet the needs of users (perfectly implementing ACME protocol). So, they meet the definition of Acuquirers. 
 
 ###2.1.2 Developers
 
