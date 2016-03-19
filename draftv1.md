@@ -154,9 +154,9 @@ Let's Encrypt allows users to do following things:
 
 ###2.2.2 Entities, data and interfaces
 
-There are ten entities related to Let's Encrypt. First, as discussed before, to be an Certificate Authority, Let's Encrypt must be authorized by root certificate provider, IdenTrust. And Let's Encrypt identified Python as the only language dependency. Then its development is open-source which is based on GitHub platform. Furthermore, the release of different version will be strictly tested by tools, Tox and Travis CI online test system, and finally posted by using the Python Package Index (PYPI). To further discuss about the project, Freenode offers good platform for communications.
+There are ten entities related to Let's Encrypt. First, as discussed before, to be an Certificate Authority, Let's Encrypt must be authorized by root certificate provider, IdenTrust. And Let's Encrypt identified Python as the only language dependency. Then its development is open-source which is based on GitHub platform, while Freenode is its main community. Furthermore, the release of different version will be strictly tested by tools, Tox and Travis CI online test system, and finally posted by using the Python Package Index (PYPI). 
 
-Let's Encrypt provides service to a large number of users including blueboard.cz and checkdomain. Users can operate Let's Encrypt on a series Unix-ish Operating Systems like Arch, Debian, FreeBSD, etc. In addition, Let's Encrypt extends its support of different servers by adding plugins including Apache, Nginx and Webroot. Finally, there exist other softwares based on ACME that compete with Let’s Encrypt.
+Let's Encrypt provides service to a large number of users including [blueboard.cz](https://blueboard.cz/) and [checkdomain](https://www.checkdomain.de/ssl/zertifikat/ssl-free/). Users can operate Let's Encrypt on a series Unix-ish Operating Systems like Arch, Debian, FreeBSD, etc. In addition, Let's Encrypt extends its support of different servers by adding plugins including Apache, Nginx and Webroot. Finally, there exist other softwares based on ACME that compete with Let’s Encrypt.
 
 An overview of the relationships between Let’s Encrypt and its entities is presented in Figure 3.
 
