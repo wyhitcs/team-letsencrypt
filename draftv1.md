@@ -160,12 +160,15 @@ As mentioned above, in order to become an Certificate Authority, Let's Encrypt m
 
 Let's Encrypt provides service to a large number of users. Here we only give two examples, [blueboard.cz](https://blueboard.cz/) and [checkdomain](https://www.checkdomain.de/ssl/zertifikat/ssl-free/). Users can operate Let's Encrypt on a series Unix-ish Operating Systems like Arch, Debian, FreeBSD, etc. In addition, Let's Encrypt extends its support for different servers such as Apache, Nginx and Webroot by using a pluging architecture. 
 
+Finally, there exist other softwares based on ACME that compete with Let’s Encrypt like [acme-tiny](https://github.com/diafygi/acme-tiny) and [simp_le](https://github.com/kuba/simp_le).
+
+![contextview](https://github.com/delftswa2016/team-letsencrypt/blob/master/D1/contextview.png)
 
 ###2.2.3 Impact of the System on Environment
 
 The impact of system on environment concerns about the dependencies of other system on Let's Encrypt and other systems’ decommissions and data migration. Since Let's Encrypt can be used as a plugin embedded in other certificate systems, the performance of those systems depend on Let's Encrypt. As a newly developed project, there is not any system decommissions because of Let's Encrypt so far. Finally, Let's Encrypt is independently developed by ISRG.
 
-![contextview](https://github.com/delftswa2016/team-letsencrypt/blob/master/D1/contextview.png)
+
 
 ##2.3 Development View
 
