@@ -77,10 +77,7 @@ Mozilla Foundation and University Michigan also have personnel devoting into thi
 
 ###2.1.2 Developers
 
-Developers are the people who devote themselves directly to the development of the project.
-For Let’s Encrypt, the developers are mainly programmers.
-
-There are 165 contributors for Let’s Encrypt and here we only list the most important ones:
+So far 165 contributors have made contributions to the development of let’s encrypt. The core develoment team consisting of 11 people comes from a public benefit organization [Internet Security Research Group (ISRG)](https://letsencrypt.org/isrg/). The whole project is based on the ACME protocal proposed by ISRG. Unsurprisingly, they made most of the constributions to this project. For a newly established project like let’s encrypt, these developers more or less have responsibilities for testing, maintaining and github management. Here we list the several major developers:
 
 - @[Liam Marshall](https://github.com/ArchimedesPi)
 
@@ -106,7 +103,7 @@ There are 165 contributors for Let’s Encrypt and here we only list the most im
 
 - @[Sagi Kedmi](https://github.com/sagi)
 
-Since the project lasts for only a short time (less than 4 months) and still in progress, some developers are also responsible for testing and maintaining. For example, the developer @[bmw](https://github.com/bmw) also responds to issues and pull requests in github.
+The other contributors are either the users of let’s encrypt or github users who are interested in this project. Their constributions are mainly about improving commond line, fixing bugs and format.  In the documentation the team mentions that let’s encrypt is a beta software containing plenty of bugs. Thus, there is a lot of work to be done to improve user-friendliness.
 
 ###2.1.3 Users
 
