@@ -173,9 +173,23 @@ The development view communicates the aspects of the architecture of interest to
 Based on this, the following article shows the common design model, module structure model and code line model of Let's Encrypt which give a technical overview of whole project.
 To learn more details, each model is attached with complete descrption. In addition, technical debt of the project and coresponding solution or plan are described at the end of report.
 
-###2.3.1 Common Design Model
+###2.3.1 Module Structure Model
+![Module Structure Model](https://github.com/delftswa2016/team-letsencrypt/blob/master/D2/module.structure.png)
 
-####2.3.1.1 Common Processing
+
+The UML component diagram below gives an overview of module structure. Each package means a code module and arrow shows intermodule dependencies[[1](#Nick)].
+
+The first layer which is also the closest layer to users offers friendly UI for common clients to set up their own certificates. And the command way is also possible for developers to contribute to the project. 
+
+Receiving commands from upper layer, the coordinator module tries to check the compatibility to ensure the job can be done in certain environment. After that, the commands are parsed by parser and functions offered in next layer are recalled.
+
+As the core layer of whole project, the third layer offers important functions to complete tasks. ACME protocol is a protocol that a certificate authority (CA) and an applicant can use to automate the process of verification and certificate issuance. The package contains a series of codes to complete this task. Challenge module represents automatic module to finish the challenge provided by CA. JSON Web Key (JWK) module offers a cryptographic key in this data structure.  Besides, Let’s Encrypt has a plugin architecture to facilitate support for different webservers, other TLS servers, and operating systems. Currently, general webservers like Apache and Nginx are supported.
+
+There’s no doubt that all previous code is based on python library which is included the bottom layer. In addition, OpenSSL, a software library to be used to secure communications against eavesdropping or to ascertain the identity of the party at the other end, is also the base of authentication process.
+
+###2.3.2 Common Design Model
+
+####2.3.2.1 Common Processing
 
 - **Instruction parsing**: 
 Parsing instrcutions is considered to be a common process because 1) many modules rely on the user's instructions to determine the subsequent actions. 2) the parsing functions in different modules are similar to each other. Hence, the parsers should be put into a separate module. In fact, all codes relevant to the parser functions reside in the file *letsencrypt-auto* and *cli.py*.
@@ -186,7 +200,7 @@ To implement ACME Protocol, letsencyrpt contains ACME Objects such as ACME accou
 - **Configuration processing**:
 Configuration Object is "a bag of variables" used by almost all the other modules. For instance, the user might want to register his/her information like "I have a domain name abc.com; my account is xxxxx; my email is xxxx@gmail.com; my private key stores in xxxxx; please give me a certificate for that domain name". By passing a configuration Object containing these attributes, it enables letsencrypt to automatically obtain, renew and revoke a certificate.The need for processing a configuration Object (update/trasmit/destroy) is common in almost all modules of let's encrypt. For convenience concern, the configuration Objects (as well as the relevant functions) are wrapped into a module.
 
-####2.3.1.2 Standard Design Approaches
+####2.3.2.2 Standard Design Approaches
 
 The most important component of letsencrypt is its plugin.
 There are 4 major types of plugins: User Interface (UI), Configurator, Authenticator and Installer.
@@ -201,7 +215,7 @@ The interfaces available for implementation of these plugins are defined in [int
 
  - **Installer**: It setups the certificate in a server and possibly tweaks the security configuration to make it reliable and secure. For different web servers in user's machine, different Installers are needed. Developers are allowed to construct their own                          Installer, which has to implement Installer Interface.
  
-####2.3.1.3 Standardlization of Testing
+####2.3.2.3 Standardlization of Testing
  
 There are two types of tests: Unit Test and Intergration Test.
 
@@ -211,19 +225,7 @@ There are two types of tests: Unit Test and Intergration Test.
 - **Integration Test**: 
 Integration Test is to test whether letsencrypt works well with boulder (a software runs in Certificate Authority which generate SSL/TLS). It is an online test running automatically to test a pull request. The module corresponding to Intergration Test is Travis CI.
 
-###2.3.2 Module Structure Model
-![Module Structure Model](https://github.com/delftswa2016/team-letsencrypt/blob/master/D2/module.structure.png)
 
-
-The UML component diagram below gives an overview of module structure. Each package means a code module and arrow shows intermodule dependencies[[1](#Nick)].
-
-The first layer which is also the closest layer to users offers friendly UI for common clients to set up their own certificates. And the command way is also possible for developers to contribute to the project. 
-
-Receiving commands from upper layer, the coordinator module tries to check the compatibility to ensure the job can be done in certain environment. After that, the commands are parsed by parser and functions offered in next layer are recalled.
-
-As the core layer of whole project, the third layer offers important functions to complete tasks. ACME protocol is a protocol that a certificate authority (CA) and an applicant can use to automate the process of verification and certificate issuance. The package contains a series of codes to complete this task. Challenge module represents automatic module to finish the challenge provided by CA. JSON Web Key (JWK) module offers a cryptographic key in this data structure.  Besides, Let’s Encrypt has a plugin architecture to facilitate support for different webservers, other TLS servers, and operating systems. Currently, general webservers like Apache and Nginx are supported.
-
-There’s no doubt that all previous code is based on python library which is included the bottom layer. In addition, OpenSSL, a software library to be used to secure communications against eavesdropping or to ascertain the identity of the party at the other end, is also the base of authentication process.
 
 ###2.3.3 Codeline Model
 
