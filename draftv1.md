@@ -100,21 +100,7 @@ So far 165 contributors have made contributions to the development of let’s en
 
 - @[Francois Marier](https://github.com/fmarier)
 
-- @[Harlan Lieberman-Berg](https://github.com/hlieberman)
 
-- @[Joona Hoikkala](https://github.com/joohoi)
-
-- @[Jacob Hoffman-Andrews](https://github.com/jsha)
-
-- @[Jakub Warmuz](https://github.com/kuba)
-
-- @[Martin Thomson](https://github.com/martinthomson)
-
-- @[Peter Eckersley](https://github.com/pde)
-
-- @[Roland Bracewell Shoemaker](https://github.com/rolandshoemaker)
-
-- @[Sagi Kedmi](https://github.com/sagi)
 
 The other contributors are either the users of let’s encrypt or github users who are interested in this project. Their constributions are mainly about improving commond line, fixing bugs and format.  In the documentation the team mentions that let’s encrypt is a beta software containing plenty of bugs. Thus, there is a lot of work to be done to improve user-friendliness.
 
@@ -238,21 +224,6 @@ In addition, Technical Debt is also analyzed.
 
 - **tools** - Include .sh files which are frequently used.
 
-####2.3.2.2 Coding Style
-
-The developers of Let's Encrypt follow the **Google Python Style Guide**, And use **Sphinx-style** for documentation. 'pylint' is used to check coding style.
-```
-def foo(arg):
-    """Short description.
-
-    :param int arg: Some number.
-
-    :returns: Argument
-    :rtype: int
-
-    """
-    return arg
-```
 
 ####2.3.2.3 Build, Integration and Test Approach
 
@@ -278,49 +249,6 @@ To contribute to Let's Encrypt project, developers have to follow the strict int
 
 Before merging the changes in pull requests, all of them must have thorough unit test coverage, pass Let's Encrypt's integration tests, and be compliant with the coding style. This is done by popular online testing platform Travis CI. 
 And developers can also do their own test before posting a request. Tox is recommended as official tools for running a full set of test like config file parsing test. For debugging, ipdb is introduced to execlude a series of faults.
-
-####2.3.2.4 Release Process
-
-Let's Encrypt release packages and upload them to PyPI (wheels and source tarballs)[[4](#lfam)].
-
-- https://pypi.python.org/pypi/acme
-
-- https://pypi.python.org/pypi/letsencrypt
-
-- https://pypi.python.org/pypi/letsencrypt-apache
-
-- https://pypi.python.org/pypi/letsencrypt-nginx
-
-- https://pypi.python.org/pypi/letshelp-letsencrypt
-
-The following scripts are used in the process:
-
-- https://github.com/letsencrypt/letsencrypt/blob/master/tools/dev-release.sh
-
-- https://gist.github.com/kuba/b9a3a2ca3bd35b8368ef
-
-Let's Encrypt currently version as 0.0.0.devYYYYMMDD, and will change at GA time to the following scheme:
-
-- 0.1.0
-
-- 0.2.0dev for developement in master
-
-- 0.2.0 (only temporarily in master)
-
-- ...
-
-Tracking issue for non-dev release scripts: https://github.com/letsencrypt/letsencrypt/issues/1185
-
-####2.3.2.5 Configuration Management
-
-To ensure repeatability and technical integrity, Let's encrypt define a configuration file. It is possible to specify configuration file with `letsencrypt-auto --config cli.ini` (or shorter `-c cli.ini`).
-By default, the following locations are searched:
-
-- `/etc/letsencrypt/cli.ini`
-
-- `$XDG_CONFIG_HOME/letsencrypt/cli.ini` (or `~/.config/letsencrypt/cli.ini` if `$XDG_CONFIG_HOME` is not set).
-
-All flags used by the client can be configured, including RSA key size, registed e-mail address, specified domains which generate certificates for, text interface or ncurses, standalone authenticator, webroot authenticator.
 
 ###2.3.3 Common Design Model
 
