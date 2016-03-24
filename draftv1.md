@@ -346,13 +346,15 @@ There is no limit to the number of certificates that can be issued to different 
 
 ##2.5 Variability Perspective
 
-In [[6](#Sven)], variability describes the ability to derive different products from a common set of artifacts. It is important for a good software to equip with variability to adapt to different environments, which largely satisfies the requirements of different stakeholders. Without doubt, Let’s Encrypt is such a software in developing. In the first section of report, a list of features and dependencies are given. A related model is built upon this. Additionally, the implementation and binding time of features are presented. Finally, the strategy to realize variabilities is posted.
+Variability describes the ability to derive different products from a common set of artifacts[[6](#Sven)]. It is important for a good software to equip with variability to adapt to different environments, which also largely satisfies the requirements of different stakeholders. In spite of a BETA software, Let’s Encrypt provides plenty of variable features. In this section, a list of features and dependencies are given and then, a related model is built upon this. The strategies to implement such variabilities are also discussed.
 
-In [[6](#Sven)], evolution is defined as the process of dealing with change in the system development lifecycle. After a series changes, Let’s Encrypt is desired to be more flexible for users. In the second section, the evolution history of  Let’s Encrypt is given and related issues are analyzed.
+As mentioned above, Let’s Encrypt is a BETA software still in its earlier version. It can be seen from the github milestone that a great amount of work focuses on improving its flexibility to equip with variability. That is why it is interesting to address its evolution history here to see how Let’s Encrypt deals with change in the system development lifecycle.
+
 
 ###2.5.1 Variable Features
 
-According to [[6](#Sven)], a feature is a characteristic or end-user-visible behavior of a software system. Features are used in product-line engineering to specify and communicate commonalities and differences of the products between stakeholders, and to guide structure, reuse, and variation across all phases of the software life cycle. In this section,  a series of features for Let’s Encrypt are identified and commented. In addition, they are classified into four different parts.
+A feature is a characteristic or end-user-visible behavior of a software system[[6](#Sven)]. We identified a list of variable features and classified them into four categories.
+
 
 ####2.5.1.1 Feature List
 
