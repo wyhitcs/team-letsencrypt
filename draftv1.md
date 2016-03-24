@@ -255,40 +255,14 @@ And developers can also do their own test before posting a request. Tox is recom
 ####2.3.3.1 Common Processing
 
 - **Instruction parsing**: 
-Parsing instrcutions is considered to be a common process because 1) many modules rely on the user's instructions to determine the subsequent actions. 2) the parsing functions in different modules are similar to each other. Hence, the parsers should be put into a separate module. In fact, all codes relevant to the parser functions reside in the file *letsencrypt-auto* and *cli.py*.
+Parsing instructions is considered to be a common process because 1) many modules rely on user's instructions to determine the subsequent actions; 2) the parsers in different modules are similar to each other. Hence, the parsers can be put into a separate module. In fact, all codes relevant to the parsers reside in the file *letsencrypt-auto* and *cli.py*.
 
-- **ACME Objects processiong**: 
-To implement ACME Protocol, letsencyrpt contains ACME Objects such as ACME account and ACME Exceptions. Those Objects are used almost everywhere in letsencrypt. When the user wants to request an account, for example, an account Object is created and returned. Such account will later be used when a certificate needs to be requested or renewed. Many modules of let's encrypt need to process ACME object(initiate,update,trasmit,destroy),so, for convenience concern the developers of let's encrypt wrap the functions used to process ACME Objects into a module.
+- **ACME objects processiong**: 
+To implement ACME Protocol, Let’s Encrypt contains ACME objects such as ACME account and ACME exceptions. Those objects are used almost everywhere in Let’s Encrypt. When a user wants to request an account, for example, an account object is created and returned. Such account will later be used when a certificate needs to be requested or renewed. Many modules of Let’s Encrypt are used to process ACME objects to initiate, update, transmit or destroy a certificate. Therefore, for convenience, the developers of Let’s Encrypt wrap all the functions used for processing ACME objects into a separate module.
+
 
 - **Configuration processing**:
-Configuration Object is "a bag of variables" used by almost all the other modules. For instance, the user might want to register his/her information like "I have a domain name abc.com; my account is xxxxx; my email is xxxx@gmail.com; my private key stores in xxxxx; please give me a certificate for that domain name". By passing a configuration Object containing these attributes, it enables letsencrypt to automatically obtain, renew and revoke a certificate.The need for processing a configuration Object (update/trasmit/destroy) is common in almost all modules of let's encrypt. For convenience concern, the configuration Objects (as well as the relevant functions) are wrapped into a module.
-
-####2.3.3.2 Standard Design Approaches
-
-The most important component of letsencrypt is its plugin.
-There are 4 major types of plugins: User Interface (UI), Configurator, Authenticator and Installer.
-The project uses interfaces to standardlize the contributions from developers.
-The interfaces available for implementation of these plugins are defined in [interfaces.py](https://github.com/letsencrypt/letsencrypt/blob/master/letsencrypt/interfaces.py) and [plugins/common.py](https://github.com/letsencrypt/letsencrypt/blob/master/letsencrypt/plugins/common.py#L34). 
-
-- **Configurator**:  This component is to automatically change the configurations. For example, if the user wants to                       change the folder to store certificates, it can be achieved by changing the configuration with the help of a corresponding                              configurator.  Considering that different configurators are for different purposes, letencrypt allows                           the developers to write their own configurator, which has to implement the corresponding interface.
-
- - **IDisplay**:  This plugin implements bindings to alternative UI libraries. Letsencrypt allows contributors to write their own UI, which has to implement IDisplay.
-
- - **Authenticators**: This component is to prove that the client deserves a certificate for some domain name by solving challenges received from ACME server.                         For different types of challenges (e.g. simple HTTP challenge, DVSNI challenge), different                                   Authenticators are needed. Letsencrypt allows developers to construct new authenticator,  which has to                 implement Authenticators Interface.
-
- - **Installer**: It setups the certificate in a server and possibly tweaks the security configuration to make it reliable and secure. For different web servers in user's machine, different Installers are needed. Developers are allowed to construct their own                          Installer, which has to implement Installer Interface.
- 
-####2.3.3.3 Standardlization of Testing
- 
-There are two types of tests: Unit Test and Intergration Test.
-
- - **Unit Test**: 
- Unit Test in letsencrypt aims to check whether the code style is compatiable with the required style. There are two files related to Unit Test: *pep8* and *tox.ini*. The Test can run off-line by developers.
-
-- **Integration Test**: 
-Integration Test is to test whether letsencrypt works well with boulder (a software runs in Certificate Authority which generate SSL/TLS). It is an online test running automatically to test a pull request. The module corresponding to Intergration Test is Travis CI.
-
-
+Configuration object is "a bag of attributes" used by almost all the modules. For instance, a user might want to register his/her information in such way "I have a domain name abc.com; my account is xxxxx; my private key stores in xxxxx; please give me a certificate for that domain name". Processing a configuration object containing these attributes enables Let’s Encrypt to automatically obtain, renew and revoke a certificate. Such processing is needed in almost all the modules. Therefore, the configuration object (as well as the relevant functions) is wrapped into a module.
 
 
 
