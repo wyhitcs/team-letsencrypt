@@ -247,8 +247,10 @@ To contribute to Let's Encrypt project, developers have to follow the strict int
 
 ##### **Test**
 
-Before merging the changes in pull requests, all of them must have thorough unit test coverage, pass Let's Encrypt's integration tests, and be compliant with the coding style. This is done by popular online testing platform Travis CI. 
-And developers can also do their own test before posting a request. Tox is recommended as official tools for running a full set of test like config file parsing test. For debugging, ipdb is introduced to execlude a series of faults.
+Before the pull requests are merged, they have to first go through a unit coverage test , pass the integration test, and comply with the coding style of Let's Encrypt. It can be done on a popular online testing platform Travis CI. 
+
+Another option for developers is to do their own test locally before pulling a request. Tox is officially recommended as a testing tool for running a full set of tests including config file parsing test and codes style testing. For debugging purpose, ipdb is a package used for detecting syntax errors.
+
 
 ###2.3.3 Common Design Model
 
