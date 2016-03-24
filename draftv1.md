@@ -50,7 +50,7 @@ These two protocols aim to provide encrypted communication between two parties. 
 ##1.2 ACME protocol
 
 The identity of internet entities (client and server) need to be verified. However, today’s verification is done by some ad-hoc mechanisms which are not suitable for development of online verification in the future. 
-ACME protocol aims to address such issue by standardizing and automating the procedure of verification. In other words, it is a “bag of procedures” by doing which a Certificate Authority(CA) issues a certificate to a client.
+Automatic Certificate Management Environment (ACME) protocol[[8](#acme)] aims to address such issue by standardizing and automating the procedure of verification. In other words, it is a “bag of procedures” by doing which a Certificate Authority(CA) issues a certificate to a client.
 
 ##1.3 Certificate Authority
 CA is an online organization which issues a Digital Certificate.
@@ -689,4 +689,5 @@ They set up project in multiple Python versions(2.6,2.7,3.3,3.4,3.5) and multipl
 
 7. <div id="Lee">Lee, Jihyun, & Hwang Sunmyung. A review on variability mechanisms for product lines. International Journal of Advanced Media and Communication, 5(2-3), 172-181. 2014
 
+8. <div id="acme">R. Barnes, J. Hoffman-Andrews, J. Kasten. Automatic Certificate Management Environment (ACME). https://letsencrypt.github.io/acme-spec/.2015
 
