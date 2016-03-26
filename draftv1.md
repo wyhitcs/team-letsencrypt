@@ -162,8 +162,8 @@ The impact of system on environment concerns about the dependencies of other sys
 
 The development view describes the architecture that supports the software development process.
 The development view communicates the aspects of the architecture of interest to stakeholders from the building, testing, maintaining and enhancing the project[[1](#Nick)].
-Based on this, the following article shows the common design model, module structure model and code line model of Let's Encrypt which give a technical overview of whole project.
-To learn more details, each model is attached with complete descrption. In addition, technical debt of the project and coresponding solution or plan are described at the end of report.
+Based on this, the following article shows the common design model, module structure model and code line model of Let's Encrypt which give a technical overview of the whole project.
+To learn more details, each model is attached with a complete descrption. In addition, technical debt of the project and corresponding solution or plan are described at the end of report.
 
 ###2.3.1 Module Structure Model
 ![Module Structure Model](https://github.com/delftswa2016/team-letsencrypt/blob/master/D2/module.structure.png)
@@ -171,13 +171,13 @@ To learn more details, each model is attached with complete descrption. In addit
 
 The UML component diagram below gives an overview of the module structure. Each package is a code module and the arrow shows the intermodule dependencies[[1](#Nick)].
 
-- **User layer**: The uppermost layer which is also the closest layer to users offers UI for clients to set up their own certificates. The command line interface enables the developers to contribute to the project. 
+- **User layer**: the uppermost layer which is also the closest layer to users offers UI for clients to set up their own certificates. The command line interface enables the developers to contribute to the project. 
 
-- **Parser layer**: After receiving commands from the upper layer, the coordinator module checks the compatibility to ensure the job can be successfully done in a certain environment. Then, the commands are parsed by the parser and the function layer is called.
+- **Parser layer**: after receiving commands from the upper layer, the coordinator module checks the compatibility to ensure the job can be successfully done in a certain environment. Then, the commands are parsed by the parser and the function layer is called.
 
-- **Function layer**: As the core layer of the whole project, function layer offers important functions to automate the tasks of obtaining a certificate. The ACME module provides a protocol that allows an applicant to obtain a certificate automatically from a Certificate Authority (CA). It includes a challenge module which automatically fulfills the challenge provided by CA. Moreover, a JSON Web Key (JWK) module creates a cryptographic key in the data structure. Another module in this layer is Plugins, providing a plugin architecture to facilitate support for different web servers. Currently, web servers including Apache and Nginx are supported by Let’s Encrypt.
+- **Function layer**: as the core layer of the whole project, function layer offers important functions to automate the tasks of obtaining a certificate. The ACME module provides a protocol that allows an applicant to obtain a certificate automatically from a Certificate Authority (CA). It includes a challenge module which automatically fulfills the challenge provided by CA. Moreover, JSON Web Key (JWK) module creates a cryptographic key in the data structure. Another module in this layer is Plugins, providing a plugin architecture to facilitate support for different web servers. Currently, web servers including Apache and Nginx are supported by Let’s Encrypt.
 
-- **Platform layer**: In the bottom layer, it can be seen that the only language dependency is python. In addition, OpenSSL, a software library used to secure communications against eavesdropping or to ascertain the identity of the party at the other end, is the base of authentication process.
+- **Platform layer**: in the bottom layer, it can be observed that the only language dependency is python. In addition, OpenSSL, a software library used to secure communications against eavesdropping or to ascertain the identity of the party at the other end, is the base of authentication process.
 
 ![ACME Protocol Module in Detail](https://github.com/delftswa2016/team-letsencrypt/blob/master/D2/module2.png)
 
@@ -207,7 +207,7 @@ In this section, code structure of Let's Encrypt will be explored. Besides, Buil
 
 - **letsencrypt-nginx** - This package is for nginx plugin. 
 
-- **letsencrypt-auto-source** - This file is to receive and parse the shell instruction from user.
+- **letsencrypt-auto-source** - This file is to receive and parse the shell instruction from users.
 
 - **letsencrypt** - Source code of the whole project.
   - **display** - UI methods for user operations.
@@ -216,7 +216,7 @@ In this section, code structure of Let's Encrypt will be explored. Besides, Buil
   - **client.py** - Implementation of the certificate obtain, install and revoke procedures.
   - **\*.py** - Implementation of the annotated ACME objects.
 
-- **letshelp-letsencrypt** - This is responsible for the “help” instruction for let’s encrypt.
+- **letshelp-letsencrypt** - This is responsible for the “help” instruction for Let’s Encrypt.
 
 - **tests** - Include .sh files for test use.
 
@@ -225,17 +225,17 @@ In this section, code structure of Let's Encrypt will be explored. Besides, Buil
 
 ####2.3.2.2 Build, Integration and Test Approach
 
-To provide developers a convenient environment and also protect project source version, Let's Encrypt has an offical workflow for building, integrating and testing. 
+To provide developers a convenient environment and also protect project source version, Let's Encrypt has an official workflow for building, integrating and testing. 
 
 ##### **Build**
 
-Let's Encrypt supports multiple operating systems. Users can install client according to their requirements. However, developers should have their own local copies based on their platform and run the client in developer mode from local tree for technical test. 
+Let's Encrypt supports multiple operating systems. Users can install the client according to their requirements. However, developers should have their own local copies based on their platform and run the client in developer mode from local tree for a technical test. 
 
 ##### **Integration**
 
 To contribute to Let's Encrypt project, developers have to follow the strict integration process made by project team.
 
-- Developers can firstly find open issues in the github issue tracker or post new issues for their own idea.
+- Developers can firstly find open issues in the GitHub issue tracker or post new issues for their own idea.
 
 - Then developers start to work on the problem, post a comment to let others know and seek feedback on the plan where appropriate.
 
@@ -245,7 +245,7 @@ To contribute to Let's Encrypt project, developers have to follow the strict int
 
 ##### **Test**
 
-Before the pull requests are merged, they have to first go through a unit coverage test , pass the integration test, and comply with the coding style of Let's Encrypt. It can be done on a popular online testing platform Travis CI. 
+Before the pull requests are merged, they have to first go through a unit coverage test , pass the integration test, and comply with the coding style of Let's Encrypt. It can be performed on a popular online testing platform Travis CI. 
 
 Another option for developers is to do their own test locally before pulling a request. Tox is officially recommended as a testing tool for running a full set of tests including config file parsing test and codes style testing. For debugging purpose, ipdb is a package used for detecting syntax errors.
 
