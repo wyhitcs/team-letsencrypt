@@ -308,8 +308,9 @@ In that passage, the second sentence contradicts the first. Also it is not nearl
 
 
 ####2.3.4.3 How developers deal with technical debt
+For technical debt, developers always find it via Issues, discuss it and try to find a better solution to fix it. For technical debt and related issues we mentioned above, Let’s Encrypt manage their technical debt using the following method.
 
-For technical debt, developers always find it via Issues, discuss it and try to find a better solution to fix it. For the technical debt and related issues we mentioned above [#2155](https://github.com/letsencrypt/letsencrypt/issues/2155), [#2498](https://github.com/letsencrypt/letsencrypt/issues/2498) and [#2114](https://github.com/letsencrypt/letsencrypt/issues/2114) they use this kind of method to manage their technical debt. 
+
 - Code Duplication: Recent advances in static code analysis and hardware performance made possible tool-based localization of code duplication in industrial contexts. 
 For developers, they could use this kind of tools to detect duplicates and then improved by sharing common util functions (as they did in [#382](https://github.com/letsencrypt/letsencrypt/pull/382)).
 
