@@ -491,7 +491,7 @@ ECC support is deferred until it is required for a reason that this feature is n
 
 ###2.6.2 Architectural Tactics
 
-With the development of Let’s Encypt, various architecture tactics are used to make it more flexible to accomodate changes. Besides adding extensible plugins and configurable parameters, Let’s encrypt also takes the following strategies to achieve reliable change:
+With the development of Let’s Encrypt, various architecture tactics are used to make it more flexible to accomodate changes. Besides adding extensible plugins and configurable parameters, Let’s encrypt also takes the following strategies to achieve reliable change:
 
 - Create mechanisms to roll back unsuccessful deployments: 
 The source code is on Github, which is a perfect tool for version control. 
@@ -504,7 +504,7 @@ Let’s Encrypt uses `tox` for testing.
 - Continuous integration: 
 When making changes, it is always best to receive bad news as early as possible. 
 Travis CI is used to do automated testing for every pull request to Let’s Encrypt project before merging. 
-They set up project in multiple Python versions(2.6,2.7,3.3,3.4,3.5) and multiple plugins. [(links to `.travis.yml` for letsencrypt)](https://github.com/letsencrypt/letsencrypt/blob/master/.travis.yml)
+They set up project in multiple Python versions(2.6,2.7,3.3,3.4,3.5) and multiple plugins. [(links to `.travis.yml`)](https://github.com/letsencrypt/letsencrypt/blob/master/.travis.yml)
 
 ##Conclusion
 
@@ -518,7 +518,7 @@ We also gain knowledge from the analysis of deployment view on how to guarantee 
 
 At last, the variability perspective and evolution perspective focus on the design that enables a project to equip with variability and changes. It shows us the importance for an architect to be prepared for variability and changes during the development lifecycle.
 
-To conclude, a well-structured architecture of a software satisfies its related stakeholders and makes the development, maintainence and test process easier.  Let’s Encrypt is a BETA SOFTWARE containing plenty of bugs, which makes the analysis challenging but interesting. To get involved into the project, we made contributions by making pull request on GitHub which were merged. Our main contributions are in the form of documentation.
+To conclude, a well-structured architecture of a software satisfies its related stakeholders and makes the development, maintainence and test process easier. Let’s Encrypt is a BETA SOFTWARE containing plenty of bugs, which makes the analysis challenging but interesting. To get involved into the project, we made contributions by pulling request on GitHub and two of them got merged. Our main contributions are listed in the appendix.
 
 
 
