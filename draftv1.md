@@ -144,9 +144,9 @@ Let's Encrypt allows users to do following things:
 
 An overview of the relationship between Let’s Encrypt and its entities is shown in Figure 3.
 
-As mentioned above, in order to become an Certificate Authority, Let's Encrypt must be authorized by the root certificate provider IdenTrust. The only language dependency of Let's encrypt is Python and the development is based on GitHub platform, where both ISRG members and individual github users can contribute. Let's encrypt also takes advantage of online communicty such as Freenode to allow discussion of issues among developers and users. The releases of different versions will be first strictly tested by Tox (standardize testing) and Travis CI (online test system) and then, posted using the Python Package Index (PYPI). 
+As mentioned above, in order to become a Certificate Authority, Let's Encrypt must be authorized by the root certificate provider IdenTrust. The only language dependency of Let's encrypt is Python and the development is based on GitHub platform, where both ISRG members and individual GitHub users can contribute. Let's encrypt also takes advantage of online community such as Freenode to allow discussion of issues among developers and users. The releases of different versions will be first strictly tested by Tox (standardize testing) and Travis CI (online test system) and then, posted using the Python Package Index (PYPI). 
 
-Let's Encrypt provides service to a large number of users. Here we only give two examples, [blueboard.cz](https://blueboard.cz/) and [checkdomain](https://www.checkdomain.de/ssl/zertifikat/ssl-free/). Users can operate Let's Encrypt on a series Unix-ish Operating Systems like Arch, Debian, FreeBSD, etc. In addition, Let's Encrypt extends its support for different servers such as Apache, Nginx and Webroot by using a pluging architecture. 
+Let's Encrypt provides service to a large number of users. Here we only give two examples, [blueboard.cz](https://blueboard.cz/) and [checkdomain](https://www.checkdomain.de/ssl/zertifikat/ssl-free/). Users can operate Let's Encrypt on a series Unix-ish Operating Systems like Arch, Debian, FreeBSD, etc. In addition, Let's Encrypt extends its support for different servers such as Apache, Nginx and Webroot by using a plugging architecture. 
 
 Finally, there exist other softwares based on ACME that compete with Let’s Encrypt like [acme-tiny](https://github.com/diafygi/acme-tiny) and [simp_le](https://github.com/kuba/simp_le).
 
@@ -154,7 +154,7 @@ Finally, there exist other softwares based on ACME that compete with Let’s Enc
 
 ###2.2.3 Impact of the System on Environment
 
-The impact of system on environment concerns about the dependencies of other system on Let's Encrypt and other systems’ decommissions and data migration. Since Let's Encrypt can be used as a plugin embedded in other certificate systems, the performance of those systems depend on Let's Encrypt. As a newly developed project, there is not any system decommissions because of Let's Encrypt so far. Finally, Let's Encrypt is independently developed by ISRG.
+The impact of system on environment concerns about the dependencies of other system on Let's Encrypt and other systems’ decommissions and data migration. Since Let's Encrypt can be used as a plugin embedded in other certificate systems, the performance of those systems depends on Let's Encrypt. As a newly developed project, there is not any system decommissions because of Let's Encrypt so far. Finally, Let's Encrypt is independently developed by ISRG.
 
 
 
