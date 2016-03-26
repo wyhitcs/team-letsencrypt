@@ -463,47 +463,7 @@ Finally, it’s convenient for users to get a kind email notification about the 
 
 ###2.5.2 Implementation Strategy
 
-####2.5.2.1 Interface Design
-
 The key to implement variability and configurability is using interface. All the interfaces need to be implemented are stored in the file `interface.py`. In the [developer guide](https://letsencrypt.readthedocs.org/en/latest/contributing.html) announce that what interface should be implemented by a specific kind of class. The interface.py and the developer guide together draw a outline for the let’s encrypt: what configuration can be done, what parameter can be specified, what Operation System it should support, what plugin it should support. Hence the variability and configurability has been implemented.
-
-####2.5.2.2 Configuration File
-
-It is possible to specify configuration file with letsencrypt-auto --config cli.ini (or shorter -c cli.ini). In the configuration file, users could change the length of RSA key, registered e-mail address, domains need certification, text interface or ncurses, authenticator, etc. An example configuration file is shown below:
-
-```
-# This is an example of the kind of things you can do in a configuration file.
-# All flags used by the client can be configured here. Run Let's Encrypt with
-# "--help" to learn more about the available options.
-
-# Use a 4096 bit RSA key instead of 2048
-rsa-key-size = 4096
-
-# Uncomment and update to register with the specified e-mail address
-# email = foo@example.com
-
-# Uncomment and update to generate certificates for the specified
-# domains.
-# domains = example.com, www.example.com
-
-# Uncomment to use a text interface instead of ncurses
-# text = True
-
-# Uncomment to use the standalone authenticator on port 443
-# authenticator = standalone
-# standalone-supported-challenges = tls-sni-01
-
-# Uncomment to use the webroot authenticator. Replace webroot-path with the
-# path to the public_html / webroot folder being served by your web server.
-# authenticator = webroot
-# webroot-path = /usr/share/nginx/html
-```
-
-By default, the following locations are searched:
-
-- `/etc/letsencrypt/cli.ini`
-
-- `$XDG_CONFIG_HOME/letsencrypt/cli.ini` (or `~/.config/letsencrypt/cli.ini` if `$XDG_CONFIG_HOME is not set`).
 
 ###2.5.3 Evolution History of Variability and Configurability
 
