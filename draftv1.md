@@ -306,7 +306,7 @@ Considering the wide use of Let’s Encrypt, it is important to describe the dep
 As defined[[1](#Nick)], deployment describes the environment into which the system will be deployed and dependencies that the system has on elements of it. 
 In this part, we will introduce a series of constraints about Let’s Encrypt including third party software requirements, technology compatibility and network requirements.
 
-###2.4.1 Third Party Software Requirements
+###2.4.1 Software Requirements and Technology Compatibility
 
 Identifying third party software requirements and technology compatibility is essential for both developers and users. For developers, they can clearly know what tools or libraries are available for further use. Users can know what is exactly needed to apply such software on their environments. 
 
