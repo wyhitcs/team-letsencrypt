@@ -91,6 +91,8 @@ The task for the first week is planned as follow:
 - Pull Request to add links for ACME 
 - Update contributions
 
+#Week 6-D5
+
 ###Group Meeting 17-03-2016(3h)
 - Discuss the form and content of review task
 - Discuss the problems in outline
@@ -101,10 +103,12 @@ The task for the first week is planned as follow:
 - Fix some spelling and syntax errors
 - Remove some redundant content
 
+#Week 7-D6
+
 ###Group Meeting 24-03-2016(3h)
 - Discuss the problems in Development View
-- Explain more in Module Structure Model
-- Remove few parts that are not closely related to the project like Codeline Model
+- Explain more details in Module Structure Model
+- Remove few parts that are not closely related to the project such as Codeline Model
 
 ###Group Meeting 26-03-2016(6h)
 - Discuss the problem in Deployment View and Variable features
