@@ -90,3 +90,23 @@ The task for the first week is planned as follow:
 - Fix Reference format according to new requirement
 - Pull Request to add links for ACME 
 - Update contributions
+
+###Group Meeting 17-03-2016(3h)
+- Discuss the form and content of review task
+- Discuss the problems in outline
+
+###Group Meeting 19-03-2016(3h)
+- Discuss the problems in Stakeholder and Context View part
+- Remake Context View diagram
+- Fix some spelling and syntax errors
+- Remove some redundant content
+
+###Group Meeting 24-03-2016(3h)
+- Discuss the problems in Development View
+- Explain more in Module Structure Model
+- Remove few parts that are not closely related to the project like Codeline Model
+
+###Group Meeting 26-03-2016(6h)
+- Discuss the problem in Deployment View and Variable features
+- Fix the problem given by teaching assistant
+- Add an "Introduction" section for better readability
