@@ -5,7 +5,6 @@ In this chapter, we will first introduce some necessary knowledge to you e.g. wh
 After that, we will give you a brief instruction on the views and perspectives of Let's Encrypt: the Context View, Development View, Deployment View, Variability Perspectives and Evolution Perspectives. 
 
 * Introduction
-* Backgroud Knowledge
   * SSL/TLS Certificate
   * ACME Protocol
   * Certificate Authority
@@ -40,23 +39,29 @@ After that, we will give you a brief instruction on the views and perspectives o
 2.	The contents are still in first version, hence they need to be revised.
 3.	We have made a little contribution to Let's Encrypt project and further contribution is planned and in progress.
 
-#1. Background Knowledge
+#1. Introduction
+
+Before we introduce Let's Encrypt, we need to introduce some necessary knowledge. We will talk about SSL/TLS, ACME protocol and Certificate Authority before the introduction of Let's Encrypt 
 
 ##1.1 SSL/TLS
 
 Transport Layer Security Protocol (TLS) and its predecessor -- Secure Socket Layer Protocol (SSL) are both referred to as “SSL”. 
 These two protocols aim to provide encrypted communication between two parties. For SSL/TLS communications, the server side needs to provide a Digital Certificate (for convenience it is referred to SSL certificate for the rest of this Chapter) to verify its identity (to prove that the server owns a set of domain names such as www.google.com, www.paypal.com).
 
-##1.2 ACME protocol
+##1.2 Digital Certificate
+
+Digital Certifical is in fact a "bag of data" which can prove the website is the owner of a domain name. The digital certificates are authorized by Certificate Authority (will be dicussed later) and installed in the web servers
+
+##1.3 ACME protocol
 
 The identity of internet entities (client and server) need to be verified. However, today’s verification is done by some ad-hoc mechanisms which are not suitable for development of online verification in the future. 
 Automatic Certificate Management Environment (ACME) protocol[[8](#acme)] aims to address such issue by standardizing and automating the procedure of verification. In other words, it is a “bag of procedures” by doing which a Certificate Authority(CA) issues a certificate to a client.
 
-##1.3 Certificate Authority
+##1.4 Certificate Authority
 CA is an online organization which issues a Digital Certificate.
-A certificate needs to install a software called boulder to enable Let’s Encrypt, which will be discussed later.
+A certificate needs to install a software called boulder to cooperate with Let’s Encrypt, which will be discussed later.
 
-##1.4 Let’s Encrypt
+##1.5 Let’s Encrypt
 
 Let’s Encrypt is a software implementing ACME protocol.
 The workflow is summarized as follows: 
