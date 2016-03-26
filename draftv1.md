@@ -282,7 +282,7 @@ Duplicated code, also known as “copy-and-paste development”, is produced by 
 
 For an open source project, the contributions from open source communities to the huge development of the project is evident.  It is vital to have a transparent documentation system so that developers in such communities can understand, reuse and develop the code in a more efficient way. The documentation of Let's Encrypt still has room for improvement. We notice that 59 issues are labeled `documentation` on GitHub. These issues indicate that the documentation is not well- structured, lacking architecture description and module information, which make it difficult to understand how the project works and how the module connects to each other. In addition, insufficient documentation also confuses users.
 
-For example in issue [#2271](https://github.com/letsencrypt/letsencrypt/issues/2271), the developers discuss the text related to certificate renewal. The former version of documentation is “To renew a certificate, simply run Let's Encrypt again providing the same values when prompted. In almost all circumstances, renewal should be performed with the certainly subcommand”. It seems that the second sentence contradicts the first. Moreover, it is not as detailed as it should be.
+For example in issue [#2271](https://github.com/letsencrypt/letsencrypt/issues/2271), the developers discuss the text related to certificate renewal. The former version of documentation is “To renew a certificate, simply run Let's Encrypt again providing the same values when prompted. In almost all circumstances, renewal should be performed with the certonly subcommand”. It seems that the second sentence contradicts the first. Moreover, it is not as detailed as it should be.
 
 ####2.3.4.3 How developers deal with technical debt
 Developers usually find out technical debt through Issues, discuss it and figure out a solution. To resolve technical debt and the relevant issues mentioned above, Let’s Encrypt uses the following methods:
@@ -322,9 +322,9 @@ For Let’s  Encrypt, following softwares are required to be installed on user m
 
 Let’s Encrypt runs a certificate management agent on the web server. The node in the system can be divided into two categories: Server and Client. On its client side, it requires port 80 or 443 to be available. On its server side, Let’s Encrypt has rate limits for certificate issuance. These limits are in place primarily to protect services from both accidental and intentional abuse. Let’s Encrypt has the following rate limits in place:
 
-- **Names/Certificate**:  is the limit on how many domain names user can include in a single certificate. This is currently limited to 100 names, or websites, per certificate issued.
+- **Names/Certificate**:  is the limit on how many domain names users can include in a single certificate. This is currently limited to 100 names, or websites, per certificate issued.
 
-- **Certificates/Domain**:  user could run into through repeated re-issuance. This limit measures certificates issued for a given combination of Public Suffix + Domain (a "registered domain"). This is limited to 5 certificates per domain per week.
+- **Certificates/Domain**:  user could run into through repeated re-issuance. This limitation measures certificates issued for a given combination of Public Suffix + Domain (a "registered domain"). This is limited to 5 certificates per domain per week.
 
 - **Registrations/IP address**: limits the number of registrations users can make in a given time period; currently 500 per 3 hours. This limit should only affect the largest users of Let's Encrypt.
 
@@ -338,7 +338,7 @@ There is no limit to the number of certificates that can be issued to different 
 
 Variability describes the ability to derive different products from a common set of artifacts[[6](#Sven)]. It is important for a good software to equip with variability to adapt to different environments, which also largely satisfies the requirements of different stakeholders. In spite of a BETA software, Let’s Encrypt provides plenty of variable features. In this section, a list of features and dependencies are given and then, a related model is built upon this. The strategies to implement such variabilities are also discussed.
 
-As mentioned above, Let’s Encrypt is a BETA software still in its earlier version. It can be seen from the github milestone that a great amount of work focuses on improving its flexibility to equip with variability. That is why it is interesting to address its evolution history here to see how Let’s Encrypt deals with change in the system development lifecycle.
+As mentioned above, Let’s Encrypt is a BETA software still in its earlier version. It can be seen from the GitHub milestone that a great amount of work focuses on improving its flexibility to equip with variability. That is why it is interesting to address its evolution history here to see how Let’s Encrypt deals with change in the system development lifecycle.
 
 
 ###2.5.1 Variable Features
@@ -349,9 +349,9 @@ A feature is a characteristic or end-user-visible behavior of a software system[
 
 ##### **Environment**
 
-The first subsection concerns about the environment in which the software runs. The binding time of OS support is at complile time while Python-version support is at run time.
+The first subsection concerns about the environment in which the software runs. The binding time of OS support is at compile time while Python-version support is at run time.
 
-- OS support: Let’s encrypt supports multiple Unix-ish Operating Systems including Arch, Debian, FreeBSD and etc. Let’s Encrypt is able to automatically identify user’s OS and install a compatible version, or user can manually choose a version.
+- OS support: Let’s encrypt supports multiple Unix-ish Operating Systems including Arch, Debian, FreeBSD and etc. Let’s Encrypt is able to automatically identify user’s OS and install a compatible version, or users can manually choose a version.
 
 - Python-version support: Let’s Encrypt Client currently can only run on Unix-ish OS with Python 2.6 or 2.7; Python 3.x will be supported after the Public Beta Launch.
 
@@ -361,7 +361,7 @@ There are a number of features that users can change via Let’s Encrypt client 
 
 - UI/Command switch: Let’s Encrypt supports [ncurses](https://en.wikipedia.org/wiki/Ncurses) (a programming library providing an API that allows the user to write text-based user interfaces) UI, or can be driven entirely from the command line. Users can choose between UI and command line.
 
-- Notification of configuration change: User can switch on/off notification of configuration change. For example, if someone changes the storage path of a file, there should be notification of the change by default. However, user can choose to close such notification. 
+- Notification of configuration change: User can switch on/off notification of configuration change. For example, if someone changes the storage path of a file, there should be notification of the change by default. However, user can decide to close such notification. 
 
 - User authority: There are two levels of authority: “user” and “super-user” (developer). In “user” mode, it is not allowed to use a number of instructions and some information will also be hidden. In ’super-user’ level, there are no such restrictions.
 
@@ -369,13 +369,13 @@ There are a number of features that users can change via Let’s Encrypt client 
 
 - Usage (as plugin or client): Let’s encrypt not only can serve as an independent application, it can also serve as a third party module in other applications. In the latter case, Let’s encrypt is used as a plugin.
 
-- Input Method: Users can either input arguments of functions from keyboard or from a pre-stored file.
+- Input Method: Users can either input arguments of functions from a keyboard or from a pre-stored file.
 
 ##### **Plugin**
 
-Plugin concerns the extensions of Let’s Encrypt and is binded at compile time.
+Plugin concerns the extensions of Let’s Encrypt and is bound at compile time.
 
-- Web server support: Let’s Encrypt client supports a number of different “plugins” that can be used to obtain and/or install certificates. Plugins that can obtain a specified certificate are called “authenticators” and can be used with the “certonly” command. Plugins that can install a certificate are called “installers”. Apache, Nginx and webroot are plugins currently supported. Moreover, users can use a “standalone” webserver to obtain a certificate. This is useful on systems with no web server, or when direct integration with the local web server is not supported or not desired.
+- Web server support: Let’s Encrypt client supports a number of different “plugins” that can be used to obtain and/or install certificates. Plugins that can obtain a specified certificate are called “authenticators” and can be used with the “certonly” command. Plugins that can install a certificate are called “installers”. Apache, Nginx and webroot are plugins currently supported. Moreover, users can use a “standalone” web server to obtain a certificate. This is useful on systems with no web server, or when direct integration with the local web server is not supported or not desired.
 
 ##### **Configuration**
 
@@ -397,9 +397,9 @@ Configuration contains a great many features offered by Let’s Encrypt to impro
 
 - Optional ACME compliant services: Let’s Encrypt supports a number of CAs and allows users to choose their favorite one by command line.
 
-- Optional redirect (optionally install a http -> https redirect). After obtaining an SSL certificate, browser turns from http to https. User can choose whether to use a hybrid strategy (http and https are both valid) or only validate https.
+- Optional redirect (optionally install an http -> https redirect). After obtaining an SSL certificate, browser turns from http to https. User can choose whether to use a hybrid strategy (http and https are both valid) or only validate https.
 
-- Verification: Let’s Encrypt currently supports two types of verification, Domain-Validated (DV) and Organization-Validated (OV) Certificate. Users can choose between these two verfications.
+- Verification: Let’s Encrypt currently supports two types of verification, Domain-Validated (DV) and Organization-Validated (OV) Certificate. Users can choose between these two verifications.
 
 - Revocation: Let’s Encrypt allows users to revoke a certificate after losing the ownership of the server. 
 
@@ -407,15 +407,15 @@ Configuration contains a great many features offered by Let’s Encrypt to impro
 
 - Valid period: For the safety concern, a certificate should not be permanently valid which means the owner needs to update it after expiration. Let’s Encrypt allows a certificate to be valid for 90 days by default.
 
-- Email notification: For good user experience, Let’s Encrypt records the registration date of certificate and kindly reminds users to update their certificates by email when the validity is less than 30 days.
+- Email notification: For good user experience, Let’s Encrypt records the registration date of the certificate and kindly reminds users to update their certificates by email when the validity is less than 30 days.
 
 ####2.5.1.3 Feature Dependencies and Model
 
 There are some dependencies among the features we talked about. For example, users have to choose “SuperUser” authority in order to enter debug mode, choose challenge solution and manually update method. 
 
-Besides, there are several constraints between plugin and configuration features. Configuration feature relies on the specified server choice, i.e. Nginx and Apache. Furthermore, currently users can install a “http -> https” redirect, so their site effectively runs https only, however, this depends on the plugin of the Apache server.
+Besides, there are several constraints between plugin and configuration features. Configuration feature relies on the specified server choice, i.e. Nginx and Apache. Furthermore, currently users can install a “http -> https” redirect, so their site effectively runs https only, however, this is dependent on the plugin of the Apache server.
 
-Finally, it’s convenient for users to get a kind email notification about the expiring date of the certificate, which is related to the valid period of certificate.
+Finally, it’s convenient for users to get a kind email notification about the expiring date of the certificate, which is related to the valid period of the certificate.
 
 ![Feature Dependencies and Model](https://github.com/delftswa2016/team-letsencrypt/blob/master/D3/Feature.Model.png)
 
