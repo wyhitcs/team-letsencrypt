@@ -18,7 +18,7 @@ After that, we will give you a brief instruction on the views and perspectives o
 #1. Introduction
 
 With all the malware and viruses being perpetrated these days, it is more critical than ever that all our communications are secured. But cryptography is hard and good cryptography tends to be both hard and expensive. 
-That has changed with LetsEncrypt.org! The goal of Let’s Encrypt is to set up an HTTPS server and have it automatically obtain a browser-trusted certificate, without any human intervention. Before analyzing Let's Encrypt, it is important to have some background knowledge of Let’s Encrypt. 
+That has changed with [LetsEncrypt.org](https://letsEncrypt.org)! The goal of Let’s Encrypt is to set up an HTTPS server and have it automatically obtain a browser-trusted certificate, without any human intervention. Before analyzing Let's Encrypt, it is important to have some background knowledge of Let’s Encrypt. 
 
 ####SSL/TLS
 
@@ -446,15 +446,15 @@ redirect on some systems.
 
 Issues and pull requests relevant to the variability and configurability can be classified as follows:
 
-- **Improvement of Operation Systems support**: the first release version only supported Ubuntu with version before 14.04. The supports for Debian, Mac, CentOS and later version Ubuntu are enabled in the following versions. Relevant issues include [issue 292](https://github.com/letsencrypt/letsencrypt/pull/292), [508](https://github.com/letsencrypt/letsencrypt/pull/508), [840](https://github.com/letsencrypt/letsencrypt/pull/840), [1206](https://github.com/letsencrypt/letsencrypt/pull/1206), [1232](https://github.com/letsencrypt/letsencrypt/pull/1232). 
+- **Improvement of Operation Systems support**: the first release version only supported Ubuntu with version before 14.04. The supports for Debian, Mac, CentOS and later version Ubuntu are enabled in the following versions. Relevant issues include [# 292](https://github.com/letsencrypt/letsencrypt/pull/292), [508](https://github.com/letsencrypt/letsencrypt/pull/508), [840](https://github.com/letsencrypt/letsencrypt/pull/840), [1206](https://github.com/letsencrypt/letsencrypt/pull/1206), [1232](https://github.com/letsencrypt/letsencrypt/pull/1232). 
 
-- **Support for different versions of Python**: at the beginning, Let’s encrypt only supported python 2.6. The support for later versions of python, especially python 3.x, is enabled now. Relevant issues include [issue 605](https://github.com/letsencrypt/letsencrypt/pull/605), [957](https://github.com/letsencrypt/letsencrypt/pull/957), [1508](https://github.com/letsencrypt/letsencrypt/pull/1508).
+- **Support for different versions of Python**: at the beginning, Let’s encrypt only supported python 2.6. The support for later versions of python, especially python 3.x, is enabled now. Relevant issues include [# 605](https://github.com/letsencrypt/letsencrypt/pull/605), [957](https://github.com/letsencrypt/letsencrypt/pull/957), [1508](https://github.com/letsencrypt/letsencrypt/pull/1508).
 
-- **Improvement of configuration**: numerous configuration options are added and the command lines becomes increasingly user-friendly. For example, users can now specify the parameters such as the length of the RSA key. Relevant issues include [issue 82](https://github.com/letsencrypt/letsencrypt/pull/82), [368](https://github.com/letsencrypt/letsencrypt/pull/368), [404](https://github.com/letsencrypt/letsencrypt/pull/404).
+- **Improvement of configuration**: numerous configuration options are added and the command lines becomes increasingly user-friendly. For example, users can now specify the parameters such as the length of the RSA key. Relevant issues include [# 82](https://github.com/letsencrypt/letsencrypt/pull/82), [368](https://github.com/letsencrypt/letsencrypt/pull/368), [404](https://github.com/letsencrypt/letsencrypt/pull/404).
 
-- **Support for different webserver plugins**: while the early version of Let’s encrypt only supported apache and nginx, now the supports for nginx, webroots, standalone are enabled. Relevant issues are [issue 232](https://github.com/letsencrypt/letsencrypt/pull/232), [387](https://github.com/letsencrypt/letsencrypt/pull/387), [895](https://github.com/letsencrypt/letsencrypt/pull/895), [1395](https://github.com/letsencrypt/letsencrypt/pull/1395).
+- **Support for different webserver plugins**: while the early version of Let’s encrypt only supported apache and nginx, now the supports for nginx, webroots, standalone are enabled. Relevant issues are [# 232](https://github.com/letsencrypt/letsencrypt/pull/232), [387](https://github.com/letsencrypt/letsencrypt/pull/387), [895](https://github.com/letsencrypt/letsencrypt/pull/895), [1395](https://github.com/letsencrypt/letsencrypt/pull/1395).
 
-- **Implementations of more ACME challenge solutions**: ACME protocols allow different kinds of challenge solutions, but Let’s encrypt only implemented a small number of them. However, in the recent releases more challenge solutions are added by contributors. Relevant issues are [issue 232](https://github.com/letsencrypt/letsencrypt/pull/232), [291](https://github.com/letsencrypt/letsencrypt/pull/291), [387](https://github.com/letsencrypt/letsencrypt/pull/387).
+- **Implementations of more ACME challenge solutions**: ACME protocols allow different kinds of challenge solutions, but Let’s encrypt only implemented a small number of them. However, in the recent releases more challenge solutions are added by contributors. Relevant issues are [# 232](https://github.com/letsencrypt/letsencrypt/pull/232), [291](https://github.com/letsencrypt/letsencrypt/pull/291), [387](https://github.com/letsencrypt/letsencrypt/pull/387).
 
 ##2.6 Evolution Perspective
 
@@ -503,7 +503,7 @@ Let’s Encrypt uses `tox` for testing.
 - Continuous integration: 
 When making changes, it is always best to receive bad news as early as possible. 
 Travis CI is used to do automated testing for every pull request to Let’s Encrypt project before merging. 
-They set up a project in multiple Python versions(2.6,2.7,3.3,3.4,3.5) and multiple plugins. [(links to `.travis.yml`)](https://github.com/letsencrypt/letsencrypt/blob/master/.travis.yml)
+They set up a project in multiple Python versions(2.6, 2.7, 3.3, 3.4, 3.5) and multiple plugins. [(links to `.travis.yml`)](https://github.com/letsencrypt/letsencrypt/blob/master/.travis.yml)
 
 ##Conclusion
 
