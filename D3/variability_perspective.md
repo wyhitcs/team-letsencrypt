@@ -108,6 +108,18 @@ This class includes all features about Client Graphic User Interface.
 - Input Method: There are two kinds of input method to choose: users can input a instruction from key board; users can also input the instruction from a pre-stored file. The second method is very convenient if there are a lot of instructions to input.
 
 
+####Plugin
+
+There are four kinds of Plugin in Let's Encrypt, they are used to cooperate with different web server in the users' machines. Notice that you can only use at most one of the plugin, you can not activate more than plugins simultaneously.
+
+- Apache Plugin: this plugin is used if the web server in a user's machie is Apache.
+- Nginx: this plugin is used if the web server in a user's machie is Nginx.
+- Webroot:Obtains a cert by writing to the webroot directory of an already running webserver, whatever webserver you are using.
+- Standalone:Uses a “standalone” webserver to obtain a cert. Requires port 80 or 443 to be available. This is useful on systems with no webserver, or when direct integration with the local webserver is not supported or not desired.
+manual	Y	N	Helps you obtain a cert by giving you instructions to perform domain validation yourself.
+nginx	Y	Y	Very experimental and not included in letsencrypt-auto.
+
+
 
 ###Feature Binding Time
 
