@@ -508,22 +508,21 @@ They set up project in multiple Python versions(2.6,2.7,3.3,3.4,3.5) and multipl
 
 ##Conclusion
 
-In this chapter we have studied the stakeholders, views and perspectives of a free, automated, and open software Let’s Encrypt. Throughout the analysis of Let’s Encrypt’s software architecture many observations have been made. 
+In this report, we studied the stakeholders, views and perspectives of an open source project Let’s Encrypt. Throughout the analysis of its software architecture we draw the following conclusions: 
 
-In this chapter, we show the stakeholders of Let’s Encrypt, that should give you some light to the relevant parties of Let’s Encrypt.
-We also go through the context view of Let’s Encrypt. The context view aims to demonstrate the relations between Let’s Encrypt and its external enviroment.
-Later, we analyze Let’s Encrypt with development view. We hope this section can provides the anwsers to the question: What is the inner structure of Let’s Encrypt? What is the build/integration/test standard of Let’s Encrypt?
-And then, we add a section “Deployment view” in this chapter, that tells you the enviroment (software/network enviroment) requirement of Let’s Encrypt, if you want to deploy Let’s Encrypt in your machine, that will be useful.
-We also include a section “Variability Perspective”. This section aims to show you:
-1.the features and feature dependency of Let’s Encrypt.
-2.how to implement those features
-3.the evolution history of this feature.
-At last, we use Evolution Perspective demonstrate:
-1.The requirement for Let’s Encrypt
-2.the trade off during the evolution of Let’s Encrypt.
-3.The Architecture tactics of Let’s Encrypt.
+The analysis of stakeholders and context view of Let’s Encrypt shows us the roadmap of the project and how it proceeds to fulfill its roadmap. By first having a whole picture of the project, we then look into it and gain a deeper understanding from different perspectives and views. 
 
-To conclude, Let’s Encrypt is a BETA SOFTWARE which contains plenty of bugs and rough edges,  and couples of improvements could be made to the project. However, with the community’s persistent efforts, reliable and rapidly growing CA server, healthy client and protocol ecosystem will help tohelps to reduce financial, technological, and education barriers to secure communication over the Internet.
+In the section of development view, the architecture of Let’s Encrypt that serves the development process is analyzed. Its design principles show an example of how a well-structured project facilitates the development, maintenance and test process.
+
+We also gain knowledge from the analysis of deployment view on how to guarantee the proper operation in different envrionments, which is quite useful for both users and developers.
+
+At last, the variability perspective and evolution perspective focus on the design that enables a project to equip with variability and changes. It shows us the importance for an architect to be prepared for variability and changes during the development lifecycle.
+
+To conclude, a well-structured architecture of a software satisfies its related stakeholders and makes the development, maintainence and test process easier.  Let’s Encrypt is a BETA SOFTWARE containing plenty of bugs, which makes the analysis challenging but interesting. To get involved into the project, we made contributions by making pull request on GitHub which were merged. Our main contributions are in the form of documentation.
+
+
+
+
 
 ##References
 
