@@ -403,13 +403,13 @@ There are a number of features that users can change via Let’s Encrypt client 
 
 - Usage (as plugin or client): Let’s encrypt not only can serve as an independent application, it can also serve as a third party module in other applications. In the latter case, Let’s encrypt is used as a plugin.
 
-- Input method: Users can either input arguments of functions from keyboard or from a file.
+- Input Method: Users can either input arguments of functions from keyboard or from a pre-stored file.
 
 ##### **Plugin**
 
 Plugin concerns the extensions of Let’s Encrypt and is binded at compile time.
 
-- Web server support: Let’s Encrypt client supports a number of different “plugins” that can be used to obtain and/or install certificates. Plugins that can obtain a specified certificate are called “authenticators” and can be used with the “certonly” command. Plugins that can install a certificate are called “installers”. Apache, Nginx and webroot are plugins currently supported.
+- Web server support: Let’s Encrypt client supports a number of different “plugins” that can be used to obtain and/or install certificates. Plugins that can obtain a specified certificate are called “authenticators” and can be used with the “certonly” command. Plugins that can install a certificate are called “installers”. Apache, Nginx and webroot are plugins currently supported. Moreover, users can use a “standalone” webserver to obtain a certificate. This is useful on systems with no web server, or when direct integration with the local web server is not supported or not desired.
 
 ##### **Configuration**
 
@@ -425,7 +425,7 @@ Configuration contains a great many features offered by Let’s Encrypt to impro
 
 - Personal profile: The most important information of personal profile is email address and users have to offer an effective profile in order to apply for a certificate. They are also allowed to edit the profile afterwards.
 
-- Multiple Challenge solution: There are many ways of solving challenges to prove someone owns a certain domain name: Simple HTTP, Domain Validation with Server Name Indication(DVSNI), DNS verification. If it is not chosen manually by users, Let’s encrypt will pick the default one.
+- Multiple Challenge solution: There are many ways of solving challenges to prove someone owns a certain domain name: Simple HTTP, Domain Validation with Server Name Indication(DVSNI) and DNS verification. If it is not chosen manually by users, Let’s Encrypt will pick the default one.
 
 - Optional update way (manual or automatic): Once an up-to-date version of Let’s encrypt is released, user’s local machine will update automatically. However, users can disable such automatic update and do it manually instead.
 
