@@ -188,6 +188,14 @@ The UML component diagram below gives an overview of module structure. Each pack
 
 - **Platform layer**: There’s no doubt that all previous code is based on python library which is included the bottom layer. In addition, OpenSSL, a software library to be used to secure communications against eavesdropping or to ascertain the identity of the party at the other end, is also the base of authentication process.
 
+![ACME Protocol Module in Detail](https://github.com/delftswa2016/team-letsencrypt/blob/master/D2/module2.png)
+
+The image below shows more details about the internal relations in ACME protocol. The communication between ACME Client and Certificate Authority (CA) is based on ACME Message. ACME Message is an object specified by ACME protocol specification, like Packet defined in Transmission Control Protocol (TCP). Several modules in ACME Client like Authenticator will wrap the information into an ACME message and send it, while CA receive and parse it.
+
+When Let’s Encrypt client wants to communicate with CA, for example, it is requesting an account, it should wrap the JSON Web Key (as payload) into an ACME Message, and send it to the CA. In addition to JSON Web Key, the payload of ACME Message can also be ACME Challenge and ACME Error.
+
+There are some more modules that generate ACME Message. The Authenticator is used to deal with ACME Challenge, so the corresponding ACME Message will include related objects. Installer is used to deal with JSON Web Key and Digital Certificates. And ACME Utility Module is used to provide encryption/decryption and other utilities.
+
 ###2.3.2 Codeline Model
 
 In this section, code structure of letsencrypt will be explored.
