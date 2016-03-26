@@ -65,9 +65,13 @@ A certificate needs to install a software called boulder to cooperate with Let�
 
 Let’s Encrypt is a software implementing ACME protocol.
 The workflow is summarized as follows: 
+
 1) when a certificate is requested, Let’s Encrypt wraps necessary information (the account, the domain name etc) into standard format and sends them to boulder of a CA; 
+
 2) CA responds the request with a challenge, saying that “since you claim the ownership of the domain xxxxx.com, please add a .txt file containing the string in the folder aaa/bbb/ccc”; 
+
 3) Let’s Encrypt will automatically solve this challenge for the client; 
+
 4) CA grants a certificate after solving the challenge.
 
 #2. Views and Perspectives
