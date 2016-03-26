@@ -370,11 +370,15 @@ A feature is a characteristic or end-user-visible behavior of a software system[
 
 ##### **Environment**
 
+The first subsection concerns about the environment in which the software runs. The binding time of OS support is at complile time while Python-version support is at run time.
+
 - OS support: Let’s encrypt supports multiple Unix-ish Operating Systems including Arch, Debian, FreeBSD and etc. Let’s Encrypt is able to automatically identify user’s OS and install a compatible version, or user can manually choose a version.
 
 - Python-version support: Let’s Encrypt Client currently can only run on Unix-ish OS with Python 2.6 or 2.7; Python 3.x will be supported after the Public Beta Launch.
 
 ##### **Client(GUI)**
+
+There are a number of features that users can change via Let’s Encrypt client GUI. All of them are binded at run time except UI/Command switch, User authority and Usage which are at compile time.
 
 - UI/Command switch: Let’s Encrypt supports [ncurses](https://en.wikipedia.org/wiki/Ncurses) (a programming library providing an API that allows the user to write text-based user interfaces) UI, or can be driven entirely from the command line. Users can choose between UI and command line.
 
@@ -390,9 +394,13 @@ A feature is a characteristic or end-user-visible behavior of a software system[
 
 ##### **Plugin**
 
+Plugin concerns the extensions of Let’s Encrypt and is binded at compile time.
+
 - Web server support: Let’s Encrypt client supports a number of different “plugins” that can be used to obtain and/or install certificates. Plugins that can obtain a specified certificate are called “authenticators” and can be used with the “certonly” command. Plugins that can install a certificate are called “installers”. Apache, Nginx and webroot are plugins currently supported.
 
 ##### **Configuration**
+
+Configuration contains a great many features offered by Let’s Encrypt to improve user experience. All of them are binded at run time except Valid period and Email notification which are at compile time. 
 
 - Logging-level: The application is setup using serilog for logging. There are many logger levels such as “debug” and “customer”. In “customer” level, detail information is hidden to prevent ’noise’ while in “debug” level, such information can be seen.
 
@@ -439,86 +447,6 @@ In addition, there are several constraints between plugin and configuration feat
 Finally, it’s convenient for users to get a kind email notification about the expiring date of certificate, which is surely related to the valid period of cert.
 
 ![Feature Dependencies and Model](https://github.com/delftswa2016/team-letsencrypt/blob/master/D3/Feature.Model.png)
-
- 
-####2.5.1.4 Feature Binding Time
-
-Features in Let's Encrypt are with different binding times, most features at run time, others at compile time[[7](#Lee)].
-
-##### **Environment**
-
-- OS support:
-**run time binding**, determined after deployed to a machine.
-
-- Python-version support: 
-**run time binding**, determined after deployed to a machine and Let’s encrypt will automatically detect what versions of python are running in the machine.
-
-##### **Client (GUI)**
-
-- UI/Command switch: 
-**compile time binding**, unable to be disabled after deployed to a machine.
-
-- Notification of configuration change: 
-**run time binding**, can be disabled or enabled by user.
-
-- User authority:
-**compile time binding**, with two authority level: user and super user.
-
-- Virtual Environment: 
-**run time binding**, can be enabled or disabled by user after deployed to a machine.
-
-- Multiple Usage: 
-**compile time binding**, unable to be specified after deployed to user's computer.
-
-- Input method:
-**run time binding**, can be specified by users using command line.
-
-##### **Plugin**:
-- Web server support: 
-**compile time binding**, always support web servers like apache, nginx.
-
-##### **Configuration**:
-- Multiple Logging-level:
-**run time binding**, log level can be switched by command line.
-
-- Allow specifying Encryption algorithm: 
-**run time binding**, can be disabled after deployed to a machine.
-
-- Editable Certificate and key storage path:
-**run time binding**, storage path can be changed after deployment and this feature can even be disabled by user.
-
-- Editable Log file storage path:
-**run time binding**, storage path can be changed after deployment and this feature can even be disabled by user.
-
-- Personal profile:
-**run time binding**, users can edit their profile after installation.
-
-- Multiple Challenge solution: 
-**run time binding**, users can manually select a way to solve the challenge.
-
-- Optional update way: 
-**run time binding**, can be determined by users after installation.
-
-- Optional ACME compliant services:
-**run time binding**, users can select other CAs (not only Let’s encrypt CA) to trust.
-
-- Optional redirect: 
-**run time binding**, can be switched between http/https at anytime after getting SSL certificates.
-
-- Verification method: 
-**run time binding**, users can choose to do Domain verification (DV) or Organization verification (OV).
-
-- Revocation: 
-**run time binding**, users can do revocation at any time.
-
-- Adjustable key bit-length: 
-**run time binding**, the length can be specified after deployed to user's machine
-
-- Valid period: 
-**compile time binding**, the valid period can not be determined by users.
-
-- Email notification: 
-**compile time binding**, users are not allow to disable this feature.
 
 ###2.5.2 Implementation Strategy
 
