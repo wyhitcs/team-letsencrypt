@@ -69,7 +69,7 @@ In this section, we present a comprehensive study of Let’s Encrypt covering th
 ##2.1 Stakeholders Analysis
 We identify 6 types of stakeholders for Let's Encrypt.
 
-###2.1.1 Acquirers
+### Acquirers
 
 We identified three organizations as the acquirers of Let's encrypt:
 
@@ -85,7 +85,7 @@ We identified three organizations as the acquirers of Let's encrypt:
 These three foundations aim to provide a free, automated and open certificate authority to users. They establish a public benefit corporation, Internet Security Research Group (ISRG), to serve the purpose. The members in this group are the main contributors of Let’s Encrypt.
 
 
-###2.1.2 Developers
+### Developers
 
 So far 165 contributors have made contributions to the development of let’s encrypt. The core develoment team consisting of 11 people comes from a public benefit organization [Internet Security Research Group (ISRG)](https://letsencrypt.org/isrg/). The whole project is based on the ACME protocal proposed by ISRG. Unsurprisingly, they made most of the constributions to this project. For a newly established project like let’s encrypt, these developers more or less have responsibilities for testing, maintaining and github management. Here we list several major developers:
 
@@ -101,17 +101,17 @@ So far 165 contributors have made contributions to the development of let’s en
 
 The other contributors are either the users of let’s encrypt or github users who are interested in this project. Their constributions are mainly about improving commond line, fixing bugs and format.  In the documentation the team mentions that let’s encrypt is a beta software containing plenty of bugs. Thus, there is a lot of work to be done to improve user-friendliness.
 
-###2.1.3 Users
+### Users
 
 The potential users of Let's encrypt are websites which want to obtain SSL/TLS certificate. Let’s encrypt automates the process of obtaining certificates and moreover, totally free of charge. As a result, the number of its potential users is huge. In fact, Let’s Encrypt has just issued its millionth certificate in March, 2016.
 
 
-###2.1.4 Sponsors
+### Sponsors
 
 Let's Encrypt is initialized by a non-profit organization (ISRG) to enbale secure communication over the Internet for the purpose of overcoming financial, technological and education barriers. Corporate Sponsorship helps speed up the process leading to a secure Web. The number of sponsers keeps incresing especially in the last four months. The dramatic rise in the nubmer of sponsors reflects the success and importance of the programme.
 ![Sponsors Growth](https://github.com/delftswa2016/team-letsencrypt/blob/master/D1/sponsors.png)
 
-###2.1.5 Additional Stakeholder
+### Additional Stakeholder
 
 - [IdenTrust](https://www.identrust.com/) (Root certificate provider)
 
