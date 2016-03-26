@@ -377,8 +377,7 @@ As mentioned above, Let’s Encrypt is a BETA software still in its earlier vers
 
 ###2.5.1 Variable Features
 
-A feature is a characteristic or end-user-visible behavior of a software system[[6](#Sven)]. We identified a list of variable features and classified them into four categories.
-
+A feature is a characteristic or end-user-visible behavior of a software system[[6](#Sven)]. We identified a list of variable features and classified them into four categories. We identified a list of variable features and classified them into four categories. Moreover, features in Let's Encrypt come with different binding times, most features are at run time, others at compile time[[7](#Lee)]. And this is described at the first of each class.
 
 ####2.5.1.1 Feature List
 
