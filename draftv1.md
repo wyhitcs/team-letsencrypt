@@ -19,18 +19,6 @@ After that, we will give you a brief instruction on the views and perspectives o
 * Conclusion
 
 
-| section              | subsection           |
-|----------------------|----------------------|
-| 1. Backgroud Knowledge  |  1.1 SSL/TLS Certificate     |
-|                         |  1.2 ACME Protocol           |
-|                         |  1.3 Certificate Authority   |
-|                         |  1.4 Let's encrypt           |
-| 2.View and Perspectives |  2.1 Stakeholder Analysis    |
-|                         |  2.2 Context View            |
-|                         | 2.3 Development View         |
-|                         | 2.4 Deployment View          |
-|                         | 2.5 Variability Perspectives |
-|                         | 2.6 Evolution Perspectives   |
 
 
 
