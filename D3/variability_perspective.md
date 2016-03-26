@@ -76,13 +76,35 @@ Developers: Developers are also related to these features. By accept suggestions
 
 ###Feature Dependencies and Model
 
-Mainly all features can be classified into four categories, environment, client, plugin and configuration. Among them, there are dependencies, which means that some features depend on others. For example, users have to choose “SuperUser” authority in order to enter debug mode, choose challenge solution and manual update method. 
+Mainly all features can be classified into four categories, environment GUI, client, plugin and configuration. Among them, there are dependencies, which means that some features depend on others. For example, users have to choose “SuperUser” authority in order to enter debug mode, choose challenge solution and manual update method. 
 
 In addition, there are several constraints between plugin and configuration features. Configuration feature relies on the specified server choice that are Nginx and Apache. Furthermore, currently users can install a “http -> https” redirect, so their site effectively runs https only, however, this relies on the plugin of Apache server.
 
 Finally, it’s convenient for users to get a kind email notification about the expiring date of certificate, which is surely related to the valid period of cert.
 
+Your can find more details about this model in the picture and the textual content below:
+
+
 ![Feature Dependencies and Model](https://github.com/delftswa2016/team-letsencrypt/blob/master/D3/Feature.Model.png)
+
+There are four classes of feature in Let's Encrypt: Environment, Client GUI, Plugin and Configuration.
+
+####Enviroment
+
+The enviroment feature of Let's Encrypt is consist of 2 parts: Operation System Support and Python Support.
+Let's Encrypt supports the following classed of Operation System: FreeBSD (a kind of UNIX), OpenBSD (also a kind of UNIX), ArchLinux (kind of Linux), Debian, Fedora, Gentoo. Let's Encrypt can automatically adapt to your Operation System.
+
+Let's Encrypt provides support for Python 2.6 and Python 2.7, for other version of python, it doesn't perfectly support. So we only identify support of Python 2.6/2.7 as a feature of Let's Encrypt.
+
+####Client GUI
+
+This class includes all features about Client Graphic User Interface.
+
+- display: users can switch between graphic interface or command line interface
+- Notification: users can choose the way to receive notifications: by email/pop out window/no notification
+- User Authority: there are 2 kinds of users: user and super user. The former doesn't have authority to use some instructions while the latter has.
+
+
 
 ###Feature Binding Time
 
