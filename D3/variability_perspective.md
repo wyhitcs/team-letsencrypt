@@ -119,6 +119,32 @@ There are four kinds of Plugin in Let's Encrypt, they are used to cooperate with
 manual	Y	N	Helps you obtain a cert by giving you instructions to perform domain validation yourself.
 nginx	Y	Y	Very experimental and not included in letsencrypt-auto.
 
+####Configuration
+
+- logger_level: there are 2 logger level in Let's encrypt, i.e. customer level and debug level. 
+- Encryption Algorithm:currently, Let's Encrypt support RSA and MD5 encryption algorithm.
+- Personal Profile: Let's Encrypt allows users to edit their own profile (email address,user name, etc.)
+- Challenge Solution: If you want a Certificate Authority(CA) to verify your possesion of a domain name (e.g. www.example.com), you need to solve some challenged provided by CA. For example, a CA may ask you to put a txt file which contains a String "xxxxxxx" in a certain folder of your website, you do so, and CA knows you are the owner of this domain name. Let's Encrypt currently supports 4 kind of Challenge: simple HTTP challenge, DVSNI challenge, private key challenge, DNS_verfication challenge.
+- ACME compliant: Let's Encrypt allows users to add new Certificate Authority to trust.
+- HTTP/HTTPs switch: after geting digital certificates, users can choose either HTTP or HTTPs to use. HTTPs means HTTP with SSL/TLS certificate.
+- Update Method: users can ask Let's Encrypt to automatically updates their digital certificates, they can also update their certificates it manually.
+- Storage configuration: users can specify the path to store the certificate, key and log
+- Valid Period: users can specify the live span of their digital certificate, the default is 90 days, users can make it shorter or longer.
+- Email Notification: users can specify what kinds of Notification should be sent to email, they can also disable email notification.
+- Revocation: Let's Encrypt allows users to revoke (destroyed) a certificate whenever they like.
+- Verification type: Users can choose to do DV (Domain Verfication, verifying ownership of a domain name in the way we said above) or OV (Organization Verfication,Verifying the domain name by prove the website belongs to the organization who owns this domain name), the part for DV in Let's Encrypt has been finished, but the part of DV is still in progress.
+- Adjustable RSA: Let's Encrypt allows to change some parameters of RSA (e.g. key length), the developers plan to allow this feature on other encryption algorithms like MD5, but haven't finished it yet.
+
+
+
+####Dependency
+There are some dependency among the features we talked about.
+- Only super user can use manual mode in updating certificate.
+- only super user can set log level to "debug"
+- only super user can specify what challenge solution to use, for normal user, the challenge solution is automatically selected by Let's Encrypt.
+- So far, only in Apache web server, Let's Encrypt allows users to switch between HTTP/HTTPs.
+- Most of the configuration are only support in Apache and Nginx, for other web server, those features are still under developing.
+- When to send the Email Notification depends on the valid period (live span) of your digital certificates.
 
 
 ###Feature Binding Time
