@@ -443,7 +443,7 @@ redirect on some systems.
 
 - [0.4.0](https://github.com/letsencrypt/letsencrypt/issues?q=milestone%3A0.4.0)- In this version, two major changes were made to support the variability and configurability: 1) a new subcommand renew can be used to renew the existing certificates as they approach expiration; 2)  full support for Python 2.6 is enabled.
 
-- [0.4.2](https://github.com/letsencrypt/letsencrypt/issues?q=is%3Aissue+milestone%3A0.4.2)- A patch fixing problems of using letsencrypt `renew` with configuration files from private beta has been added.
+- [0.4.2](https://github.com/letsencrypt/letsencrypt/issues?q=is%3Aissue+milestone%3A0.4.2)- A patch fixing problems of using Let's Encrypt `renew` with configuration files from private beta has been added.
 
 Issues and pull requests relevant to the variability and configurability can be classified as follows:
 
