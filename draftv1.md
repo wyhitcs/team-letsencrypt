@@ -87,7 +87,11 @@ These three foundations aim to provide a free, automated and open certificate au
 
 ### Developers
 
-So far 165 contributors have made contributions to the development of let’s encrypt. The core develoment team consisting of 11 people comes from a public benefit organization [Internet Security Research Group (ISRG)](https://letsencrypt.org/isrg/). The whole project is based on the ACME protocal proposed by ISRG. Unsurprisingly, they made most of the constributions to this project. For a newly established project like let’s encrypt, these developers more or less have responsibilities for testing, maintaining and github management. Here we list several major developers:
+So far 165 contributors have made contributions to the development of let’s encrypt. The core develoment team consisting of 11 people comes from a public benefit organization [Internet Security Research Group (ISRG)](https://letsencrypt.org/isrg/). The whole project is based on the ACME protocal proposed by ISRG. Unsurprisingly, they made most of the constributions to this project. 
+
+For a newly established project like Let’s Encrypt, these developers more or less have responsibilities for testing, maintaining and github management. For example, pde and bmw are identified as integrators who ensure the quality of the project by communicating with contributors on github. They are also responsible for merging pull requests and interacting with contributors, no matter the pull requests are accepted or denied. We notice that the biggest challenge for Let’s Encrypt is to maintain the quality of the project when massive incoming contributions taking place everyday. To solve this, a complete stategy of test and integration is proposed which will be discussed later.
+
+Here we list several major developers:
 
 - @[Liam Marshall](https://github.com/ArchimedesPi)
 
@@ -96,6 +100,8 @@ So far 165 contributors have made contributions to the development of let’s en
 - @[Felix Rieseberg](https://github.com/felixrieseberg)
 
 - @[Francois Marier](https://github.com/fmarier)
+
+- @[pde](https://github.com/pde)
 
 
 
