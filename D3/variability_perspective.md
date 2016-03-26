@@ -103,6 +103,9 @@ This class includes all features about Client Graphic User Interface.
 - display: users can switch between graphic interface or command line interface
 - Notification: users can choose the way to receive notifications: by email/pop out window/no notification
 - User Authority: there are 2 kinds of users: user and super user. The former doesn't have authority to use some instructions while the latter has.
+- Virtual Enviroment: For convenience of developing, users can choose to user Virtual Enviroment. (If you have no idea about virtual enviroment, Virtual Machine is a good analogy)
+- Usage: Let's Encrypt can be used as an independent software. It can also be used as a plugin for other software.
+- Input Method: There are two kinds of input method to choose: users can input a instruction from key board; users can also input the instruction from a pre-stored file. The second method is very convenient if there are a lot of instructions to input.
 
 
 
