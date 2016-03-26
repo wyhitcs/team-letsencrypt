@@ -52,7 +52,7 @@ Let’s Encrypt is a software implementing ACME protocol. The workflow is summar
 
 #2. Views and Perspectives
 
-In this section, we present a comprehensive study of Let’s Encrypt covering the stakeholders, the architecture, the deployment of the software, the variability and the evolution of Let’s Encrypt.
+In this section, we present a comprehensive study of Let’s Encrypt covering the stakeholders, the architecture, the deployment of the software, the variability and evolution of Let’s Encrypt.
 
 ##2.1 Stakeholders Analysis
 We identify 6 types of stakeholders for Let's Encrypt.
@@ -75,9 +75,9 @@ These three foundations aim to provide a free, automated and open certificate au
 
 ### Developers
 
-So far 165 contributors have made contributions to the development of let’s encrypt. The core develoment team consisting of 11 people comes from a public benefit organization [Internet Security Research Group (ISRG)](https://letsencrypt.org/isrg/). The whole project is based on the ACME protocal proposed by ISRG. Unsurprisingly, they made most of the constributions to this project. 
+So far, 165 contributors have made contributions to the development of let’s encrypt. The core development team consisting of 11 people comes from a public benefit organization [Internet Security Research Group (ISRG)](https://letsencrypt.org/isrg/). The whole project is based on ACME protocal proposed by ISRG. Unsurprisingly, they made most of the contributions to this project. 
 
-For a newly established project like Let’s Encrypt, these developers more or less have responsibilities for testing, maintaining and github management. For example, pde and bmw are identified as integrators who ensure the quality of the project by communicating with contributors on github. They are also responsible for merging pull requests and interacting with contributors, no matter the pull requests are accepted or denied. We notice that the biggest challenge for Let’s Encrypt is to maintain the quality of the project when massive incoming contributions taking place everyday. To solve this, a complete stategy of test and integration is proposed which will be discussed later.
+For a newly established project like Let’s Encrypt, these developers more or less have responsibilities for testing, maintaining and github management. For example, pde and bmw are identified as integrators who ensure the quality of the project by communicating with contributors on github. They are also responsible for merging pull requests and interacting with contributors, no matter the pull requests are accepted or denied. We notice that the biggest challenge for Let’s Encrypt is to maintain the quality of the project when massive incoming contributions taking place everyday. To solve this, a complete strategy of testing and integration is proposed which will be discussed later.
 
 Here we list several major developers:
 
@@ -93,7 +93,7 @@ Here we list several major developers:
 
 
 
-The other contributors are either the users of let’s encrypt or github users who are interested in this project. Their constributions are mainly about improving commond line, fixing bugs and format.  In the documentation the team mentions that let’s encrypt is a beta software containing plenty of bugs. Thus, there is a lot of work to be done to improve user-friendliness.
+The other contributors are either users of let’s encrypt or github users who are interested in this project. Their contributions are mainly about improving command line, fixing bugs and format.  In the documentation, the team mentions that let’s encrypt is a beta software containing plenty of bugs. Thus, there is a lot of work to be done to improve user-friendliness.
 
 ### Users
 
@@ -102,7 +102,7 @@ The potential users of Let's encrypt are websites which want to obtain SSL/TLS c
 
 ### Sponsors
 
-Let's Encrypt is initialized by a non-profit organization (ISRG) to enbale secure communication over the Internet for the purpose of overcoming financial, technological and education barriers. Corporate Sponsorship helps speed up the process leading to a secure Web. The number of sponsers keeps incresing especially in the last four months. The dramatic rise in the nubmer of sponsors reflects the success and importance of the programme.
+Let's Encrypt is initialized by a non-profit organization (ISRG) to enable secure communication over the Internet for the purpose of overcoming financial, technological and education barriers. Corporate Sponsorship helps speed up the process resulting in a secure Web. The number of sponsors keeps increasing especially in the last four months. The dramatic rise in the number of sponsors reflects the success and importance of the programme.
 ![Sponsors Growth](https://github.com/delftswa2016/team-letsencrypt/blob/master/D1/sponsors.png)
 
 ### Additional Stakeholder
@@ -110,10 +110,10 @@ Let's Encrypt is initialized by a non-profit organization (ISRG) to enbale secur
 - [IdenTrust](https://www.identrust.com/) (Root certificate provider)
 
 Let us first explain the concept of root certificate providers.
-A certificate provider is a root certificate provider if and only if:
+Certificate provider is a root certificate provider if and only if:
 1) it can authorize other organizations to be the new certificate providers;
 2) it doesn’t need any other organizations to authorize it to be a certificate provider.
-For example, a certificate providers A can authorize organization B to be a new certificate provider.
+For example, certificate provider A can authorize organization B to be a new certificate provider.
 Later, B can authorize C to be a new certificate provider.
 A in our case is the root certificate provider.
 IdenTrust is a root certificate provider who authorizes Let’s Encrypt.
