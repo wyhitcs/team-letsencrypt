@@ -178,23 +178,24 @@ To learn more details, each model is attached with complete descrption. In addit
 ![Module Structure Model](https://github.com/delftswa2016/team-letsencrypt/blob/master/D2/module.structure.png)
 
 
-The UML component diagram below gives an overview of module structure. Each package means a code module and arrow shows intermodule dependencies[[1](#Nick)].
+The UML component diagram below gives an overview of the module structure. Each package is a code module and the arrow shows the intermodule dependencies[[1](#Nick)].
 
-- **User layer**: The first layer which is also the closest layer to users offers friendly UI for common clients to set up their own certificates. And the command way is also possible for developers to contribute to the project. 
+- **User layer**: The uppermost layer which is also the closest layer to users offers UI for clients to set up their own certificates. The command line interface enables the developers to contribute to the project. 
 
-- **Parser layer**: Receiving commands from upper layer, the coordinator module tries to check the compatibility to ensure the job can be done in certain environment. After that, the commands are parsed by parser and functions offered in next layer are recalled.
+- **Parser layer**: After receiving commands from the upper layer, the coordinator module checks the compatibility to ensure the job can be successfully done in a certain environment. Then, the commands are parsed by the parser and the function layer is called.
 
-- **Function layer**: As the core layer of whole project, the third layer offers important functions to complete tasks. ACME protocol is a protocol that a certificate authority (CA) and an applicant can use to automate the process of verification and certificate issuance. The package contains a series of codes to complete this task. Challenge module represents automatic module to finish the challenge provided by CA. JSON Web Key (JWK) module offers a cryptographic key in this data structure.  Besides, Let’s Encrypt has a plugin architecture to facilitate support for different webservers, other TLS servers, and operating systems. Currently, general webservers like Apache and Nginx are supported.
+- **Function layer**: As the core layer of the whole project, function layer offers important functions to automate the tasks of obtaining a certificate. The ACME module provides a protocol that allows an applicant to obtain a certificate automatically from a Certificate Authority (CA). It includes a challenge module which automatically fulfills the challenge provided by CA. Moreover, a JSON Web Key (JWK) module creates a cryptographic key in the data structure. Another module in this layer is Plugins, providing a plugin architecture to facilitate support for different web servers. Currently, web servers including Apache and Nginx are supported by Let’s Encrypt.
 
-- **Platform layer**: There’s no doubt that all previous code is based on python library which is included the bottom layer. In addition, OpenSSL, a software library to be used to secure communications against eavesdropping or to ascertain the identity of the party at the other end, is also the base of authentication process.
+- **Platform layer**: In the bottom layer, it can be seen that the only language dependency is python. In addition, OpenSSL, a software library used to secure communications against eavesdropping or to ascertain the identity of the party at the other end, is the base of authentication process.
 
 ![ACME Protocol Module in Detail](https://github.com/delftswa2016/team-letsencrypt/blob/master/D2/module2.png)
 
-The image below shows more details about the internal relations in ACME protocol. The communication between ACME Client and Certificate Authority (CA) is based on ACME Message. ACME Message is an object specified by ACME protocol specification, like Packet defined in Transmission Control Protocol (TCP). Several modules in ACME Client like Authenticator will wrap the information into an ACME message and send it, while CA receive and parse it.
+Since the software is based on ACME, it is necessary to gain a deeper understanding of how ACME module works. The graph below shows the details about the internal relations in ACME protocol. The communication between ACME Client and CA is via the ACME Message. ACME Message is an object specified by ACME protocol,  the definition of which is similar to the Packet in Transmission Control Protocol (TCP). 
 
-When Let’s Encrypt client wants to communicate with CA, for example, it is requesting an account, it should wrap the JSON Web Key (as payload) into an ACME Message, and send it to the CA. In addition to JSON Web Key, the payload of ACME Message can also be ACME Challenge and ACME Error.
+To understand how it works, let’s walk through a typical process. When Let’s Encrypt client wants to communicate with CA, for example, requesting an account, it first wraps the JSON Web Key as payload into an ACME Message and then send it to CA. The payload of ACME Message can also be ACME Challenge or ACME Error. After having processed the message, CA sends back a Message to Let’s Encrypt.
 
-There are some more modules that generate ACME Message. The Authenticator is used to deal with ACME Challenge, so the corresponding ACME Message will include related objects. Installer is used to deal with JSON Web Key and Digital Certificates. And ACME Utility Module is used to provide encryption/decryption and other utilities.
+Authenticator, Installer and ACME Utility Module are responsible for generating payloads and wrapping the payload into an ACME message and send it to CA for parsing. Authenticator is used to deal with ACME Challenge, Installer deals with JSON Web Key and Digital Certificates. ACME Utility Module provides encryption/decryption and other utilities. It also deals with ACME errors.
+
 
 ###2.3.2 Codeline Model
 
