@@ -370,59 +370,57 @@ A feature is a characteristic or end-user-visible behavior of a software system[
 
 ##### **Environment**
 
-The first part concerns about the environment that the software runs in. 
+- OS support: Let’s encrypt supports multiple Unix-ish Operating Systems including Arch, Debian, FreeBSD and etc. Let’s Encrypt is able to automatically identify user’s OS and install a compatible version, or user can manually choose a version.
 
-- OS support: Let’s encrypt supports multiple Unix-ish Operating Systems including Arch, Debian, FreeBSD, etc. Based on user’s system, Let’s Encrypt will install automatically, or user can manually choose his OS.
-
-- Python-version support: The Let’s Encrypt Client presently only runs on Unix-ish OSes that include Python 2.6 or 2.7; Python 3.x support will be added after the Public Beta launch.
+- Python-version support: Let’s Encrypt Client currently can only run on Unix-ish OS with Python 2.6 or 2.7; Python 3.x will be supported after the Public Beta Launch.
 
 ##### **Client(GUI)**
 
-- UI/Command switch: Let’s Encrypt supports ncurses and text (-t) UI, or can be driven entirely from the command line. Users can choose according to their requirements.
+- UI/Command switch: Let’s Encrypt supports [ncurses](https://en.wikipedia.org/wiki/Ncurses) (a programming library providing an API that allows the user to write text-based user interfaces) UI, or can be driven entirely from the command line. Users can choose between UI and command line.
 
-- Notification of configuration change: As a user, you can switch on/off notification of change, for example, if you change the storage path of some files, there should be some notification for the change by default, but you can choose to close this function. And a result of your certificate generation will also be shown on window.
+- Notification of configuration change: User can switch on/off notification of configuration change. For example, if someone changes the storage path of a file, there should be notification of the change by default. However, user can choose to close such notification. 
 
-- User authority: There are two levels for authority, ’user’ and ’super-user’ (developer), in ’user’ mode you are not allowed to use some instructions and some information are hidden. In ’super-user’ level, all functions are open.
+- User authority: There are two levels of authority: “user” and “super-user” (developer). In “user” mode, it is not allowed to use a number of instructions and some information will also be hidden. In ’super-user’ level, there are no such restrictions.
 
-- Virtual Environment: To implement some functions, Let’s Encrypt allow users to use virtualenv (virtual environment package), while you can choose not to use it.
+- Virtual Environment: Let’s Encrypt allows users to decide whether to use virtualenv (virtual environment package) or not.
 
-- Usage (As plugin or client): With no doubt, Let’s encrypt can serve as an independent application. Additionally, it can also serve as a third party module in other applications which means that users use it as a plugin.
+- Usage (as plugin or client): Let’s encrypt not only can serve as an independent application, it can also serve as a third party module in other applications. In the latter case, Let’s encrypt is used as a plugin.
 
-- Input method: User can choose to input arguments for functions from keyboard or from a file.
+- Input method: Users can either input arguments of functions from keyboard or from a file.
 
 ##### **Plugin**
 
-- Web server support: Let’s Encrypt client supports a number of different “plugins” that can be used to obtain and/or install certificates. Plugins that can obtain a specified certificate are called “authenticators” and can be used with the “certonly” command. Plugins that can install a cert are called “installers”. Apache, Nginx and webroot are plugins currently supported.
+- Web server support: Let’s Encrypt client supports a number of different “plugins” that can be used to obtain and/or install certificates. Plugins that can obtain a specified certificate are called “authenticators” and can be used with the “certonly” command. Plugins that can install a certificate are called “installers”. Apache, Nginx and webroot are plugins currently supported.
 
 ##### **Configuration**
 
-- Logging-level: The application is setup using serilog for logging. There are many logger levels like debug and customer. In customer level, some detail information are hidden to prevent ’noise’, but in debug level you can see more information.
+- Logging-level: The application is setup using serilog for logging. There are many logger levels such as “debug” and “customer”. In “customer” level, detail information is hidden to prevent ’noise’ while in “debug” level, such information can be seen.
 
-- Allow specifying Encryption algorithm: ACME protocol enables multiple kinds of encryption algorithm like RSA and MD5. As an implementation of ACME, Let’s encrypt enable those algorithms as well.
+- Allow specifying encryption algorithm: ACME protocol enables multiple types of encryption algorithms like RSA and MD5. Let’s encrypt enables all these algorithms.
 
-- Editable Certificate and key storage path: After installing, the path to store your certificate has been specified by default setting, but users are allow to edit it and assign another path.
+- Editable certificate and key storage path: The path of storing a certificate is specified by default after installing Let’s Encrypt. However, users are allowed to edit the storage path.
 
-- Editable Log file storage path: After installing, the path of the log documents has been specified by default setting, but users are allow to edit it and assign it another path.
+- Editable log file storage path: The path of the log file is specified by default after installing Let’s Encrypt. Users can also edit the path.
 
-- Personal profile: The most important information of your profile is your email address and users have to offer an effective profile when apply for a certificate. And also they are allow to edit it.
+- Personal profile: The most important information of personal profile is email address and users have to offer an effective profile in order to apply for a certificate. They are also allowed to edit the profile afterwards.
 
-- Multiple Challenge solution: There are many ways to solve challenges (so that you can prove you own a certain domain name):Simple HTTP/DVSNI/ private key/DNS verification. By default Let’s encrypt will choose one of them by preset algorithms but you can also specify it manually.
+- Multiple Challenge solution: There are many ways of solving challenges to prove someone owns a certain domain name: Simple HTTP, Domain Validation with Server Name Indication(DVSNI), DNS verification. If it is not chosen manually by users, Let’s encrypt will pick the default one.
 
-- Optional update way (Manual or automatic): Once there is a newer version of let’s encrypt released, the Let’s Encrypt in user’s machine will update itself automatically, but you can also choose to disable automatically update and do it manually
+- Optional update way (manual or automatic): Once an up-to-date version of Let’s encrypt is released, user’s local machine will update automatically. However, users can disable such automatic update and do it manually instead.
 
-- Optional ACME compliant services: As an implementation of ACME, Let’s Encrypt supports not only Let’s Encrypt CA but also other ACME compliant services. User can set up their choice in command.
+- Optional ACME compliant services: Let’s Encrypt supports a number of CAs and allows users to choose their favorite one by command line.
 
-- Optional redirect: Optionally install a http -> https redirect. Once user finish SSL certificate, browsers  can use https instead of http. User can  choose use only or a hybrid strategy (http and https are both valid)  by changing the configuration.
+- Optional redirect (optionally install a http -> https redirect). After obtaining an SSL certificate, browser turns from http to https. User can choose whether to use a hybrid strategy (http and https are both valid) or only validate https.
 
-- Verification: Let’s Encrypt currently supports two kinds of verification, Domain-Validated (DV) and Organization-Validated (OV) Certificate. Users can choose according to their requirements.
+- Verification: Let’s Encrypt currently supports two types of verification, Domain-Validated (DV) and Organization-Validated (OV) Certificate. Users can choose between these two verfications.
 
-- Revocation: It is common that when user lose the ownership of the server he needs to revoke the certificate issued before. And this is possible to complete this task in Let’s Encrypt.
+- Revocation: Let’s Encrypt allows users to revoke a certificate after losing the ownership of the server. 
 
-- Adjustable key bit-length: Because users have different requirement for key bit-length, it is possible to change it in Let’s Encrypt while 2048 is default value.
+- Adjustable key bit-length: The key bit-length is adjustable and its default value is 2048.
 
-- Valid period: Considering about the safety of server and users who log in their web, the certificate is not permanently valid and owners must update it when expiring. In Let’s Encrypt, a certificate is valid for 90 days.
+- Valid period: For the safety concern, a certificate should not be permanently valid which means the owner needs to update it after expiration. Let’s Encrypt allows a certificate to be valid for 90 days by default.
 
-- Email notification: For good user experience, Let’s Encrypt records the registration date of certificate and kindly remind user to update their certificates by email when 30 days rest for validity.
+- Email notification: For good user experience, Let’s Encrypt records the registration date of certificate and kindly reminds users to update their certificates by email when the validity is less than 30 days.
 
 
 ####2.5.1.2 Stakeholders Related
