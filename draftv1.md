@@ -19,14 +19,6 @@ After that, we will give you a brief instruction on the views and perspectives o
 * Conclusion
 
 
-
-
-
-##Plan and current status:
-1.	We have finished the first version of Context View, Development View, Deployment View, Variability Perspectives and Evolution Perspectives.
-2.	The contents are still in first version, hence they need to be revised.
-3.	We have made a little contribution to Let's Encrypt project and further contribution is planned and in progress.
-
 #1. Introduction
 
 Before we introduce Let's Encrypt, we need to introduce some necessary knowledge. We will talk about SSL/TLS, ACME protocol and Certificate Authority before the introduction of Let's Encrypt 
@@ -202,9 +194,7 @@ Authenticator, Installer and ACME Utility Module are responsible for generating 
 
 ###2.3.2 Codeline Model
 
-In this section, code structure of letsencrypt will be explored.
-Build, Integration, Test and Release Approach also matters a lot in understanding the project organization.
-In addition, Technical Debt is also analyzed.
+In this section, code structure of Let's Encrypt will be explored. Besides, Build, Integration, Test and Release Approach also matters a lot in understanding the project organization.
 
 ####2.3.2.1 Source Code Structure
 
@@ -237,7 +227,7 @@ In addition, Technical Debt is also analyzed.
 - **tools** - Include .sh files which are frequently used.
 
 
-####2.3.2.3 Build, Integration and Test Approach
+####2.3.2.2 Build, Integration and Test Approach
 
 To provide developers a convenient environment and also protect project source version, Let's Encrypt has an offical workflow for building, integrating and testing. 
 
@@ -288,37 +278,23 @@ The concept of technical debt refers to the accumulated consequences of the quic
 ####2.3.4.1 Code Duplication
 
 In issue [#383](https://github.com/letsencrypt/letsencrypt/issues/383), code duplication exists between apache and nginx plugins; and in issue [#698](https://github.com/letsencrypt/letsencrypt/issues/698), [Dockerfile-dev](https://github.com/letsencrypt/letsencrypt/blob/26c1f003d0d05397154fe63e1f452ed2148cfe75/Dockerfile-dev) and [Dockerfile](https://github.com/letsencrypt/letsencrypt/blob/26c1f003d0d05397154fe63e1f452ed2148cfe75/Dockerfile) also duplicated. 
-Code in those part are just copying and changing slightly, which makes editing common code more dangerous.
-Duplicated code is code that has been produced by copying and then adapting existing code. Also known as “copy-and-paste development”. 
-This strategy of producing code is frequently employed as a way of reusing software. 
-On the first impression, code duplication seems to be a desirable approach to development as it is associated with reuse, implementation speed-up, and developer care. 
-However, in the long term, code duplication implications can be very negative. 
-First of all, code duplication causes an increase in software size. 
-Secondly, duplication has a direct impact on the difficulty of maintaining already developed code. 
-Additionally, code-duplication can also be a sign of poor design, indicating that generic functionality has been not properly abstracted. Consequently, on the long term, especially during the maintenance phase, code duplication has to be avoided.
+Problem arises when codes are just copied and changed slightly, making it difficult to maintain the software project.
 
-
+Duplicated code, also known as “copy-and-paste development”, is produced by copying existing code and then using it somewhere else. This strategy of producing code is frequently employed as a way of reusing software. On one hand, code duplication seems to be a desirable approach of development as it facilitates code reusabitility and speed up software development. On the other hand, code duplication implications can be very negative in the long term. First of all, code duplication causes an increase in code size. Secondly, duplication increases the difficulty of maintaining the already developed code. Moreover, code duplication can also be a sign of poor design, indicating that the generic functionality has not been properly abstracted. Consequently, code duplication needs to be carefully avoided in the long term, especially during the maintenance phase.
 
 ####2.3.4.2 Documentation
 
-For open source projects, the contribution of open source communities behind the huge development of the project is very evident. 
-So it is vital that a transparent documentation system is followed in such community projects. 
-Without proper documentation it is very difficult for other developers to understand the code developed by any user and to reuse the code or make it more efficient.
-Unfortunately, for Let's Encrypt, they do not provide a well-structured documentation for developers. There are 59 issues labeled `documentation`. 
-No architecture and module information, which makes understanding of how the project works and how the module connects with each other difficult to understand. 
-In addition, insufficient documentation may also cause troubles for both developers not in their team and users.
-For example in issue [#2271](https://github.com/letsencrypt/letsencrypt/issues/2271), the developers discuss the text related to renewal certificate, the former version of documentation is “To renew a certificate, simply run letsencrypt again providing the same values when prompted. In almost all circumstances, renewal should be performed with the certonly subcommand”. 
-In that passage, the second sentence contradicts the first. Also it is not nearly as detailed as it should be.
+For an open source project, the contributions from open source communities to the huge development of the project is evident.  It is vital to have a transparent documentation system so that developers in such communities can understand, reuse and develop the code in a more efficient way. The documentation of Let's Encrypt still has room for improvement. We notice that 59 issues are labeled `documentation` on github. These issues indicate that the documentation is not well- structured, lacking architecture description and module information, which makes it difficult to understand how the project works and how the module connects to each other. In addition, insufficient documentation also confuses users.
 
+For example in issue [#2271](https://github.com/letsencrypt/letsencrypt/issues/2271), the developers discuss the text related to certificate renewal. The former version of documentation is “To renew a certificate, simply run letsencrypt again providing the same values when prompted. In almost all circumstances, renewal should be performed with the certonly subcommand”. It seems that the second sentence contradicts the first. Moreover, it is not as detailed as it should be.
 
 ####2.3.4.3 How developers deal with technical debt
-For technical debt, developers always find it via Issues, discuss it and try to find a better solution to fix it. For technical debt and related issues we mentioned above, Let’s Encrypt manage their technical debt using the following method.
+Developers usually find out technical debt through Issues, discuss it and figure out a solution. To resolve technical debt and the relevant issues mentioned above, Let’s Encrypt uses the following methods:
 
 
-- Code Duplication: Recent advances in static code analysis and hardware performance made possible tool-based localization of code duplication in industrial contexts. 
-For developers, they could use this kind of tools to detect duplicates and then improved by sharing common util functions (as they did in [#382](https://github.com/letsencrypt/letsencrypt/pull/382)).
+- Code Duplication: Recent advances in static code analysis and hardware performance enable tool-based localization of code duplication in industrial contexts. For developers, they could use such tools to detect and resolve duplicates by sharing common util functions (as they did in [#382](https://github.com/letsencrypt/letsencrypt/pull/382)).
 
-- Documentation: The developers are professionals who may not be aware of the not sufficient documentation, but they are willing to fix it when users make an issue on the github as what they did in issue [#2216] (https://github.com/letsencrypt/letsencrypt/issues/2216) and [#2271](https://github.com/letsencrypt/letsencrypt/issues/2271).
+- Documentation: There are insufficiency in the documentation that the developers are not aware of. However, they are willing to fix it when users post issues on github (as what they did in issue [#2216] (https://github.com/letsencrypt/letsencrypt/issues/2216) and [#2271](https://github.com/letsencrypt/letsencrypt/issues/2271)).
 
 ##2.4 Deployment View
 
@@ -371,7 +347,7 @@ As mentioned above, Let’s Encrypt is a BETA software still in its earlier vers
 
 ###2.5.1 Variable Features
 
-A feature is a characteristic or end-user-visible behavior of a software system[[6](#Sven)]. We identified a list of variable features and classified them into four categories. We identified a list of variable features and classified them into four categories. Moreover, features in Let's Encrypt come with different binding times, most features are at run time, others at compile time[[7](#Lee)]. And this is described at the first of each class.
+A feature is a characteristic or end-user-visible behavior of a software system[[6](#Sven)]. We identified a list of variable features and classified them into four categories. We identified a list of variable features and classified them into four categories. Moreover, features in Let's Encrypt come with different binding times. Most features are at run time, others at compile time[[7](#Lee)]. And this is described at the first of each class.
 
 ####2.5.1.1 Feature List
 
