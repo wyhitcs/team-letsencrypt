@@ -413,14 +413,6 @@ Configuration contains a great many features offered by Let’s Encrypt to impro
 
 - Email notification: For good user experience, Let’s Encrypt records the registration date of certificate and kindly reminds users to update their certificates by email when the validity is less than 30 days.
 
-
-####2.5.1.2 Stakeholders Related
-There are two stakeholders affected by listed features:
-
-Users: Users are the stakeholders affected most, because each creation and change of features are done for better user experience. 
-
-Developers: Developers are also related to these features. By accept suggestions and issues posted by others (users or developers), developers try to make Let’s Encrypt more flexible and robust.
-
 ####2.5.1.3 Feature Dependencies and Model
 
 Mainly all features can be classified into four categories, environment, client, plugin and configuration. Among them, there are dependencies, which means that some features depend on others. For example, users have to choose “SuperUser” authority in order to enter debug mode, choose challenge solution and manual update method. 
