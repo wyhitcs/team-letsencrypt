@@ -288,7 +288,7 @@ For an open source project, the contributions from open source communities to th
 For example in issue [#2271](https://github.com/letsencrypt/letsencrypt/issues/2271), the developers discuss the text related to certificate renewal. The former version of documentation is “To renew a certificate, simply run Let's Encrypt again providing the same values when prompted. In almost all circumstances, renewal should be performed with the certonly subcommand”. It seems that the second sentence contradicts the first. Moreover, it is not as detailed as it should be.
 
 ####2.3.4.3 How developers deal with technical debt
-Developers usually find out technical debt through Issues, discuss it and figure out a solution. To resolve technical debt and the relevant issues mentioned above, Let’s Encrypt uses the following methods:
+Developers usually find out technical debt through Issues, discuss it and figure out a solution. To resolve technical debt and  relevant issues mentioned above, Let’s Encrypt uses the following methods:
 
 
 - Code Duplication: Recent advances in static code analysis and hardware performance enable tool-based localization of code duplication in industrial contexts. For developers, they could use such tools to detect and resolve duplicates by sharing common util functions (as they did in [#382](https://github.com/letsencrypt/letsencrypt/pull/382)).
@@ -424,13 +424,13 @@ Finally, it’s convenient for users to get a kind email notification about the 
 
 ###2.5.2 Implementation Strategy
 
-The key to implement variability and configurability is using interface. All the interfaces need to be implemented are stored in the file `interface.py`. In the [developer guide](https://letsencrypt.readthedocs.org/en/latest/contributing.html) announce that what interface should be implemented by a specific kind of class. The interface.py and the developer guide together draw a outline for the let’s encrypt: what configuration can be done, what parameter can be specified, what Operation System it should support, what plugin it should support. Hence the variability and configurability has been implemented.
+The key to implement variability and configurability is using interface. All the interfaces need to be implemented are stored in the file `interface.py`. In the [developer guide](https://letsencrypt.readthedocs.org/en/latest/contributing.html) announce that what interface should be implemented by a specific kind of class. The interface.py and the developer guide together draw an outline for the let’s encrypt: what configuration can be done, what parameter can be specified, what Operation System it should support, what plugin it should support. Hence the variability and configurability have been implemented.
 
 ###2.5.3 Evolution History of Variability and Configurability
 
 The Let’s Encrypt had already included many features in the first released version. More features are added in the following releases. The contributions focus mainly on the support for Operation Systems, different versions of python, improvements of configuration file and command line flags, support for new plugins, and implementations of more ACME challenge solutions. 
 
-Release note is a good method to figure out the evolution history. To see the changes of the given releases in Let’s Encrypt , we inspect the github milestone for the following releases:
+Release note is a good method to figure out the evolution history. To see the changes of the given releases in Let’s Encrypt , we inspect the GitHub milestone for the following releases:
 
 - [0.1.1](https://github.com/letsencrypt/letsencrypt/issues?q=milestone%3A0.1.1)- This version includes important bugfixes over the Public Beta / 0.1.0 version:
 1) fixed a confusing UI path that caused some users to repeatedly renew their certs; 2) completed numerous Apache configuration parser fixes; 3) fixed `--webroot` permission handling for non-root users.
@@ -440,21 +440,21 @@ redirect on some systems.
 
 - [0.3.0](https://github.com/letsencrypt/letsencrypt/issues?q=is%3Aissue+milestone%3A0.3.0)- This version enabled a non-interactive mode by including `-n` or `--non-interactive` on the command line to guarantee the client will not prompt when running automatically.
 
-- [0.4.0](https://github.com/letsencrypt/letsencrypt/issues?q=milestone%3A0.4.0)- In this version, two major changes were made to support the variability and configurability: 1) a new subcommand renew can be used to renew the existing certificates as they approach expiration; 2)  full support for Python 2.6 is enabled.
+- [0.4.0](https://github.com/letsencrypt/letsencrypt/issues?q=milestone%3A0.4.0)- In this version, two major changes were made to support the variability and configurability: 1) a new subcommand renewal can be used to renew the existing certificates as they approach expiration; 2)  full support for Python 2.6 is enabled.
 
 - [0.4.2](https://github.com/letsencrypt/letsencrypt/issues?q=is%3Aissue+milestone%3A0.4.2)- A patch fixing problems of using Let's Encrypt `renew` with configuration files from private beta has been added.
 
 Issues and pull requests relevant to the variability and configurability can be classified as follows:
 
-- **Improvement of Operation Systems support**: the first release version only supported Ubuntu with version before 14.04. The supports for Debian, Mac, CentOS and later version Ubuntu are enabled in the following versions. The relevant issues include [issue 292](https://github.com/letsencrypt/letsencrypt/pull/292), [508](https://github.com/letsencrypt/letsencrypt/pull/508), [840](https://github.com/letsencrypt/letsencrypt/pull/840), [1206](https://github.com/letsencrypt/letsencrypt/pull/1206), [1232](https://github.com/letsencrypt/letsencrypt/pull/1232). 
+- **Improvement of Operation Systems support**: the first release version only supported Ubuntu with version before 14.04. The supports for Debian, Mac, CentOS and later version Ubuntu are enabled in the following versions. Relevant issues include [issue 292](https://github.com/letsencrypt/letsencrypt/pull/292), [508](https://github.com/letsencrypt/letsencrypt/pull/508), [840](https://github.com/letsencrypt/letsencrypt/pull/840), [1206](https://github.com/letsencrypt/letsencrypt/pull/1206), [1232](https://github.com/letsencrypt/letsencrypt/pull/1232). 
 
-- **Support for different version of Python**: at the beginning, Let’s encrypt only supported python 2.6. The support for later versions of python, especially python 3.x, is enabled now. The relevant issues include [issue 605](https://github.com/letsencrypt/letsencrypt/pull/605), [957](https://github.com/letsencrypt/letsencrypt/pull/957), [1508](https://github.com/letsencrypt/letsencrypt/pull/1508).
+- **Support for different versions of Python**: at the beginning, Let’s encrypt only supported python 2.6. The support for later versions of python, especially python 3.x, is enabled now. Relevant issues include [issue 605](https://github.com/letsencrypt/letsencrypt/pull/605), [957](https://github.com/letsencrypt/letsencrypt/pull/957), [1508](https://github.com/letsencrypt/letsencrypt/pull/1508).
 
-- **Improvement of configuration**: numerous configuration options are added and the command lines becoms increasingly user-friendly. For example, users can now specify the parameters such as the length of the RSA key. The relevant issues include [issue 82](https://github.com/letsencrypt/letsencrypt/pull/82), [368](https://github.com/letsencrypt/letsencrypt/pull/368), [404](https://github.com/letsencrypt/letsencrypt/pull/404).
+- **Improvement of configuration**: numerous configuration options are added and the command lines becomes increasingly user-friendly. For example, users can now specify the parameters such as the length of the RSA key. Relevant issues include [issue 82](https://github.com/letsencrypt/letsencrypt/pull/82), [368](https://github.com/letsencrypt/letsencrypt/pull/368), [404](https://github.com/letsencrypt/letsencrypt/pull/404).
 
-- **Support for different webserver plugins**: while the early version of Let’s encrypt only supported apache and nginx, now the supports for nginx, webroots, standalone are enabled. The relevant issues are [issue 232](https://github.com/letsencrypt/letsencrypt/pull/232), [387](https://github.com/letsencrypt/letsencrypt/pull/387), [895](https://github.com/letsencrypt/letsencrypt/pull/895), [1395](https://github.com/letsencrypt/letsencrypt/pull/1395).
+- **Support for different webserver plugins**: while the early version of Let’s encrypt only supported apache and nginx, now the supports for nginx, webroots, standalone are enabled. Relevant issues are [issue 232](https://github.com/letsencrypt/letsencrypt/pull/232), [387](https://github.com/letsencrypt/letsencrypt/pull/387), [895](https://github.com/letsencrypt/letsencrypt/pull/895), [1395](https://github.com/letsencrypt/letsencrypt/pull/1395).
 
-- **Implementations of more ACME challenge solutions**: ACME protocols allows different kinds of challenge solution, but Let’s encrypt only implemented a small number of them. However, in the recent releases more challenge solutions are added by contributors. The relevant issues are [issue 232](https://github.com/letsencrypt/letsencrypt/pull/232), [291](https://github.com/letsencrypt/letsencrypt/pull/291), [387](https://github.com/letsencrypt/letsencrypt/pull/387).
+- **Implementations of more ACME challenge solutions**: ACME protocols allow different kinds of challenge solutions, but Let’s encrypt only implemented a small number of them. However, in the recent releases more challenge solutions are added by contributors. Relevant issues are [issue 232](https://github.com/letsencrypt/letsencrypt/pull/232), [291](https://github.com/letsencrypt/letsencrypt/pull/291), [387](https://github.com/letsencrypt/letsencrypt/pull/387).
 
 ##2.6 Evolution Perspective
 
@@ -467,7 +467,7 @@ To identify the evolution needs, the system requirements need to be re-analyzed 
 
 ####2.6.1.1 Identify Requirements
 
-Based on the roadmap inferred from the existing document and discussion on forum and github, the key evolution requirements in the future can be summerized as follows:
+Based on the roadmap inferred from the existing documentation and discussion on forum and GitHub, the key evolution requirements in the future can be summarized  as follows:
 
 
 |  Dimensions of Change | Magnitude of change required| Likelihood of change  |Timescale of change required|
@@ -480,9 +480,9 @@ Based on the roadmap inferred from the existing document and discussion on forum
 
 ####2.6.1.2 Evolution Tradeoff
 
-The tradeoff depends on the type of the system, the likehood of the change and the confidence to defer the change until it is required. It means the prioritized evolution requirements will take flexibility into account at the beginning while the others defer the efforts. 
+The tradeoff depends on the type of the system, the likelihood  of the change and the confidence to defer the change until it is required. It means the prioritized evolution requirements will take flexibility into account at the beginning while others defer the efforts. 
 
-The architects of Letsencypt considers support for IPv6 and Nginx at initial development since they are the necessary features the project wants to include. By creating extensible interfaces for IPv6 and Nginx, the system becomes flexible for later change.
+Architects of Letsencypt consider support for IPv6 and Nginx at initial development since they are the necessary features the project wants to include. By creating extensible interfaces for IPv6 and Nginx, the system becomes flexible for later change.
 
 The issues of lessening rate limits on the number of certificates issued per domain and certificate compatibility with Windows XP are also considered even not with the highest priority. The reason is that the compatibility problem is a small-scale issue in our case while the rate limit demands more on the hardware support than software architecture. 
 
@@ -503,7 +503,7 @@ Let’s Encrypt uses `tox` for testing.
 - Continuous integration: 
 When making changes, it is always best to receive bad news as early as possible. 
 Travis CI is used to do automated testing for every pull request to Let’s Encrypt project before merging. 
-They set up project in multiple Python versions(2.6,2.7,3.3,3.4,3.5) and multiple plugins. [(links to `.travis.yml`)](https://github.com/letsencrypt/letsencrypt/blob/master/.travis.yml)
+They set up a project in multiple Python versions(2.6,2.7,3.3,3.4,3.5) and multiple plugins. [(links to `.travis.yml`)](https://github.com/letsencrypt/letsencrypt/blob/master/.travis.yml)
 
 ##Conclusion
 
@@ -513,11 +513,11 @@ The analysis of stakeholders and context view of Let’s Encrypt shows us the ro
 
 In the section of development view, the architecture of Let’s Encrypt that serves the development process is analyzed. Its design principles show an example of how a well-structured project facilitates the development, maintenance and test process.
 
-We also gain knowledge from the analysis of deployment view on how to guarantee the proper operation in different envrionments, which is quite useful for both users and developers.
+We also gain knowledge from the analysis of deployment view on how to guarantee the proper operation in different environments, which is quite useful for both users and developers.
 
 At last, the variability perspective and evolution perspective focus on the design that enables a project to equip with variability and changes. It shows us the importance for an architect to be prepared for variability and changes during the development lifecycle.
 
-To conclude, a well-structured architecture of a software satisfies its related stakeholders and makes the development, maintainence and test process easier. Let’s Encrypt is a BETA SOFTWARE containing plenty of bugs, which makes the analysis challenging but interesting. To get involved into the project, we made contributions by pulling request on GitHub and two of them got merged. Our main contributions are listed in the appendix.
+To conclude, a well-structured architecture of a software satisfies its related stakeholders and makes the development, maintenance  and test process easier. Let’s Encrypt is a BETA SOFTWARE containing plenty of bugs, which makes the analysis challenging but interesting. To get involved into the project, we made contributions by pulling request on GitHub and two of them got merged. Our main contributions are listed in the appendix.
 
 
 
