@@ -491,21 +491,7 @@ ECC support is deferred until it is required for a reason that this feature is n
 
 ###2.6.2 Architectural Tactics
 
-With the development of Let’s Encypt, various architecture tactics are used to make it more flexible to accomodate changes.
-
-####2.6.2.1 Create extensible interfaces
-
-Let’s Encrypt supports different servers by adding extensible plugins, which means developers can add their own plugin according to their requirements.
-
-####2.6.2.2 Build variation points into the software
-
-To  make Let’s Encrypt more flexible, developers design variation points into software. 
-For example, Let’s Encrypt supports a series of configurable parameters like adjustable key bit-length and optional ACME compliant services. 
-This allow some aspects of the system’s operation to be changed over time without modifying its implementation[[1](#Nick)].
-
-####2.6.2.3 Achieve reliable change	
-
-To achieve reliable change, Let’s encrypt takes the following strategies:
+With the development of Let’s Encypt, various architecture tactics are used to make it more flexible to accomodate changes. Besides adding extensible plugins and configurable parameters, Let’s encrypt also takes the following strategies to achieve reliable change:
 
 - Create mechanisms to roll back unsuccessful deployments: 
 The source code is on Github, which is a perfect tool for version control. 
