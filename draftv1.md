@@ -308,37 +308,25 @@ In this part, we will introduce a series of constraints about Let’s Encrypt in
 
 ###2.4.1 Third Party Software Requirements
 
-Identifying third party software requirements is essential for both developers and users. 
-For developers, they can clearly know what tools or libraries are available for further use. 
-Users can know what is exactly needed to apply such software on their environments. 
+Identifying third party software requirements and technology compatibility is essential for both developers and users. For developers, they can clearly know what tools or libraries are available for further use. Users can know what is exactly needed to apply such software on their environments. 
 
 For Let’s  Encrypt, following softwares are required to be installed on user machine:
 
-- **Python**: Python programming language;
+- **Python**: Python programming language. And it is required to use Python 2.6 or 2.7, while Python 3.x support is currently not available. When installing Let’s Encrypt, it will automatically check the version of Python in user environment and install it if there is no proper library.
 
-- **OpenSSL**: a software library implementing the Secure Sockets Layer (SSL) and Transport Layer Security (TLS) protocols;
+- **OpenSSL**: a software library implementing the Secure Sockets Layer (SSL) and Transport Layer Security (TLS) protocols.
 
-- **ACME**: Automatic Certificate Management Environment (ACME) protocol implementation in Python;
+- **ACME**: Automatic Certificate Management Environment (ACME) protocol implementation in Python.
 
-- **ConfigArgParse**: Python command-line parsing library;
+- **ConfigArgParse**: Python command-line parsing library. It is required that the version of ConfigArgParse must higher than 0.9.3.
 
-- **Python Package Index (PyPI)**: a tool to help package and share Python modules;
+- **Python Package Index (PyPI)**: a tool to help package and share Python modules.
 
-- **cryptography**: a package which provides cryptographic recipes and primitives to Python developers;
+- **cryptography**: a package which provides cryptographic recipes and primitives to Python developers.At least version 0.7 should be used.
 
-- **psutil**: a cross-platform library for retrieving information on running processes and system utilization;
+- **psutil**: a cross-platform library for retrieving information on running processes and system utilization.The version of psutil must higher than 2.1.0.
 
-###2.4.2 Technology Compatibility
-
-1. **Python**: It is required to use Python 2.6 or 2.7, while Python 3.x support is currently not available. When installing Let’s Encrypt, it will automatically check the version of Python in user environment and install it if there is no proper library.  
-
-2. **ConfigArgParse**: It is required that the version of ConfigArgParse must higher than 0.9.3.
-
-3. **cryptography**: At least version 0.7 should be used.
-
-4. **psutil**: The version of psutil must higher than 2.1.0
-
-###2.4.3 Network Requirements
+###2.4.2 Network Requirements
 
 Let’s Encrypt runs a certificate management agent on the web server. The node in the system can be divided into two categories: Server and Client. On its client side, it requires port 80 or 443 to be available. On its server side, Let’s Encrypt has rate limits for certificate issuance. These limits are in place primarily to protect services from both accidental and intentional abuse. Let’s Encrypt has the following rate limits in place:
 
