@@ -278,19 +278,34 @@ Configuration object is "a bag of attributes" used by almost all the modules. Fo
 
 ###2.3.4 Technical Debt
 
-The concept of technical debt refers to the accumulated consequences of the quick but dirty design into an evolving software program [[2](#Fowler)]. In other words, the danger occurs when people rush software by simply adding features into the program but never reflect their understanding of those features. As the “debt” accumulates, the complexity of maintaining the programs to reduce its deterioration to the whole software increases [[3](#Cunningham)].
+The concept of technical debt refers to the accumulated consequences of the quick but dirty design into an evolving software program [[2](#Fowler)]. In other words, the danger occurs when people rush software by simply adding features into the program but never reflect their understanding of those features. As the “debt” accumulates, the complexity of maintaining the programs to reduce its deterioration to the entire software increases [[3](#Cunningham)].
+
 
 ####2.3.4.1 Code Duplication
 
-In issue [#383](https://github.com/letsencrypt/letsencrypt/issues/383), code duplication exsits between apache and nginx plugins; and in issue [#698](https://github.com/letsencrypt/letsencrypt/issues/383), [Dockerfile-dev](https://github.com/letsencrypt/letsencrypt/blob/26c1f003d0d05397154fe63e1f452ed2148cfe75/Dockerfile-dev) and [Dockerfile](https://github.com/letsencrypt/letsencrypt/blob/26c1f003d0d05397154fe63e1f452ed2148cfe75/Dockerfile) also duplicated.
+In issue [#383](https://github.com/letsencrypt/letsencrypt/issues/383), code duplication exists between apache and nginx plugins; and in issue [#698](https://github.com/letsencrypt/letsencrypt/issues/698), [Dockerfile-dev](https://github.com/letsencrypt/letsencrypt/blob/26c1f003d0d05397154fe63e1f452ed2148cfe75/Dockerfile-dev) and [Dockerfile](https://github.com/letsencrypt/letsencrypt/blob/26c1f003d0d05397154fe63e1f452ed2148cfe75/Dockerfile) also duplicated. 
+Code in those part are just copying and changing slightly, which makes editing common code more dangerous.
+Duplicated code is code that has been produced by copying and then adapting existing code. Also known as “copy-and-paste development”. 
+This strategy of producing code is frequently employed as a way of reusing software. 
+On the first impression, code duplication seems to be a desirable approach to development as it is associated with reuse, implementation speed-up, and developer care. 
+However, in the long term, code duplication implications can be very negative. 
+First of all, code duplication causes an increase in software size. 
+Secondly, duplication has a direct impact on the difficulty of maintaining already developed code. 
+Additionally, code-duplication can also be a sign of poor design, indicating that generic functionality has been not properly abstracted. Consequently, on the long term, especially during the maintenance phase, code duplication has to be avoided.
 
-Duplicated code is code that has been produced by copying and then adapting existing code. Also known as “copy-and-paste development”, this strategy of producing code is frequently employed as a way of reusing software. 
-On the first impression, code duplication seems to be a desirable approach to development as it is associated with reuse, implementation speed-up, and developer care. However, in the long term, code duplication implications can be very negative.
-First of all, code duplication causes an increase in software size. Secondly, duplication has a direct influence on the difficulty of maintaining already developed code. Additionally, code-duplication can also be a sign of poor design, indicating that generic functionality has been not properly abstracted. Consequently, on long term, especially during the maintenance phase, code duplication is to be avoided.
+
 
 ####2.3.4.2 Documentation
 
-For open source projects, the contribution of open source communities behind the huge development of the project is very evident. So it is very important that a transparent documentation system is followed in such community projects. Without proper documentation it is very difficult for other developers to understand the code developed by any user and to reuse the code or make it more efficient.Unfortunately, for Let's Encrypt, they do not provide a well-structured documentation for developers. There are 59 issuses labeled `documentation`. No architecture and module information, which makes understanding of how the project works and how the module connect with each other difficult to understand, which makes it difficult for developers not in their team to contribute to the project. In addition, insufficient documentation may also cause troubles for users.
+For open source projects, the contribution of open source communities behind the huge development of the project is very evident. 
+So it is vital that a transparent documentation system is followed in such community projects. 
+Without proper documentation it is very difficult for other developers to understand the code developed by any user and to reuse the code or make it more efficient.
+Unfortunately, for Let's Encrypt, they do not provide a well-structured documentation for developers. There are 59 issues labeled `documentation`. 
+No architecture and module information, which makes understanding of how the project works and how the module connects with each other difficult to understand. 
+In addition, insufficient documentation may also cause troubles for both developers not in their team and users.
+For example in issue [#2271](https://github.com/letsencrypt/letsencrypt/issues/2271), the developers discuss the text related to renewal certificate, the former version of documentation is “To renew a certificate, simply run letsencrypt again providing the same values when prompted. In almost all circumstances, renewal should be performed with the certonly subcommand”. 
+In that passage, the second sentence contradicts the first. Also it is not nearly as detailed as it should be.
+
 
 ####2.3.4.3 How developers deal with technical debt
 
