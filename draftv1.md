@@ -17,37 +17,40 @@ After that, we will give you a brief instruction on the views and perspectives o
 
 #1. Introduction
 
-With all the malware and viruses being perpetrated these days, it is more important than ever that all our communications are secured. But cryptography is hard, and good cryptography tends to be both hard and expensive. 
-That all has changed with LetsEncrypt.org! The goal of Let’s Encrypt is to set up an HTTPS server and have it automatically obtain a browser-trusted certificate, without any human intervention. Before analyzing Let's Encrypt, it is important to understand few knowledge points about Let’s Encrypt. 
-
-Before we introduce Let's Encrypt, we need to introduce some necessary knowledge. We will talk about SSL/TLS, ACME protocol and Certificate Authority before the introduction of Let's Encrypt 
+With all the malware and viruses being perpetrated these days, it is more critical than ever that all our communications are secured. But cryptography is hard and good cryptography tends to be both hard and expensive. 
+That has changed with LetsEncrypt.org! The goal of Let’s Encrypt is to set up an HTTPS server and have it automatically obtain a browser-trusted certificate, without any human intervention. Before analyzing Let's Encrypt, it is important to have some background knowledge of Let’s Encrypt. 
 
 ####SSL/TLS
 
-Transport Layer Security Protocol (TLS) and its predecessor -- Secure Socket Layer Protocol (SSL) are both referred to as “SSL”. 
-These two protocols aim to provide encrypted communication between two parties. For SSL/TLS communications, the server side needs to provide a Digital Certificate (for convenience it is referred to SSL certificate for the rest of this Chapter) to verify its identity (to prove that the server owns a set of domain names such as www.google.com, www.paypal.com).
+Transport Layer Security Protocol (TLS) and its predecessor -- Secure Socket Layer Protocol (SSL) are both referred to as “SSL”. These two protocols aim to provide encrypted communication between two parties. For SSL/TLS communications, the server side needs to provide a Digital Certificate (for convenience it is referred to SSL certificate for the rest of this report) to verify its identity (to prove that the server owns a set of domain names such as www.google.com, www.paypal.com).
 
 ####Digital Certificate
 
-Digital Certifical is in fact a "bag of data" which can prove the website is the owner of a domain name. The digital certificates are authorized by Certificate Authority (will be dicussed later) and installed in the web servers
+Digital Certificate is in fact a "bag of data" which can prove the website is the owner of a certain domain name. The digital certificates are authorized by Certificate Authority and installed in web servers.
+
+####Certificate Authority (CA)
+
+CA is an online organization which issues the Digital Certificate. A software called “boulder” to cooperate with Let’s Encrypt automatically verify that an applicant for a certificate actually controls an identifier, and allows domain holders to issue and revoke certificates for their domains.
 
 ####ACME protocol
 
-The identity of internet entities (client and server) need to be verified. However, today’s verification is done by some ad-hoc mechanisms which are not suitable for development of online verification in the future. 
-Automatic Certificate Management Environment (ACME) protocol[[8](#acme)] aims to address such issue by standardizing and automating the procedure of verification. In other words, it is a “bag of procedures” by doing which a Certificate Authority(CA) issues a certificate to a client.
+The identities of Internet entities (client and server) need to be verified. However, today’s verification is done by some ad-hoc mechanisms which are not suitable for future development of online verification. Automatic Certificate Management Environment (ACME) protocol [[8](#acme)] aims to address such issue by standardizing and automating the procedures of verification. In other words, it is a “bag of procedures” by doing which a Certificate Authority issues a certificate to a client.
 
-####Certificate Authority
-CA is an online organization which issues a Digital Certificate.
-A certificate needs to install a software called boulder to cooperate with Let’s Encrypt, which will be discussed later.
+Let’s Encrypt is a software automating the tasks of obtaining certificates and configuring web servers to use them. It is based on ACME protocol and accomplished by running a certificate management agent on the web server. The workflow can be summarized as follows:
 
-
-
-Let’s Encrypt is a software implementing ACME protocol. The workflow is summarized as follows:
-
-1. When a certificate is requested, Let’s Encrypt wraps necessary information (the account, the domain name etc) into standard format and sends them to boulder of a CA;
+1. When a certificate is requested, Let’s Encrypt wraps the necessary information (the account, the domain name and etc) into standard format and sends it to boulder of a CA;
 2. CA responds the request with a “challenge” which is a special task to verify the ownership of the server;
 3. Let’s Encrypt automatically solves this challenge;
-4. CA grants a certificate after solving the challenge.
+4. CA grants a certificate after the challenge has been solved.
+
+Our report analyzes the project from different views and perspectives. In the first section, we studied different types of stakeholders and how they are related to the project. Then, we analyzed its Context View which demonstrates the relationship between Let’s Encrypt and its external enviroment.
+
+In the section of Development View, we aim to analyze the architecture of Let’s Encrypt that concerns the development process.
+
+In the section of Deployment View, the enviroment (software/network enviroment) requirements of Let’s Encrypt are provided. 
+The section of Variability Perspective aims to show the variable features of Let’s Encrypt. To gain a deeper understanding, the implementation strategy and evolution history are also analyzed.
+
+At last, in the section of Evolution Perspective, we identified several possible changes of Let’s Encrypt in the future and listed some architecture tactics used by Let’s Encrypt to increase its flexibility to accomodate changes.
 
 
 #2. Views and Perspectives
