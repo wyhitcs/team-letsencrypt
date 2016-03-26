@@ -415,11 +415,11 @@ Configuration contains a great many features offered by Let’s Encrypt to impro
 
 ####2.5.1.3 Feature Dependencies and Model
 
-Mainly all features can be classified into four categories, environment, client, plugin and configuration. Among them, there are dependencies, which means that some features depend on others. For example, users have to choose “SuperUser” authority in order to enter debug mode, choose challenge solution and manual update method. 
+There are some dependencies among the features we talked about. For example, users have to choose “SuperUser” authority in order to enter debug mode, choose challenge solution and manually update method. 
 
-In addition, there are several constraints between plugin and configuration features. Configuration feature relies on the specified server choice that are Nginx and Apache. Furthermore, currently users can install a “http -> https” redirect, so their site effectively runs https only, however, this relies on the plugin of Apache server.
+Besides, there are several constraints between plugin and configuration features. Configuration feature relies on the specified server choice, i.e. Nginx and Apache. Furthermore, currently users can install a “http -> https” redirect, so their site effectively runs https only, however, this depends on the plugin of the Apache server.
 
-Finally, it’s convenient for users to get a kind email notification about the expiring date of certificate, which is surely related to the valid period of cert.
+Finally, it’s convenient for users to get a kind email notification about the expiring date of the certificate, which is related to the valid period of certificate.
 
 ![Feature Dependencies and Model](https://github.com/delftswa2016/team-letsencrypt/blob/master/D3/Feature.Model.png)
 
