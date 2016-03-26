@@ -667,5 +667,5 @@ They set up project in multiple Python versions(2.6,2.7,3.3,3.4,3.5) and multipl
 
 7. <div id="Lee">Lee, Jihyun, & Hwang Sunmyung. A review on variability mechanisms for product lines. International Journal of Advanced Media and Communication, 5(2-3), 172-181. 2014
 
-8. <div id="acme">R. Barnes, J. Hoffman-Andrews, J. Kasten. Automatic Certificate Management Environment (ACME). https://letsencrypt.github.io/acme-spec/.2015
+8. <div id="acme">R. Barnes, J. Hoffman-Andrews, J. Kasten. Automatic Certificate Management Environment (ACME). https://letsencrypt.github.io/acme-spec/ . 2015
 
