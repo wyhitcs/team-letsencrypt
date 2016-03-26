@@ -520,6 +520,25 @@ When making changes, it is always best to receive bad news as early as possible.
 Travis CI is used to do automated testing for every pull request to Let’s Encrypt project before merging. 
 They set up project in multiple Python versions(2.6,2.7,3.3,3.4,3.5) and multiple plugins. [(links to `.travis.yml` for letsencrypt)](https://github.com/letsencrypt/letsencrypt/blob/master/.travis.yml)
 
+##Conclusion
+
+In this chapter we have studied the stakeholders, views and perspectives of a free, automated, and open software Let’s Encrypt. Throughout the analysis of Let’s Encrypt’s software architecture many observations have been made. 
+
+In this chapter, we show the stakeholders of Let’s Encrypt, that should give you some light to the relevant parties of Let’s Encrypt.
+We also go through the context view of Let’s Encrypt. The context view aims to demonstrate the relations between Let’s Encrypt and its external enviroment.
+Later, we analyze Let’s Encrypt with development view. We hope this section can provides the anwsers to the question: What is the inner structure of Let’s Encrypt? What is the build/integration/test standard of Let’s Encrypt?
+And then, we add a section “Deployment view” in this chapter, that tells you the enviroment (software/network enviroment) requirement of Let’s Encrypt, if you want to deploy Let’s Encrypt in your machine, that will be useful.
+We also include a section “Variability Perspective”. This section aims to show you:
+1.the features and feature dependency of Let’s Encrypt.
+2.how to implement those features
+3.the evolution history of this feature.
+At last, we use Evolution Perspective demonstrate:
+1.The requirement for Let’s Encrypt
+2.the trade off during the evolution of Let’s Encrypt.
+3.The Architecture tactics of Let’s Encrypt.
+
+To conclude, Let’s Encrypt is a BETA SOFTWARE which contains plenty of bugs and rough edges,  and couples of improvements could be made to the project. However, with the community’s persistent efforts, reliable and rapidly growing CA server, healthy client and protocol ecosystem will help tohelps to reduce financial, technological, and education barriers to secure communication over the Internet.
+
 ##References
 
 1. <div id="Nick"/>Nick Rozanski and Eoin Woods. Software Systems Architecture: Working with Stakeholders using Viewpoints and Perspectives. Addison-Wesley, 2012.
