@@ -43,14 +43,15 @@ Let’s Encrypt is a software automating the tasks of obtaining certificates and
 3. Let’s Encrypt automatically solves this challenge;
 4. CA grants a certificate after the challenge has been solved.
 
-Our report analyzes the project from different views and perspectives. In the first section, we studied different types of stakeholders and how they are related to the project. Then, we analyzed its Context View which demonstrates the relationship between Let’s Encrypt and its external enviroment.
+In the report, the project is analyzed from different views and perspectives. In the first section, we identified different types of stakeholders and studied how they are related to the project. Then, the Context View is analyzed to demonstrate the relationship between Let’s Encrypt and its external enviroment.
 
 In the section of Development View, we aim to analyze the architecture of Let’s Encrypt that concerns the development process.
 
 In the section of Deployment View, the enviroment (software/network enviroment) requirements of Let’s Encrypt are provided. 
-The section of Variability Perspective aims to show the variable features of Let’s Encrypt. To gain a deeper understanding, the implementation strategy and evolution history are also analyzed.
 
-At last, in the section of Evolution Perspective, we identified several possible changes of Let’s Encrypt in the future and listed some architecture tactics used by Let’s Encrypt to increase its flexibility to accomodate changes.
+The section of Variability Perspective shows the variable features provided by Let’s Encrypt. To gain a deeper understanding, the implementation strategies and evolution history are analyzed.
+
+In the section of Evolution Perspective, we identified several possible changes of Let’s Encrypt in the future and listed corresponding architecture tactics used by Let’s Encrypt to increase its flexibility to accomodate changes.
 
 
 #2. Views and Perspectives
