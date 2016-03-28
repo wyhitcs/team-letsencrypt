@@ -43,23 +43,23 @@ Let’s Encrypt is a software automating the tasks of obtaining certificates and
 3. Let’s Encrypt automatically solves this challenge;
 4. CA grants a certificate after the challenge has been solved.
 
-In the report, the project is analyzed from different views and perspectives. In the first section, we identified different types of stakeholders and studied how they are related to the project. Then, the Context View is analyzed to demonstrate the relationship between Let’s Encrypt and its external enviroment.
+In this report, the project is analyzed from different views and perspectives. In the first section, we identified 5 different types of stakeholders and studied how they are related to the project. Then, the Context View is presented to demonstrate the relationship between Let’s Encrypt and its external enviroment.
 
 In the section of Development View, we aim to analyze the architecture of Let’s Encrypt that concerns the development process.
 
-In the section of Deployment View, the enviroment (software/network enviroment) requirements of Let’s Encrypt are provided. 
+The section of Deployment View describes the enviroment (software/network enviroment) requirements of Let’s Encrypt. 
 
 The section of Variability Perspective shows the variable features provided by Let’s Encrypt. To gain a deeper understanding, the implementation strategies and evolution history are analyzed.
 
-In the section of Evolution Perspective, we identified several possible changes of Let’s Encrypt in the future and listed corresponding architecture tactics used by Let’s Encrypt to increase its flexibility to accomodate changes.
+In the section of Evolution Perspective, we made a list of several possible changes of Let’s Encrypt in the future and the corresponding architecture tactics used by Let’s Encrypt to increase its flexibility to accomodate such changes.
 
 
 #2. Views and Perspectives
 
-In this section, we present a comprehensive study of Let’s Encrypt covering the stakeholders, the architecture, the deployment of the software, the variability and evolution of Let’s Encrypt.
+In this section, a comprehensive study of Let’s Encrypt covering the stakeholders, the Context View, the development and deployment of the software, the variability and evolution of Let’s Encrypt.
 
 ##2.1 Stakeholders Analysis
-We identify 6 types of stakeholders for Let's Encrypt.
+5 types of stakeholders are identified for Let's Encrypt as follows:
 
 ### Acquirers
 
@@ -131,7 +131,7 @@ The graph of stakeholders is shown below:
 
 ##2.2 Context View
 
-This section concerns about the relationships, dependencies and interactions between Let’s Encrypt and its environment[[1](#Nick)]. It gives readers an image about the responsibilities and boundaries of  the system.
+This section concerns about the relationships, dependencies and interactions between Let’s Encrypt and its environment[[1](#Nick)]. It gives readers an image about the responsibilities and boundaries of the system.
 
 ###2.2.1 System scope and Responsibilities
 
@@ -166,8 +166,8 @@ The impact of system on environment concerns about the dependencies of other sys
 
 The development view describes the architecture that supports the software development process.
 The development view communicates the aspects of the architecture of interest to stakeholders from the building, testing, maintaining and enhancing the project[[1](#Nick)].
-Based on this, the following article shows the common design model, module structure model and code line model of Let's Encrypt which give a technical overview of the whole project.
-To learn more details, each model is attached with a complete descrption. In addition, technical debt of the project and corresponding solution or plan are described at the end of report.
+Based on it, the following article shows module structure model, code line model the common design model of Let's Encrypt which give a technical overview of the whole project.
+In addition, technical debt of the project and the corresponding solutions are described at the end of this section.
 
 ###2.3.1 Module Structure Model
 ![Module Structure Model](https://github.com/delftswa2016/team-letsencrypt/blob/master/D2/module.structure.png)
@@ -298,9 +298,9 @@ Developers usually find out technical debt through Issues, discuss it and figure
 
 ##2.4 Deployment View
 
-Considering the wide use of Let’s Encrypt, it is important to describe the deployment of software to guarantee the proper operating in different environments. 
-As defined[[1](#Nick)], deployment describes the environment into which the system will be deployed and dependencies that the system has on elements of it. 
-In this part, we will introduce a series of constraints about Let’s Encrypt including third party software requirements, technology compatibility and network requirements.
+Considering the wide use of Let’s Encrypt, it is important to clarify the deployment of the software to guarantee proper operation in different environments. 
+Deployment describes the environment into which a system will be deployed and the dependencies that the system has on elements of it[[1](#Nick)]. 
+In this section, we point out a number of constraints on Let’s Encrypt including third party software requirements, technology compatibility and network requirements.
 
 ###2.4.1 Software Requirements and Technology Compatibility
 
@@ -335,7 +335,7 @@ Let’s Encrypt runs a certificate management agent on the web server. The node 
 - **Pending Authorizations/Account**: limits how many times an ACME client can request a domain name be authorized without actually fulfilling on the request itself. This is most commonly encountered when developing ACME clients, and this limit is set to 300 per account per week.
 
 
-There is no limit to the number of certificates that can be issued to different domains.
+There is no limit of the number of certificates that can be issued to different domains.
 
 
 ##2.5 Variability Perspective
@@ -429,7 +429,7 @@ The key to implement variability and configurability is using interface. All the
 
 ###2.5.3 Evolution History of Variability and Configurability
 
-The Let’s Encrypt had already included many features in the first released version. More features are added in the following releases. The contributions focus mainly on the support for Operation Systems, different versions of python, improvements of configuration file and command line flags, support for new plugins, and implementations of more ACME challenge solutions. 
+Let’s Encrypt has already included the most important features in its first release. More features are added in the following releases. The contributions focus mainly on the support for Operation Systems, different versions of python, improvements of configuration file and command line flags, support for new plugins, and implementations of more ACME challenge solutions. 
 
 Release note is a good method to figure out the evolution history. To see the changes of the given releases in Let’s Encrypt , we inspect the GitHub milestone for the following releases:
 
