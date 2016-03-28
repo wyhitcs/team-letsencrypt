@@ -17,8 +17,8 @@ After that, we will give you a brief instruction on the views and perspectives o
 
 #1. Introduction
 
-With all the malware and viruses being perpetrated these days, it is more critical than ever that all our communications are secured. But cryptography is hard and good cryptography tends to be both hard and expensive. 
-That has changed with [LetsEncrypt.org](https://letsEncrypt.org)! The goal of Let’s Encrypt is to set up an HTTPS server and have it automatically obtain a browser-trusted certificate, without any human intervention. Before analyzing Let's Encrypt, it is important to have some background knowledge of Let’s Encrypt. 
+With malware and viruses being perpetrated these days, it is more critical than ever to keep the online communication secured. Unfortunately, modern cryptography techniques in many case are too expensive and difficult to implement. 
+It has changed with the appearance of [LetsEncrypt.org](https://letsEncrypt.org) ! The goal of Let’s Encrypt is to set up an HTTPS server and have it automatically obtain a browser-trusted certificate, without any human intervention. Before analyzing Let's Encrypt, it is necessary to have some background knowledge. 
 
 ####SSL/TLS
 
