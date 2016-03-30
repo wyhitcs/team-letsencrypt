@@ -25,7 +25,7 @@ Transport Layer Security Protocol (TLS) and its predecessor -- Secure Socket Lay
 
 ####Digital Certificate
 
-Digital Certificate is in fact a "bag of data" which can prove the website is the owner of a certain domain name. The digital certificates are authorized by Certificate Authority and installed in web servers.
+Digital Certificate is in fact a digital file which can prove the website is the owner of a certain domain name. The digital certificates are authorized by Certificate Authority and installed in web servers.
 
 ####Certificate Authority (CA)
 
