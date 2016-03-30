@@ -61,15 +61,7 @@ Let’s Encrypt is a software automating the tasks of obtaining certificates and
 3. Let’s Encrypt automatically solves this challenge;
 4. CA grants a certificate after the challenge has been solved.
 
-In this report, the project is analyzed from different views and perspectives. In the first section, we identified 5 different types of stakeholders and studied how they are related to the project. Then, the Context View is presented to demonstrate the relationship between Let’s Encrypt and its external enviroment.
-
-In the section of Development View, we aim to analyze the architecture of Let’s Encrypt that concerns the development process.
-
-The section of Deployment View describes the enviroment (software/network enviroment) requirements of Let’s Encrypt. 
-
-The section of Variability Perspective shows the variable features provided by Let’s Encrypt. To gain a deeper understanding, the implementation strategies and evolution history are analyzed.
-
-In the section of Evolution Perspective, we made a list of several possible changes of Let’s Encrypt in the future and the corresponding architecture tactics used by Let’s Encrypt to increase its flexibility to accomodate such changes.
+In this report, the project is analyzed from different views and perspectives. In the first section, we identified 5 different types of stakeholders and studied how they are related to the project. Then, the Context View is presented to demonstrate the relationship between Let’s Encrypt and its external enviroment. In the section of Development View, we aim to analyze the architecture of Let’s Encrypt that concerns the development process. The section of Deployment View describes the enviroment (software/network enviroment) requirements of Let’s Encrypt. The section of Variability Perspective shows the variable features provided by Let’s Encrypt. To gain a deeper understanding, the implementation strategies and evolution history are analyzed. In the section of Evolution Perspective, we made a list of several possible changes of Let’s Encrypt in the future and the corresponding architecture tactics used by Let’s Encrypt to increase its flexibility to accomodate such changes.
 
 <div id="ViewsandPerspectives"></div>
 #Views and Perspectives
