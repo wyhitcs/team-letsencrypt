@@ -5,12 +5,12 @@ Let’s encrypt is a software aiming to automatically request Digital Certificat
 * Abstract
 * Introduction
 * View and Perspectives
-* Stakeholder Analysis
-* Context View
-* Development View
-* Deployment View 
-* Variability Perspectives
-* Evolution Perspectives
+   * Stakeholder Analysis
+   * Context View
+   * Development View
+   * Deployment View 
+   * Variability Perspectives
+   * Evolution Perspectives
 * Conclusion
 
 
