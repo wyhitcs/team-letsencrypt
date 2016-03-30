@@ -1,17 +1,21 @@
-#Chapter Outline
+#Let's Encrypt!
+Yu Wang, Xilin Li, Wang Jing, and Changliang Luo
+from
+*Delft University of Technology*
 ##Abstract
-Let’s encrypt is a software aiming to automatically request Digital Certificates and install/renew the certificates on web servers. As a highly active project launched in less than four months, it is interesting to see how it progresses to improve the efficiency of development, maintenance and test. The report first introduces the necessary knowledge about Digital Certificate and ACME protocol on which the whole project is based. Then, a thorough analysis is done to gain a deep understanding of the software architecture of Let’s encrypt. The analysis of its stakeholders and Context View shows how the project involves different groups of people and interacts with the external environment. Development View is about its architecture that supports the development process and Deployment View about the environment the system is deployed in. At last, Variability Perspectives and Evolution Perspectives show its flexibility to accomodate variability and changes.
+Let’s encrypt is a software aiming to automatically request Digital Certificates and install/renew the certificates on web servers. As a highly active project launched in less than four months, it is interesting to see how it progresses to improve the efficiency of development, maintenance and test. The report first introduces the necessary knowledge about Digital Certificate and ACME protocol on which the whole project is based. Then, a thorough analysis is done to gain a deep understanding of the software architecture of Let’s Encrypt. The analysis of its stakeholders and Context View shows how the project involves different groups of people and interacts with the external environment. Development View is about its architecture that supports the development process and Deployment View about the environment the system is deployed in. At last, Variability Perspectives and Evolution Perspectives show its flexibility to accomodate variability and changes.
 
-* Abstract
-* Introduction
-* Views and Perspectives
-   * Stakeholder Analysis
-   * Context View
-   * Development View
-   * Deployment View 
-   * Variability Perspectives
-   * Evolution Perspectives
-* Conclusion
+* [Abstract](##Abstract)
+* [Introduction](#Introduction)
+* [Views and Perspectives](#Views and Perspectives)
+   * [Stakeholder Analysis](##1 Stakeholders Analysis)
+   * [Context View](##2 Context View)
+   * [Development View](##3 Development View)
+   * [Deployment View](##4 Deployment View) 
+   * [Variability Perspectives](##5 Variability Perspective)
+   * [Evolution Perspectives](##6 Evolution Perspective)
+* [Conclusion](##Conclusion)
+* [References](##References)
 
 
 #Introduction
@@ -34,6 +38,8 @@ CA is an online organization which issues the Digital Certificate. To automatica
 ####ACME protocol
 
 In many cases (e.g. online payment),the identities of Internet entities (client and server) need to be verified. However, today’s verification is done by some ad-hoc mechanisms which are not suitable for future development of online verification. Automatic Certificate Management Environment (ACME) protocol [[1](#acme)] aims to address such issue by standardizing and automating the procedures of verification. In other words, it is a “bag of procedures” by doing which a Certificate Authority issues a certificate to a client.
+
+####Workfolw of Let's Encrypt
 
 Let’s Encrypt is a software automating the tasks of obtaining certificates and configuring web servers to use them. It is based on ACME protocol and accomplished by running a certificate management agent on the web server. The workflow can be summarized as follows:
 
