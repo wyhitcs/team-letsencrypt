@@ -420,7 +420,7 @@ ECC support is deferred until it is required for a reason that this feature is n
 
 
 
-##Conclusion<a name="Conclusion"></a>
+#Conclusion<a name="Conclusion"></a>
 
 In this report, we studied the stakeholders, views and perspectives of an open source project Let’s Encrypt. Throughout the analysis of its software architecture we draw the following conclusions: 
 
@@ -438,7 +438,7 @@ To conclude, a well-structured architecture of a software satisfies its related 
 
 
 
-##References<a name="References"></a>
+#References<a name="References"></a>
 1. <div id="acme">R. Barnes, J. Hoffman-Andrews, J. Kasten. Automatic Certificate Management Environment (ACME). https://letsencrypt.github.io/acme-spec/ . 2015
 
 2. <div id="Nick"/>Nick Rozanski and Eoin Woods. Software Systems Architecture: Working with Stakeholders using Viewpoints and Perspectives. Addison-Wesley, 2012.
@@ -456,7 +456,7 @@ To conclude, a well-structured architecture of a software satisfies its related 
 
 8. <div id="ncurses">Wikipedia,ncurses.https://en.wikipedia.org/wiki/Ncurses . 2016
 
-##Appendix - Contributions<a name="Appendix"></a>
+#Appendix - Contributions<a name="Appendix"></a>
 1. Pull request: [#2612](https://github.com/letsencrypt/letsencrypt/pull/2612)
 
     Time: March 5th
