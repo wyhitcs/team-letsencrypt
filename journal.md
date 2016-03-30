@@ -1,6 +1,10 @@
 #Week 1
 We choose 'Letsencrypt' as our research project. The Let's Encrypt Client is a fully-featured, extensible client for the Let's Encrypt CA that can automate the tasks of obtaining certificates and configuring webservers to use them. For its practicability, the project is quite hot recently which attracts lots of programmers to contribute to. And this also inspires us to research the project or even improve it.
+
+
 The task for the first week is planned as follow:
+
+
 - Attending lectures
 - Picking the project *letsencrypt*: letsencrypt is a newly developed, highly active and interesting project, which makes it a good choice.
 - Getting to know the project in more depth: browsing the readme file, documentation and website to get familiar with the project.
@@ -90,3 +94,35 @@ The task for the first week is planned as follow:
 - Fix Reference format according to new requirement
 - Pull Request to add links for ACME 
 - Update contributions
+
+#Week 6-D5
+
+###Group Meeting 17-03-2016(3h)
+- Discuss the form and content of review task
+- Discuss the problems in outline
+
+###Group Meeting 19-03-2016(3h)
+- Discuss the problems in Stakeholder and Context View part
+- Remake Context View diagram
+- Fix some spelling and syntax errors
+- Remove some redundant content
+
+#Week 7-D6
+
+###Group Meeting 24-03-2016(3h)
+- Discuss the problems in Development View
+- Explain more details in Module Structure Model
+- Remove few parts that are not closely related to the project such as Codeline Model
+
+###Group Meeting 26-03-2016(6h)
+- Discuss the problem in Deployment View and Variable features
+- Fix the problem given by teaching assistant
+- Add an "Introduction" section for better readability
+
+
+#Week 8- All chapters
+
+###Group Meeting 30-03-2016(4h)
+- Update the format according to the DESOSA markdown style guide
+- Change the structure of the Chapter
+- Final check for the whole chapter

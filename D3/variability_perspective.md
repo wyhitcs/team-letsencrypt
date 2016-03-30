@@ -76,13 +76,76 @@ Developers: Developers are also related to these features. By accept suggestions
 
 ###Feature Dependencies and Model
 
-Mainly all features can be classified into four categories, environment, client, plugin and configuration. Among them, there are dependencies, which means that some features depend on others. For example, users have to choose “SuperUser” authority in order to enter debug mode, choose challenge solution and manual update method. 
+Mainly all features can be classified into four categories, environment GUI, client, plugin and configuration. Among them, there are dependencies, which means that some features depend on others. For example, users have to choose “SuperUser” authority in order to enter debug mode, choose challenge solution and manual update method. 
 
 In addition, there are several constraints between plugin and configuration features. Configuration feature relies on the specified server choice that are Nginx and Apache. Furthermore, currently users can install a “http -> https” redirect, so their site effectively runs https only, however, this relies on the plugin of Apache server.
 
 Finally, it’s convenient for users to get a kind email notification about the expiring date of certificate, which is surely related to the valid period of cert.
 
+Your can find more details about this model in the picture and the textual content below:
+
+
 ![Feature Dependencies and Model](https://github.com/delftswa2016/team-letsencrypt/blob/master/D3/Feature.Model.png)
+
+There are four classes of feature in Let's Encrypt: Environment, Client GUI, Plugin and Configuration.
+
+####Enviroment
+
+The enviroment feature of Let's Encrypt is consist of 2 parts: Operation System Support and Python Support.
+Let's Encrypt supports the following classed of Operation System: FreeBSD (a kind of UNIX), OpenBSD (also a kind of UNIX), ArchLinux (kind of Linux), Debian, Fedora, Gentoo. Let's Encrypt can automatically adapt to your Operation System.
+
+Let's Encrypt provides support for Python 2.6 and Python 2.7, for other version of python, it doesn't perfectly support. So we only identify support of Python 2.6/2.7 as a feature of Let's Encrypt.
+
+####Client GUI
+
+This class includes all features about Client Graphic User Interface.
+
+- display: users can switch between graphic interface or command line interface
+- Notification: users can choose the way to receive notifications: by email/pop out window/no notification
+- User Authority: there are 2 kinds of users: user and super user. The former doesn't have authority to use some instructions while the latter has.
+- Virtual Enviroment: For convenience of developing, users can choose to user Virtual Enviroment. (If you have no idea about virtual enviroment, Virtual Machine is a good analogy)
+- Usage: Let's Encrypt can be used as an independent software. It can also be used as a plugin for other software.
+- Input Method: There are two kinds of input method to choose: users can input a instruction from key board; users can also input the instruction from a pre-stored file. The second method is very convenient if there are a lot of instructions to input.
+
+
+####Plugin
+
+There are four kinds of Plugin in Let's Encrypt, they are used to cooperate with different web server in the users' machines. Notice that you can only use at most one of the plugin, you can not activate more than plugins simultaneously.
+
+- Apache Plugin: this plugin is used if the web server in a user's machie is Apache.
+- Nginx: this plugin is used if the web server in a user's machie is Nginx.
+- Webroot:Obtains a cert by writing to the webroot directory of an already running webserver, whatever webserver you are using.
+- Standalone:Uses a “standalone” webserver to obtain a cert. Requires port 80 or 443 to be available. This is useful on systems with no webserver, or when direct integration with the local webserver is not supported or not desired.
+manual	Y	N	Helps you obtain a cert by giving you instructions to perform domain validation yourself.
+nginx	Y	Y	Very experimental and not included in letsencrypt-auto.
+
+####Configuration
+
+- logger_level: there are 2 logger level in Let's encrypt, i.e. customer level and debug level. 
+- Encryption Algorithm:currently, Let's Encrypt support RSA and MD5 encryption algorithm.
+- Personal Profile: Let's Encrypt allows users to edit their own profile (email address,user name, etc.)
+- Challenge Solution: If you want a Certificate Authority(CA) to verify your possesion of a domain name (e.g. www.example.com), you need to solve some challenged provided by CA. For example, a CA may ask you to put a txt file which contains a String "xxxxxxx" in a certain folder of your website, you do so, and CA knows you are the owner of this domain name. Let's Encrypt currently supports 4 kind of Challenge: simple HTTP challenge, DVSNI challenge, private key challenge, DNS_verfication challenge.
+- ACME compliant: Let's Encrypt allows users to add new Certificate Authority to trust.
+- HTTP/HTTPs switch: after geting digital certificates, users can choose either HTTP or HTTPs to use. HTTPs means HTTP with SSL/TLS certificate.
+- Update Method: users can ask Let's Encrypt to automatically updates their digital certificates, they can also update their certificates it manually.
+- Storage configuration: users can specify the path to store the certificate, key and log
+- Valid Period: users can specify the live span of their digital certificate, the default is 90 days, users can make it shorter or longer.
+- Email Notification: users can specify what kinds of Notification should be sent to email, they can also disable email notification.
+- Revocation: Let's Encrypt allows users to revoke (destroyed) a certificate whenever they like.
+- Verification type: Users can choose to do DV (Domain Verfication, verifying ownership of a domain name in the way we said above) or OV (Organization Verfication,Verifying the domain name by prove the website belongs to the organization who owns this domain name), the part for DV in Let's Encrypt has been finished, but the part of DV is still in progress.
+- Adjustable RSA: Let's Encrypt allows to change some parameters of RSA (e.g. key length), the developers plan to allow this feature on other encryption algorithms like MD5, but haven't finished it yet.
+
+
+
+####Dependency
+There are some dependency among the features we talked about.
+- Only super user can use manual mode in updating certificate.
+- only super user can set log level to "debug"
+- only super user can specify what challenge solution to use, for normal user, the challenge solution is automatically selected by Let's Encrypt.
+- So far, only in Apache web server, Let's Encrypt allows users to switch between HTTP/HTTPs.
+- Most of the configuration are only support in Apache and Nginx, for other web server, those features are still under developing.
+- When to send the Email Notification depends on the valid period (live span) of your digital certificates.
+
 
 ###Feature Binding Time
 
