@@ -5,7 +5,8 @@ from
 *Delft University of Technology*
 
 
-##Abstract<div id="Abstract"></a>
+<div id="Abstract"></div>
+##Abstract
 
 Let’s encrypt is a software aiming to automatically request Digital Certificates and install/renew the certificates on web servers. As a highly active project launched in less than four months, it is interesting to see how it progresses to improve the efficiency of development, maintenance and test. The report first introduces the necessary knowledge about Digital Certificate and ACME protocol on which the whole project is based. Then, a thorough analysis is done to gain a deep understanding of the software architecture of Let’s Encrypt. The analysis of its stakeholders and Context View shows how the project involves different groups of people and interacts with the external environment. Development View is about its architecture that supports the development process and Deployment View about the environment the system is deployed in. At last, Variability Perspectives and Evolution Perspectives show its flexibility to accomodate variability and changes.
 
@@ -27,8 +28,8 @@ Let’s encrypt is a software aiming to automatically request Digital Certificat
 * [Appendix](#Appendix)
 
 
-
-#Introduction<div id="Introduction"></a>
+<div id="Introduction"></div>
+#Introduction
 
 Being perpetrated by malwares and viruses  these days, it is more critical than ever to keep the online communication secured. Unfortunately, modern cryptography techniques in many case are too expensive and difficult to implement. 
 Fortunately,that has been changed with the appearance of [LetsEncrypt.org](https://letsEncrypt.org) ! The goal of Let’s Encrypt is to set up an HTTPS server and have it automatically obtain a browser-trusted certificate, without any human intervention. Before analyzing Let's Encrypt, it is necessary to have some background knowledge. 
@@ -68,10 +69,12 @@ The section of Variability Perspective shows the variable features provided by L
 
 In the section of Evolution Perspective, we made a list of several possible changes of Let’s Encrypt in the future and the corresponding architecture tactics used by Let’s Encrypt to increase its flexibility to accomodate such changes.
 
+<div id="ViewsandPerspectives"></div>
+#Views and Perspectives
 
-#Views and Perspectives<div id="ViewsandPerspectives"></a>
 
-##1 Stakeholders Analysis<div id="1StakeholdersAnalysis"></a>
+<div id="1StakeholdersAnalysis"></div>
+##1 Stakeholders Analysis
 5 types of stakeholders are identified for Let's Encrypt as follows:
 
 ### Acquirers
@@ -143,8 +146,8 @@ The graph of stakeholders is shown below:
 ![Stakeholders Analysis](image/stakeholdersv2.png)
 
 
-
-##2 Context View<div id="2ContextView"></a>
+<div id="2ContextView"></div>
+##2 Context View
 
 This section concerns about the relationships, dependencies and interactions between Let’s Encrypt and its environment[[2](#Nick)]. It gives readers an image about the responsibilities and boundaries of the system.
 
@@ -171,8 +174,8 @@ Finally, there exist other softwares based on ACME that compete with Let’s Enc
 
 ![contextview](image/contextview.png)
 
-
-##3 Development View<div id="3DevelopmentView"></a>
+<div id="3DevelopmentView"></div>
+##3 Development View
 
 The development view describes the architecture that supports the software development process.
 The development view communicates the aspects of the architecture of interest to stakeholders from the building, testing, maintaining and enhancing the project[[2](#Nick)].
@@ -274,7 +277,9 @@ Developers usually find out technical debt through Issues, discuss it and figure
 
 - Documentation: There are insufficiencies in the documentation that the developers are not aware of. However, they are willing to fix it when users post issues on GitHub (as what they did in issue [#2216] (https://github.com/letsencrypt/letsencrypt/issues/2216) and [#2271](https://github.com/letsencrypt/letsencrypt/issues/2271)).
 
-##4 Deployment View<div id="4DeploymentView"></a>
+
+<div id="4DeploymentView"></div>
+##4 Deployment View
 
 Considering the wide use of Let’s Encrypt, it is important to clarify the deployment of the software to guarantee proper operation in different environments. 
 Deployment describes the environment into which a system will be deployed and the dependencies that the system has on elements of it[[2](#Nick)]. 
@@ -312,8 +317,8 @@ Let’s Encrypt runs a certificate management agent on the web server. The node 
 
 There is no limit of the number of certificates that can be issued to different domains.
 
-
-##5 Variability Perspective<div id="5VariabilityPerspective"></a>
+<div id="5VariabilityPerspective"></div>
+##5 Variability Perspective
 
 Variability describes the ability to derive different products from a common set of artifacts[[6](#Sven)]. It is important for a good software to equip with variability to adapt to different environments, which also largely satisfies the requirements of different stakeholders. In spite of a BETA software, Let’s Encrypt provides plenty of variable features. In this section, a list of features and dependencies are given and then, a related model is built upon this. The strategies to implement such variabilities are also discussed.
 
@@ -387,7 +392,9 @@ Issues and pull requests relevant to the variability and configurability can be 
 
 - **Implementations of more ACME challenge solutions**: ACME protocols allow different kinds of challenge solutions, but Let’s encrypt only implemented a small fraction of them. However, in the recent releases more challenge solutions are added by contributors. Relevant issues are [# 232](https://github.com/letsencrypt/letsencrypt/pull/232), [291](https://github.com/letsencrypt/letsencrypt/pull/291), [387](https://github.com/letsencrypt/letsencrypt/pull/387).
 
-##6 Evolution Perspective<div id="6EvolutionPerspective"></a>
+
+<div id="6EvolutionPerspective"></div>
+##6 Evolution Perspective
 
 As the business maxim tells us “the only constant  is change”[[2](#Nick)], a major concern for architects is how to build a flexible system to adapt to inevitable changes. 
 As a result, there is constant pressure to change the system’s behavior, which in many cases requires architectural tactics to ease such process. The term evolution is used as the process of dealing with changes encountered during the development lifecycle.
@@ -420,8 +427,8 @@ The issues of lessening rate limits on the number of certificates issued per dom
 ECC support is deferred until it is required for a reason that this feature is not needed recently and possibly will not happen in the future. Thus, it is not worth investing efforts in it at the very beginning.  
 
 
-
-#Conclusion<div id="Conclusion"></a>
+<div id="Conclusion"></div>
+#Conclusion
 
 In this report, we studied the stakeholders, views and perspectives of an open source project Let’s Encrypt. Throughout the analysis of its software architecture we draw the following conclusions: 
 
@@ -438,8 +445,8 @@ To conclude, a well-structured architecture of a software satisfies its related 
 
 
 
-
-#References<div id="References"></a>
+<div id="References"></div>
+#References
 1. <div id="acme">R. Barnes, J. Hoffman-Andrews, J. Kasten. Automatic Certificate Management Environment (ACME). https://letsencrypt.github.io/acme-spec/ . 2015
 
 2. <div id="Nick"/>Nick Rozanski and Eoin Woods. Software Systems Architecture: Working with Stakeholders using Viewpoints and Perspectives. Addison-Wesley, 2012.
@@ -457,7 +464,8 @@ To conclude, a well-structured architecture of a software satisfies its related 
 
 8. <div id="ncurses">Wikipedia,ncurses.https://en.wikipedia.org/wiki/Ncurses . 2016
 
-#Appendix - Contributions<div id="Appendix"></a>
+<div id="Appendix"></div>
+#Appendix - Contributions
 1. Pull request: [#2612](https://github.com/letsencrypt/letsencrypt/pull/2612)
 
     Time: March 5th
