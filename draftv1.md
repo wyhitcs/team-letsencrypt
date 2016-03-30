@@ -4,7 +4,7 @@ Let’s encrypt is a software aiming to automatically request Digital Certificat
 
 * Abstract
 * Introduction
-* View and Perspectives
+* Views and Perspectives
    * Stakeholder Analysis
    * Context View
    * Development View
@@ -53,7 +53,7 @@ The section of Variability Perspective shows the variable features provided by L
 In the section of Evolution Perspective, we made a list of several possible changes of Let’s Encrypt in the future and the corresponding architecture tactics used by Let’s Encrypt to increase its flexibility to accomodate such changes.
 
 
-#View and Perspectives
+#Views and Perspectives
 
 ##1 Stakeholders Analysis
 5 types of stakeholders are identified for Let's Encrypt as follows:
