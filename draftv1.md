@@ -190,36 +190,6 @@ Authenticator, Installer and ACME Utility Module are responsible for generating 
 
 In this section, code structure of Let's Encrypt will be explored. Besides, Build, Integration, Test and Release Approach also matters a lot in understanding the project organization.
 
-####2.3.2.1 Source Code Structure
-
-![Source Code Structure](https://github.com/delftswa2016/team-letsencrypt/blob/master/D2/code.structure.png)
-
-
-- **acme** - ACME protocol implementation in Python.
-  - **jose** - Implementation of the standards developed by “JavaScript Object Signing and Encyption”.
-  - **\*.py** - Implementation of the ACME protocal objects.
-
-- **docs** - Documentations.
-
-- **letsencrypt-apache** - Two plugins are allowed: apache and nginx. This package is for apache plugin. 
-
-- **letsencrypt-nginx** - This package is for nginx plugin. 
-
-- **letsencrypt-auto-source** - This file is to receive and parse the shell instruction from users.
-
-- **letsencrypt** - Source code of the whole project.
-  - **display** - UI methods for user operations.
-  - **plugins** - Plugins used to obtain certificates such as nginx.
-  - **cli.py** - System entry code.
-  - **client.py** - Implementation of the certificate obtain, install and revoke procedures.
-  - **\*.py** - Implementation of the annotated ACME objects.
-
-- **letshelp-letsencrypt** - This is responsible for the “help” instruction for Let’s Encrypt.
-
-- **tests** - Include .sh files for test use.
-
-- **tools** - Include .sh files which are frequently used.
-
 
 ####2.3.2.2 Build, Integration and Test Approach
 
