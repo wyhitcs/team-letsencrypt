@@ -89,7 +89,7 @@ These three foundations aim to provide a free, automated and open certificate au
 
 ### Developers
 
-So far, 165 contributors have made contributions to the development of let’s encrypt. The core development team consisting of 11 people comes from a public benefit organization [Internet Security Research Group (ISRG)](https://letsencrypt.org/isrg/). The whole project is based on ACME protocal proposed by ISRG. Unsurprisingly, they made most of the contributions to this project. 
+So far, 165 contributors have made contributions to the development of Let’s Encrypt. The core development team consisting of 11 people comes from a public benefit organization [Internet Security Research Group (ISRG)](https://letsencrypt.org/isrg/). The whole project is based on ACME protocal proposed by ISRG. Unsurprisingly, they made most of the contributions to this project. 
 
 For a newly established project like Let’s Encrypt, these developers more or less have responsibilities for testing, maintaining and github management. For example, @[pde](https://github.com/pde) and @[bmw](https://github.com/bmw) are identified as integrators who ensure the quality of the project by communicating with contributors on github. They are also responsible for merging pull requests and interacting with contributors, no matter whether the pull requests are accepted or denied. We notice that the biggest challenge for Let’s Encrypt is maintaining the quality of the project when massive incoming contributions taking place everyday. To solve this, a complete strategy of testing and integration is proposed which will be discussed later.
 
@@ -107,11 +107,11 @@ Here we list several major developers:
 
 
 
-The other contributors are either users of let’s encrypt or github users who are interested in this project. Their contributions are mainly about improving command line, fixing bugs and format.  As a BETA software, Let's Encrypt has some bugs to fix.
+The other contributors are either users of Let’s Encrypt or github users who are interested in this project. Their contributions are mainly about improving command line, fixing bugs and format.  As a BETA software, Let's Encrypt has some bugs to fix.
 
 ### Users
 
-The potential users of Let's encrypt are websites which want to obtain SSL/TLS certificate. Let’s encrypt automates the process of obtaining certificates and moreover, totally free of charge. As a result, the number of its potential users is huge. In fact, Let’s Encrypt has just issued its millionth certificate in March, 2016.
+The potential users of Let's Encrypt are websites which want to obtain SSL/TLS certificate. Let’s Encrypt automates the process of obtaining certificates and moreover, totally free of charge. As a result, the number of its potential users is huge. In fact, Let’s Encrypt has just issued its millionth certificate in March, 2016.
 
 
 ### Sponsors
@@ -161,7 +161,7 @@ Let's Encrypt allows users to do following things:
 
 An overview of the relationship between Let’s Encrypt and its entities is shown in Figure 3.
 
-As mentioned above, in order to become a Certificate Authority, Let's Encrypt must be authorized by the root certificate provider IdenTrust. The only language dependency of Let's encrypt is Python and the development is based on GitHub platform, where both ISRG members and individual GitHub users can contribute. Let's encrypt also takes advantage of online community such as Freenode to allow discussion of issues among developers and users. The releases of different versions will be first strictly tested by Tox (standardize testing) and Travis CI (online test system) and then, posted using the Python Package Index (PYPI). 
+As mentioned above, in order to become a Certificate Authority, Let's Encrypt must be authorized by the root certificate provider IdenTrust. The only language dependency of Let's Encrypt is Python and the development is based on GitHub platform, where both ISRG members and individual GitHub users can contribute. Let's Encrypt also takes advantage of online community such as Freenode to allow discussion of issues among developers and users. The releases of different versions will be first strictly tested by Tox (standardize testing) and Travis CI (online test system) and then, posted using the Python Package Index (PYPI). 
 
 Let's Encrypt provides service to a large number of users. Here we only give two examples, [blueboard.cz](https://blueboard.cz/) and [checkdomain](https://www.checkdomain.de/ssl/zertifikat/ssl-free/). Users can operate Let's Encrypt on a series Unix-ish Operating Systems like Arch, Debian, FreeBSD, etc. In addition, Let's Encrypt extends its support for different servers such as Apache, Nginx and Webroot by using a plugging architecture. 
 
@@ -327,13 +327,13 @@ A feature is a characteristic or end-user-visible behavior of a software system[
 
 - Virtual Environment: Let’s Encrypt allows users to decide whether to use virtualenv (virtual environment package) or not.
 
-- Usage (as plugin or client): Let’s encrypt can not only serve as an independent application, but also as a third party plugin in other software.
+- Usage (as plugin or client): Let’s Encrypt can not only serve as an independent application, but also as a third party plugin in other software.
 
 - Notification of configuration change: User can switch on/off notification of configuration change. For example, if someone changes the storage path of a file, there should be notification of the change by default. However, user can decide to enable/disable such notification.
 
 - Web server support: Let’s Encrypt client supports a number of different “plugins” that can be used to obtain and/or install certificates. Plugins which can obtain a specific certificate are called “authenticators” and can be used with the “certonly” command. Plugins that can be used to install a certificate are called “installers”. Apache, Nginx and webroot are plugins currently supported. Moreover, users can use a “standalone” web server to obtain a certificate. This is useful on systems with no web server, or when direct integration with the local web server is not supported or not desired.
 
-- Allow specifying encryption algorithm: ACME protocol enables multiple types of encryption algorithms like RSA and MD5. Let’s encrypt enables all these algorithms.
+- Allow specifying encryption algorithm: ACME protocol enables multiple types of encryption algorithms like RSA and MD5. Let’s Encrypt enables all these algorithms.
 
 - Editable certificate and key storage path: The path of storing a certificate is specified by default after installing Let’s Encrypt. However, users are allowed to edit the storage path.
 
@@ -355,7 +355,7 @@ A feature is a characteristic or end-user-visible behavior of a software system[
 
 ###5.2 Implementation Strategy
 
-The key to implement variability and configurability is using interface. All the interfaces need to be implemented are stored in the file `interface.py`. In the [developer guide](https://letsencrypt.readthedocs.org/en/latest/contributing.html) announce that what interface should be implemented by a specific kind of class. The interface.py and the developer guide together draw an outline for the let’s encrypt: what configuration can be done, what parameter can be specified, what Operation System it should support, what plugin it should support. Hence the variability and configurability have been implemented.
+The key to implement variability and configurability is using interface. All the interfaces need to be implemented are stored in the file `interface.py`. In the [developer guide](https://letsencrypt.readthedocs.org/en/latest/contributing.html) announce that what interface should be implemented by a specific kind of class. The interface.py and the developer guide together draw an outline for the Let’s Encrypt: what configuration can be done, what parameter can be specified, what Operation System it should support, what plugin it should support. Hence the variability and configurability have been implemented.
 
 ###5.3 Evolution History of Variability and Configurability
 
@@ -379,13 +379,13 @@ Issues and pull requests relevant to the variability and configurability can be 
 
 - **Improvement of Operation Systems support**: the first release version only supported Ubuntu with version before 14.04. The supports for Debian, Mac, CentOS and later version Ubuntu are enabled in the following versions. Relevant issues include [# 292](https://github.com/letsencrypt/letsencrypt/pull/292), [508](https://github.com/letsencrypt/letsencrypt/pull/508), [840](https://github.com/letsencrypt/letsencrypt/pull/840), [1206](https://github.com/letsencrypt/letsencrypt/pull/1206), [1232](https://github.com/letsencrypt/letsencrypt/pull/1232). 
 
-- **Support for different versions of Python**: at the beginning, Let’s encrypt only supported python 2.6. The support for later versions of python, especially python 3.x, is enabled now. Relevant issues include [# 605](https://github.com/letsencrypt/letsencrypt/pull/605), [957](https://github.com/letsencrypt/letsencrypt/pull/957), [1508](https://github.com/letsencrypt/letsencrypt/pull/1508).
+- **Support for different versions of Python**: at the beginning, Let’s Encrypt only supported python 2.6. The support for later versions of python, especially python 3.x, is enabled now. Relevant issues include [# 605](https://github.com/letsencrypt/letsencrypt/pull/605), [957](https://github.com/letsencrypt/letsencrypt/pull/957), [1508](https://github.com/letsencrypt/letsencrypt/pull/1508).
 
 - **Improvement of configuration**: numerous configuration options are added and the command lines becomes more user-friendly. For example, users can now specify the parameters such as the length of the RSA key. Relevant issues include [# 82](https://github.com/letsencrypt/letsencrypt/pull/82), [368](https://github.com/letsencrypt/letsencrypt/pull/368), [404](https://github.com/letsencrypt/letsencrypt/pull/404).
 
-- **Support for different webserver plugins**: while the early version of Let’s encrypt only supported apache and nginx, now the supports for nginx, webroots, standalone are enabled. Relevant issues are [# 232](https://github.com/letsencrypt/letsencrypt/pull/232), [387](https://github.com/letsencrypt/letsencrypt/pull/387), [895](https://github.com/letsencrypt/letsencrypt/pull/895), [1395](https://github.com/letsencrypt/letsencrypt/pull/1395).
+- **Support for different webserver plugins**: while the early version of Let’s Encrypt only supported apache and nginx, now the supports for nginx, webroots, standalone are enabled. Relevant issues are [# 232](https://github.com/letsencrypt/letsencrypt/pull/232), [387](https://github.com/letsencrypt/letsencrypt/pull/387), [895](https://github.com/letsencrypt/letsencrypt/pull/895), [1395](https://github.com/letsencrypt/letsencrypt/pull/1395).
 
-- **Implementations of more ACME challenge solutions**: ACME protocols allow different kinds of challenge solutions, but Let’s encrypt only implemented a small fraction of them. However, in the recent releases more challenge solutions are added by contributors. Relevant issues are [# 232](https://github.com/letsencrypt/letsencrypt/pull/232), [291](https://github.com/letsencrypt/letsencrypt/pull/291), [387](https://github.com/letsencrypt/letsencrypt/pull/387).
+- **Implementations of more ACME challenge solutions**: ACME protocols allow different kinds of challenge solutions, but Let’s Encrypt only implemented a small fraction of them. However, in the recent releases more challenge solutions are added by contributors. Relevant issues are [# 232](https://github.com/letsencrypt/letsencrypt/pull/232), [291](https://github.com/letsencrypt/letsencrypt/pull/291), [387](https://github.com/letsencrypt/letsencrypt/pull/387).
 
 
 <div id="6EvolutionPerspective"></div>
