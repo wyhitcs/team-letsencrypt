@@ -16,7 +16,7 @@ Let’s encrypt is a software aiming to automatically request Digital Certificat
 
 #1. Introduction
 
-With being perpetrated by malwares and viruses  these days, it is more critical than ever to keep the online communication secured. Unfortunately, modern cryptography techniques in many case are too expensive and difficult to implement. 
+Being perpetrated by malwares and viruses  these days, it is more critical than ever to keep the online communication secured. Unfortunately, modern cryptography techniques in many case are too expensive and difficult to implement. 
 It has changed with the appearance of [LetsEncrypt.org](https://letsEncrypt.org) ! The goal of Let’s Encrypt is to set up an HTTPS server and have it automatically obtain a browser-trusted certificate, without any human intervention. Before analyzing Let's Encrypt, it is necessary to have some background knowledge. 
 
 ####SSL/TLS
