@@ -1,4 +1,4 @@
-#Let's Encrypt!
+#Let's Encrypt
 Yu Wang, Xilin Li, Wang Jing, and Changliang Luo
 from
 *Delft University of Technology*
@@ -120,9 +120,9 @@ Let's Encrypt is initialized by a non-profit organization (ISRG) to enable secur
 Let us first explain the concept of root certificate providers.
 Certificate provider is a root certificate provider if and only if:
 
-(1) it can authorize other organizations to be the new certificate providers;
+1. it can authorize other organizations to be the new certificate providers;
 
-(2) it doesn’t need any other organizations to authorize it to be a certificate provider.
+2. it doesn’t need any other organizations to authorize it to be a certificate provider.
 For example, certificate provider A can authorize organization B to be a new certificate provider.
 Later, B can authorize C to be a new certificate provider.
 A in our case is the root certificate provider.
