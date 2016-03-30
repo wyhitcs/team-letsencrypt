@@ -280,11 +280,8 @@ For Let’s  Encrypt, following softwares are required to be installed on user m
 
 - **ConfigArgParse**: Python command-line parsing library. It is required that the version of ConfigArgParse must higher than 0.9.3.
 
-- **Python Package Index (PyPI)**: a tool to help package and share Python modules.
-
 - **cryptography**: a package which provides cryptographic recipes and primitives to Python developers.At least version 0.7 should be used.
 
-- **psutil**: a cross-platform library for retrieving information on running processes and system utilization.The version of psutil must higher than 2.1.0.
 
 ###4.2 Network Requirements
 
