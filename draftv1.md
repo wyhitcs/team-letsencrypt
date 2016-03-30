@@ -125,6 +125,7 @@ The potential users of Let's encrypt are websites which want to obtain SSL/TLS c
 ### Sponsors
 
 Let's Encrypt is initialized by a non-profit organization (ISRG) to enable secure communication over the Internet for the purpose of overcoming financial, technological and education barriers. Corporate Sponsorship helps speed up the process resulting in a secure Web. The number of sponsors keeps increasing especially in the last four months. The dramatic rise in the number of sponsors reflects the success and importance of the programme.
+
 ![Sponsors Growth](image/sponsors.png)
 
 ### Additional Stakeholder
