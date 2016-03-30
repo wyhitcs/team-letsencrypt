@@ -160,7 +160,7 @@ Finally, there exist other softwares based on ACME that compete with Let’s Enc
 
 The development view describes the architecture that supports the software development process.
 The development view communicates the aspects of the architecture of interest to stakeholders from the building, testing, maintaining and enhancing the project[[2](#Nick)].
-Based on it, the following article shows module structure model, code line model the common design model of Let's Encrypt which give a technical overview of the whole project.
+The following article shows module structure model, code line model the common design model of Let's Encrypt which give a technical overview of the whole project.
 In addition, technical debt of the project and the corresponding solutions are described at the end of this section.
 
 ###3.1 Module Structure Model
