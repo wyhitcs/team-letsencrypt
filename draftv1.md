@@ -451,12 +451,15 @@ To conclude, a well-structured architecture of a software satisfies its related 
 
 2. <div id="Nick"/>Nick Rozanski and Eoin Woods. Software Systems Architecture: Working with Stakeholders using Viewpoints and Perspectives. Addison-Wesley, 2012.
 
-3. <div id="Fowler">Fowler Martin. TechnicalDebtQuadrant. http://martinfowler.com/bliki/TechnicalDebt.html. 2014.
+3. <div id="Fowler">Fowler Martin. TechnicalDebtQuadrant.  
+http://martinfowler.com/bliki/TechnicalDebt.html. 2014.
 
-4. <div id="Cunningham">Cunningham Ward. Ward Explains Debt Metaphor. http://c2.com/cgi/wiki?WardExplainsDebtMetaphor. 2011.
+4. <div id="Cunningham">Cunningham Ward. Ward Explains Debt Metaphor.  
+http://c2.com/cgi/wiki?WardExplainsDebtMetaphor. 2011.
 
 
-5. <div id="Let">Let's Encrypt Project. Let’s Encrypt client documentation! https://letsencrypt.readthedocs.org/en/latest/index.html.
+5. <div id="Let">Let's Encrypt Project. Let’s Encrypt client documentation!  
+https://letsencrypt.readthedocs.org/en/latest/index.html.
 
 6. <div id="Sven">Sven Apel, Don Batory, Christian Kästner, Gunter Saake.Feature-Oriented Software Product Lines. 2013.
 
