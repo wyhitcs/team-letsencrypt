@@ -4,7 +4,7 @@ Let’s encrypt is a software aiming to automatically request Digital Certificat
 
 * Abstract
 * Introduction
-* View and Perspectives
+* Views and Perspectives
    * Stakeholder Analysis
    * Context View
    * Development View
@@ -53,7 +53,7 @@ The section of Variability Perspective shows the variable features provided by L
 In the section of Evolution Perspective, we made a list of several possible changes of Let’s Encrypt in the future and the corresponding architecture tactics used by Let’s Encrypt to increase its flexibility to accomodate such changes.
 
 
-
+#Views and Perspectives
 
 ##1 Stakeholders Analysis
 5 types of stakeholders are identified for Let's Encrypt as follows:
@@ -186,9 +186,23 @@ To understand how it works, let’s walk through a typical process. When Let’s
 Authenticator, Installer and ACME Utility Module are responsible for generating and wrapping other kinds of payload into an ACME message and send it to CA for parsing. Authenticator is used to deal with ACME Challenge, Installer deals with JSON Web Key and Digital Certificates. ACME Utility Module provides encryption/decryption and other utilities. It also deals with ACME errors.
 
 
-###3.2 Codeline Model
 
-In this section, code structure of Let's Encrypt will be explored. Besides, Build, Integration, Test and Release Approach also matters a lot in understanding the project organization.
+
+
+###3.2 Common Design Model
+
+####3.2.1 Common Processing
+
+- **Instruction parsing**: 
+Parsing instructions is considered to be a common process because: (1) many modules rely on user's instructions to determine the subsequent actions; (2) the parsers in different modules are similar to each other. Hence, the parsers can be put into a separate module. In fact, all codes relevant to the parsers reside in the file *letsencrypt-auto* and *cli.py*.
+
+- **ACME objects processing**: 
+To implement ACME Protocol, Let’s Encrypt contains ACME objects such as ACME account and ACME exceptions. Those objects are used almost everywhere in Let’s Encrypt. When a user wants to request an account, for example, an account object is created and returned. Such account will later be used when a certificate needs to be requested or renewed. Many modules of Let’s Encrypt need to process ACME objects to initiate, update, transmit or destroy a certificate. Therefore, for convenience, developers of Let’s Encrypt wrap all the functions used for processing ACME objects into a separate module.
+
+
+- **Configuration processing**:
+Configuration object is "a bag of attributes" used by almost all the modules. For instance, a user might want to register his/her information in such way "I have a domain name abc.com; my account is xxxxx; my private key stores in xxxxx; please give me a certificate for that domain name". Processing a configuration object containing these attributes enables Let’s Encrypt to automatically obtain, renew and revoke a certificate. Such processing is needed in almost all the modules. Therefore, the configuration object (as well as the relevant functions) is wrapped into a module.
+
 
 
 ####3.2.2 Build, Integration and Test Approach
@@ -218,41 +232,25 @@ Before the pull requests are merged, they have to first go through a unit covera
 Another option for developers is to do their own test locally before pulling a request. Tox is officially recommended as a testing tool for running a full set of tests including config file parsing test and codes style testing. For debugging purpose, ipdb is a package used for detecting syntax errors.
 
 
-###3.3 Common Design Model
-
-####3.3.1 Common Processing
-
-- **Instruction parsing**: 
-Parsing instructions is considered to be a common process because: (1) many modules rely on user's instructions to determine the subsequent actions; (2) the parsers in different modules are similar to each other. Hence, the parsers can be put into a separate module. In fact, all codes relevant to the parsers reside in the file *letsencrypt-auto* and *cli.py*.
-
-- **ACME objects processing**: 
-To implement ACME Protocol, Let’s Encrypt contains ACME objects such as ACME account and ACME exceptions. Those objects are used almost everywhere in Let’s Encrypt. When a user wants to request an account, for example, an account object is created and returned. Such account will later be used when a certificate needs to be requested or renewed. Many modules of Let’s Encrypt need to process ACME objects to initiate, update, transmit or destroy a certificate. Therefore, for convenience, developers of Let’s Encrypt wrap all the functions used for processing ACME objects into a separate module.
-
-
-- **Configuration processing**:
-Configuration object is "a bag of attributes" used by almost all the modules. For instance, a user might want to register his/her information in such way "I have a domain name abc.com; my account is xxxxx; my private key stores in xxxxx; please give me a certificate for that domain name". Processing a configuration object containing these attributes enables Let’s Encrypt to automatically obtain, renew and revoke a certificate. Such processing is needed in almost all the modules. Therefore, the configuration object (as well as the relevant functions) is wrapped into a module.
-
-
-
-###3.4 Technical Debt
+###3.3 Technical Debt
 
 The concept of technical debt refers to the accumulated consequences of the quick but dirty design into an evolving software program [[3](#Fowler)]. In other words, the danger occurs when people rush software by simply adding features into the program but never reflect their understanding of those features. As the “debt” accumulates, the complexity of maintaining the programs to reduce its deterioration to the entire software increases [[4](#Cunningham)].
 
 
-####3.4.1 Code Duplication
+####3.3.1 Code Duplication
 
 In issue [#383](https://github.com/letsencrypt/letsencrypt/issues/383), code duplication exists between apache and nginx plugins; and in issue [#698](https://github.com/letsencrypt/letsencrypt/issues/698), [Dockerfile-dev](https://github.com/letsencrypt/letsencrypt/blob/26c1f003d0d05397154fe63e1f452ed2148cfe75/Dockerfile-dev) and [Dockerfile](https://github.com/letsencrypt/letsencrypt/blob/26c1f003d0d05397154fe63e1f452ed2148cfe75/Dockerfile) also duplicated. 
 Problem arises when codes are just copied and changed slightly, making it difficult to maintain the software project.
 
-Duplicated code, also known as “copy-and-paste development”, is produced by copying existing code and then using it somewhere else. This strategy of producing code is frequently employed as a way of reusing software. On one hand, code duplication seems to be a desirable approach of development as it facilitates code reusability and speed up software development. On the other hand, code duplication can be very negative in the long term. First of all, code duplication causes an increase in code size. Secondly, duplication increases the difficulty of maintaining. Moreover, code duplication can also be a sign of poor design, indicating that the generic functionality has not been properly abstracted. Consequently, code duplication needs to be carefully avoided in the long term, especially during the maintenance phase.
+Duplicated code, also known as “copy-and-paste development”, is produced by copying existing code and then using it somewhere else. This strategy of producing code is frequently employed as a way of reusing software. However, code duplication can be very negative in the long term. First of all, code duplication causes an increase in code size. Secondly, duplication increases the difficulty of maintaining. Moreover, code duplication can also be a sign of poor design, indicating that the generic functionality has not been properly abstracted. Consequently, code duplication needs to be carefully avoided in the long term, especially during the maintenance phase.
 
-####3.4.2 Documentation
+####3.3.2 Documentation
 
-For an open source project, the contributions from open source communities to the huge development of the project is evident.  It is vital to have a transparent documentation system so that developers in such communities can understand, reuse and develop the code in a more efficient way. The documentation of Let's Encrypt still has room for improvement. We notice that 59 issues are labeled `documentation` on GitHub. These issues indicate that the documentation is not well- structured, lacking architecture description and module information, which make it difficult to understand how the project works and how the module connects to each other. In addition, insufficient documentation also confuses users.
+For an open source project, it is vital to have a good documentation system so that developers in such communities can understand, reuse and develop the code in a more efficient way. The documentation of Let's Encrypt still needs improvement. We notice that 59 issues are labeled `documentation` on GitHub. These issues indicate that the documentation is not well-structured, lacking architecture description and module information, which make it difficult to understand how the project works and how the module connects to each other. In addition, insufficient documentation also confuses users.
 
 For example in issue [#2271](https://github.com/letsencrypt/letsencrypt/issues/2271), the developers discuss the text related to certificate renewal. The former version of documentation is “To renew a certificate, simply run Let's Encrypt again providing the same values when prompted. In almost all circumstances, renewal should be performed with the certonly subcommand”. It seems that the second sentence contradicts the first. Moreover, it is not as detailed as it should be.
 
-####3.4.3 How developers deal with technical debt
+####3.3.3 How developers deal with technical debt
 Developers usually find out technical debt through Issues, discuss it and figure out a solution. To resolve technical debt and  relevant issues mentioned above, Let’s Encrypt uses the following methods:
 
 
