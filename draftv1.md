@@ -470,11 +470,11 @@ To conclude, a well-structured architecture of a software satisfies its related 
 
     Time: March 5th
 
-    Content: It is a display error in Let's Encrypt document at website ["Read the Docs"](http://letsencrypt.readthedocs.org/en/latest/using.html?highlight=mail#webroot). This is a command line exceeding the border of the browser window. We make a horizontal scroll to display a long text (both in rst and html) and test it with Chrome, Firefox and Safari at Mac OSX and Ubuntu.
+    Content: It is a display error in Let's Encrypt document at website ["Read the Docs"](http://letsencrypt.readthedocs.org/en/latest/using.html?highlight=mail#webroot). A command line exceeds the border of the browser window. We make a horizontal scroll to display a long text (both in rst and html) and test it with Chrome, Firefox and Safari at Mac OSX and Ubuntu.
 
 2. Pull requests: [#2657](https://github.com/letsencrypt/letsencrypt/pull/2657), [#2658](https://github.com/letsencrypt/letsencrypt/pull/2658), [#2659](https://github.com/letsencrypt/letsencrypt/pull/2659), [#2659](https://github.com/letsencrypt/letsencrypt/pull/2659)
 
     Time: March 12th - March 14th
     
-    Content: The documentation of Let's Encrypt is not so friendly to new comers. Since Let's Encrypt is a implementation of ACME, we propose to add a link to ACME specification. The handle of the request takes some time because the link is not up to date and we fix it.
+    Content: The documentation of Let's Encrypt is not so friendly to new comers. Since Let's Encrypt is a implementation of ACME, we propose to add a link to ACME specification. The handle of the request takes some time because the link we add is not up to date and we fix it later.
 
