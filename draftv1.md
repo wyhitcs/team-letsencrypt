@@ -363,7 +363,7 @@ The first subsection concerns about the environment in which the software runs. 
 
 There are a number of features that users can change via Let’s Encrypt client GUI. All of them are binded at run time except UI/Command switch, User authority and Usage which are at compile time.
 
-- UI/Command switch: Let’s Encrypt supports [ncurses](https://en.wikipedia.org/wiki/Ncurses) (a programming library providing an API that allows the user to write text-based user interfaces) UI, or can be driven entirely from the command line. Users can choose between UI and command line.
+- UI/Command switch: Let’s Encrypt supports ncurses [[8](#ncurses)] (a programming library providing an API that allows the user to write text-based user interfaces) UI, or can be driven entirely from the command line. Users can choose between UI and command line.
 
 - Notification of configuration change: User can switch on/off notification of configuration change. For example, if someone changes the storage path of a file, there should be notification of the change by default. However, user can decide to close such notification. 
 
