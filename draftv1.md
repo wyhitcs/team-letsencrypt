@@ -272,7 +272,7 @@ Configuration object is "a bag of attributes" used by almost all the modules. Fo
 
 ###2.3.4 Technical Debt
 
-The concept of technical debt refers to the accumulated consequences of the quick but dirty design into an evolving software program [[2](#Fowler)]. In other words, the danger occurs when people rush software by simply adding features into the program but never reflect their understanding of those features. As the “debt” accumulates, the complexity of maintaining the programs to reduce its deterioration to the entire software increases [[3](#Cunningham)].
+The concept of technical debt refers to the accumulated consequences of the quick but dirty design into an evolving software program [[3](#Fowler)]. In other words, the danger occurs when people rush software by simply adding features into the program but never reflect their understanding of those features. As the “debt” accumulates, the complexity of maintaining the programs to reduce its deterioration to the entire software increases [[4](#Cunningham)].
 
 
 ####2.3.4.1 Code Duplication
@@ -529,11 +529,10 @@ To conclude, a well-structured architecture of a software satisfies its related 
 
 2. <div id="Nick"/>Nick Rozanski and Eoin Woods. Software Systems Architecture: Working with Stakeholders using Viewpoints and Perspectives. Addison-Wesley, 2012.
 
-2. <div id="Fowler">Fowler Martin. TechnicalDebtQuadrant. http://martinfowler.com/bliki/TechnicalDebt.html. 2014.
+3. <div id="Fowler">Fowler Martin. TechnicalDebtQuadrant. http://martinfowler.com/bliki/TechnicalDebt.html. 2014.
 
-3. <div id="Cunningham">Cunningham Ward. Ward Explains Debt Metaphor. http://c2.com/cgi/wiki?WardExplainsDebtMetaphor. 2011.
+4. <div id="Cunningham">Cunningham Ward. Ward Explains Debt Metaphor. http://c2.com/cgi/wiki?WardExplainsDebtMetaphor. 2011.
 
-4. <div id="lfam">lfam. Packaging. https://github.com/letsencrypt/letsencrypt/wiki/Packaging. 2016.
 
 5. <div id="Let">Let's Encrypt Project. Let’s Encrypt client documentation! https://letsencrypt.readthedocs.org/en/latest/index.html.
 
@@ -541,4 +540,4 @@ To conclude, a well-structured architecture of a software satisfies its related 
 
 7. <div id="Lee">Lee, Jihyun, & Hwang Sunmyung. A review on variability mechanisms for product lines. International Journal of Advanced Media and Communication, 5(2-3), 172-181. 2014
 
-9. <div id="ncurses">Wikipedia,ncurses.https://en.wikipedia.org/wiki/Ncurses . 2016
+8. <div id="ncurses">Wikipedia,ncurses.https://en.wikipedia.org/wiki/Ncurses . 2016
