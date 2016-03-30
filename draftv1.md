@@ -348,55 +348,21 @@ As mentioned above, Let’s Encrypt is a BETA software still in its earlier vers
 
 A feature is a characteristic or end-user-visible behavior of a software system[[6](#Sven)]. We identified a list of variable features and classified them into four categories. We identified a list of variable features and classified them into four categories. Moreover, features in Let's Encrypt come with different binding times. Most features are at run time, others at compile time[[7](#Lee)]. And this is described at the first of each class.
 
-####2.5.1.1 Feature List
-
-##### **Environment**
-
-The first subsection concerns about the environment in which the software runs. The binding time of OS support is at compile time while Python-version support is at run time.
-
-- OS support: Let’s encrypt supports multiple Unix-ish Operating Systems including Arch, Debian, FreeBSD and etc. Let’s Encrypt is able to automatically identify user’s OS and install a compatible version, or users can manually choose a version.
-
-- Python-version support: Let’s Encrypt Client currently can only run on Unix-ish OS with Python 2.6 or 2.7; Python 3.x will be supported after the Public Beta Launch.
-
-##### **Client(GUI)**
-
-There are a number of features that users can change via Let’s Encrypt client GUI. All of them are binded at run time except UI/Command switch, User authority and Usage which are at compile time.
-
-- UI/Command switch: Let’s Encrypt supports ncurses(a programming library providing an API that allows the user to write text-based user interfaces) [[8](#ncurses)]  UI, or can be driven entirely from the command line. Users can choose between UI and command line.
-
-- Notification of configuration change: User can switch on/off notification of configuration change. For example, if someone changes the storage path of a file, there should be notification of the change by default. However, user can decide to close such notification. 
-
-- User authority: There are two levels of authority: “user” and “super-user” (developer). In “user” mode, it is not allowed to use a number of instructions and some information will also be hidden. In ’super-user’ level, there are no such restrictions.
+####2.5.1.1 Main Features
 
 - Virtual Environment: Let’s Encrypt allows users to decide whether to use virtualenv (virtual environment package) or not.
 
 - Usage (as plugin or client): Let’s encrypt not only can serve as an independent application, it can also serve as a third party module in other applications. In the latter case, Let’s encrypt is used as a plugin.
 
-- Input Method: Users can either input arguments of functions from a keyboard or from a pre-stored file.
-
-##### **Plugin**
-
-Plugin concerns the extensions of Let’s Encrypt and is bound at compile time.
+- Notification of configuration change: User can switch on/off notification of configuration change. For example, if someone changes the storage path of a file, there should be notification of the change by default. However, user can decide to close such notification.
 
 - Web server support: Let’s Encrypt client supports a number of different “plugins” that can be used to obtain and/or install certificates. Plugins that can obtain a specified certificate are called “authenticators” and can be used with the “certonly” command. Plugins that can install a certificate are called “installers”. Apache, Nginx and webroot are plugins currently supported. Moreover, users can use a “standalone” web server to obtain a certificate. This is useful on systems with no web server, or when direct integration with the local web server is not supported or not desired.
-
-##### **Configuration**
-
-Configuration contains a great many features offered by Let’s Encrypt to improve user experience. All of them are binded at run time except Valid period and Email notification which are at compile time. 
-
-- Logging-level: The application is setup using serilog for logging. There are many logger levels such as “debug” and “customer”. In “customer” level, detail information is hidden to prevent ’noise’ while in “debug” level, such information can be seen.
 
 - Allow specifying encryption algorithm: ACME protocol enables multiple types of encryption algorithms like RSA and MD5. Let’s encrypt enables all these algorithms.
 
 - Editable certificate and key storage path: The path of storing a certificate is specified by default after installing Let’s Encrypt. However, users are allowed to edit the storage path.
 
-- Editable log file storage path: The path of the log file is specified by default after installing Let’s Encrypt. Users can also edit the path.
-
-- Personal profile: The most important information of personal profile is email address and users have to offer an effective profile in order to apply for a certificate. They are also allowed to edit the profile afterwards.
-
 - Multiple Challenge solution: There are many ways of solving challenges to prove someone owns a certain domain name: Simple HTTP, Domain Validation with Server Name Indication(DVSNI) and DNS verification. If it is not chosen manually by users, Let’s Encrypt will pick the default one.
-
-- Optional update way (manual or automatic): Once an up-to-date version of Let’s encrypt is released, user’s local machine will update automatically. However, users can disable such automatic update and do it manually instead.
 
 - Optional ACME compliant services: Let’s Encrypt supports a number of CAs and allows users to choose their favorite one by command line.
 
@@ -408,17 +374,7 @@ Configuration contains a great many features offered by Let’s Encrypt to impro
 
 - Adjustable key bit-length: The key bit-length is adjustable and its default value is 2048.
 
-- Valid period: For the safety concern, a certificate should not be permanently valid which means the owner needs to update it after expiration. Let’s Encrypt allows a certificate to be valid for 90 days by default.
-
-- Email notification: For good user experience, Let’s Encrypt records the registration date of the certificate and kindly reminds users to update their certificates by email when the validity is less than 30 days.
-
-####2.5.1.3 Feature Dependencies and Model
-
-There are some dependencies among the features we talked about. For example, users have to choose “SuperUser” authority in order to enter debug mode, choose challenge solution and manually update method. 
-
-Besides, there are several constraints between plugin and configuration features. Configuration feature relies on the specified server choice, i.e. Nginx and Apache. Furthermore, currently users can install a “http -> https” redirect, so their site effectively runs https only, however, this is dependent on the plugin of the Apache server.
-
-Finally, it’s convenient for users to get a kind email notification about the expiring date of the certificate, which is related to the valid period of the certificate.
+- UI/Command switch: Let’s Encrypt supports ncurses(a programming library providing an API that allows the user to write text-based user interfaces) [[8](https://github.com/delftswa2016/team-letsencrypt/blob/Improvement/draftv1.md#ncurses)] UI, or can be driven entirely from the command line. Users can choose between UI and command line.
 
 ![Feature Dependencies and Model](https://github.com/delftswa2016/team-letsencrypt/blob/master/D3/Feature.Model.png)
 
