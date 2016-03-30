@@ -155,11 +155,6 @@ Finally, there exist other softwares based on ACME that compete with Let’s Enc
 
 ![contextview](https://github.com/delftswa2016/team-letsencrypt/blob/master/D1/contextview.png)
 
-###2.2.3 Impact of the System on Environment
-
-The impact of system on environment concerns about the dependencies of other system on Let's Encrypt and other systems’ decommissions and data migration. Since Let's Encrypt can be used as a plugin embedded in other certificate systems, the performance of those systems depends on Let's Encrypt. As a newly developed project, there is not any system decommissions because of Let's Encrypt so far. Finally, Let's Encrypt is independently developed by ISRG.
-
-
 
 ##2.3 Development View
 
