@@ -409,22 +409,7 @@ The issues of lessening rate limits on the number of certificates issued per dom
 
 ECC support is deferred until it is required for a reason that this feature is not needed recently and possibly will not happen in the future. Thus, it is not worth investing efforts in it at the very beginning.  
 
-###2.6.2 Architectural Tactics
 
-With the development of Let’s Encrypt, various architecture tactics are used to make it more flexible to accomodate changes. Besides adding extensible plugins and configurable parameters, Let’s encrypt also takes the following strategies to achieve reliable change:
-
-- Create mechanisms to roll back unsuccessful deployments: 
-The source code is on Github, which is a perfect tool for version control. 
-Developers are able to records changes to a file or set of files over time so that they can recall specific versions later.
-
-- Automated testing: 
-Let’s Encrypt uses `tox` for testing. 
-`tox` starts a full set of tests, it includes apacheconftest, unit tests for specific Python versions, code coverage, style of the whole project, etc. 
-
-- Continuous integration: 
-When making changes, it is always best to receive bad news as early as possible. 
-Travis CI is used to do automated testing for every pull request to Let’s Encrypt project before merging. 
-They set up a project in multiple Python versions(2.6, 2.7, 3.3, 3.4, 3.5) and multiple plugins. [(links to `.travis.yml`)](https://github.com/letsencrypt/letsencrypt/blob/master/.travis.yml)
 
 ##Conclusion
 
