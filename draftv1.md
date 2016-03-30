@@ -166,7 +166,7 @@ Finally, there exist other softwares based on ACME that compete with Let’s Enc
 
 The development view describes the architecture that supports the software development process.
 The development view communicates the aspects of the architecture of interest to stakeholders from the building, testing, maintaining and enhancing the project[[2](#Nick)].
-The following article shows module structure model, code line model the common design model of Let's Encrypt which give a technical overview of the whole project.
+The following article shows module structure model and the common design model of Let's Encrypt which give a technical overview of the whole project.
 In addition, technical debt of the project and the corresponding solutions are described at the end of this section.
 
 ###3.1 Module Structure Model
@@ -175,7 +175,7 @@ In addition, technical debt of the project and the corresponding solutions are d
 
 The UML component diagram below gives an overview of the module structure. Each package is a code module and the arrow shows the intermodule dependencies[[2](#Nick)].
 
-- **User layer**: the uppermost layer which is also the closest layer to users offers UI for clients to set up their own certificates. The command line interface enables the developers to contribute to the project. 
+- **User layer**: the uppermost layer which is also the closest layer to users offers UI for clients to set up their own certificates, while command line is also available. 
 
 - **Parser layer**: after receiving commands from the upper layer, the coordinator module checks the compatibility to ensure the job can be successfully done in a certain environment. Then, the commands are parsed by the parser and the function layer is called.
 
