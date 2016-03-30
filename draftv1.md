@@ -100,7 +100,7 @@ Here we list several major developers:
 
 
 
-The other contributors are either users of let’s encrypt or github users who are interested in this project. Their contributions are mainly about improving command line, fixing bugs and format.  As a BETA software, Let's Encrypt has some many bugs to fix.
+The other contributors are either users of let’s encrypt or github users who are interested in this project. Their contributions are mainly about improving command line, fixing bugs and format.  As a BETA software, Let's Encrypt has some bugs to fix.
 
 ### Users
 
