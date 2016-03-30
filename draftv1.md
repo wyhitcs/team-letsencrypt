@@ -56,7 +56,7 @@ In many cases (e.g. online payment),the identities of Internet entities (client 
 
 Let’s Encrypt is a software automating the tasks of obtaining certificates and configuring web servers to use them. It is based on ACME protocol and accomplished by running a certificate management agent on the web server. The workflow can be summarized as follows:
 
-1. When a certificate is requested, Let’s Encrypt wraps the necessary information (the account, the domain name and etc) into standard format and sends it to boulder of a CA;
+1. When a certificate is requested, Let’s Encrypt wraps the necessary information (the account, the domain name and etc.) into standard format and sends it to boulder of a CA;
 2. CA responds the request with a “challenge” which is a special task to verify the ownership of the server;
 3. Let’s Encrypt automatically solves this challenge;
 4. CA grants a certificate after the challenge has been solved.
@@ -73,7 +73,7 @@ In this report, the project is analyzed from different views and perspectives. I
 
 ### Acquirers
 
-We identified three organizations as the acquirers of Let's encrypt:
+We identified three organizations as the acquirers of Let's Encrypt:
 
 
 
@@ -299,7 +299,7 @@ For Let’s  Encrypt, following softwares are required to be installed on user m
 
 ###4.2 Network Requirements
 
-Let’s Encrypt runs a certificate management agent on the web server. The node in the system can be divided into two categories: Server and Client. On its client side, it requires port 80 or 443 to be available. On its server side, Let’s Encrypt has rate limits for certificate issuance. These limits are in place primarily to protect services from both accidental and intentional abuse. Let’s Encrypt has the following rate limits in place:
+Let’s Encrypt runs a certificate management agent on the web server. The node in the system can be divided into two categories: server and client. On its client side, it requires port 80 or 443 to be available. On its server side, Let’s Encrypt has rate limits for certificate issuance. These limits are in place primarily to protect services from both accidental and intentional abuse. Let’s Encrypt has the following rate limits in place:
 
 - **Names/Certificate**:  is the limit on how many domain names users can include in a single certificate. This is currently limited to 100 names, or websites, per certificate issued.
 
