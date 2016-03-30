@@ -25,7 +25,7 @@ Let’s encrypt is a software aiming to automatically request Digital Certificat
 * [References](#References)
 * [Appendix](#Appendix)
 
-![Let's Encrypt](image/lets-encrypt.jpg)
+
 
 #Introduction<a name="Introduction"></a>
 
