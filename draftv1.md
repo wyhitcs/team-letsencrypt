@@ -173,7 +173,7 @@ The UML component diagram below gives an overview of the module structure. Each 
 
 - **Parser layer**: after receiving commands from the upper layer, the coordinator module checks the compatibility to ensure the job can be successfully done in a certain environment. Then, the commands are parsed by the parser and the function layer is called.
 
-- **Function layer**: as the core layer of the whole project, function layer offers important functions to automate the tasks of obtaining a certificate. The ACME module provides a protocol that allows an applicant to obtain a certificate automatically from a Certificate Authority (CA). It includes a challenge module which automatically fulfills the challenge provided by CA. Moreover, JSON Web Key (JWK) module creates a cryptographic key in the data structure. Another module in this layer is Plugins, providing a plugin architecture to facilitate support for different web servers. Currently, web servers including Apache and Nginx are supported by Let’s Encrypt.
+- **Function layer**: as the core layer of the whole project, function layer offers important functions to automate the tasks of obtaining a certificate. The ACME module provides a protocol that allows an applicant to obtain a certificate automatically from a Certificate Authority (CA). It includes a challenge module which automatically solves the challenge provided by CA. Moreover, JSON Web Key (JWK) module creates a cryptographic key in the data structure. Another module in this layer is Plugins, providing a plugin architecture to facilitate support for different web servers. Currently, web servers including Apache and Nginx are supported by Let’s Encrypt.
 
 - **Platform layer**: in the bottom layer, it can be observed that the only language dependency is python. In addition, OpenSSL, a software library used to secure communications against eavesdropping or to ascertain the identity of the party at the other end, is the base of authentication process.
 
@@ -183,7 +183,7 @@ Since the software is based on ACME, it is necessary to gain a deeper understand
 
 To understand how it works, let’s walk through a typical process. When Let’s Encrypt client wants to communicate with CA, for example, requesting an account, it first wraps the JSON Web Key as payload into an ACME Message and then send it to CA. The payload of ACME Message can also be ACME Challenge or ACME Error. After having processed the message, CA sends back a Message to Let’s Encrypt.
 
-Authenticator, Installer and ACME Utility Module are responsible for generating payloads and wrapping the payload into an ACME message and send it to CA for parsing. Authenticator is used to deal with ACME Challenge, Installer deals with JSON Web Key and Digital Certificates. ACME Utility Module provides encryption/decryption and other utilities. It also deals with ACME errors.
+Authenticator, Installer and ACME Utility Module are responsible for generating and wrapping other kinds of payload into an ACME message and send it to CA for parsing. Authenticator is used to deal with ACME Challenge, Installer deals with JSON Web Key and Digital Certificates. ACME Utility Module provides encryption/decryption and other utilities. It also deals with ACME errors.
 
 
 ###3.2 Codeline Model
