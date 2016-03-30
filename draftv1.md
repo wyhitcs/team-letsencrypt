@@ -33,7 +33,7 @@ CA is an online organization which issues the Digital Certificate. To automatica
 
 ####ACME protocol
 
-The identities of Internet entities (client and server) need to be verified. However, today’s verification is done by some ad-hoc mechanisms which are not suitable for future development of online verification. Automatic Certificate Management Environment (ACME) protocol [[1](#acme)] aims to address such issue by standardizing and automating the procedures of verification. In other words, it is a “bag of procedures” by doing which a Certificate Authority issues a certificate to a client.
+In many cases (e.g. online payment),the identities of Internet entities (client and server) need to be verified. However, today’s verification is done by some ad-hoc mechanisms which are not suitable for future development of online verification. Automatic Certificate Management Environment (ACME) protocol [[1](#acme)] aims to address such issue by standardizing and automating the procedures of verification. In other words, it is a “bag of procedures” by doing which a Certificate Authority issues a certificate to a client.
 
 Let’s Encrypt is a software automating the tasks of obtaining certificates and configuring web servers to use them. It is based on ACME protocol and accomplished by running a certificate management agent on the web server. The workflow can be summarized as follows:
 
