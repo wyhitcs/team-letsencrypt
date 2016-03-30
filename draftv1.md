@@ -46,7 +46,7 @@ Digital Certificate is in fact a digital file which can prove the website is the
 
 ####Certificate Authority (CA)
 
-CA is an online organization which issues the Digital Certificate. To automatically respond to the requests from Let's encrypt, a CA must install a software called “boulder” to cooperate with Let’s Encrypt. Boulder can automatically issue a digital certificate when it receive an certificate request from Let's Encrypt.
+CA is an online organization which issues the Digital Certificate. To automatically respond to the requests from Let's Encrypt, a CA must install a software called “boulder” to cooperate with Let’s Encrypt. Boulder can automatically issue a digital certificate when it receive an certificate request from Let's Encrypt.
 
 ####ACME protocol
 
