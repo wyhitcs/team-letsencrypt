@@ -1,6 +1,6 @@
 #Let's Encrypt
 <div  align="center">
-    <img src="https://letsencrypt.org/images/letsencrypt-logo-horizontal.svg" />
+    <img src="image/letsencrypt-hor.png" height="30%" width="30%"/>
 </div>
 
 By Yu Wang, Xilin Li, Wang Jing, and Changliang Luo
