@@ -131,7 +131,7 @@ The graph of stakeholders is shown below:
 
 ##2.2 Context View
 
-This section concerns about the relationships, dependencies and interactions between Let’s Encrypt and its environment[[1](#Nick)]. It gives readers an image about the responsibilities and boundaries of the system.
+This section concerns about the relationships, dependencies and interactions between Let’s Encrypt and its environment[[2](#Nick)]. It gives readers an image about the responsibilities and boundaries of the system.
 
 ###2.2.1 System scope and Responsibilities
 
@@ -165,7 +165,7 @@ The impact of system on environment concerns about the dependencies of other sys
 ##2.3 Development View
 
 The development view describes the architecture that supports the software development process.
-The development view communicates the aspects of the architecture of interest to stakeholders from the building, testing, maintaining and enhancing the project[[1](#Nick)].
+The development view communicates the aspects of the architecture of interest to stakeholders from the building, testing, maintaining and enhancing the project[[2](#Nick)].
 Based on it, the following article shows module structure model, code line model the common design model of Let's Encrypt which give a technical overview of the whole project.
 In addition, technical debt of the project and the corresponding solutions are described at the end of this section.
 
@@ -173,7 +173,7 @@ In addition, technical debt of the project and the corresponding solutions are d
 ![Module Structure Model](https://github.com/delftswa2016/team-letsencrypt/blob/master/D2/module.structure.png)
 
 
-The UML component diagram below gives an overview of the module structure. Each package is a code module and the arrow shows the intermodule dependencies[[1](#Nick)].
+The UML component diagram below gives an overview of the module structure. Each package is a code module and the arrow shows the intermodule dependencies[[2](#Nick)].
 
 - **User layer**: the uppermost layer which is also the closest layer to users offers UI for clients to set up their own certificates. The command line interface enables the developers to contribute to the project. 
 
@@ -299,7 +299,7 @@ Developers usually find out technical debt through Issues, discuss it and figure
 ##2.4 Deployment View
 
 Considering the wide use of Let’s Encrypt, it is important to clarify the deployment of the software to guarantee proper operation in different environments. 
-Deployment describes the environment into which a system will be deployed and the dependencies that the system has on elements of it[[1](#Nick)]. 
+Deployment describes the environment into which a system will be deployed and the dependencies that the system has on elements of it[[2](#Nick)]. 
 In this section, we point out a number of constraints on Let’s Encrypt including third party software requirements, technology compatibility and network requirements.
 
 ###2.4.1 Software Requirements and Technology Compatibility
@@ -459,7 +459,7 @@ Issues and pull requests relevant to the variability and configurability can be 
 
 ##2.6 Evolution Perspective
 
-As the business maxim tells us “the only constant  is change”[[1](#Nick)], a major concern for architects is how to build a flexible system to adapt to inevitable changes. 
+As the business maxim tells us “the only constant  is change”[[2](#Nick)], a major concern for architects is how to build a flexible system to adapt to inevitable changes. 
 As a result, there is constant pressure to change the system’s behavior, which in many cases requires architectural tactics to ease such process. The term evolution is used as the process of dealing with changes encountered during the development lifecycle.
 
 ###2.6.1 Requirements Capture
@@ -527,7 +527,7 @@ To conclude, a well-structured architecture of a software satisfies its related 
 ##References
 1. <div id="acme">R. Barnes, J. Hoffman-Andrews, J. Kasten. Automatic Certificate Management Environment (ACME). https://letsencrypt.github.io/acme-spec/ . 2015
 
-1. <div id="Nick"/>Nick Rozanski and Eoin Woods. Software Systems Architecture: Working with Stakeholders using Viewpoints and Perspectives. Addison-Wesley, 2012.
+2. <div id="Nick"/>Nick Rozanski and Eoin Woods. Software Systems Architecture: Working with Stakeholders using Viewpoints and Perspectives. Addison-Wesley, 2012.
 
 2. <div id="Fowler">Fowler Martin. TechnicalDebtQuadrant. http://martinfowler.com/bliki/TechnicalDebt.html. 2014.
 
