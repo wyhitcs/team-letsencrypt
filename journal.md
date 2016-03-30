@@ -114,3 +114,11 @@ The task for the first week is planned as follow:
 - Discuss the problem in Deployment View and Variable features
 - Fix the problem given by teaching assistant
 - Add an "Introduction" section for better readability
+
+
+#Week 8- All chapters
+
+###Group Meeting 30-03-2016(4h)
+- Update the format according to the DESOSA markdown style guide
+- Change the structure of the Chapter
+- Final check for the whole chapter
