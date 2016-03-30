@@ -311,11 +311,11 @@ A feature is a characteristic or end-user-visible behavior of a software system[
 
 - Virtual Environment: Let’s Encrypt allows users to decide whether to use virtualenv (virtual environment package) or not.
 
-- Usage (as plugin or client): Let’s encrypt not only can serve as an independent application, it can also serve as a third party module in other applications. In the latter case, Let’s encrypt is used as a plugin.
+- Usage (as plugin or client): Let’s encrypt can not only serve as an independent application, but also as a third party plugin in other software.
 
-- Notification of configuration change: User can switch on/off notification of configuration change. For example, if someone changes the storage path of a file, there should be notification of the change by default. However, user can decide to close such notification.
+- Notification of configuration change: User can switch on/off notification of configuration change. For example, if someone changes the storage path of a file, there should be notification of the change by default. However, user can decide to enable/disable such notification.
 
-- Web server support: Let’s Encrypt client supports a number of different “plugins” that can be used to obtain and/or install certificates. Plugins that can obtain a specified certificate are called “authenticators” and can be used with the “certonly” command. Plugins that can install a certificate are called “installers”. Apache, Nginx and webroot are plugins currently supported. Moreover, users can use a “standalone” web server to obtain a certificate. This is useful on systems with no web server, or when direct integration with the local web server is not supported or not desired.
+- Web server support: Let’s Encrypt client supports a number of different “plugins” that can be used to obtain and/or install certificates. Plugins which can obtain a specific certificate are called “authenticators” and can be used with the “certonly” command. Plugins that can be used to install a certificate are called “installers”. Apache, Nginx and webroot are plugins currently supported. Moreover, users can use a “standalone” web server to obtain a certificate. This is useful on systems with no web server, or when direct integration with the local web server is not supported or not desired.
 
 - Allow specifying encryption algorithm: ACME protocol enables multiple types of encryption algorithms like RSA and MD5. Let’s encrypt enables all these algorithms.
 
@@ -365,11 +365,11 @@ Issues and pull requests relevant to the variability and configurability can be 
 
 - **Support for different versions of Python**: at the beginning, Let’s encrypt only supported python 2.6. The support for later versions of python, especially python 3.x, is enabled now. Relevant issues include [# 605](https://github.com/letsencrypt/letsencrypt/pull/605), [957](https://github.com/letsencrypt/letsencrypt/pull/957), [1508](https://github.com/letsencrypt/letsencrypt/pull/1508).
 
-- **Improvement of configuration**: numerous configuration options are added and the command lines becomes increasingly user-friendly. For example, users can now specify the parameters such as the length of the RSA key. Relevant issues include [# 82](https://github.com/letsencrypt/letsencrypt/pull/82), [368](https://github.com/letsencrypt/letsencrypt/pull/368), [404](https://github.com/letsencrypt/letsencrypt/pull/404).
+- **Improvement of configuration**: numerous configuration options are added and the command lines becomes more user-friendly. For example, users can now specify the parameters such as the length of the RSA key. Relevant issues include [# 82](https://github.com/letsencrypt/letsencrypt/pull/82), [368](https://github.com/letsencrypt/letsencrypt/pull/368), [404](https://github.com/letsencrypt/letsencrypt/pull/404).
 
 - **Support for different webserver plugins**: while the early version of Let’s encrypt only supported apache and nginx, now the supports for nginx, webroots, standalone are enabled. Relevant issues are [# 232](https://github.com/letsencrypt/letsencrypt/pull/232), [387](https://github.com/letsencrypt/letsencrypt/pull/387), [895](https://github.com/letsencrypt/letsencrypt/pull/895), [1395](https://github.com/letsencrypt/letsencrypt/pull/1395).
 
-- **Implementations of more ACME challenge solutions**: ACME protocols allow different kinds of challenge solutions, but Let’s encrypt only implemented a small number of them. However, in the recent releases more challenge solutions are added by contributors. Relevant issues are [# 232](https://github.com/letsencrypt/letsencrypt/pull/232), [291](https://github.com/letsencrypt/letsencrypt/pull/291), [387](https://github.com/letsencrypt/letsencrypt/pull/387).
+- **Implementations of more ACME challenge solutions**: ACME protocols allow different kinds of challenge solutions, but Let’s encrypt only implemented a small fraction of them. However, in the recent releases more challenge solutions are added by contributors. Relevant issues are [# 232](https://github.com/letsencrypt/letsencrypt/pull/232), [291](https://github.com/letsencrypt/letsencrypt/pull/291), [387](https://github.com/letsencrypt/letsencrypt/pull/387).
 
 ##6 Evolution Perspective
 
