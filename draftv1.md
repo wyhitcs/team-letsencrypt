@@ -270,7 +270,7 @@ Developers usually find out technical debt through Issues, discuss it and figure
 
 - Code Duplication: Recent advances in static code analysis and hardware performance enable tool-based localization of code duplication in industrial contexts. For developers, they could use such tools to detect and resolve duplicates by sharing common util functions (as they did in [#382](https://github.com/letsencrypt/letsencrypt/pull/382)).
 
-- Documentation: There are insufficiencies in the documentation that the developers are not aware of. However, they are willing to fix it when users post issues on GitHub (as what they did in issue [#2216] (https://github.com/letsencrypt/letsencrypt/issues/2216) and [#2271](https://github.com/letsencrypt/letsencrypt/issues/2271)).
+- Documentation: There are insufficiencies in the documentation that the developers are not aware of. However, they are willing to fix it when users post issues on GitHub (as what they did in issue [#2216](https://github.com/letsencrypt/letsencrypt/issues/2216) and [#2271](https://github.com/letsencrypt/letsencrypt/issues/2271)).
 
 
 <div id="4DeploymentView"></div>
