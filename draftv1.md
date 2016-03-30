@@ -1,5 +1,9 @@
 #Let's Encrypt
-Yu Wang, Xilin Li, Wang Jing, and Changliang Luo
+<div  align="center">
+    <img src="https://letsencrypt.org/images/letsencrypt-logo-horizontal.svg" />
+</div>
+
+By Yu Wang, Xilin Li, Wang Jing, and Changliang Luo
 from
 *Delft University of Technology*
 ##Abstract<a name="Abstract"></a>
@@ -447,3 +451,6 @@ To conclude, a well-structured architecture of a software satisfies its related 
 7. <div id="Lee">Lee, Jihyun, & Hwang Sunmyung. A review on variability mechanisms for product lines. International Journal of Advanced Media and Communication, 5(2-3), 172-181. 2014
 
 8. <div id="ncurses">Wikipedia,ncurses.https://en.wikipedia.org/wiki/Ncurses . 2016
+
+##Appendix<a name="Appendix"></a>
+
