@@ -5,16 +5,16 @@ Let’s encrypt is a software aiming to automatically request Digital Certificat
 * Abstract
 * Introduction
 * View and Perspectives
-  * Stakeholder Analysis
-  * Context View
-  * Development View
-  * Deployment View
-  * Variability Perspectives
-  * Evolution Perspectives
+* Stakeholder Analysis
+* Context View
+* Development View
+* Deployment View 
+* Variability Perspectives
+* Evolution Perspectives
 * Conclusion
 
 
-#1. Introduction
+#Introduction
 
 Being perpetrated by malwares and viruses  these days, it is more critical than ever to keep the online communication secured. Unfortunately, modern cryptography techniques in many case are too expensive and difficult to implement. 
 Fortunately,that has been changed with the appearance of [LetsEncrypt.org](https://letsEncrypt.org) ! The goal of Let’s Encrypt is to set up an HTTPS server and have it automatically obtain a browser-trusted certificate, without any human intervention. Before analyzing Let's Encrypt, it is necessary to have some background knowledge. 
@@ -53,11 +53,9 @@ The section of Variability Perspective shows the variable features provided by L
 In the section of Evolution Perspective, we made a list of several possible changes of Let’s Encrypt in the future and the corresponding architecture tactics used by Let’s Encrypt to increase its flexibility to accomodate such changes.
 
 
-#2. Views and Perspectives
 
-In this section, a comprehensive study of Let’s Encrypt covering the stakeholders, the Context View, the development and deployment of the software, the variability and evolution of Let’s Encrypt.
 
-##2.1 Stakeholders Analysis
+##1 Stakeholders Analysis
 5 types of stakeholders are identified for Let's Encrypt as follows:
 
 ### Acquirers
@@ -128,11 +126,11 @@ The graph of stakeholders is shown below:
 
 
 
-##2.2 Context View
+##2 Context View
 
 This section concerns about the relationships, dependencies and interactions between Let’s Encrypt and its environment[[2](#Nick)]. It gives readers an image about the responsibilities and boundaries of the system.
 
-###2.2.1 System scope and Responsibilities
+###2.1 System scope and Responsibilities
 
 Let's Encrypt allows users to do following things:
 
@@ -143,7 +141,7 @@ Let's Encrypt allows users to do following things:
 - Register certificate for their server
 - Revoke certificate
 
-###2.2.2 Entities, data and interfaces
+###2.2 Entities, data and interfaces
 
 An overview of the relationship between Let’s Encrypt and its entities is shown in Figure 3.
 
@@ -156,14 +154,14 @@ Finally, there exist other softwares based on ACME that compete with Let’s Enc
 ![contextview](https://github.com/delftswa2016/team-letsencrypt/blob/master/D1/contextview.png)
 
 
-##2.3 Development View
+##3 Development View
 
 The development view describes the architecture that supports the software development process.
 The development view communicates the aspects of the architecture of interest to stakeholders from the building, testing, maintaining and enhancing the project[[2](#Nick)].
 Based on it, the following article shows module structure model, code line model the common design model of Let's Encrypt which give a technical overview of the whole project.
 In addition, technical debt of the project and the corresponding solutions are described at the end of this section.
 
-###2.3.1 Module Structure Model
+###3.1 Module Structure Model
 ![Module Structure Model](https://github.com/delftswa2016/team-letsencrypt/blob/master/D2/module.structure.png)
 
 
@@ -186,12 +184,12 @@ To understand how it works, let’s walk through a typical process. When Let’s
 Authenticator, Installer and ACME Utility Module are responsible for generating payloads and wrapping the payload into an ACME message and send it to CA for parsing. Authenticator is used to deal with ACME Challenge, Installer deals with JSON Web Key and Digital Certificates. ACME Utility Module provides encryption/decryption and other utilities. It also deals with ACME errors.
 
 
-###2.3.2 Codeline Model
+###3.2 Codeline Model
 
 In this section, code structure of Let's Encrypt will be explored. Besides, Build, Integration, Test and Release Approach also matters a lot in understanding the project organization.
 
 
-####2.3.2.2 Build, Integration and Test Approach
+####3.2.2 Build, Integration and Test Approach
 
 To provide developers a convenient environment and also protect project source version, Let's Encrypt has an official workflow for building, integrating and testing. 
 
@@ -218,9 +216,9 @@ Before the pull requests are merged, they have to first go through a unit covera
 Another option for developers is to do their own test locally before pulling a request. Tox is officially recommended as a testing tool for running a full set of tests including config file parsing test and codes style testing. For debugging purpose, ipdb is a package used for detecting syntax errors.
 
 
-###2.3.3 Common Design Model
+###3.3 Common Design Model
 
-####2.3.3.1 Common Processing
+####3.3.1 Common Processing
 
 - **Instruction parsing**: 
 Parsing instructions is considered to be a common process because 1) many modules rely on user's instructions to determine the subsequent actions; 2) the parsers in different modules are similar to each other. Hence, the parsers can be put into a separate module. In fact, all codes relevant to the parsers reside in the file *letsencrypt-auto* and *cli.py*.
@@ -234,25 +232,25 @@ Configuration object is "a bag of attributes" used by almost all the modules. Fo
 
 
 
-###2.3.4 Technical Debt
+###3.4 Technical Debt
 
 The concept of technical debt refers to the accumulated consequences of the quick but dirty design into an evolving software program [[3](#Fowler)]. In other words, the danger occurs when people rush software by simply adding features into the program but never reflect their understanding of those features. As the “debt” accumulates, the complexity of maintaining the programs to reduce its deterioration to the entire software increases [[4](#Cunningham)].
 
 
-####2.3.4.1 Code Duplication
+####3.4.1 Code Duplication
 
 In issue [#383](https://github.com/letsencrypt/letsencrypt/issues/383), code duplication exists between apache and nginx plugins; and in issue [#698](https://github.com/letsencrypt/letsencrypt/issues/698), [Dockerfile-dev](https://github.com/letsencrypt/letsencrypt/blob/26c1f003d0d05397154fe63e1f452ed2148cfe75/Dockerfile-dev) and [Dockerfile](https://github.com/letsencrypt/letsencrypt/blob/26c1f003d0d05397154fe63e1f452ed2148cfe75/Dockerfile) also duplicated. 
 Problem arises when codes are just copied and changed slightly, making it difficult to maintain the software project.
 
 Duplicated code, also known as “copy-and-paste development”, is produced by copying existing code and then using it somewhere else. This strategy of producing code is frequently employed as a way of reusing software. On one hand, code duplication seems to be a desirable approach of development as it facilitates code reusability and speed up software development. On the other hand, code duplication implications can be very negative in the long term. First of all, code duplication causes an increase in code size. Secondly, duplication increases the difficulty of maintaining the already developed code. Moreover, code duplication can also be a sign of poor design, indicating that the generic functionality has not been properly abstracted. Consequently, code duplication needs to be carefully avoided in the long term, especially during the maintenance phase.
 
-####2.3.4.2 Documentation
+####3.4.2 Documentation
 
 For an open source project, the contributions from open source communities to the huge development of the project is evident.  It is vital to have a transparent documentation system so that developers in such communities can understand, reuse and develop the code in a more efficient way. The documentation of Let's Encrypt still has room for improvement. We notice that 59 issues are labeled `documentation` on GitHub. These issues indicate that the documentation is not well- structured, lacking architecture description and module information, which make it difficult to understand how the project works and how the module connects to each other. In addition, insufficient documentation also confuses users.
 
 For example in issue [#2271](https://github.com/letsencrypt/letsencrypt/issues/2271), the developers discuss the text related to certificate renewal. The former version of documentation is “To renew a certificate, simply run Let's Encrypt again providing the same values when prompted. In almost all circumstances, renewal should be performed with the certonly subcommand”. It seems that the second sentence contradicts the first. Moreover, it is not as detailed as it should be.
 
-####2.3.4.3 How developers deal with technical debt
+####3.4.3 How developers deal with technical debt
 Developers usually find out technical debt through Issues, discuss it and figure out a solution. To resolve technical debt and  relevant issues mentioned above, Let’s Encrypt uses the following methods:
 
 
@@ -260,13 +258,13 @@ Developers usually find out technical debt through Issues, discuss it and figure
 
 - Documentation: There are insufficiencies in the documentation that the developers are not aware of. However, they are willing to fix it when users post issues on GitHub (as what they did in issue [#2216] (https://github.com/letsencrypt/letsencrypt/issues/2216) and [#2271](https://github.com/letsencrypt/letsencrypt/issues/2271)).
 
-##2.4 Deployment View
+##4 Deployment View
 
 Considering the wide use of Let’s Encrypt, it is important to clarify the deployment of the software to guarantee proper operation in different environments. 
 Deployment describes the environment into which a system will be deployed and the dependencies that the system has on elements of it[[2](#Nick)]. 
 In this section, we point out a number of constraints on Let’s Encrypt including third party software requirements, technology compatibility and network requirements.
 
-###2.4.1 Software Requirements and Technology Compatibility
+###4.1 Software Requirements and Technology Compatibility
 
 Identifying third party software requirements and technology compatibility is essential for both developers and users. For developers, they can clearly know what tools or libraries are available for further use. Users can know what is exactly needed to apply such software on their environments. 
 
@@ -286,7 +284,7 @@ For Let’s  Encrypt, following softwares are required to be installed on user m
 
 - **psutil**: a cross-platform library for retrieving information on running processes and system utilization.The version of psutil must higher than 2.1.0.
 
-###2.4.2 Network Requirements
+###4.2 Network Requirements
 
 Let’s Encrypt runs a certificate management agent on the web server. The node in the system can be divided into two categories: Server and Client. On its client side, it requires port 80 or 443 to be available. On its server side, Let’s Encrypt has rate limits for certificate issuance. These limits are in place primarily to protect services from both accidental and intentional abuse. Let’s Encrypt has the following rate limits in place:
 
@@ -302,18 +300,17 @@ Let’s Encrypt runs a certificate management agent on the web server. The node 
 There is no limit of the number of certificates that can be issued to different domains.
 
 
-##2.5 Variability Perspective
+##5 Variability Perspective
 
 Variability describes the ability to derive different products from a common set of artifacts[[6](#Sven)]. It is important for a good software to equip with variability to adapt to different environments, which also largely satisfies the requirements of different stakeholders. In spite of a BETA software, Let’s Encrypt provides plenty of variable features. In this section, a list of features and dependencies are given and then, a related model is built upon this. The strategies to implement such variabilities are also discussed.
 
 As mentioned above, Let’s Encrypt is a BETA software still in its earlier version. It can be seen from the GitHub milestone that a great amount of work focuses on improving its flexibility to equip with variability. That is why it is interesting to address its evolution history here to see how Let’s Encrypt deals with change in the system development lifecycle.
 
 
-###2.5.1 Variable Features
+###5.1 Variable Features
 
-A feature is a characteristic or end-user-visible behavior of a software system[[6](#Sven)]. We identified a list of variable features and classified them into four categories. We identified a list of variable features and classified them into four categories. Moreover, features in Let's Encrypt come with different binding times. Most features are at run time, others at compile time[[7](#Lee)]. And this is described at the first of each class.
+A feature is a characteristic or end-user-visible behavior of a software system[[6](#Sven)]. We identified a list of variable features and classified them into four categories. We identified a list of variable features and classified them into four categories. Moreover, features in Let's Encrypt come with different binding times. Most features are at run time, others at compile time[[7](#Lee)]. Main features are as follows:
 
-####2.5.1.1 Main Features
 
 - Virtual Environment: Let’s Encrypt allows users to decide whether to use virtualenv (virtual environment package) or not.
 
@@ -343,11 +340,11 @@ A feature is a characteristic or end-user-visible behavior of a software system[
 
 ![Feature Dependencies and Model](https://github.com/delftswa2016/team-letsencrypt/blob/master/D3/Feature.Model.png)
 
-###2.5.2 Implementation Strategy
+###5.2 Implementation Strategy
 
 The key to implement variability and configurability is using interface. All the interfaces need to be implemented are stored in the file `interface.py`. In the [developer guide](https://letsencrypt.readthedocs.org/en/latest/contributing.html) announce that what interface should be implemented by a specific kind of class. The interface.py and the developer guide together draw an outline for the let’s encrypt: what configuration can be done, what parameter can be specified, what Operation System it should support, what plugin it should support. Hence the variability and configurability have been implemented.
 
-###2.5.3 Evolution History of Variability and Configurability
+###5.3 Evolution History of Variability and Configurability
 
 Let’s Encrypt has already included the most important features in its first release. More features are added in the following releases. The contributions focus mainly on the support for Operation Systems, different versions of python, improvements of configuration file and command line flags, support for new plugins, and implementations of more ACME challenge solutions. 
 
@@ -377,16 +374,16 @@ Issues and pull requests relevant to the variability and configurability can be 
 
 - **Implementations of more ACME challenge solutions**: ACME protocols allow different kinds of challenge solutions, but Let’s encrypt only implemented a small number of them. However, in the recent releases more challenge solutions are added by contributors. Relevant issues are [# 232](https://github.com/letsencrypt/letsencrypt/pull/232), [291](https://github.com/letsencrypt/letsencrypt/pull/291), [387](https://github.com/letsencrypt/letsencrypt/pull/387).
 
-##2.6 Evolution Perspective
+##6 Evolution Perspective
 
 As the business maxim tells us “the only constant  is change”[[2](#Nick)], a major concern for architects is how to build a flexible system to adapt to inevitable changes. 
 As a result, there is constant pressure to change the system’s behavior, which in many cases requires architectural tactics to ease such process. The term evolution is used as the process of dealing with changes encountered during the development lifecycle.
 
-###2.6.1 Requirements Capture
+###6.1 Requirements Capture
 
 To identify the evolution needs, the system requirements need to be re-analyzed to find out which of them will likely need to change over time.
 
-####2.6.1.1 Identify Requirements
+####6.1 Identify Requirements
 
 Based on the roadmap inferred from the existing documentation and discussion on forum and GitHub, the key evolution requirements in the future can be summarized  as follows:
 
@@ -399,7 +396,7 @@ Based on the roadmap inferred from the existing documentation and discussion on 
 |Certificate Compatibility with Windows XP(**Platform**).|small-scale(defect correction), low-risk|100%|approximately 2~3 months|
 |Elliptic Curve Cryptography (ECC) Support(**Functional**).|medium-scale, high-risk|60%|approximately 8~10 months |
 
-####2.6.1.2 Evolution Tradeoff
+####6.2 Evolution Tradeoff
 
 The tradeoff depends on the type of the system, the likelihood  of the change and the confidence to defer the change until it is required. It means the prioritized evolution requirements will take flexibility into account at the beginning while others defer the efforts. 
 
