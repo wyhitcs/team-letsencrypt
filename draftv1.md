@@ -110,7 +110,7 @@ The potential users of Let's encrypt are websites which want to obtain SSL/TLS c
 ### Sponsors
 
 Let's Encrypt is initialized by a non-profit organization (ISRG) to enable secure communication over the Internet for the purpose of overcoming financial, technological and education barriers. Corporate Sponsorship helps speed up the process resulting in a secure Web. The number of sponsors keeps increasing especially in the last four months. The dramatic rise in the number of sponsors reflects the success and importance of the programme.
-![Sponsors Growth](https://github.com/delftswa2016/team-letsencrypt/blob/master/D1/sponsors.png)
+![Sponsors Growth](image/sponsors.png)
 
 ### Additional Stakeholder
 
@@ -130,7 +130,7 @@ IdenTrust is a root certificate provider who authorizes Let’s Encrypt.
 The graph of stakeholders is shown below:
 
 
-![Stakeholders Analysis](https://github.com/delftswa2016/team-letsencrypt/blob/master/D1/stakeholdersv2.png)
+![Stakeholders Analysis](image/stakeholdersv2.png)
 
 
 
@@ -159,7 +159,7 @@ Let's Encrypt provides service to a large number of users. Here we only give two
 
 Finally, there exist other softwares based on ACME that compete with Let’s Encrypt like [acme-tiny](https://github.com/diafygi/acme-tiny) and [simp_le](https://github.com/kuba/simp_le).
 
-![contextview](https://github.com/delftswa2016/team-letsencrypt/blob/master/D1/contextview.png)
+![contextview](image/contextview.png)
 
 
 ##3 Development View<a name="3 Development View"></a>
@@ -170,7 +170,7 @@ The following article shows module structure model and the common design model o
 In addition, technical debt of the project and the corresponding solutions are described at the end of this section.
 
 ###3.1 Module Structure Model
-![Module Structure Model](https://github.com/delftswa2016/team-letsencrypt/blob/master/D2/module.structure.png)
+![Module Structure Model](image/module.structure.png)
 
 
 The UML component diagram below gives an overview of the module structure. Each package is a code module and the arrow shows the intermodule dependencies[[2](#Nick)].
@@ -183,7 +183,7 @@ The UML component diagram below gives an overview of the module structure. Each 
 
 - **Platform layer**: in the bottom layer, it can be observed that the only language dependency is python. In addition, OpenSSL, a software library used to secure communications against eavesdropping or to ascertain the identity of the party at the other end, is the base of authentication process.
 
-![ACME Protocol Module in Detail](https://github.com/delftswa2016/team-letsencrypt/blob/master/D2/module2.png)
+![ACME Protocol Module in Detail](image/module2.png)
 
 Since the software is based on ACME, it is necessary to gain a deeper understanding of how ACME module works. The graph below shows the details about the internal relations in ACME protocol. The communication between ACME Client and CA is via the ACME Message. ACME Message is an object specified by ACME protocol,  the definition of which is similar to the Packet in Transmission Control Protocol (TCP). 
 
@@ -341,7 +341,7 @@ A feature is a characteristic or end-user-visible behavior of a software system[
 
 - UI/Command switch: Let’s Encrypt supports ncurses(a programming library providing an API that allows the user to write text-based user interfaces) [[8](https://github.com/delftswa2016/team-letsencrypt/blob/Improvement/draftv1.md#ncurses)] UI, or can be driven entirely from the command line. Users can choose between UI and command line.
 
-![Feature Dependencies and Model](https://github.com/delftswa2016/team-letsencrypt/blob/master/D3/Feature.Model.png)
+![Feature Dependencies and Model](image/Feature.Model.png)
 
 ###5.2 Implementation Strategy
 
