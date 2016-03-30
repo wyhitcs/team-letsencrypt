@@ -308,7 +308,7 @@ There is no limit of the number of certificates that can be issued to different 
 
 Variability describes the ability to derive different products from a common set of artifacts[[6](#Sven)]. It is important for a good software to equip with variability to adapt to different environments, which also largely satisfies the requirements of different stakeholders. In spite of a BETA software, Let’s Encrypt provides plenty of variable features. In this section, a list of features and dependencies are given and then, a related model is built upon this. The strategies to implement such variabilities are also discussed.
 
-As mentioned above, Let’s Encrypt is a BETA software still in its earlier version. It can be seen from the GitHub milestone that a great amount of work focuses on improving its flexibility to equip with variability. That is why it is interesting to address its evolution history here to see how Let’s Encrypt deals with change in the system development lifecycle.
+As mentioned above, Let’s Encrypt is a BETA software still in its earlier version. It can be seen from the GitHub milestone that a great amount of work focuses on improving its flexibility to equip with variability. That is why it is interesting to address its evolution history here to see how Let’s Encrypt deals with changes in the system development lifecycle.
 
 
 ###5.1 Variable Features
