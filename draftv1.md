@@ -167,7 +167,7 @@ Let's Encrypt provides service to a large number of users. Here we only give two
 
 Finally, there exist other softwares based on ACME that compete with Let’s Encrypt like [acme-tiny](https://github.com/diafygi/acme-tiny) and [simp_le](https://github.com/kuba/simp_le).
 
-![contextview](image/contextview.png)
+![Context View](image/contextview.png)
 
 <div id="3DevelopmentView"></div>
 ##3 Development View
