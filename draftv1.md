@@ -468,11 +468,11 @@ https://letsencrypt.readthedocs.org/en/latest/index.html.
 
     Time: March 5th
 
-    Content: It is a display error in Let's Encrypt document at website ["Read the Docs"](http://letsencrypt.readthedocs.org/en/latest/using.html?highlight=mail#webroot). A command line exceeds the border of the browser window. We make a horizontal scroll to display a long text (both in rst and html) and test it with Chrome, Firefox and Safari at Mac OSX and Ubuntu.
+    Content: It is a display error in the documentation of Let's Encrypt at website ["Read the Docs"](http://letsencrypt.readthedocs.org/en/latest/using.html?highlight=mail#webroot). A command line exceeds the border of the browser window. We made a horizontal scroll to display a long text (both in rst and html) and tested it with Chrome, Firefox and Safari at Mac OSX and Ubuntu.
 
 2. Pull requests: [#2657](https://github.com/letsencrypt/letsencrypt/pull/2657), [#2658](https://github.com/letsencrypt/letsencrypt/pull/2658), [#2659](https://github.com/letsencrypt/letsencrypt/pull/2659), [#2659](https://github.com/letsencrypt/letsencrypt/pull/2659)
 
     Time: March 12th - March 14th
     
-    Content: The documentation of Let's Encrypt is not so friendly to new comers. Since Let's Encrypt is a implementation of ACME, we propose to add a link to ACME specification. The handle of the request takes some time because the link we add is not up to date and we fix it later.
+    Content: The documentation of Let's Encrypt is not so friendly to new comers. Since Let's Encrypt is based on ACME protocal, we proposed to add a link to ACME specification. The accept of the request takes some time because the link added was not up to date and we fixed it later.
 
