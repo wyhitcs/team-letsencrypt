@@ -18,7 +18,7 @@ We are students from  <img src="http://www.ce.ewi.tudelft.nl/fileadmin/ce/images
 - [Changliang Luo](https://github.com/YourDaddyIsHere), Student ID: 4501357
 
 #Journal
-The [journal](https://github.com/delftswa2016/team-letsencrypt/blob/master/journal.md) contains main activities of team letsencrypt.
+The [journal](https://github.com/wyhitcs/team-letsencrypt/blob/master/journal.md) contains main activities of team letsencrypt.
 #Hour Sheet
 Our hour sheet is available on [Google Docs](https://docs.google.com/spreadsheets/d/1WNZ6_zGQyT9PT4Q8Ou8pqhx76jxQEzxe0XPCoo_UU1Y/edit?usp=sharing).
 
